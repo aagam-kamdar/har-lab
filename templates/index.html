@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Video Tracking Demo — Student Lab Tracker</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            max-width: 680px;
+            margin: 2.5rem auto;
+            padding: 1.5rem;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        .card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.06), 0 2px 4px -2px rgba(0,0,0,0.06);
+        }
+        h2 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+            color: #0f172a;
+        }
+        .subtitle {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+        .badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0.2rem 0.55rem;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+        .error {
+            background: #fef2f2;
+            color: #b91c1c;
+            border: 1px solid #fecaca;
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            margin-bottom: 1.25rem;
+            font-size: 0.9rem;
+        }
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.35rem;
+            color: #334155;
+        }
+        input[type="file"] {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            background: #f8fafc;
+            border: 2px dashed #cbd5e1;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        input[type="file"]:hover {
+            border-color: #3b82f6;
+            background: #f0f9ff;
+        }
+        .settings-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #f1f5f9;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+        .help-text {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-top: 0.25rem;
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 0.85rem 1.25rem;
+            background: #2563eb;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            transition: background 0.15s ease-in-out;
+        }
+        button[type="submit"]:hover {
+            background: #1d4ed8;
+        }
+        .info-box {
+            margin-top: 1.5rem;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 0.85rem 1rem;
+            font-size: 0.85rem;
+            color: #475569;
+            line-height: 1.45;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <span class="badge">100% Offline Demo</span>
+        <h2>Student Lab Tracking Demo</h2>
+        <p class="subtitle">
+            Upload a classroom or lab video. The system runs <strong>local YOLO person detection</strong> and the <strong>official ByteTrack algorithm</strong> frame-by-frame, outputting a single playable video with persistent <strong>ID 1, ID 2, ID 3</strong> labels.
+        </p>
+
+        {% if error %}
+            <div class="error">{{ error }}</div>
+        {% endif %}
+
+        <form action="/analyze" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="video">Select Video File (.mp4, .mov, .avi, .mkv)</label>
+                <input type="file" id="video" name="video" accept="video/*" required>
+            </div>
+
+            <div class="settings-grid">
+                <div>
+                    <label for="conf_thresh">YOLO Confidence Threshold</label>
+                    <input type="number" id="conf_thresh" name="conf_thresh" step="0.05" min="0.10" max="0.95" value="0.30">
+                    <div class="help-text">Filters weak detections before tracking.</div>
+                </div>
+                <div>
+                    <label for="track_buffer">Track Buffer (Frames)</label>
+                    <input type="number" id="track_buffer" name="track_buffer" step="5" min="10" max="300" value="30">
+                    <div class="help-text">Frames to remember occluded persons (~1 sec).</div>
+                </div>
+            </div>
+
+            <button type="submit" id="submit-btn">Process Video &amp; Track Students</button>
+        </form>
+
+        <div class="info-box">
+            <strong>Key Features:</strong>
+            <ul style="margin: 0.35rem 0 0 1.25rem; padding: 0;">
+                <li><strong>Person Class Only:</strong> Ignores laptops, phones, books, and furniture.</li>
+                <li><strong>Sequential Tracking:</strong> Every frame is fed sequentially to BYTETracker for smooth Kalman velocity estimation.</li>
+                <li><strong>Single MP4 Output:</strong> Generates an embedded, browser-playable annotated video.</li>
+                <li><strong>Zero API Dependencies:</strong> No cloud calls or API keys required.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector("form").addEventListener("submit", function() {
+            var btn = document.getElementById("submit-btn");
+            btn.disabled = true;
+            btn.innerText = "Processing Video Locally (This may take a moment)...";
+            btn.style.background = "#64748b";
+        });
+    </script>
+</body>
+</html>

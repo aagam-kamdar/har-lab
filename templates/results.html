@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking &amp; Re-ID Results — Student Lab Tracker</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        .header {
+            margin-bottom: 1.5rem;
+        }
+        .header h1 {
+            font-size: 1.75rem;
+            margin-bottom: 0.25rem;
+            color: #0f172a;
+        }
+        .header p {
+            color: #64748b;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        .video-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.07);
+            margin-bottom: 1.5rem;
+        }
+        .video-container {
+            background: #000;
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        video {
+            width: 100%;
+            max-height: 580px;
+            display: block;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            padding: 1.25rem;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+        }
+        .stat-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+        }
+        .stat-highlight {
+            background: #f0fdf4;
+            border-color: #bbf7d0;
+        }
+        .stat-label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #64748b;
+            margin-bottom: 0.25rem;
+        }
+        .stat-value {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .stat-value.green {
+            color: #15803d;
+        }
+        .stat-sub {
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+        .ids-badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+            margin-top: 0.35rem;
+        }
+        .student-badge {
+            background: #dcfce7;
+            color: #166534;
+            font-weight: 700;
+            font-size: 0.82rem;
+            padding: 0.2rem 0.55rem;
+            border-radius: 6px;
+            border: 1px solid #86efac;
+        }
+        .track-badge {
+            background: #f1f5f9;
+            color: #475569;
+            font-size: 0.78rem;
+            padding: 0.15rem 0.45rem;
+            border-radius: 4px;
+            border: 1px solid #cbd5e1;
+        }
+        .actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.65rem 1.25rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.15s ease-in-out;
+        }
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+            border: 1px solid #1d4ed8;
+        }
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+        .btn-secondary {
+            background: white;
+            color: #334155;
+            border: 1px solid #cbd5e1;
+        }
+        .btn-secondary:hover {
+            background: #f1f5f9;
+        }
+        .card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 1.25rem;
+            margin-top: 1.5rem;
+        }
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+            color: #0f172a;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+        }
+        th, td {
+            text-align: left;
+            padding: 0.55rem 0.75rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th {
+            background: #f8fafc;
+            color: #475569;
+            font-weight: 600;
+        }
+        .recovered-tag {
+            background: #dcfce7;
+            color: #15803d;
+            font-weight: 700;
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Local Tracking &amp; Re-ID Results</h1>
+        <p>Job ID: <code>{{ job_id }}</code> — Local YOLO + Official ByteTrack + Local FAISS Re-ID</p>
+    </div>
+
+    <div class="video-card">
+        <div class="video-container">
+            <video controls autoplay loop playsinline>
+                <source src="{{ video_url }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-box stat-highlight">
+                <div class="stat-label">Persistent Students</div>
+                <div class="stat-value green">{{ result.persistent_student_ids|length }}</div>
+                <div class="stat-sub">Resolved persistent identities</div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-label">Temporary Track IDs</div>
+                <div class="stat-value">{{ result.unique_track_ids|length }}</div>
+                <div class="stat-sub">ByteTrack temporary IDs</div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-label">Long-Term Recoveries</div>
+                <div class="stat-value">{{ result.reid_metrics.long_term_recoveries or 0 }}</div>
+                <div class="stat-sub">Re-ID identity matches after gap</div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-label">Total Video Frames</div>
+                <div class="stat-value">{{ result.total_frames }}</div>
+                <div class="stat-sub">{{ "%.1f"|format(result.duration_sec) }}s @ {{ "%.1f"|format(result.fps) }} fps</div>
+            </div>
+        </div>
+
+        <div style="padding: 1rem 1.25rem; background: #fafafa; border-top: 1px solid #e2e8f0;">
+            <div style="font-size: 0.8rem; font-weight: 600; color: #475569; margin-bottom: 0.4rem; text-transform: uppercase;">
+                Resolved Persistent Student Identities:
+            </div>
+            <div class="ids-badge-container">
+                {% for sid in result.persistent_student_ids %}
+                    <span class="student-badge">{{ sid }}</span>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {% if result.recovery_log %}
+    <div class="card">
+        <h3>Sample Identity Recovery Events (Re-ID Across Tracking Gaps)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Old Track ID</th>
+                    <th>New Track ID</th>
+                    <th>Resolved Student ID</th>
+                    <th>Similarity Score</th>
+                    <th>Gap (Frames / Sec)</th>
+                    <th>Outcome</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in result.recovery_log[:10] %}
+                <tr>
+                    <td><code>Track {{ item.old_track }}</code></td>
+                    <td><code>Track {{ item.new_track }}</code></td>
+                    <td><strong>{{ item.student_id }}</strong></td>
+                    <td>{{ "%.3f"|format(item.similarity) }}</td>
+                    <td>{{ item.gap_frames }} frames ({{ "%.2f"|format(item.gap_sec) }}s)</td>
+                    <td><span class="recovered-tag">{{ item.result }}</span></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% endif %}
+
+    <div class="actions">
+        <a class="btn btn-primary" href="{{ video_url }}" download="reid_{{ result.output_video_filename }}">Download Annotated MP4</a>
+        <a class="btn btn-secondary" href="/">Track Another Video</a>
+    </div>
+</body>
+</html>

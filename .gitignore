@@ -1,0 +1,13 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.env
+static/results/
+*.mp4
+*.avi
+*.mov
+.vscode/
+.idea/
+.pytest_cache/
+.mypy_cache/
