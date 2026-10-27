@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Student Productivity Tracker</title>
+<style>
+  :root {
+    --bg: #0f172a; --card: #1e293b; --border: #334155;
+    --text: #e2e8f0; --muted: #94a3b8;
+    --aagam: #5eead4; --swayam: #f472b6; --harshil: #818cf8; --soham: #fbbf24;
+    --sitting: #6b7280; --writing: #22c55e; --typing: #38bdf8;
+    --phone: #ef4444; --sleeping: #8b5cf6; --standing: #eab308; --talking: #f97316;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; min-height: 100vh; }
+  
+  nav { 
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 1.5rem; background: var(--card); border-bottom: 1px solid var(--border);
+  }
+  nav h1 { font-size: 1.2rem; font-weight: 700; letter-spacing: -0.02em; }
+  nav a { text-decoration:none; padding:0.35rem 0.75rem; border:1px solid var(--border); border-radius:0.5rem; 
+           font-size:0.75rem; font-weight:600; color:var(--text); }
+  nav a:hover { background:var(--border); }
+  nav h1 span { color: var(--aagam); }
+  .nav-status { display: flex; gap: 0.75rem; align-items: center; }
+  .status-dot { width: 10px; height: 10px; border-radius: 50%; background: #ef4444; }
+  .status-dot.active { background: #22c55e; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{ opacity:1; } 50%{ opacity:0.5; } }
+  .badge { padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600;
+            background: var(--border); color: var(--muted); }
+  .badge.running { background: #14532d; color: #86efac; }
+
+  .main { display: grid; grid-template-columns: 1fr 380px; grid-template-rows: auto 1fr; gap: 1rem; padding: 1rem; min-height: calc(100vh - 60px); }
+  
+  /* VIDEO */
+  .video-panel { grid-row: 1 / 3; background: #000; border-radius: 0.75rem; overflow: hidden;
+                  display: flex; flex-direction: column; }
+  .video-panel img { width: 100%; height: auto; flex: 1; object-fit: contain; }
+  .video-controls { display: flex; gap: 0.5rem; padding: 0.75rem; background: var(--card); border-top: 1px solid var(--border); }
+  
+  /* STUDENT CARDS */
+  .students-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; align-content: start; }
+  .student-card {
+    background: var(--card); border-radius: 0.75rem; padding: 1rem;
+    border: 1px solid var(--border); border-top: 3px solid;
+    transition: all 0.3s ease;
+  }
+  .student-card[data-student="Aagam"]   { border-top-color: var(--aagam); }
+  .student-card[data-student="Swayam"]  { border-top-color: var(--swayam); }
+  .student-card[data-student="Harshil"] { border-top-color: var(--harshil); }
+  .student-card[data-student="Soham"]   { border-top-color: var(--soham); }
+  .student-name { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.5rem; }
+  .action-badge {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    padding: 0.3rem 0.75rem; border-radius: 999px;
+    font-size: 0.75rem; font-weight: 600; margin-bottom: 0.5rem;
+    transition: background 0.4s, color 0.4s;
+  }
+  .productivity-bar { background: var(--border); border-radius: 999px; height: 6px; margin: 0.4rem 0; overflow: hidden; }
+  .productivity-fill { height: 100%; border-radius: 999px; background: #22c55e; transition: width 0.5s ease; }
+  .productivity-label { font-size: 0.7rem; color: var(--muted); }
+  .duration-label { font-size: 0.7rem; color: var(--muted); margin-top: 0.25rem; }
+
+  /* ALERTS */
+  .alerts-panel { background: var(--card); border-radius: 0.75rem; border: 1px solid var(--border);
+                   padding: 0.75rem; max-height: 250px; overflow-y: auto; }
+  .alerts-panel h3 { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; 
+                      letter-spacing: 0.05em; color: var(--muted); margin-bottom: 0.5rem; }
+  .alert-item { 
+    display: flex; align-items: center; gap: 0.5rem;
+    padding: 0.4rem 0.5rem; border-radius: 0.4rem; margin-bottom: 0.35rem;
+    background: #451a1a; border: 1px solid #7f1d1d; font-size: 0.75rem;
+  }
+  .alert-item .alert-icon { font-size: 1rem; }
+  .alert-item .alert-text { flex: 1; }
+  .alert-item .alert-ack { cursor: pointer; color: var(--muted); font-size: 0.7rem;
+                            border: 1px solid var(--border); padding: 0.1rem 0.35rem; border-radius: 4px; }
+  .alert-item .alert-ack:hover { background: var(--border); }
+  .no-alerts { color: var(--muted); font-size: 0.75rem; text-align: center; padding: 1rem; }
+
+  /* CONTROLS */
+  .btn { cursor: pointer; padding: 0.5rem 1.25rem; border-radius: 0.5rem; font-size: 0.8rem;
+          font-weight: 600; border: none; transition: opacity 0.2s; }
+  .btn:hover { opacity: 0.85; }
+  .btn-primary { background: var(--aagam); color: #0f172a; }
+  .btn-danger  { background: #ef4444; color: #fff; }
+  .btn-secondary { background: var(--border); color: var(--text); }
+  .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  /* ACTION COLORS */
+  .action-sitting  { background: #374151; color: #d1d5db; }
+  .action-reading  { background: #713f12; color: #fef08a; }
+  .action-writing  { background: #14532d; color: #86efac; }
+  .action-typing   { background: #0c4a6e; color: #7dd3fc; }
+  .action-phone    { background: #450a0a; color: #fca5a5; }
+  .action-sleeping { background: #2e1065; color: #c4b5fd; }
+  .action-standing { background: #422006; color: #fde68a; }
+  .action-walking  { background: #064e3b; color: #a7f3d0; }
+  .action-discuss  { background: #431407; color: #fed7aa; }
+  .action-unknown  { background: #1e293b; color: #475569; }
+
+  /* SESSION INFO */
+  .session-info { font-size: 0.72rem; color: var(--muted); text-align: center; padding: 0.25rem 0; }
+</style>
+</head>
+<body>
+<nav>
+  <h1>🎓 Student <span>Productivity</span> Tracker</h1>
+  <div class="nav-status">
+    <a href="/dashboard">📊 Analytics</a>
+    <span class="session-info" id="sessionTimer">Session: 0s</span>
+    <span class="badge" id="modeBadge">Idle</span>
+    <div class="status-dot" id="statusDot"></div>
+  </div>
+</nav>
+
+<div class="main">
+  <!-- Video Feed -->
+  <div class="video-panel">
+    <img id="videoFeed" src="/video_feed" alt="Live Feed" onerror="this.style.display='none'" style="display:none;"/>
+    <div id="noFeedMsg" style="flex:1;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:0.9rem;">
+      📹 No active feed — start video or webcam below
+    </div>
+    <div class="video-controls">
+      <button class="btn btn-primary" id="btnVideo" onclick="startVideo()">▶ Lab Video</button>
+      <button class="btn btn-secondary" id="btnWebcam" onclick="startWebcam()">📷 Webcam</button>
+      <button class="btn btn-danger" id="btnStop" onclick="stopPipeline()" disabled>⏹ Stop</button>
+      <span style="flex:1"></span>
+      <span id="frameCounter" style="font-size:0.75rem;color:var(--muted);align-self:center;">Frame: 0</span>
+    </div>
+  </div>
+
+  <!-- Student Cards -->
+  <div class="students-panel" id="studentCards">
+    {% for name in ["Aagam", "Swayam", "Harshil", "Soham"] %}
+    <div class="student-card" data-student="{{ name }}" id="card-{{ name }}">
+      <div class="student-name">{{ name }}</div>
+      <div class="action-badge action-unknown" id="action-{{ name }}">❓ unknown</div>
+      <div class="duration-label" id="dur-{{ name }}">—</div>
+      <div class="productivity-bar"><div class="productivity-fill" id="pbar-{{ name }}" style="width:0%"></div></div>
+      <div class="productivity-label" id="plabel-{{ name }}">Productivity: 0%</div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- Alerts -->
+  <div class="alerts-panel">
+    <h3>⚠️ Alerts</h3>
+    <div id="alertsList"><div class="no-alerts">No alerts yet</div></div>
+  </div>
+</div>
+
+<script>
+const ACTION_EMOJIS = {
+  sitting:"🪑", reading:"📖", writing:"✍️", typing:"⌨️",
+  phone:"📱", sleeping:"😴", standing:"🧍", walking:"🚶", discuss:"💬", unknown:"❓"
+};
+
+let isRunning = false;
+
+function updateCards(data) {
+  if (!data || !data.students) return;
+  
+  const elapsed = data.session_elapsed_sec || 0;
+  document.getElementById("sessionTimer").textContent = 
+    `Session: ${Math.floor(elapsed/60)}m ${Math.floor(elapsed%60)}s`;
+
+  for (const [name, info] of Object.entries(data.students)) {
+    const action = info.current_action || "unknown";
+    const dur = info.current_action_duration_sec || 0;
+    const prod = info.productivity_pct || 0;
+    const emoji = ACTION_EMOJIS[action] || "❓";
+
+    const el = document.getElementById(`action-${name}`);
+    if (el) {
+      el.className = `action-badge action-${action}`;
+      el.textContent = `${emoji} ${action}`;
+    }
+
+    const durEl = document.getElementById(`dur-${name}`);
+    if (durEl) {
+      const m = Math.floor(dur/60), s = Math.floor(dur%60);
+      durEl.textContent = dur > 0 ? `For ${m > 0 ? m+"m " : ""}${s}s` : "—";
+    }
+
+    const pb = document.getElementById(`pbar-${name}`);
+    if (pb) pb.style.width = prod + "%";
+
+    const pl = document.getElementById(`plabel-${name}`);
+    if (pl) pl.textContent = `Productivity: ${prod}%`;
+  }
+
+  // Alerts
+  const alerts = data.recent_alerts || [];
+  const alertsEl = document.getElementById("alertsList");
+  if (alerts.length === 0) {
+    alertsEl.innerHTML = '<div class="no-alerts">No alerts yet</div>';
+  } else {
+    const ICONS = { phone:"📱", sleeping:"😴", talking:"💬" };
+    alertsEl.innerHTML = alerts.map((a, i) => `
+      <div class="alert-item">
+        <span class="alert-icon">${ICONS[a.action] || "⚠️"}</span>
+        <span class="alert-text"><b>${a.student}</b> ${a.action} for ${Math.floor(a.duration_sec)}s</span>
+        <span class="alert-ack" onclick="ackAlert(${i})">✓</span>
+      </div>
+    `).join("");
+  }
+}
+
+// SSE connection
+let evtSource = null;
+function connectSSE() {
+  if (evtSource) evtSource.close();
+  evtSource = new EventSource("/stream");
+  evtSource.onmessage = (e) => {
+    try { updateCards(JSON.parse(e.data)); } catch {}
+  };
+  evtSource.onerror = () => { setTimeout(connectSSE, 3000); };
+}
+connectSSE();
+
+// Poll state
+async function pollState() {
+  const res = await fetch("/api/state").catch(() => null);
+  if (!res) return;
+  const data = await res.json();
+  isRunning = data.running;
+
+  const dot = document.getElementById("statusDot");
+  const badge = document.getElementById("modeBadge");
+  const feed = document.getElementById("videoFeed");
+  const noFeed = document.getElementById("noFeedMsg");
+  const fc = document.getElementById("frameCounter");
+
+  if (isRunning) {
+    dot.classList.add("active");
+    badge.className = "badge running";
+    badge.textContent = data.mode === "webcam" ? "📷 Webcam" : "🎬 Video";
+    feed.style.display = "block";
+    noFeed.style.display = "none";
+    fc.textContent = `Frame: ${data.frame_idx}`;
+  } else {
+    dot.classList.remove("active");
+    badge.className = "badge";
+    badge.textContent = "Idle";
+    if (data.frame_idx === 0) { feed.style.display = "none"; noFeed.style.display = "flex"; }
+  }
+
+  document.getElementById("btnVideo").disabled = isRunning;
+  document.getElementById("btnWebcam").disabled = isRunning;
+  document.getElementById("btnStop").disabled = !isRunning;
+}
+setInterval(pollState, 1000);
+pollState();
+
+async function startVideo() {
+  await fetch("/api/start_video", {method:"POST", headers:{"Content-Type":"application/json"},
+    body: JSON.stringify({video_path: "new lab video.mp4"})});
+  pollState();
+}
+
+async function startWebcam() {
+  await fetch("/api/start_webcam", {method:"POST"});
+  pollState();
+}
+
+async function stopPipeline() {
+  await fetch("/api/stop", {method:"POST"});
+  pollState();
+}
+
+async function ackAlert(idx) {
+  await fetch(`/api/acknowledge_alert?idx=${idx}`, {method:"POST"});
+}
+</script>
+</body>
+</html>

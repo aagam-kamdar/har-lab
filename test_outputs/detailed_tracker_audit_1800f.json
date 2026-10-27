@@ -1,0 +1,1234 @@
+{
+  "benchmark_window": "0 to 1800 frames (60.0 seconds @ 30.0 fps)",
+  "detection_source": "Cached identical YOLOv8 detections (classes=[0])",
+  "tracker_parameters_matched": {
+    "track_high_thresh": 0.35,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.35,
+    "track_buffer": 90,
+    "match_thresh": 0.85,
+    "fuse_score": true
+  },
+  "raw_id_switches": {
+    "bytetrack_idsw": 36,
+    "ocsort_idsw": 89,
+    "botsort_idsw": 63
+  },
+  "total_unique_track_ids": {
+    "bytetrack": 21,
+    "ocsort": 32,
+    "botsort": 40
+  },
+  "keyframe_student_continuity": [
+    {
+      "frame": 1,
+      "ground_truth_targets": 3,
+      "targets": [
+        {
+          "student": "soham",
+          "bbox": [
+            767,
+            76,
+            967,
+            385
+          ],
+          "bytetrack_id": 1,
+          "ocsort_id": 1,
+          "botsort_id": 1
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            662,
+            59,
+            807,
+            240
+          ],
+          "bytetrack_id": 2,
+          "ocsort_id": 2,
+          "botsort_id": 2
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            513,
+            45,
+            621,
+            175
+          ],
+          "bytetrack_id": "None",
+          "ocsort_id": 3,
+          "botsort_id": 3
+        }
+      ]
+    },
+    {
+      "frame": 50,
+      "ground_truth_targets": 3,
+      "targets": [
+        {
+          "student": "soham",
+          "bbox": [
+            763,
+            92,
+            947,
+            374
+          ],
+          "bytetrack_id": 1,
+          "ocsort_id": 1,
+          "botsort_id": 1
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            650,
+            61,
+            774,
+            166
+          ],
+          "bytetrack_id": 2,
+          "ocsort_id": 2,
+          "botsort_id": 4
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            506,
+            44,
+            622,
+            143
+          ],
+          "bytetrack_id": "None",
+          "ocsort_id": "None",
+          "botsort_id": "None"
+        }
+      ]
+    },
+    {
+      "frame": 100,
+      "ground_truth_targets": 3,
+      "targets": [
+        {
+          "student": "soham",
+          "bbox": [
+            696,
+            0,
+            864,
+            374
+          ],
+          "bytetrack_id": 1,
+          "ocsort_id": 1,
+          "botsort_id": 1
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            877,
+            233,
+            1081,
+            474
+          ],
+          "bytetrack_id": "None",
+          "ocsort_id": "None",
+          "botsort_id": "None"
+        },
+        {
+          "student": "harshil",
+          "bbox": [
+            513,
+            43,
+            626,
+            140
+          ],
+          "bytetrack_id": "None",
+          "ocsort_id": "None",
+          "botsort_id": "None"
+        }
+      ]
+    },
+    {
+      "frame": 150,
+      "ground_truth_targets": 3,
+      "targets": [
+        {
+          "student": "soham",
+          "bbox": [
+            602,
+            61,
+            818,
+            359
+          ],
+          "bytetrack_id": 1,
+          "ocsort_id": 1,
+          "botsort_id": 1
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            901,
+            155,
+            1081,
+            474
+          ],
+          "bytetrack_id": 4,
+          "ocsort_id": 8,
+          "botsort_id": 5
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            744,
+            56,
+            828,
+            172
+          ],
+          "bytetrack_id": 5,
+          "ocsort_id": 9,
+          "botsort_id": 6
+        }
+      ]
+    },
+    {
+      "frame": 200,
+      "ground_truth_targets": 2,
+      "targets": [
+        {
+          "student": "Person",
+          "bbox": [
+            635,
+            14,
+            838,
+            363
+          ],
+          "bytetrack_id": 1,
+          "ocsort_id": 1,
+          "botsort_id": 1
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            522,
+            43,
+            626,
+            139
+          ],
+          "bytetrack_id": "None",
+          "ocsort_id": "None",
+          "botsort_id": "None"
+        }
+      ]
+    },
+    {
+      "frame": 250,
+      "ground_truth_targets": 2,
+      "targets": [
+        {
+          "student": "Person",
+          "bbox": [
+            701,
+            0,
+            855,
+            337
+          ],
+          "bytetrack_id": 1,
+          "ocsort_id": 1,
+          "botsort_id": 1
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            519,
+            43,
+            628,
+            175
+          ],
+          "bytetrack_id": "None",
+          "ocsort_id": 10,
+          "botsort_id": 11
+        }
+      ]
+    },
+    {
+      "frame": 300,
+      "ground_truth_targets": 3,
+      "targets": [
+        {
+          "student": "Person",
+          "bbox": [
+            950,
+            112,
+            1080,
+            475
+          ],
+          "bytetrack_id": 7,
+          "ocsort_id": 8,
+          "botsort_id": 12
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            661,
+            46,
+            797,
+            249
+          ],
+          "bytetrack_id": 8,
+          "ocsort_id": 9,
+          "botsort_id": 13
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            770,
+            72,
+            962,
+            300
+          ],
+          "bytetrack_id": 1,
+          "ocsort_id": 1,
+          "botsort_id": 1
+        }
+      ]
+    },
+    {
+      "frame": 400,
+      "ground_truth_targets": 3,
+      "targets": [
+        {
+          "student": "soham",
+          "bbox": [
+            782,
+            54,
+            983,
+            344
+          ],
+          "bytetrack_id": 1,
+          "ocsort_id": 1,
+          "botsort_id": 1
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            626,
+            66,
+            795,
+            275
+          ],
+          "bytetrack_id": 8,
+          "ocsort_id": 9,
+          "botsort_id": 13
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            524,
+            46,
+            636,
+            140
+          ],
+          "bytetrack_id": "None",
+          "ocsort_id": "None",
+          "botsort_id": "None"
+        }
+      ]
+    },
+    {
+      "frame": 473,
+      "ground_truth_targets": 5,
+      "targets": [
+        {
+          "student": "Person",
+          "bbox": [
+            894,
+            81,
+            1062,
+            468
+          ],
+          "bytetrack_id": 9,
+          "ocsort_id": 8,
+          "botsort_id": 18
+        },
+        {
+          "student": "swayam",
+          "bbox": [
+            775,
+            71,
+            932,
+            246
+          ],
+          "bytetrack_id": 10,
+          "ocsort_id": 1,
+          "botsort_id": 19
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            632,
+            65,
+            795,
+            270
+          ],
+          "bytetrack_id": 8,
+          "ocsort_id": 9,
+          "botsort_id": 13
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            637,
+            65,
+            790,
+            184
+          ],
+          "bytetrack_id": 8,
+          "ocsort_id": 9,
+          "botsort_id": 16
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            508,
+            43,
+            616,
+            142
+          ],
+          "bytetrack_id": "None",
+          "ocsort_id": "None",
+          "botsort_id": "None"
+        }
+      ]
+    },
+    {
+      "frame": 500,
+      "ground_truth_targets": 4,
+      "targets": [
+        {
+          "student": "soham",
+          "bbox": [
+            823,
+            72,
+            946,
+            243
+          ],
+          "bytetrack_id": 10,
+          "ocsort_id": 1,
+          "botsort_id": 1
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            654,
+            76,
+            847,
+            355
+          ],
+          "bytetrack_id": 9,
+          "ocsort_id": 8,
+          "botsort_id": 18
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            622,
+            66,
+            704,
+            231
+          ],
+          "bytetrack_id": 8,
+          "ocsort_id": 9,
+          "botsort_id": 16
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            513,
+            43,
+            588,
+            138
+          ],
+          "bytetrack_id": "None",
+          "ocsort_id": "None",
+          "botsort_id": "None"
+        }
+      ]
+    },
+    {
+      "frame": 600,
+      "ground_truth_targets": 3,
+      "targets": [
+        {
+          "student": "swayam",
+          "bbox": [
+            608,
+            106,
+            821,
+            378
+          ],
+          "bytetrack_id": 8,
+          "ocsort_id": 19,
+          "botsort_id": 22
+        },
+        {
+          "student": "soham",
+          "bbox": [
+            792,
+            73,
+            938,
+            294
+          ],
+          "bytetrack_id": 10,
+          "ocsort_id": 1,
+          "botsort_id": 1
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            638,
+            67,
+            769,
+            199
+          ],
+          "bytetrack_id": "None",
+          "ocsort_id": "None",
+          "botsort_id": "None"
+        }
+      ]
+    },
+    {
+      "frame": 750,
+      "ground_truth_targets": 3,
+      "targets": [
+        {
+          "student": "aagam",
+          "bbox": [
+            631,
+            67,
+            790,
+            295
+          ],
+          "bytetrack_id": 8,
+          "ocsort_id": 9,
+          "botsort_id": 22
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            528,
+            44,
+            625,
+            164
+          ],
+          "bytetrack_id": 11,
+          "ocsort_id": 19,
+          "botsort_id": 27
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            782,
+            75,
+            937,
+            305
+          ],
+          "bytetrack_id": 10,
+          "ocsort_id": 1,
+          "botsort_id": 28
+        }
+      ]
+    },
+    {
+      "frame": 900,
+      "ground_truth_targets": 5,
+      "targets": [
+        {
+          "student": "aagam",
+          "bbox": [
+            634,
+            25,
+            778,
+            336
+          ],
+          "bytetrack_id": 8,
+          "ocsort_id": 9,
+          "botsort_id": 22
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            529,
+            29,
+            637,
+            153
+          ],
+          "bytetrack_id": 11,
+          "ocsort_id": 19,
+          "botsort_id": 27
+        },
+        {
+          "student": "swayam",
+          "bbox": [
+            467,
+            6,
+            553,
+            145
+          ],
+          "bytetrack_id": 16,
+          "ocsort_id": 26,
+          "botsort_id": 35
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            785,
+            75,
+            940,
+            245
+          ],
+          "bytetrack_id": 10,
+          "ocsort_id": 1,
+          "botsort_id": 1
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            786,
+            76,
+            941,
+            319
+          ],
+          "bytetrack_id": 15,
+          "ocsort_id": 1,
+          "botsort_id": 28
+        }
+      ]
+    },
+    {
+      "frame": 1050,
+      "ground_truth_targets": 3,
+      "targets": [
+        {
+          "student": "harshil",
+          "bbox": [
+            649,
+            102,
+            949,
+            389
+          ],
+          "bytetrack_id": 11,
+          "ocsort_id": 31,
+          "botsort_id": 27
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            801,
+            77,
+            940,
+            242
+          ],
+          "bytetrack_id": 10,
+          "ocsort_id": 36,
+          "botsort_id": 1
+        },
+        {
+          "student": "aagam",
+          "bbox": [
+            632,
+            44,
+            724,
+            229
+          ],
+          "bytetrack_id": 20,
+          "ocsort_id": 43,
+          "botsort_id": 54
+        }
+      ]
+    },
+    {
+      "frame": 1200,
+      "ground_truth_targets": 4,
+      "targets": [
+        {
+          "student": "harshil",
+          "bbox": [
+            634,
+            111,
+            851,
+            374
+          ],
+          "bytetrack_id": 11,
+          "ocsort_id": 31,
+          "botsort_id": 27
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            788,
+            57,
+            967,
+            238
+          ],
+          "bytetrack_id": 10,
+          "ocsort_id": 36,
+          "botsort_id": 1
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            619,
+            52,
+            715,
+            231
+          ],
+          "bytetrack_id": 20,
+          "ocsort_id": 43,
+          "botsort_id": 54
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            788,
+            58,
+            971,
+            315
+          ],
+          "bytetrack_id": 10,
+          "ocsort_id": 46,
+          "botsort_id": 57
+        }
+      ]
+    },
+    {
+      "frame": 1350,
+      "ground_truth_targets": 4,
+      "targets": [
+        {
+          "student": "Person",
+          "bbox": [
+            578,
+            0,
+            649,
+            96
+          ],
+          "bytetrack_id": 31,
+          "ocsort_id": 55,
+          "botsort_id": 66
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            431,
+            16,
+            542,
+            185
+          ],
+          "bytetrack_id": 27,
+          "ocsort_id": 57,
+          "botsort_id": 68
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            743,
+            63,
+            966,
+            289
+          ],
+          "bytetrack_id": 25,
+          "ocsort_id": 46,
+          "botsort_id": 1
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            641,
+            52,
+            759,
+            189
+          ],
+          "bytetrack_id": 11,
+          "ocsort_id": 31,
+          "botsort_id": 62
+        }
+      ]
+    },
+    {
+      "frame": 1500,
+      "ground_truth_targets": 6,
+      "targets": [
+        {
+          "student": "Person",
+          "bbox": [
+            785,
+            76,
+            957,
+            313
+          ],
+          "bytetrack_id": 25,
+          "ocsort_id": 36,
+          "botsort_id": 1
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            593,
+            1,
+            657,
+            140
+          ],
+          "bytetrack_id": 31,
+          "ocsort_id": 60,
+          "botsort_id": 71
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            506,
+            40,
+            592,
+            144
+          ],
+          "bytetrack_id": 27,
+          "ocsort_id": 57,
+          "botsort_id": 68
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            636,
+            55,
+            773,
+            256
+          ],
+          "bytetrack_id": 32,
+          "ocsort_id": 62,
+          "botsort_id": 74
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            639,
+            54,
+            773,
+            196
+          ],
+          "bytetrack_id": 32,
+          "ocsort_id": 62,
+          "botsort_id": 74
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            530,
+            40,
+            593,
+            138
+          ],
+          "bytetrack_id": 27,
+          "ocsort_id": 57,
+          "botsort_id": 68
+        }
+      ]
+    },
+    {
+      "frame": 1650,
+      "ground_truth_targets": 4,
+      "targets": [
+        {
+          "student": "Person",
+          "bbox": [
+            658,
+            47,
+            791,
+            257
+          ],
+          "bytetrack_id": 34,
+          "ocsort_id": 62,
+          "botsort_id": 74
+        },
+        {
+          "student": "swayam",
+          "bbox": [
+            571,
+            45,
+            659,
+            168
+          ],
+          "bytetrack_id": 31,
+          "ocsort_id": 70,
+          "botsort_id": 71
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            503,
+            41,
+            583,
+            176
+          ],
+          "bytetrack_id": 27,
+          "ocsort_id": 57,
+          "botsort_id": 68
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            658,
+            49,
+            785,
+            193
+          ],
+          "bytetrack_id": 34,
+          "ocsort_id": 73,
+          "botsort_id": 85
+        }
+      ]
+    },
+    {
+      "frame": 1750,
+      "ground_truth_targets": 2,
+      "targets": [
+        {
+          "student": "harshil",
+          "bbox": [
+            507,
+            40,
+            596,
+            179
+          ],
+          "bytetrack_id": 27,
+          "ocsort_id": 57,
+          "botsort_id": 68
+        },
+        {
+          "student": "harshil",
+          "bbox": [
+            579,
+            32,
+            676,
+            151
+          ],
+          "bytetrack_id": 31,
+          "ocsort_id": 70,
+          "botsort_id": 71
+        }
+      ]
+    },
+    {
+      "frame": 1799,
+      "ground_truth_targets": 3,
+      "targets": [
+        {
+          "student": "Person",
+          "bbox": [
+            564,
+            64,
+            689,
+            233
+          ],
+          "bytetrack_id": 31,
+          "ocsort_id": 70,
+          "botsort_id": 71
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            506,
+            40,
+            614,
+            174
+          ],
+          "bytetrack_id": 27,
+          "ocsort_id": 57,
+          "botsort_id": 68
+        },
+        {
+          "student": "Person",
+          "bbox": [
+            537,
+            39,
+            612,
+            155
+          ],
+          "bytetrack_id": 27,
+          "ocsort_id": 57,
+          "botsort_id": 68
+        }
+      ]
+    }
+  ],
+  "bot_sort_covariance_measurements": [
+    {
+      "frame": 300,
+      "track_id": 1,
+      "mean_shape": [
+        8
+      ],
+      "mean_xywh": [
+        867.75,
+        188.58,
+        191.65,
+        232.86,
+        0.29,
+        -0.68,
+        -0.21,
+        -3.43
+      ],
+      "cov_diag": [
+        60.5968,
+        98.3489,
+        60.5968,
+        98.3489,
+        13.3597,
+        22.7689,
+        13.3597,
+        22.7689
+      ]
+    },
+    {
+      "frame": 300,
+      "track_id": 12,
+      "mean_shape": [
+        8
+      ],
+      "mean_xywh": [
+        1015.06,
+        293.5,
+        130.56,
+        365.13,
+        -0.54,
+        0.59,
+        1.03,
+        -1.02
+      ],
+      "cov_diag": [
+        28.4489,
+        224.913,
+        28.4489,
+        224.913,
+        5.6153,
+        50.439,
+        5.6153,
+        50.439
+      ]
+    },
+    {
+      "frame": 300,
+      "track_id": 13,
+      "mean_shape": [
+        8
+      ],
+      "mean_xywh": [
+        729.61,
+        148.61,
+        135.03,
+        204.25,
+        -0.87,
+        -0.0,
+        0.72,
+        -0.29
+      ],
+      "cov_diag": [
+        29.7545,
+        70.5894,
+        29.7545,
+        70.5894,
+        6.3663,
+        15.5893,
+        6.3663,
+        15.5893
+      ]
+    },
+    {
+      "frame": 301,
+      "track_id": 1,
+      "mean_shape": [
+        8
+      ],
+      "mean_xywh": [
+        868.0,
+        174.57,
+        189.93,
+        208.34,
+        0.28,
+        -2.32,
+        -0.38,
+        -6.02
+      ],
+      "cov_diag": [
+        60.6608,
+        89.5001,
+        60.6608,
+        89.5001,
+        13.2878,
+        22.0233,
+        13.2878,
+        22.0233
+      ]
+    },
+    {
+      "frame": 301,
+      "track_id": 12,
+      "mean_shape": [
+        8
+      ],
+      "mean_xywh": [
+        1015.17,
+        294.76,
+        129.93,
+        361.94,
+        -0.47,
+        0.67,
+        0.86,
+        -1.27
+      ],
+      "cov_diag": [
+        28.3824,
+        220.6797,
+        28.3824,
+        220.6797,
+        5.7068,
+        49.7762,
+        5.7068,
+        49.7762
+      ]
+    }
+  ],
+  "bytetrack_covariance_measurements": [
+    {
+      "frame": 300,
+      "track_id": 1,
+      "mean_shape": [
+        8
+      ],
+      "mean_xyah": [
+        867.7,
+        188.58,
+        0.74,
+        232.86,
+        0.23,
+        -0.68,
+        0.0,
+        -3.43
+      ],
+      "cov_diag": [
+        98.3489,
+        98.3489,
+        0.001,
+        98.3489,
+        22.7689,
+        22.7689,
+        0.0,
+        22.7689
+      ]
+    },
+    {
+      "frame": 300,
+      "track_id": 7,
+      "mean_shape": [
+        8
+      ],
+      "mean_xyah": [
+        1015.06,
+        293.59,
+        0.33,
+        364.96,
+        -0.54,
+        0.74,
+        0.0,
+        -1.29
+      ],
+      "cov_diag": [
+        224.3625,
+        224.3625,
+        0.0009,
+        224.3625,
+        50.3627,
+        50.3627,
+        0.0,
+        50.3627
+      ]
+    },
+    {
+      "frame": 300,
+      "track_id": 8,
+      "mean_shape": [
+        8
+      ],
+      "mean_xyah": [
+        729.6,
+        148.62,
+        0.62,
+        204.28,
+        -0.89,
+        0.02,
+        0.0,
+        -0.25
+      ],
+      "cov_diag": [
+        70.639,
+        70.639,
+        0.0009,
+        70.639,
+        15.6015,
+        15.6015,
+        0.0,
+        15.6015
+      ]
+    },
+    {
+      "frame": 301,
+      "track_id": 1,
+      "mean_shape": [
+        8
+      ],
+      "mean_xyah": [
+        867.97,
+        174.57,
+        0.76,
+        208.34,
+        0.23,
+        -2.32,
+        0.0,
+        -6.02
+      ],
+      "cov_diag": [
+        89.5001,
+        89.5001,
+        0.001,
+        89.5001,
+        22.0233,
+        22.0233,
+        0.0,
+        22.0233
+      ]
+    },
+    {
+      "frame": 301,
+      "track_id": 7,
+      "mean_shape": [
+        8
+      ],
+      "mean_xyah": [
+        1015.18,
+        294.84,
+        0.33,
+        361.8,
+        -0.47,
+        0.8,
+        0.0,
+        -1.51
+      ],
+      "cov_diag": [
+        220.2007,
+        220.2007,
+        0.001,
+        220.2007,
+        49.7063,
+        49.7063,
+        0.0,
+        49.7063
+      ]
+    }
+  ]
+}

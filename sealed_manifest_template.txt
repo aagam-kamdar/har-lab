@@ -1,0 +1,8 @@
+# sealed_manifest.txt
+# -------------------
+# Provide paths or filenames of sealed evaluation recordings (one per line).
+# Benchmark evaluation runs strictly and exclusively on files listed here.
+#
+# Examples:
+# sealed_session_a.mp4
+# sealed_session_b.mp4

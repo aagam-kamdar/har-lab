@@ -1,0 +1,42 @@
+================================================================================
+UNKNOWN WINDOW CONTINUITY AUDIT: AAGAM & HARSHIL
+================================================================================
+
+1. AAGAM UNKNOWN WINDOW (Frames 272 to 726 -> Lock at Frame 727)
+---------------------------------------------------------------------------
+Total Frames in Window             : 456
+Observed Track IDs                 : [8, 10, 11]
+A. Missing YOLO Person Detections  : 9 (1.97%)
+B. Missing ByteTrack Tracks        : 0 (0.0%)
+C. Number of LOST Frames           : 82
+D. Number of REMOVED Events        : 0
+E. Continuously Detected & Tracked : NO
+F. ArcFace Failure Breakdown       :
+   - Frames without face detected  : 190 (41.7%)
+   - Faces detected by ArcFace     : 266
+   - Weak/sub-threshold face scores: 261
+   - Qualifying face lock frames   : 5
+   - Lock Trigger Frame            : Frame 727 (achieved 2 consecutive strong matches)
+
+2. HARSHIL UNKNOWN WINDOW (Frames 564 to 1437 -> Lock at Frame 1438)
+---------------------------------------------------------------------------
+Total Frames in Window             : 875
+Observed Track IDs                 : [8, 11, 16, 27]
+A. Missing YOLO Person Detections  : 267 (30.51%)
+B. Missing ByteTrack Tracks        : 339 (38.74%)
+C. Number of LOST Frames           : 94
+D. Number of REMOVED Events        : 0
+E. Continuously Detected & Tracked : NO
+F. ArcFace Failure Breakdown       :
+   - Frames without face detected  : 388 (44.3%)
+   - Faces detected by ArcFace     : 487
+   - Weak/sub-threshold face scores: 410
+   - Qualifying face lock frames   : 77
+   - Lock Trigger Frame            : Frame 1438 (achieved 2 consecutive strong matches)
+
+================================================================================
+AUDIT CONCLUSION
+================================================================================
+1. Continuity: Both Aagam and Harshil were physically present throughout their respective UNKNOWN windows.
+2. Root Cause of UNKNOWN Latency: Both students sat at desks facing computer screens, obscuring frontal faces from SCRFD.
+   ArcFace did not lock earlier strictly because of missing or sub-threshold face angles, NOT tracker eviction or loss.

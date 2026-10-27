@@ -1,0 +1,390 @@
+{
+  "video": "talking.mp4",
+  "total_frames_processed": 3417,
+  "fps": 30.016678860871284,
+  "duration_seconds": 113.84,
+  "summary": {
+    "total_tracks": 21,
+    "locked_tracks": 6,
+    "unknown_tracks": 15,
+    "name_assignments": {
+      "harshil": [
+        5,
+        17
+      ],
+      "swayam": [
+        6,
+        23
+      ],
+      "aagam": [
+        1,
+        10
+      ]
+    },
+    "ownership": {
+      "student_owner": {
+        "swayam": 23
+      },
+      "track_to_student": {
+        "23": "swayam"
+      }
+    }
+  },
+  "stats": {
+    "total_detections": 13990,
+    "total_frames": 3417,
+    "face_extractions": 3921,
+    "face_locks": 6,
+    "self_learned": 125
+  },
+  "student_coverage": {
+    "UNKNOWN": {
+      "frames": 4763,
+      "coverage_pct": 139.4
+    },
+    "aagam": {
+      "frames": 2560,
+      "coverage_pct": 74.9
+    },
+    "harshil": {
+      "frames": 1072,
+      "coverage_pct": 31.4
+    },
+    "swayam": {
+      "frames": 1557,
+      "coverage_pct": 45.6
+    }
+  },
+  "tracks": [
+    {
+      "track_id": 1,
+      "name": "aagam",
+      "locked": true,
+      "locked_at_frame": 1,
+      "locked_face_score": 0.5727,
+      "first_frame": 0,
+      "last_frame": 919,
+      "lifetime_frames": 920,
+      "lifetime_seconds": 30.65,
+      "face_matches": 366,
+      "body_matches": 920,
+      "recovery_count": 0,
+      "contradictions": 0
+    },
+    {
+      "track_id": 2,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "first_frame": 6,
+      "last_frame": 596,
+      "lifetime_frames": 591,
+      "lifetime_seconds": 19.69,
+      "face_matches": 0,
+      "body_matches": 546,
+      "recovery_count": 0,
+      "contradictions": 0
+    },
+    {
+      "track_id": 3,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "first_frame": 14,
+      "last_frame": 21,
+      "lifetime_frames": 8,
+      "lifetime_seconds": 0.27,
+      "face_matches": 0,
+      "body_matches": 8,
+      "recovery_count": 0,
+      "contradictions": 0
+    },
+    {
+      "track_id": 5,
+      "name": "harshil",
+      "locked": true,
+      "locked_at_frame": 58,
+      "locked_face_score": 0.4275,
+      "first_frame": 36,
+      "last_frame": 75,
+      "lifetime_frames": 40,
+      "lifetime_seconds": 1.33,
+      "face_matches": 7,
+      "body_matches": 40,
+      "recovery_count": 0,
+      "contradictions": 1
+    },
+    {
+      "track_id": 6,
+      "name": "swayam",
+      "locked": true,
+      "locked_at_frame": 356,
+      "locked_face_score": 0.5816,
+      "first_frame": 94,
+      "last_frame": 1722,
+      "lifetime_frames": 1629,
+      "lifetime_seconds": 54.27,
+      "face_matches": 50,
+      "body_matches": 1554,
+      "recovery_count": 0,
+      "contradictions": 106
+    },
+    {
+      "track_id": 7,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "first_frame": 130,
+      "last_frame": 159,
+      "lifetime_frames": 30,
+      "lifetime_seconds": 1.0,
+      "face_matches": 0,
+      "body_matches": 30,
+      "recovery_count": 0,
+      "contradictions": 0
+    },
+    {
+      "track_id": 8,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "first_frame": 231,
+      "last_frame": 238,
+      "lifetime_frames": 8,
+      "lifetime_seconds": 0.27,
+      "face_matches": 0,
+      "body_matches": 8,
+      "recovery_count": 0,
+      "contradictions": 0
+    },
+    {
+      "track_id": 9,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "first_frame": 657,
+      "last_frame": 1591,
+      "lifetime_frames": 935,
+      "lifetime_seconds": 31.15,
+      "face_matches": 0,
+      "body_matches": 836,
+      "recovery_count": 0,
+      "contradictions": 0
+    },
+    {
+      "track_id": 10,
+      "name": "aagam",
+      "locked": true,
+      "locked_at_frame": 1012,
+      "locked_face_score": 0.5376,
+      "first_frame": 774,
+      "last_frame": 2664,
+      "lifetime_frames": 1891,
+      "lifetime_seconds": 63.0,
+      "face_matches": 219,
+      "body_matches": 1753,
+      "recovery_count": 0,
+      "contradictions": 0
+    },
+    {
+      "track_id": 11,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "first_frame": 995,
+      "last_frame": 1122,
+      "lifetime_frames": 128,
+      "lifetime_seconds": 4.26,
+      "face_matches": 0,
+      "body_matches": 45,
+      "recovery_count": 0,
+      "contradictions": 0
+    },
+    {
+      "track_id": 12,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "first_frame": 1024,
+      "last_frame": 1051,
+      "lifetime_frames": 28,
+      "lifetime_seconds": 0.93,
+      "face_matches": 21,
+      "body_matches": 28,
+      "recovery_count": 0,
+      "contradictions": 0
+    },
+    {
+      "track_id": 13,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "first_frame": 1235,
+      "last_frame": 1243,
+      "lifetime_frames": 9,
+      "lifetime_seconds": 0.3,
+      "face_matches": 2,
+      "body_matches": 9,
+      "recovery_count": 0,
+      "contradictions": 0
+    },
+    {
+      "track_id": 15,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "first_frame": 1599,
+      "last_frame": 2380,
+      "lifetime_frames": 782,
+      "lifetime_seconds": 26.05,
+      "face_matches": 0,
+      "body_matches": 687,
+      "recovery_count": 0,
+      "contradictions": 0
+    },
+    {
+      "track_id": 16,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "first_frame": 1698,
+      "last_frame": 1725,
+      "lifetime_frames": 28,
+      "lifetime_seconds": 0.93,
+      "face_matches": 0,
+      "body_matches": 28,
+      "recovery_count": 0,
+      "contradictions": 0
+    },
+    {
+      "track_id": 17,
+      "name": "harshil",
+      "locked": true,
+      "locked_at_frame": 1946,
+      "locked_face_score": 0.551,
+      "first_frame": 1801,
+      "last_frame": 2999,
+      "lifetime_frames": 1199,
+      "lifetime_seconds": 39.94,
+      "face_matches": 61,
+      "body_matches": 1194,
+      "recovery_count": 0,
+      "contradictions": 0
+    },
+    {
+      "track_id": 18,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "first_frame": 1918,
+      "last_frame": 1958,
+      "lifetime_frames": 41,
+      "lifetime_seconds": 1.37,
+      "face_matches": 0,
+      "body_matches": 24,
+      "recovery_count": 0,
+      "contradictions": 0
+    },
+    {
+      "track_id": 19,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "first_frame": 2151,
+      "last_frame": 3188,
+      "lifetime_frames": 1038,
+      "lifetime_seconds": 34.58,
+      "face_matches": 63,
+      "body_matches": 1010,
+      "recovery_count": 0,
+      "contradictions": 0
+    },
+    {
+      "track_id": 20,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "first_frame": 2438,
+      "last_frame": 2446,
+      "lifetime_frames": 9,
+      "lifetime_seconds": 0.3,
+      "face_matches": 0,
+      "body_matches": 9,
+      "recovery_count": 0,
+      "contradictions": 0
+    },
+    {
+      "track_id": 21,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "first_frame": 2673,
+      "last_frame": 3416,
+      "lifetime_frames": 744,
+      "lifetime_seconds": 24.79,
+      "face_matches": 7,
+      "body_matches": 716,
+      "recovery_count": 0,
+      "contradictions": 0
+    },
+    {
+      "track_id": 22,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "first_frame": 2727,
+      "last_frame": 2836,
+      "lifetime_frames": 110,
+      "lifetime_seconds": 3.66,
+      "face_matches": 49,
+      "body_matches": 110,
+      "recovery_count": 0,
+      "contradictions": 0
+    },
+    {
+      "track_id": 23,
+      "name": "swayam",
+      "locked": true,
+      "locked_at_frame": 3174,
+      "locked_face_score": 0.5586,
+      "first_frame": 3001,
+      "last_frame": 3416,
+      "lifetime_frames": 416,
+      "lifetime_seconds": 13.86,
+      "face_matches": 143,
+      "body_matches": 397,
+      "recovery_count": 0,
+      "contradictions": 0
+    }
+  ],
+  "body_gallery_sizes": {
+    "aagam": 80,
+    "harshil": 80,
+    "soham": 33,
+    "swayam": 80
+  },
+  "final_student_owner": {
+    "swayam": 23
+  },
+  "final_track_to_student": {
+    "23": "swayam"
+  },
+  "ownership_violations_detected": 0,
+  "processing_time_seconds": 669.34,
+  "processing_fps": 5.11
+}

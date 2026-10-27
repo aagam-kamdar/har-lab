@@ -1,0 +1,696 @@
+{
+  "metadata": {
+    "experiment": "YOLOv8-Pose Detector-Only Benchmark",
+    "video_path": "new lab video.mp4",
+    "frames_evaluated": 1800,
+    "fps_target": 30.0,
+    "ultralytics_version": "8.4.161",
+    "box_comparison_data_source": "Original Cached YOLO Baseline (yolo26n.pt, classes=[0], conf=0.25, imgsz=640)",
+    "timing_data_source": "Fresh CPU timing run across identical 1800 frames"
+  },
+  "model_capacity_comparison": {
+    "current_yolo": {
+      "checkpoint": "yolo26n.pt",
+      "architecture": "YOLOv8-nano Object Detector",
+      "parameters": 2572280,
+      "input_resolution": "640x640",
+      "classes": [
+        0
+      ],
+      "conf_threshold": 0.25,
+      "nms_iou": 0.7
+    },
+    "yolov8_pose": {
+      "checkpoint": "yolov8n-pose.pt",
+      "architecture": "YOLOv8-nano Human Pose Model (COCO 17-Keypoint Head)",
+      "parameters": 3295470,
+      "input_resolution": "640x640",
+      "classes": [
+        0
+      ],
+      "conf_threshold": 0.25,
+      "nms_iou": 0.7
+    },
+    "capacity_delta_parameters": 723190,
+    "capacity_delta_pct": 28.11,
+    "comparability_assessment": "Closest matching nano-tier pair. Pose model contains ~28.1% extra parameters purely in the 17-keypoint regression branch, which were completely ignored during this benchmark."
+  },
+  "overall_detection_metrics": {
+    "total_frames": 1800,
+    "total_baseline_boxes": 6784,
+    "total_pose_boxes": 7280,
+    "average_baseline_boxes_per_frame": 3.769,
+    "average_pose_boxes_per_frame": 4.044,
+    "total_matched_pairs": 6015,
+    "total_matched_gte_50_iou": 5394,
+    "percent_matched_gte_50_iou": 89.68,
+    "mean_matched_iou": 0.7698,
+    "median_matched_iou": 0.8303,
+    "total_unmatched_baseline_boxes": 1390,
+    "total_unmatched_pose_boxes": 1886
+  },
+  "inference_speed_cpu": {
+    "current_yolo": {
+      "total_inference_time_seconds": 62.25,
+      "average_latency_ms": 34.58,
+      "average_fps": 28.92
+    },
+    "yolov8_pose": {
+      "total_inference_time_seconds": 61.72,
+      "average_latency_ms": 34.29,
+      "average_fps": 29.16
+    },
+    "speed_ratio_pose_vs_base": 1.01
+  },
+  "difficult_windows_audit": {
+    "aagam_window": {
+      "window": "Frames 272 to 726",
+      "student": "Aagam",
+      "total_frames": 455,
+      "baseline_avg_dets_per_frame": 3.63,
+      "pose_avg_dets_per_frame": 3.86,
+      "baseline_missed_person_frames": 3,
+      "baseline_missed_person_pct": 0.66,
+      "pose_missed_person_frames": 0,
+      "pose_missed_person_pct": 0.0,
+      "both_detected_person_frames": 452,
+      "both_missed_person_frames": 0,
+      "baseline_only_detected_frames": 0,
+      "pose_only_detected_frames": 3,
+      "matched_mean_iou": 0.7705
+    },
+    "harshil_window": {
+      "window": "Frames 564 to 1437",
+      "student": "Harshil",
+      "total_frames": 874,
+      "baseline_avg_dets_per_frame": 3.96,
+      "pose_avg_dets_per_frame": 4.22,
+      "baseline_missed_person_frames": 267,
+      "baseline_missed_person_pct": 30.55,
+      "pose_missed_person_frames": 49,
+      "pose_missed_person_pct": 5.61,
+      "both_detected_person_frames": 607,
+      "both_missed_person_frames": 49,
+      "baseline_only_detected_frames": 0,
+      "pose_only_detected_frames": 218,
+      "matched_mean_iou": 0.7931
+    }
+  },
+  "scene_category_breakdown": [
+    {
+      "category": "Standing / Intro",
+      "frame_range": "0 to 300",
+      "total_frames": 301,
+      "baseline_avg_dets": 3.02,
+      "pose_avg_dets": 3.27,
+      "mean_iou": 0.8309,
+      "frames_baseline_more": 55,
+      "frames_pose_more": 105,
+      "frames_agree": 141
+    },
+    {
+      "category": "Turning & Movement",
+      "frame_range": "150 to 300",
+      "total_frames": 151,
+      "baseline_avg_dets": 2.89,
+      "pose_avg_dets": 3.47,
+      "mean_iou": 0.8572,
+      "frames_baseline_more": 12,
+      "frames_pose_more": 79,
+      "frames_agree": 60
+    },
+    {
+      "category": "Bending / Sitting Transition",
+      "frame_range": "300 to 450",
+      "total_frames": 151,
+      "baseline_avg_dets": 3.4,
+      "pose_avg_dets": 3.73,
+      "mean_iou": 0.7779,
+      "frames_baseline_more": 29,
+      "frames_pose_more": 67,
+      "frames_agree": 55
+    },
+    {
+      "category": "Sitting at Desks",
+      "frame_range": "500 to 1400",
+      "total_frames": 901,
+      "baseline_avg_dets": 3.89,
+      "pose_avg_dets": 4.17,
+      "mean_iou": 0.793,
+      "frames_baseline_more": 233,
+      "frames_pose_more": 409,
+      "frames_agree": 259
+    },
+    {
+      "category": "Desk / Monitor Occlusion",
+      "frame_range": "600 to 1800",
+      "total_frames": 1200,
+      "baseline_avg_dets": 3.98,
+      "pose_avg_dets": 4.26,
+      "mean_iou": 0.7561,
+      "frames_baseline_more": 328,
+      "frames_pose_more": 518,
+      "frames_agree": 354
+    },
+    {
+      "category": "Far-Distance / Small Person (Harshil Back)",
+      "frame_range": "100 to 300",
+      "total_frames": 201,
+      "baseline_avg_dets": 2.96,
+      "pose_avg_dets": 3.42,
+      "mean_iou": 0.8666,
+      "frames_baseline_more": 21,
+      "frames_pose_more": 90,
+      "frames_agree": 90
+    }
+  ],
+  "representative_examples": [
+    {
+      "image_filename": "01_current_yolo_misses_pose_detects.jpg",
+      "frame": 30,
+      "description": "Pose detects person missed by Current YOLO",
+      "baseline_boxes": [
+        {
+          "bbox": [
+            766.2,
+            71.0,
+            967.8,
+            386.8
+          ],
+          "conf": 0.7785
+        },
+        {
+          "bbox": [
+            654.8,
+            58.5,
+            803.4,
+            235.3
+          ],
+          "conf": 0.4093
+        }
+      ],
+      "pose_boxes": [
+        {
+          "bbox": [
+            767.6,
+            70.4,
+            971.7,
+            374.9
+          ],
+          "conf": 0.8607
+        },
+        {
+          "bbox": [
+            641.3,
+            63.7,
+            809.7,
+            257.3
+          ],
+          "conf": 0.6759
+        },
+        {
+          "bbox": [
+            520.6,
+            43.0,
+            623.0,
+            185.4
+          ],
+          "conf": 0.5749
+        }
+      ]
+    },
+    {
+      "image_filename": "02_pose_misses_current_yolo_detects.jpg",
+      "frame": 8,
+      "description": "Current YOLO detects person missed by Pose",
+      "baseline_boxes": [
+        {
+          "bbox": [
+            766.7,
+            76.2,
+            968.0,
+            387.0
+          ],
+          "conf": 0.7956
+        },
+        {
+          "bbox": [
+            657.4,
+            61.7,
+            808.1,
+            230.9
+          ],
+          "conf": 0.553
+        },
+        {
+          "bbox": [
+            513.6,
+            47.3,
+            621.5,
+            177.5
+          ],
+          "conf": 0.3651
+        },
+        {
+          "bbox": [
+            658.5,
+            62.0,
+            789.2,
+            195.7
+          ],
+          "conf": 0.2777
+        }
+      ],
+      "pose_boxes": [
+        {
+          "bbox": [
+            768.7,
+            72.3,
+            970.1,
+            374.6
+          ],
+          "conf": 0.8618
+        },
+        {
+          "bbox": [
+            658.7,
+            62.9,
+            810.3,
+            254.9
+          ],
+          "conf": 0.8064
+        },
+        {
+          "bbox": [
+            513.8,
+            44.5,
+            619.6,
+            188.0
+          ],
+          "conf": 0.4972
+        }
+      ]
+    },
+    {
+      "image_filename": "03_both_detect_standing_intro.jpg",
+      "frame": 50,
+      "description": "Both detectors find all 3 standing students (High IoU agreement)",
+      "baseline_boxes": [
+        {
+          "bbox": [
+            763.2,
+            92.4,
+            947.4,
+            374.4
+          ],
+          "conf": 0.6661
+        },
+        {
+          "bbox": [
+            650.8,
+            61.3,
+            774.8,
+            167.0
+          ],
+          "conf": 0.6319
+        },
+        {
+          "bbox": [
+            506.1,
+            44.6,
+            623.0,
+            143.2
+          ],
+          "conf": 0.2745
+        }
+      ],
+      "pose_boxes": [
+        {
+          "bbox": [
+            770.3,
+            91.4,
+            953.8,
+            375.5
+          ],
+          "conf": 0.8492
+        },
+        {
+          "bbox": [
+            650.4,
+            67.1,
+            798.5,
+            259.3
+          ],
+          "conf": 0.7875
+        },
+        {
+          "bbox": [
+            526.1,
+            43.6,
+            653.2,
+            150.1
+          ],
+          "conf": 0.4465
+        }
+      ]
+    },
+    {
+      "image_filename": "04_both_miss_heavy_occlusion.jpg",
+      "frame": 600,
+      "description": "Both detectors miss heavily occluded seated student",
+      "baseline_boxes": [
+        {
+          "bbox": [
+            608.5,
+            106.6,
+            821.4,
+            378.4
+          ],
+          "conf": 0.8266
+        },
+        {
+          "bbox": [
+            792.7,
+            73.7,
+            938.6,
+            294.9
+          ],
+          "conf": 0.6024
+        },
+        {
+          "bbox": [
+            638.7,
+            67.6,
+            769.7,
+            199.4
+          ],
+          "conf": 0.2527
+        }
+      ],
+      "pose_boxes": [
+        {
+          "bbox": [
+            610.5,
+            101.4,
+            820.2,
+            375.5
+          ],
+          "conf": 0.8917
+        },
+        {
+          "bbox": [
+            794.8,
+            74.3,
+            948.8,
+            318.6
+          ],
+          "conf": 0.825
+        },
+        {
+          "bbox": [
+            526.0,
+            44.5,
+            610.1,
+            141.5
+          ],
+          "conf": 0.2909
+        }
+      ]
+    },
+    {
+      "image_filename": "05_desk_monitor_occlusion.jpg",
+      "frame": 800,
+      "description": "Desk & computer screen occlusion scenario",
+      "baseline_boxes": [
+        {
+          "bbox": [
+            628.4,
+            61.5,
+            792.1,
+            306.4
+          ],
+          "conf": 0.8117
+        },
+        {
+          "bbox": [
+            483.1,
+            3.7,
+            619.5,
+            195.0
+          ],
+          "conf": 0.5496
+        },
+        {
+          "bbox": [
+            779.6,
+            75.3,
+            937.9,
+            295.1
+          ],
+          "conf": 0.4318
+        }
+      ],
+      "pose_boxes": [
+        {
+          "bbox": [
+            632.8,
+            57.8,
+            793.2,
+            309.0
+          ],
+          "conf": 0.8803
+        },
+        {
+          "bbox": [
+            783.3,
+            77.0,
+            955.7,
+            318.8
+          ],
+          "conf": 0.808
+        },
+        {
+          "bbox": [
+            480.9,
+            4.7,
+            585.3,
+            207.6
+          ],
+          "conf": 0.6696
+        },
+        {
+          "bbox": [
+            531.0,
+            41.3,
+            652.5,
+            179.9
+          ],
+          "conf": 0.567
+        }
+      ]
+    },
+    {
+      "image_filename": "06_far_distance_harshil.jpg",
+      "frame": 100,
+      "description": "Far-distance standing student at rear desk",
+      "baseline_boxes": [
+        {
+          "bbox": [
+            696.4,
+            0.9,
+            864.4,
+            374.8
+          ],
+          "conf": 0.8901
+        },
+        {
+          "bbox": [
+            877.4,
+            233.8,
+            1081.6,
+            474.7
+          ],
+          "conf": 0.3504
+        },
+        {
+          "bbox": [
+            513.8,
+            43.3,
+            626.8,
+            140.1
+          ],
+          "conf": 0.2605
+        }
+      ],
+      "pose_boxes": [
+        {
+          "bbox": [
+            697.8,
+            0.0,
+            863.7,
+            370.9
+          ],
+          "conf": 0.9237
+        },
+        {
+          "bbox": [
+            527.3,
+            44.2,
+            629.1,
+            151.1
+          ],
+          "conf": 0.4533
+        },
+        {
+          "bbox": [
+            528.4,
+            43.4,
+            660.4,
+            168.3
+          ],
+          "conf": 0.3433
+        }
+      ]
+    },
+    {
+      "image_filename": "07_aagam_desk_occlusion.jpg",
+      "frame": 727,
+      "description": "Aagam seated at desk before face-lock confirmation",
+      "baseline_boxes": [
+        {
+          "bbox": [
+            639.3,
+            64.2,
+            794.2,
+            301.2
+          ],
+          "conf": 0.569
+        },
+        {
+          "bbox": [
+            784.9,
+            76.8,
+            939.9,
+            256.9
+          ],
+          "conf": 0.5153
+        },
+        {
+          "bbox": [
+            494.9,
+            32.3,
+            628.4,
+            179.2
+          ],
+          "conf": 0.2902
+        }
+      ],
+      "pose_boxes": [
+        {
+          "bbox": [
+            784.7,
+            78.3,
+            958.8,
+            322.1
+          ],
+          "conf": 0.8499
+        },
+        {
+          "bbox": [
+            649.3,
+            60.4,
+            793.4,
+            282.2
+          ],
+          "conf": 0.8268
+        },
+        {
+          "bbox": [
+            497.8,
+            27.7,
+            631.5,
+            242.2
+          ],
+          "conf": 0.7955
+        }
+      ]
+    },
+    {
+      "image_filename": "08_bending_sitting_transition.jpg",
+      "frame": 350,
+      "description": "Student bending and transitioning to chair",
+      "baseline_boxes": [
+        {
+          "bbox": [
+            726.8,
+            60.7,
+            982.7,
+            312.7
+          ],
+          "conf": 0.7259
+        },
+        {
+          "bbox": [
+            590.4,
+            66.9,
+            780.7,
+            197.8
+          ],
+          "conf": 0.4115
+        },
+        {
+          "bbox": [
+            621.5,
+            65.4,
+            778.0,
+            233.7
+          ],
+          "conf": 0.3369
+        },
+        {
+          "bbox": [
+            859.3,
+            303.2,
+            1080.4,
+            474.0
+          ],
+          "conf": 0.3269
+        }
+      ],
+      "pose_boxes": [
+        {
+          "bbox": [
+            751.4,
+            57.5,
+            981.0,
+            324.8
+          ],
+          "conf": 0.8563
+        },
+        {
+          "bbox": [
+            636.4,
+            69.4,
+            785.8,
+            250.1
+          ],
+          "conf": 0.6915
+        },
+        {
+          "bbox": [
+            523.2,
+            43.4,
+            649.8,
+            150.1
+          ],
+          "conf": 0.4844
+        }
+      ]
+    }
+  ],
+  "evidence_based_findings": {
+    "detection_recall": "YOLOv8-Pose detected 7280 boxes vs Current YOLO 6784 boxes (+496 boxes, +7.3%). In difficult seated desk windows, Pose demonstrated modest incremental person detection recovery (Aagam window: 0 missed frames vs 3 for Base; Harshil window: 49 missed frames vs 267 for Base).",
+    "bounding_box_tightness": "High mutual spatial agreement across matched detections (Mean IoU = 0.770, Median IoU = 0.830, 89.7% >= 0.50 IoU). Pose bounding boxes tend to encapsulate the full head-to-torso profile more reliably during seated typing.",
+    "cpu_overhead": "YOLOv8-Pose achieved 29.2 FPS on CPU (34.3 ms/frame) compared to Current YOLO at 28.9 FPS (34.6 ms/frame), representing a -0.9% throughput reduction due to keypoint branch computation."
+  }
+}

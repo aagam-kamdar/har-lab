@@ -1,0 +1,21 @@
+# bytetrack_custom.yaml
+# ---------------------
+# BYTETracker configuration tuned for indoor lab student tracking.
+# Students may sit/stand, turn away, or be occluded for several seconds.
+
+# Detection threshold for high-confidence detections
+track_thresh: 0.35
+
+# Buffer length in frames (how long to keep a lost track alive before removing it)
+# 90 = 3 seconds at 30 FPS — allows re-association after brief occlusions
+track_buffer: 90
+
+# IoU matching threshold for first-round association
+# Higher = stricter match (less ID confusion when students sit close together)
+match_thresh: 0.85
+
+# MOT20-compatible mode (False = use standard ByteTrack)
+mot20: False
+
+# Frame rate (used for track buffer timing)
+frame_rate: 30

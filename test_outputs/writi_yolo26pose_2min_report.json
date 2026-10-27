@@ -1,0 +1,52 @@
+{
+  "video": "writi.mp4",
+  "detector": "yolo26n-pose.pt",
+  "duration_seconds": 119.99,
+  "total_frames": 3600,
+  "runtime_seconds": 491.04,
+  "effective_fps": 7.33,
+  "video_fps": 30.003479361400895,
+  "confirmed_locks": [
+    {
+      "frame": 51,
+      "timestamp": 1.7,
+      "tid": 2,
+      "name": "aagam",
+      "score_320": 0.387,
+      "score_640": 0.391
+    },
+    {
+      "frame": 1707,
+      "timestamp": 56.89,
+      "tid": 1,
+      "name": "soham",
+      "score_320": 0.408,
+      "score_640": 0.423
+    },
+    {
+      "frame": 3094,
+      "timestamp": 103.12,
+      "tid": 4,
+      "name": "swayam",
+      "score_320": 0.475,
+      "score_640": 0.493
+    }
+  ],
+  "total_locks": 3,
+  "contradictions": [],
+  "ownership_violations": 0,
+  "candidate_pool_violations": 0,
+  "stats": {
+    "face_extractions": 88948,
+    "body_extractions": 10207,
+    "escalations_to_640": 140,
+    "face_locks": 3,
+    "face_extractions_skipped": 5745
+  },
+  "final_ownership": {
+    "aagam": 2,
+    "soham": 1,
+    "swayam": 4
+  },
+  "output_video": "test_outputs/writi_yolo26pose_2min.mp4"
+}

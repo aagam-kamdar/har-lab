@@ -1,0 +1,125 @@
+================================================================================
+STANDALONE BUG REPORT: BODY RE-ID RECOVERY TRIGGER LOGICAL-GAP BUG
+================================================================================
+
+1. EXECUTIVE SUMMARY
+--------------------
+In the current production codebase, the Body Re-ID Gap Recovery mechanism 
+('attempt_gap_recovery') can NEVER be triggered under any normal tracking condition.
+In the 1,800-frame benchmark, 'Gap Recovery Invocations' was 0 for all variants.
+This is not due to Re-ID feature extractor shortcomings; rather, it is caused by a 
+fundamental logical contradiction between ByteTrack's tracklet eviction lifecycle 
+and the gating conditions inside 'identity_lock_manager.py' and 'robust_tracker.py'.
+
+2. DEFECT LOCATION
+-------------------
+Primary File    : identity_lock_manager.py
+Primary Function: attempt_gap_recovery (lines 268-299)
+Secondary File  : robust_tracker.py (lines 231-244)
+
+Exact Code Snippet (identity_lock_manager.py:268-289):
+------------------------------------------------------
+```python
+268:    def attempt_gap_recovery(
+269:        self,
+270:        track_id: int,
+271:        current_frame: int,
+272:        body_name: str,
+273:        body_score: float,
+274:        body_second_score: float = 0.0,
+275:    ) -> Optional[str]:
+276:        state = self.get_or_create(track_id, current_frame)
+277:        frames_lost = current_frame - state.last_seen_frame
+278:
+279:        if frames_lost < FACE_FRAME_GAP_FOR_RECOVERY:   # FACE_FRAME_GAP_FOR_RECOVERY = 90
+280:            return None
+281:
+282:        if not state.locked:
+283:            return None
+284:
+285:        if body_score < BODY_RECOVERY_THRESHOLD:
+286:            return None
+287:        if (body_score - body_second_score) < BODY_RECOVERY_AMBIGUITY:
+288:            return None
+```
+
+Secondary Code Snippet (robust_tracker.py:231-244):
+--------------------------------------------------
+```python
+231:        state = self.lock_manager.update_seen(tid, frame_idx)
+232:
+233:        # -- Gap recovery check (before face/body extraction) --
+234:        frames_gap = frame_idx - self._track_last_active.get(tid, frame_idx)
+235:        is_new_appearance = frames_gap >= FACE_FRAME_GAP_FOR_RECOVERY
+236:        if is_new_appearance and tid in self._last_body_emb:
+237:            body_emb = self._last_body_emb[tid]
+238:            b_name, b_score, b_sec = self.body_gallery.top_match(body_emb)
+239:            recovered = self.lock_manager.attempt_gap_recovery(
+240:                tid, frame_idx, b_name, b_score, b_sec
+241:            )
+```
+
+3. DETAILED LOGICAL CONTRADICTION & ROOT CAUSE ANALYSIS
+-------------------------------------------------------
+There are three independent mathematical and architectural contradictions that make 
+recovery unreachable:
+
+A. The ByteTrack ID Eviction vs. State Continuity Contradiction:
+   - ByteTrack configuration sets 'max_time_lost' (track_buffer) = 90 frames.
+   - When a student is occluded or walks out of frame for >= 90 frames, ByteTrack 
+     permanently transitions the track from LOST to REMOVED and deletes it from memory.
+   - ByteTrack will NEVER re-emit that retired track_id again.
+   - When the student reappears at frame F > (last_seen + 90), ByteTrack assigns a 
+     BRAND NEW track_id (e.g., Track 27 instead of Track 11).
+
+B. The New-Track Lock Gate Contradiction (Line 282):
+   - When the reappeared person receives a brand new track_id, 'self.get_or_create' 
+     instantiates a new TrackState where 'state.locked == False'.
+   - Line 282 requires:
+       if not state.locked:
+           return None
+   - Because the newly created track is NOT locked, 'attempt_gap_recovery' immediately 
+     aborts and returns None.
+   - It is impossible for a new track to ever be recovered via body Re-ID.
+
+C. The Existing-Track Sticky-Lock Invariance:
+   - If the student was occluded for < 90 frames, ByteTrack maintains the track in 
+     'lost_stracks' and revives it with the SAME track_id.
+   - Under the 100% Sticky-Lock policy, an existing locked track never loses its lock 
+     while in LOST state. When it reappears within 90 frames, it is ALREADY locked to 
+     the student.
+   - Moreover, because frames_lost < 90, Line 279 ('if frames_lost < 90: return None') 
+     aborts recovery anyway.
+
+D. Execution Order Inversion in robust_tracker.py (Lines 231 & 239):
+   - In 'robust_tracker.py', line 231 calls 'self.lock_manager.update_seen(tid, frame_idx)'.
+   - 'update_seen' immediately executes:
+       state.last_seen_frame = current_frame
+   - When line 239 subsequently calls 'attempt_gap_recovery', line 277 computes:
+       frames_lost = current_frame - state.last_seen_frame
+     Since 'state.last_seen_frame' was just set to 'current_frame', 'frames_lost' is 
+     IDENTICALLY 0.
+   - Thus, 'frames_lost < FACE_FRAME_GAP_FOR_RECOVERY' (0 < 90) is ALWAYS True, 
+     aborting the function on line 280 on every single frame.
+
+4. SYSTEM IMPACT
+-----------------
+1. Recovery Invocations = 0: Across the entire 1,800 frames, Body Re-ID recovery was 
+   never invoked even once.
+2. Inability to Re-identify After Gaps: If a student disappears for > 3 seconds (90 frames) 
+   and reappears, they are treated as an UNKNOWN new track until ArcFace detects a 
+   frontal face. Body Re-ID cannot bridge long-duration disappearances.
+3. Decoupling from Intended Architecture: The design intent was for Body Re-ID to recover 
+   identities for new or returning tracks when faces are occluded; currently, this 
+   pathway is structurally blocked.
+
+5. ARCHITECTURAL FIX REQUIREMENTS (FOR FUTURE IMPLEMENTATION)
+-------------------------------------------------------------
+(Note: Per instructions, no production code is modified in this pass. Documented for future resolution.)
+To enable Body Re-ID recovery as intended:
+1. Re-ID Query on New/Unassigned Tracks: When a new track is created (state.locked == False) 
+   and lacks a face, allow Body Re-ID against enrolled/self-learned galleries.
+2. Disassociate Gap Metric from Single Track ID: Match new tracks against unowned enrolled 
+   students whose previous track was REMOVED > 90 frames ago.
+3. Order of Operations: Compute 'frames_lost' BEFORE updating 'state.last_seen_frame'.
+================================================================================

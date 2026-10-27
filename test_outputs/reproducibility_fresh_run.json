@@ -1,0 +1,120 @@
+{
+  "run_id": 3,
+  "total_frames": 6005,
+  "source_fps": 30.0,
+  "total_video_duration_s": 200.17,
+  "runtime_s": 415.65,
+  "reached_frame_6005": true,
+  "gate_parameters": {
+    "arcface_confirm_s": 0.5,
+    "body_stable_s": 3.0,
+    "live_gate_evidence_s": 1.5,
+    "clear_margin": 0.15
+  },
+  "live_displayed": {
+    "total_person_seconds": 484.73,
+    "known_person_seconds": 369.23,
+    "unknown_person_seconds": 115.5,
+    "overall_pct_unknown": 23.83
+  },
+  "retroactive_relabel": {
+    "total_person_seconds": 484.73,
+    "resolved_person_seconds": 484.73,
+    "unresolved_person_seconds": 0.0,
+    "overall_pct_unknown": 0.0
+  },
+  "students": {
+    "aagam": {
+      "tracks": 12,
+      "track_ids": [
+        2,
+        5,
+        15,
+        25,
+        32,
+        34,
+        35,
+        38,
+        40,
+        42,
+        46,
+        49
+      ],
+      "first_candidate_frame": 3,
+      "first_candidate_s": 0.1,
+      "first_lock_frame": 93,
+      "first_lock_s": 3.1,
+      "total_person_seconds": 125.4,
+      "live_displayed_known_s": 110.7,
+      "live_displayed_unknown_s": 14.7,
+      "live_displayed_pct_unknown": 11.72,
+      "retroactive_pct_unknown": 0.0
+    },
+    "swayam": {
+      "tracks": 10,
+      "track_ids": [
+        4,
+        7,
+        8,
+        9,
+        16,
+        20,
+        30,
+        31,
+        44,
+        50
+      ],
+      "first_candidate_frame": 120,
+      "first_candidate_s": 4.0,
+      "first_lock_frame": 540,
+      "first_lock_s": 18.0,
+      "total_person_seconds": 113.07,
+      "live_displayed_known_s": 79.1,
+      "live_displayed_unknown_s": 33.97,
+      "live_displayed_pct_unknown": 30.04,
+      "retroactive_pct_unknown": 0.0
+    },
+    "harshil": {
+      "tracks": 6,
+      "track_ids": [
+        3,
+        11,
+        14,
+        27,
+        45,
+        48
+      ],
+      "first_candidate_frame": 6,
+      "first_candidate_s": 0.2,
+      "first_lock_frame": 827,
+      "first_lock_s": 27.57,
+      "total_person_seconds": 107.1,
+      "live_displayed_known_s": 55.57,
+      "live_displayed_unknown_s": 51.53,
+      "live_displayed_pct_unknown": 48.12,
+      "retroactive_pct_unknown": 0.0
+    },
+    "soham": {
+      "tracks": 7,
+      "track_ids": [
+        1,
+        10,
+        36,
+        37,
+        39,
+        43,
+        47
+      ],
+      "first_candidate_frame": 6,
+      "first_candidate_s": 0.2,
+      "first_lock_frame": 24,
+      "first_lock_s": 0.8,
+      "total_person_seconds": 139.17,
+      "live_displayed_known_s": 123.87,
+      "live_displayed_unknown_s": 15.3,
+      "live_displayed_pct_unknown": 10.99,
+      "retroactive_pct_unknown": 0.0
+    }
+  },
+  "explanation_track_count_change": "Explanation of Track Count Shift (48 -> 26 tracks):\nUnder the earlier permissive gate ('evidence >= 1.5s OR margin >= 0.15'), 48 tracks met the gate\nand unlocked live names; their frame counts were aggregated into student totals, totaling 484.57 person-seconds.\nUnder the strict dual gate ('BOTH margin >= 0.15 AND evidence >= 1.5s'), 22 tracks failed to meet\nboth gates simultaneously. Because the previous reporting script only mapped track_to_assigned_person\nwhen pid in KNOWN_STUDENTS, those 22 tracks were completely omitted from student frame sums.\nThis caused counted tracks to drop from 48 to 26 and enrolled person-seconds to drop from 484.57s to 450.30s\n(the 34.27s from those 22 tracks was excluded). Under the redesigned gate, candidate tracking\nand retroactive relabeling cleanly attribute these tracks, eliminating artificial denominator loss."
+}

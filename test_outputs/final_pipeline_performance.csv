@@ -1,0 +1,13 @@
+Component,Module,Latency_ms,Throughput_FPS,Type
+Detector,YOLO26-Pose (yolo26n-pose.pt),56.8,17.6,Detector
+Tracker,ByteTrack,0.57,1754.4,Tracker
+Tracker,OC-SORT,1.53,653.6,Tracker
+Re-ID Extractor,MobileNetV3+Spatial HSV,9.64,103.7,Feature Extractor
+Re-ID Extractor,OSNet-x0.25,36.62,27.3,Feature Extractor
+Re-ID Extractor,ResNet18-IBN-A,15.74,63.5,Feature Extractor
+End-to-End Pipeline,ByteTrack + MobileNetV3+HSV,57.47,17.4,End-to-End (Recovery-Only)
+End-to-End Pipeline,ByteTrack + OSNet-x0.25,57.74,17.3,End-to-End (Recovery-Only)
+End-to-End Pipeline,ByteTrack + ResNet18-IBN-A,57.53,17.4,End-to-End (Recovery-Only)
+End-to-End Pipeline,OC-SORT + MobileNetV3+HSV,58.43,17.1,End-to-End (Recovery-Only)
+End-to-End Pipeline,OC-SORT + OSNet-x0.25,58.7,17.0,End-to-End (Recovery-Only)
+End-to-End Pipeline,OC-SORT + ResNet18-IBN-A,58.49,17.1,End-to-End (Recovery-Only)

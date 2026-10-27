@@ -1,0 +1,26 @@
+{
+  "Aagam": {
+    "name": "Aagam",
+    "enrollment_complete": true,
+    "num_body_embeddings": 10,
+    "body_crop_count": 10
+  },
+  "Swayam": {
+    "name": "Swayam",
+    "enrollment_complete": true,
+    "num_body_embeddings": 13,
+    "body_crop_count": 13
+  },
+  "Harshil": {
+    "name": "Harshil",
+    "enrollment_complete": true,
+    "num_body_embeddings": 8,
+    "body_crop_count": 8
+  },
+  "Soham": {
+    "name": "Soham",
+    "enrollment_complete": true,
+    "num_body_embeddings": 20,
+    "body_crop_count": 20
+  }
+}

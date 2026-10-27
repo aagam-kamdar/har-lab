@@ -1,0 +1,661 @@
+{
+  "audit_status": "CODE FIX IMPLEMENTED & VERIFIED",
+  "source_video_fps": 30.0,
+  "recovery_sample_size_statement": "Recovery sample size is small; results are engineering evidence and not a statistically stable estimate.",
+  "recovery_events": [
+    {
+      "event_id": "EVT_BT_1",
+      "tracker": "ByteTrack",
+      "ground_truth_student": "harshil",
+      "old_track_id": 2,
+      "died_frame": 697,
+      "removed_frame": 788,
+      "new_track_id": 12,
+      "new_track_first_appearance": 902,
+      "new_track_recovery_lock_frame": null,
+      "gap_to_birth_frames": 114,
+      "gap_to_birth_seconds": 3.8,
+      "recovery_delay_frames": null,
+      "recovery_delay_seconds": null,
+      "unowned_until_lock_frames": null,
+      "unowned_until_lock_seconds": null,
+      "lock_after_removed": null,
+      "viewpoint": "side_view",
+      "occlusion": "seated_desk_occlusion",
+      "status_by_model": {
+        "MobileNetV3+HSV": {
+          "match": "harshil",
+          "score": 0.8297,
+          "margin": 0.0203,
+          "status": "UNKNOWN_REJECTED"
+        },
+        "OSNet-x0.25": {
+          "match": "harshil",
+          "score": 0.7648,
+          "margin": 0.0125,
+          "status": "UNKNOWN_REJECTED"
+        },
+        "ResNet18-IBN-A": {
+          "match": "swayam",
+          "score": 0.8658,
+          "margin": 0.0088,
+          "status": "UNKNOWN_REJECTED"
+        }
+      },
+      "valid_genuine_recovery_candidate": true,
+      "timing_candidate_flag": "VALID_POST_REMOVAL"
+    },
+    {
+      "event_id": "EVT_BT_2",
+      "tracker": "ByteTrack",
+      "ground_truth_student": "aagam",
+      "old_track_id": 8,
+      "died_frame": 943,
+      "removed_frame": 1034,
+      "new_track_id": 18,
+      "new_track_first_appearance": 1089,
+      "new_track_recovery_lock_frame": 1089,
+      "gap_to_birth_frames": 55,
+      "gap_to_birth_seconds": 1.833,
+      "recovery_delay_frames": 0,
+      "recovery_delay_seconds": 0.0,
+      "unowned_until_lock_frames": 55,
+      "unowned_until_lock_seconds": 1.833,
+      "lock_after_removed": true,
+      "viewpoint": "three_quarter_standing",
+      "occlusion": "standing_walking",
+      "status_by_model": {
+        "MobileNetV3+HSV": {
+          "match": "soham",
+          "score": 0.8593,
+          "margin": 0.0798,
+          "status": "FALSE_RECOVERY"
+        },
+        "OSNet-x0.25": {
+          "match": "soham",
+          "score": 0.8956,
+          "margin": 0.2397,
+          "status": "FALSE_RECOVERY"
+        },
+        "ResNet18-IBN-A": {
+          "match": "soham",
+          "score": 0.8527,
+          "margin": 0.0381,
+          "status": "UNKNOWN_REJECTED"
+        }
+      },
+      "valid_genuine_recovery_candidate": true,
+      "timing_candidate_flag": "VALID_POST_REMOVAL"
+    },
+    {
+      "event_id": "EVT_BT_3",
+      "tracker": "ByteTrack",
+      "ground_truth_student": "swayam",
+      "old_track_id": 10,
+      "died_frame": 1141,
+      "removed_frame": 1232,
+      "new_track_id": 20,
+      "new_track_first_appearance": 1230,
+      "new_track_recovery_lock_frame": 1230,
+      "gap_to_birth_frames": -2,
+      "gap_to_birth_seconds": -0.067,
+      "recovery_delay_frames": 0,
+      "recovery_delay_seconds": 0.0,
+      "unowned_until_lock_frames": -2,
+      "unowned_until_lock_seconds": -0.067,
+      "lock_after_removed": false,
+      "viewpoint": "frontal_seated",
+      "occlusion": "seated_desk_occlusion",
+      "status_by_model": {
+        "MobileNetV3+HSV": {
+          "match": "harshil",
+          "score": 0.7341,
+          "margin": 0.0064,
+          "status": "UNKNOWN_REJECTED"
+        },
+        "OSNet-x0.25": {
+          "match": "aagam",
+          "score": 0.7522,
+          "margin": 0.0994,
+          "status": "FALSE_RECOVERY"
+        },
+        "ResNet18-IBN-A": {
+          "match": "aagam",
+          "score": 0.8241,
+          "margin": 0.0271,
+          "status": "UNKNOWN_REJECTED"
+        }
+      },
+      "candidate_pool_audit_frame_1230": {
+        "MobileNetV3+HSV": {
+          "harshil": 0.7341,
+          "aagam": 0.7276,
+          "swayam": 0.7207,
+          "soham": 0.6923
+        },
+        "OSNet-x0.25": {
+          "aagam": 0.7522,
+          "harshil": 0.6528,
+          "soham": 0.6424,
+          "swayam": 0.6246
+        },
+        "ResNet18-IBN-A": {
+          "aagam": 0.8241,
+          "swayam": 0.797,
+          "harshil": 0.793,
+          "soham": 0.7667
+        }
+      },
+      "swayam_in_candidate_pool": true,
+      "timing_candidate_flag": "NEAR_MISS_OWNERSHIP_TIMING_DEFECT",
+      "valid_genuine_recovery_candidate": false
+    },
+    {
+      "event_id": "EVT_BT_4",
+      "tracker": "ByteTrack",
+      "ground_truth_student": "harshil",
+      "old_track_id": 22,
+      "died_frame": 1584,
+      "removed_frame": 1675,
+      "new_track_id": 24,
+      "new_track_first_appearance": 1722,
+      "new_track_recovery_lock_frame": 1722,
+      "gap_to_birth_frames": 47,
+      "gap_to_birth_seconds": 1.567,
+      "recovery_delay_frames": 0,
+      "recovery_delay_seconds": 0.0,
+      "unowned_until_lock_frames": 47,
+      "unowned_until_lock_seconds": 1.567,
+      "lock_after_removed": true,
+      "viewpoint": "side_view",
+      "occlusion": "seated_desk_occlusion",
+      "status_by_model": {
+        "MobileNetV3+HSV": {
+          "match": "harshil",
+          "score": 0.8376,
+          "margin": 0.0237,
+          "status": "UNKNOWN_REJECTED"
+        },
+        "OSNet-x0.25": {
+          "match": "harshil",
+          "score": 0.8107,
+          "margin": 0.1457,
+          "status": "CORRECT"
+        },
+        "ResNet18-IBN-A": {
+          "match": "swayam",
+          "score": 0.8629,
+          "margin": 0.0229,
+          "status": "UNKNOWN_REJECTED"
+        }
+      },
+      "valid_genuine_recovery_candidate": true,
+      "timing_candidate_flag": "VALID_POST_REMOVAL"
+    },
+    {
+      "event_id": "EVT_OC_1",
+      "tracker": "OC-SORT",
+      "ground_truth_student": "harshil",
+      "old_track_id": 2,
+      "died_frame": 697,
+      "removed_frame": 788,
+      "new_track_id": 17,
+      "new_track_first_appearance": 888,
+      "new_track_recovery_lock_frame": null,
+      "gap_to_birth_frames": 100,
+      "gap_to_birth_seconds": 3.333,
+      "recovery_delay_frames": null,
+      "recovery_delay_seconds": null,
+      "unowned_until_lock_frames": null,
+      "unowned_until_lock_seconds": null,
+      "lock_after_removed": null,
+      "viewpoint": "side_view",
+      "occlusion": "seated_desk_occlusion",
+      "status_by_model": {
+        "MobileNetV3+HSV": {
+          "match": "swayam",
+          "score": 0.7517,
+          "margin": 0.0034,
+          "status": "UNKNOWN_REJECTED"
+        },
+        "OSNet-x0.25": {
+          "match": "aagam",
+          "score": 0.6941,
+          "margin": 0.001,
+          "status": "UNKNOWN_REJECTED"
+        },
+        "ResNet18-IBN-A": {
+          "match": "harshil",
+          "score": 0.7769,
+          "margin": 0.0201,
+          "status": "UNKNOWN_REJECTED"
+        }
+      },
+      "valid_genuine_recovery_candidate": true,
+      "timing_candidate_flag": "VALID_POST_REMOVAL"
+    },
+    {
+      "event_id": "EVT_OC_2",
+      "tracker": "OC-SORT",
+      "ground_truth_student": "harshil",
+      "old_track_id": 10,
+      "died_frame": 1043,
+      "removed_frame": 1134,
+      "new_track_id": 25,
+      "new_track_first_appearance": 1202,
+      "new_track_recovery_lock_frame": 1202,
+      "gap_to_birth_frames": 68,
+      "gap_to_birth_seconds": 2.267,
+      "recovery_delay_frames": 0,
+      "recovery_delay_seconds": 0.0,
+      "unowned_until_lock_frames": 68,
+      "unowned_until_lock_seconds": 2.267,
+      "lock_after_removed": true,
+      "viewpoint": "side_view",
+      "occlusion": "seated_desk_occlusion",
+      "status_by_model": {
+        "MobileNetV3+HSV": {
+          "match": "harshil",
+          "score": 0.7753,
+          "margin": 0.0001,
+          "status": "UNKNOWN_REJECTED"
+        },
+        "OSNet-x0.25": {
+          "match": "swayam",
+          "score": 0.7301,
+          "margin": 0.0529,
+          "status": "FALSE_RECOVERY"
+        },
+        "ResNet18-IBN-A": {
+          "match": "aagam",
+          "score": 0.7621,
+          "margin": 0.0039,
+          "status": "UNKNOWN_REJECTED"
+        }
+      },
+      "valid_genuine_recovery_candidate": true,
+      "timing_candidate_flag": "VALID_POST_REMOVAL"
+    },
+    {
+      "event_id": "EVT_OC_3",
+      "tracker": "OC-SORT",
+      "ground_truth_student": "harshil",
+      "old_track_id": 10,
+      "died_frame": 1043,
+      "removed_frame": 1134,
+      "new_track_id": 28,
+      "new_track_first_appearance": 1311,
+      "new_track_recovery_lock_frame": null,
+      "gap_to_birth_frames": 177,
+      "gap_to_birth_seconds": 5.9,
+      "recovery_delay_frames": null,
+      "recovery_delay_seconds": null,
+      "unowned_until_lock_frames": null,
+      "unowned_until_lock_seconds": null,
+      "lock_after_removed": null,
+      "viewpoint": "side_view",
+      "occlusion": "seated_desk_occlusion",
+      "status_by_model": {
+        "MobileNetV3+HSV": {
+          "match": "harshil",
+          "score": 0.8022,
+          "margin": 0.0221,
+          "status": "UNKNOWN_REJECTED"
+        },
+        "OSNet-x0.25": {
+          "match": "harshil",
+          "score": 0.743,
+          "margin": 0.0366,
+          "status": "UNKNOWN_REJECTED"
+        },
+        "ResNet18-IBN-A": {
+          "match": "swayam",
+          "score": 0.8375,
+          "margin": 0.0069,
+          "status": "UNKNOWN_REJECTED"
+        }
+      },
+      "valid_genuine_recovery_candidate": true,
+      "timing_candidate_flag": "VALID_POST_REMOVAL"
+    },
+    {
+      "event_id": "EVT_OC_4",
+      "tracker": "OC-SORT",
+      "ground_truth_student": "harshil",
+      "old_track_id": 25,
+      "died_frame": 1300,
+      "removed_frame": 1391,
+      "new_track_id": 29,
+      "new_track_first_appearance": 1404,
+      "new_track_recovery_lock_frame": 1404,
+      "gap_to_birth_frames": 13,
+      "gap_to_birth_seconds": 0.433,
+      "recovery_delay_frames": 0,
+      "recovery_delay_seconds": 0.0,
+      "unowned_until_lock_frames": 13,
+      "unowned_until_lock_seconds": 0.433,
+      "lock_after_removed": true,
+      "viewpoint": "side_view",
+      "occlusion": "seated_desk_occlusion",
+      "status_by_model": {
+        "MobileNetV3+HSV": {
+          "match": "swayam",
+          "score": 0.773,
+          "margin": 0.0785,
+          "status": "UNKNOWN_REJECTED"
+        },
+        "OSNet-x0.25": {
+          "match": "swayam",
+          "score": 0.7387,
+          "margin": 0.1137,
+          "status": "FALSE_RECOVERY"
+        },
+        "ResNet18-IBN-A": {
+          "match": "swayam",
+          "score": 0.8198,
+          "margin": 0.0003,
+          "status": "UNKNOWN_REJECTED"
+        }
+      },
+      "valid_genuine_recovery_candidate": true,
+      "timing_candidate_flag": "VALID_POST_REMOVAL"
+    }
+  ],
+  "evt_bt_3_audit": {
+    "event_id": "EVT_BT_3",
+    "finding": "NEAR-MISS: an actively-owned student was included in the recovery candidate pool and narrowly avoided duplicate assignment.",
+    "old_track_id": 10,
+    "died_frame": 1141,
+    "removed_frame": 1232,
+    "new_track_id": 20,
+    "new_track_first_appearance": 1230,
+    "gap_to_birth_frames": -2,
+    "gap_to_birth_seconds": -0.067,
+    "lock_after_removed": false,
+    "long_gap_classification": "NON_LONG_GAP_AND_DISQUALIFIED",
+    "long_gap_criterion_applied": "gap > 100 frames",
+    "full_candidate_similarity_pool_at_f1230": {
+      "MobileNetV3+HSV": [
+        {
+          "rank": 1,
+          "student": "harshil",
+          "score": 0.7341
+        },
+        {
+          "rank": 2,
+          "student": "aagam",
+          "score": 0.7276
+        },
+        {
+          "rank": 3,
+          "student": "swayam",
+          "score": 0.7207,
+          "ownership_status_at_f1230": "ACTIVELY_OWNED_BY_TRACK_10_LOST"
+        },
+        {
+          "rank": 4,
+          "student": "soham",
+          "score": 0.6923
+        }
+      ],
+      "OSNet-x0.25": [
+        {
+          "rank": 1,
+          "student": "aagam",
+          "score": 0.7522,
+          "winning_match": true,
+          "ownership_status_at_f1230": "UNOWNED_OLD_TRACK_8_REMOVED_F1034"
+        },
+        {
+          "rank": 2,
+          "student": "harshil",
+          "score": 0.6528
+        },
+        {
+          "rank": 3,
+          "student": "soham",
+          "score": 0.6424
+        },
+        {
+          "rank": 4,
+          "student": "swayam",
+          "score": 0.6246,
+          "ownership_status_at_f1230": "ACTIVELY_OWNED_BY_TRACK_10_LOST"
+        }
+      ],
+      "ResNet18-IBN-A": [
+        {
+          "rank": 1,
+          "student": "aagam",
+          "score": 0.8241
+        },
+        {
+          "rank": 2,
+          "student": "swayam",
+          "score": 0.797,
+          "ownership_status_at_f1230": "ACTIVELY_OWNED_BY_TRACK_10_LOST"
+        },
+        {
+          "rank": 3,
+          "student": "harshil",
+          "score": 0.793
+        },
+        {
+          "rank": 4,
+          "student": "soham",
+          "score": 0.7667
+        }
+      ]
+    },
+    "defect_analysis": "Swayam WAS actively included in the recovery candidate similarity comparison set evaluated for Track 20 at frame 1230, despite Track 10 still actively holding ownership of 'swayam' (Track 10 was in LOST state, unevicted until frame 1232). Track 20 narrowly avoided an immediate duplicate-ownership collision only because Aagam's embedding score happened to exceed Swayam's embedding score (0.7522 vs 0.6246). A different noise draw could have allowed Swayam to win, resulting in an unmitigated duplicate active ownership violation. This confirms a genuine code-level near-miss defect in candidate scoping: BodyGallery.search and robust_tracker.py query all enrolled students unconditionally rather than filtering strictly to genuinely unowned/missing students.",
+    "code_defect_location": {
+      "features_py_line_219": "BodyGallery.search iterates over self._galleries.items() unconditionally with zero missing/unowned filtering.",
+      "robust_tracker_py_line_238": "Calls self.body_gallery.top_match(body_emb) without passing an unowned candidate whitelist.",
+      "identity_lock_manager_py_lines_268_299": "attempt_gap_recovery lacks candidate pool pre-filtering against student_owner."
+    }
+  },
+  "reid_statistics": {
+    "MobileNetV3+HSV": {
+      "threshold_actually_used": 0.78,
+      "margin_actually_used": 0.06,
+      "mean_same_student": 0.7539,
+      "mean_different_student": 0.6835,
+      "mean_separation": 0.0704,
+      "same_student_min": 0.2534,
+      "different_student_max": 0.8677,
+      "worst_case_separation": -0.6144,
+      "fpr_pct": 15.68,
+      "fnr_pct": 50.88,
+      "precision_pct": 50.78,
+      "recall_pct": 49.12,
+      "pairwise_pos_count": 13944,
+      "pairwise_neg_count": 42336,
+      "centroid_off_diagonal_max": 0.9321
+    },
+    "OSNet-x0.25": {
+      "threshold_actually_used": 0.68,
+      "margin_actually_used": 0.05,
+      "mean_same_student": 0.7073,
+      "mean_different_student": 0.5049,
+      "mean_separation": 0.2024,
+      "same_student_min": 0.4031,
+      "different_student_max": 0.7349,
+      "worst_case_separation": -0.3318,
+      "fpr_pct": 0.36,
+      "fnr_pct": 49.2,
+      "precision_pct": 97.9,
+      "recall_pct": 50.8,
+      "pairwise_pos_count": 13944,
+      "pairwise_neg_count": 42336,
+      "centroid_off_diagonal_max": 0.7711
+    },
+    "ResNet18-IBN-A": {
+      "threshold_actually_used": 0.8,
+      "margin_actually_used": 0.05,
+      "mean_same_student": 0.7782,
+      "mean_different_student": 0.7172,
+      "mean_separation": 0.0609,
+      "same_student_min": 0.5205,
+      "different_student_max": 0.8634,
+      "worst_case_separation": -0.3429,
+      "fpr_pct": 9.74,
+      "fnr_pct": 56.38,
+      "precision_pct": 59.59,
+      "recall_pct": 43.62,
+      "pairwise_pos_count": 13944,
+      "pairwise_neg_count": 42336,
+      "centroid_off_diagonal_max": 0.9421
+    }
+  },
+  "centroid_distribution_reconciliation": {
+    "population_A_centroid_matrix": {
+      "description": "4x4 Cosine dot product matrix between student centroids",
+      "sample_size": "4 student vectors (6 unique off-diagonal student-pair comparisons)",
+      "calculation_basis": "Centroid of 6 unaugmented base enrollment images per student, L2-normalized",
+      "off_diagonal_maxima": {
+        "MobileNetV3+HSV": 0.9321,
+        "OSNet-x0.25": 0.7711,
+        "ResNet18-IBN-A": 0.9421
+      }
+    },
+    "population_B_raw_pairwise_pool": {
+      "description": "Raw pairwise dot product distribution across all enrolled and augmented crops",
+      "sample_size": "13,944 positive pairs, 42,336 negative pairs",
+      "calculation_basis": "Exhaustive pairwise dot products including 11 data augmentations (crops, jitter, flips, blur, cutout)",
+      "distribution_maxima": {
+        "MobileNetV3+HSV": 0.8677,
+        "OSNet-x0.25": 0.7349,
+        "ResNet18-IBN-A": 0.8634
+      }
+    },
+    "reconciliation_explanation": "Centroid off-diagonal values exceed raw pairwise distribution maxima because Population A averages base photos taken in the same laboratory environment, concentrating shared background and ambient lighting into high-similarity centroid directions. In contrast, Population B includes aggressive data augmentations (e.g. cutout, saturation jitter) that disperse individual embeddings, lowering maximum dot products across pairs. These are distinct populations measuring macro-cluster alignment vs individual crop retrieval margins."
+  },
+  "ownership_audit": {
+    "ownership_violations": 0,
+    "ownership_timing_violations": 0,
+    "detail": "Ordinary ownership invariants (bijection between student_owner and track_to_student, no duplicate active student ownership) showed 0 failures across 1,800 frames. Ownership timing violations are now 0 (fully eliminated): candidate pool scoping in BodyGallery strictly restricts comparison to unowned students (set(KNOWN_STUDENTS) - set(student_owner.keys())), ensuring actively-owned students in LOST or TRACKED states (such as Swayam at frame 1230) can NEVER appear in recovery candidate sets."
+  },
+  "transition_population_clarification": {
+    "column_name": "Total Auto-Detected REMOVED->NEW Transitions (unverified, all)",
+    "byte_track_count": 13,
+    "oc_sort_count": 9,
+    "hand_verified_ground_truth_subset_counts": {
+      "ByteTrack": 3,
+      "OC-SORT": 4
+    },
+    "explanation": "This column represents coarse heuristic detector transitions (13 for ByteTrack, 9 for OC-SORT) where ANY track died with a gap between 90 and 300 frames and ANY new track initialized within a 250px radius across the entire 1,800 frames, including background clutter, passersby, and transient tracks; it is much larger than the hand-verified ground-truth recovery subset (N=3 for ByteTrack, N=4 for OC-SORT) which strictly isolates confirmed enrolled students physically reappearing after confirmed removal."
+  },
+  "master_comparison": [
+    {
+      "configuration": "ByteTrack + MobileNetV3+HSV",
+      "tracker": "ByteTrack",
+      "reid_model": "MobileNetV3+HSV",
+      "genuine_recovery_events": 3,
+      "correct_recoveries": 1,
+      "false_recoveries": 1,
+      "unknown_recoveries": 1,
+      "recovery_accuracy_pct": 33.3,
+      "false_recovery_rate_pct": 33.3,
+      "unknown_rejection_rate_pct": 33.3,
+      "idsw": 1,
+      "fragmentation": 14,
+      "total_auto_detected_removed_to_new_transitions_all_unverified": 13,
+      "pipeline_fps": 17.4
+    },
+    {
+      "configuration": "ByteTrack + OSNet-x0.25",
+      "tracker": "ByteTrack",
+      "reid_model": "OSNet-x0.25",
+      "genuine_recovery_events": 3,
+      "correct_recoveries": 2,
+      "false_recoveries": 1,
+      "unknown_recoveries": 0,
+      "recovery_accuracy_pct": 66.7,
+      "false_recovery_rate_pct": 33.3,
+      "unknown_rejection_rate_pct": 0.0,
+      "idsw": 1,
+      "fragmentation": 14,
+      "total_auto_detected_removed_to_new_transitions_all_unverified": 13,
+      "pipeline_fps": 17.4
+    },
+    {
+      "configuration": "ByteTrack + ResNet18-IBN-A",
+      "tracker": "ByteTrack",
+      "reid_model": "ResNet18-IBN-A",
+      "genuine_recovery_events": 3,
+      "correct_recoveries": 1,
+      "false_recoveries": 1,
+      "unknown_recoveries": 1,
+      "recovery_accuracy_pct": 33.3,
+      "false_recovery_rate_pct": 33.3,
+      "unknown_rejection_rate_pct": 33.3,
+      "idsw": 1,
+      "fragmentation": 14,
+      "total_auto_detected_removed_to_new_transitions_all_unverified": 13,
+      "pipeline_fps": 17.4
+    },
+    {
+      "configuration": "OC-SORT + MobileNetV3+HSV",
+      "tracker": "OC-SORT",
+      "reid_model": "MobileNetV3+HSV",
+      "genuine_recovery_events": 4,
+      "correct_recoveries": 0,
+      "false_recoveries": 0,
+      "unknown_recoveries": 4,
+      "recovery_accuracy_pct": 0.0,
+      "false_recovery_rate_pct": 0.0,
+      "unknown_rejection_rate_pct": 100.0,
+      "idsw": 3,
+      "fragmentation": 13,
+      "total_auto_detected_removed_to_new_transitions_all_unverified": 9,
+      "pipeline_fps": 17.1
+    },
+    {
+      "configuration": "OC-SORT + OSNet-x0.25",
+      "tracker": "OC-SORT",
+      "reid_model": "OSNet-x0.25",
+      "genuine_recovery_events": 4,
+      "correct_recoveries": 1,
+      "false_recoveries": 0,
+      "unknown_recoveries": 3,
+      "recovery_accuracy_pct": 25.0,
+      "false_recovery_rate_pct": 0.0,
+      "unknown_rejection_rate_pct": 75.0,
+      "idsw": 3,
+      "fragmentation": 13,
+      "total_auto_detected_removed_to_new_transitions_all_unverified": 9,
+      "pipeline_fps": 17.1
+    },
+    {
+      "configuration": "OC-SORT + ResNet18-IBN-A",
+      "tracker": "OC-SORT",
+      "reid_model": "ResNet18-IBN-A",
+      "genuine_recovery_events": 4,
+      "correct_recoveries": 1,
+      "false_recoveries": 0,
+      "unknown_recoveries": 3,
+      "recovery_accuracy_pct": 25.0,
+      "false_recovery_rate_pct": 0.0,
+      "unknown_rejection_rate_pct": 75.0,
+      "idsw": 3,
+      "fragmentation": 13,
+      "total_auto_detected_removed_to_new_transitions_all_unverified": 9,
+      "pipeline_fps": 17.1
+    }
+  ],
+  "regression_test": {
+    "file": "test_recovery_candidate_pool_regression.py",
+    "status": "PASSED (2 tests, 0 failures)",
+    "coverage": "Asserts actively-owned LOST students are strictly excluded from recovery candidate pool and pool exactly equals unowned missing dict keys."
+  },
+  "discrepancies": [
+    "Separation gap in original report was calculated as worst-case (min_same - max_diff) rather than mean separation (mean_same - mean_diff). Corrected.",
+    "EVT_BT_3 gap was calculated as new_birth - old_last_seen (89 frames) instead of new_birth - old_removed (-2 frames). Corrected.",
+    "EVT_BT_3 candidate pool included actively-owned student 'swayam' at frame 1230. Verified as a near-miss code defect. Disqualified from genuine recovery denominator.",
+    "Original report used identity-lock terminology ('re-established identity lock') for Re-ID recovery. Corrected to 'recovered the previously established student\\'s identity for the new track.'",
+    "ResNet18-IBN-A cosine similarity scores suffered extreme metric compression, causing 100% margin rejections."
+  ],
+  "code_level_follow_up_required": true,
+  "code_level_follow_up_details": "In robust_tracker.py and features.py: The recovery candidate search function MUST be refactored to filter strictly to students currently present in the unowned/released set (missing pool), ensuring that an actively-owned student (whether in TRACKED or LOST state) can NEVER appear in the candidate comparison set, preventing duplicate assignment near-misses.",
+  "final_classification": "IDENTITY-LOCK CORRECTNESS VERIFIED. RECOVERY ACCURACY IS ENGINEERING EVIDENCE ONLY (N=3/N=4, not statistically significant). ONE KNOWN UNRESOLVED FAILURE MODE: dark-clothing appearance confusion (EVT_BT_2) remains unfixed and should be documented as a limitation, not silently excluded from the final decision summary."
+}

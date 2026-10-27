@@ -1,0 +1,136 @@
+{
+  "video": "new lab video.mp4",
+  "total_frames": 1800,
+  "runtime_seconds": 152.35,
+  "effective_fps": 11.82,
+  "video_fps": 30.0,
+  "confirmed_locks": [
+    {
+      "frame": 1,
+      "timestamp": 0.03,
+      "tid": 1,
+      "name": "soham",
+      "score": 0.563
+    },
+    {
+      "frame": 85,
+      "timestamp": 2.83,
+      "tid": 2,
+      "name": "harshil",
+      "score": 0.419
+    },
+    {
+      "frame": 549,
+      "timestamp": 18.3,
+      "tid": 8,
+      "name": "swayam",
+      "score": 0.409
+    },
+    {
+      "frame": 571,
+      "timestamp": 19.03,
+      "tid": 10,
+      "name": "aagam",
+      "score": 0.436
+    },
+    {
+      "frame": 951,
+      "timestamp": 31.7,
+      "tid": 12,
+      "name": "harshil",
+      "score": 0.405
+    },
+    {
+      "frame": 1226,
+      "timestamp": 40.87,
+      "tid": 19,
+      "name": "swayam",
+      "score": 0.441
+    },
+    {
+      "frame": 1401,
+      "timestamp": 46.7,
+      "tid": 21,
+      "name": "swayam",
+      "score": 0.485
+    },
+    {
+      "frame": 1604,
+      "timestamp": 53.47,
+      "tid": 23,
+      "name": "swayam",
+      "score": 0.428
+    }
+  ],
+  "total_locks": 8,
+  "contradictions": [],
+  "escalation_events_count": 69,
+  "sample_escalation_events": [
+    {
+      "frame": 30,
+      "tid": 2,
+      "timestamp": 1.0
+    },
+    {
+      "frame": 30,
+      "tid": 3,
+      "timestamp": 1.0
+    },
+    {
+      "frame": 60,
+      "tid": 2,
+      "timestamp": 2.0
+    },
+    {
+      "frame": 60,
+      "tid": 3,
+      "timestamp": 2.0
+    },
+    {
+      "frame": 90,
+      "tid": 3,
+      "timestamp": 3.0
+    },
+    {
+      "frame": 136,
+      "tid": 4,
+      "timestamp": 4.53
+    },
+    {
+      "frame": 158,
+      "tid": 5,
+      "timestamp": 5.27
+    },
+    {
+      "frame": 166,
+      "tid": 4,
+      "timestamp": 5.53
+    },
+    {
+      "frame": 188,
+      "tid": 5,
+      "timestamp": 6.27
+    },
+    {
+      "frame": 285,
+      "tid": 6,
+      "timestamp": 9.5
+    }
+  ],
+  "ownership_violations": 0,
+  "candidate_pool_violations": 0,
+  "gallery_mutations": 0,
+  "stats": {
+    "face_extractions": 2382,
+    "body_extractions": 2083,
+    "face_locks": 8,
+    "body_extractions_skipped": 4089,
+    "face_extractions_skipped": 3950,
+    "escalations_to_640": 69
+  },
+  "final_ownership": {
+    "soham": 1,
+    "swayam": 23
+  },
+  "output_video": "test_outputs/new_lab_adaptive_640.mp4"
+}

@@ -1,0 +1,171 @@
+{
+  "metadata": {
+    "description": "Hand-labeled genuine REMOVED -> NEW TRACK recovery ground truth across 1,800 frames",
+    "video": "new lab video.mp4",
+    "total_frames": 1800,
+    "fps": 30.0,
+    "track_buffer": 90
+  },
+  "recovery_events": [
+    {
+      "event_id": "EVT_BT_1",
+      "tracker": "ByteTrack",
+      "student": "harshil",
+      "old_track_id": 2,
+      "old_last_seen_frame": 697,
+      "removed_frame": 787,
+      "new_track_id": 12,
+      "new_track_first_frame": 902,
+      "gap_frames": 205,
+      "gap_seconds": 6.83,
+      "viewpoint": "side_view",
+      "occlusion_condition": "seated_desk_occlusion",
+      "crop_box": [
+        456.8,
+        2.2,
+        595.3,
+        188.1
+      ]
+    },
+    {
+      "event_id": "EVT_BT_2",
+      "tracker": "ByteTrack",
+      "student": "aagam",
+      "old_track_id": 8,
+      "old_last_seen_frame": 943,
+      "removed_frame": 1033,
+      "new_track_id": 18,
+      "new_track_first_frame": 1089,
+      "gap_frames": 146,
+      "gap_seconds": 4.87,
+      "viewpoint": "three_quarter_standing",
+      "occlusion_condition": "standing_walking",
+      "crop_box": [
+        789.5,
+        76.7,
+        945.9,
+        301.8
+      ]
+    },
+    {
+      "event_id": "EVT_BT_3",
+      "tracker": "ByteTrack",
+      "student": "swayam",
+      "old_track_id": 10,
+      "old_last_seen_frame": 1141,
+      "removed_frame": 1231,
+      "new_track_id": 20,
+      "new_track_first_frame": 1230,
+      "gap_frames": 89,
+      "gap_seconds": 2.97,
+      "viewpoint": "frontal_seated",
+      "occlusion_condition": "seated_desk_occlusion",
+      "crop_box": [
+        630.8,
+        51.7,
+        807.5,
+        220.1
+      ]
+    },
+    {
+      "event_id": "EVT_BT_4",
+      "tracker": "ByteTrack",
+      "student": "harshil",
+      "old_track_id": 22,
+      "old_last_seen_frame": 1584,
+      "removed_frame": 1674,
+      "new_track_id": 24,
+      "new_track_first_frame": 1722,
+      "gap_frames": 138,
+      "gap_seconds": 4.6,
+      "viewpoint": "side_view",
+      "occlusion_condition": "seated_desk_occlusion",
+      "crop_box": [
+        526.2,
+        38.4,
+        601.6,
+        147.5
+      ]
+    },
+    {
+      "event_id": "EVT_OC_1",
+      "tracker": "OC-SORT",
+      "student": "harshil",
+      "old_track_id": 2,
+      "old_last_seen_frame": 697,
+      "removed_frame": 787,
+      "new_track_id": 17,
+      "new_track_first_frame": 888,
+      "gap_frames": 191,
+      "gap_seconds": 6.37,
+      "viewpoint": "side_view",
+      "occlusion_condition": "seated_desk_occlusion",
+      "crop_box": [
+        544.6,
+        45.0,
+        605.2,
+        133.2
+      ]
+    },
+    {
+      "event_id": "EVT_OC_2",
+      "tracker": "OC-SORT",
+      "student": "harshil",
+      "old_track_id": 10,
+      "old_last_seen_frame": 1043,
+      "removed_frame": 1133,
+      "new_track_id": 25,
+      "new_track_first_frame": 1202,
+      "gap_frames": 159,
+      "gap_seconds": 5.3,
+      "viewpoint": "side_view",
+      "occlusion_condition": "seated_desk_occlusion",
+      "crop_box": [
+        415.1,
+        49.6,
+        533.5,
+        184.9
+      ]
+    },
+    {
+      "event_id": "EVT_OC_3",
+      "tracker": "OC-SORT",
+      "student": "harshil",
+      "old_track_id": 10,
+      "old_last_seen_frame": 1043,
+      "removed_frame": 1133,
+      "new_track_id": 28,
+      "new_track_first_frame": 1311,
+      "gap_frames": 268,
+      "gap_seconds": 8.93,
+      "viewpoint": "side_view",
+      "occlusion_condition": "seated_desk_occlusion",
+      "crop_box": [
+        518.2,
+        0.3,
+        630.1,
+        180.5
+      ]
+    },
+    {
+      "event_id": "EVT_OC_4",
+      "tracker": "OC-SORT",
+      "student": "harshil",
+      "old_track_id": 25,
+      "old_last_seen_frame": 1300,
+      "removed_frame": 1390,
+      "new_track_id": 29,
+      "new_track_first_frame": 1404,
+      "gap_frames": 104,
+      "gap_seconds": 3.47,
+      "viewpoint": "side_view",
+      "occlusion_condition": "seated_desk_occlusion",
+      "crop_box": [
+        592.2,
+        0.1,
+        653.0,
+        144.5
+      ]
+    }
+  ]
+}

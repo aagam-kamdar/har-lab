@@ -1,0 +1,12 @@
+tracker,type,frame,prev_track_id,new_track_id,gap_frames,spatial_evidence
+ByteTrack,trajectory_inferred,1311,19,21,11,"center_dx=74.6, dy=1.6, end_f=1300"
+OC-SORT,trajectory_inferred,1043,9,54,5,"center_dx=41.5, dy=25.9, end_f=1038"
+OC-SORT,trajectory_inferred,1122,48,55,4,"center_dx=0.7, dy=25.5, end_f=1118"
+OC-SORT,trajectory_inferred,1311,59,65,11,"center_dx=74.6, dy=1.6, end_f=1300"
+BoT-SORT,trajectory_inferred,972,39,52,9,"center_dx=45.2, dy=37.1, end_f=963"
+BoT-SORT,trajectory_inferred,895,41,43,5,"center_dx=61.7, dy=22.2, end_f=890"
+BoT-SORT,trajectory_inferred,1311,60,66,11,"center_dx=74.6, dy=1.6, end_f=1300"
+SORT,trajectory_inferred,973,10,20,12,"center_dx=28.3, dy=32.0, end_f=961"
+SORT,trajectory_inferred,1044,12,22,7,"center_dx=40.0, dy=30.2, end_f=1037"
+SORT,trajectory_inferred,901,16,17,11,"center_dx=62.9, dy=12.4, end_f=890"
+SORT,trajectory_inferred,1312,23,25,13,"center_dx=78.5, dy=3.4, end_f=1299"

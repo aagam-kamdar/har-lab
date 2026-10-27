@@ -1,0 +1,27 @@
+# validation_registry.yaml
+# ------------------------
+# Authoritative registry of validated activity classes.
+# THIS FILE CAN ONLY BE WRITTEN BY scripts/evaluate_sealed_benchmark.py
+# WHEN A CLASS MEETS PRE-REGISTERED VALIDATION CRITERIA ON SEALED RECORDINGS.
+#
+# UI, API, and alert systems read this registry.
+# Distraction alerts are disabled for any class marked false.
+
+schema_version: "1.0.0"
+last_updated: null
+evaluator_git_commit: null
+evaluator_config_hash: null
+
+validated_classes:
+  active_work: false
+  writing: false
+  reading: false
+  discussing: false
+  idle: false
+  walking: false
+  phone: false
+  call: false
+  away: false
+  uncertain: false
+
+class_records: {}

@@ -1,0 +1,222 @@
+[2026-10-27 00:26:22.493] ================================================================================
+[2026-10-27 00:26:22.493] 1-MINUTE FULL PIPELINE VERIFICATION RUN (HAR ONLY + EVENT-DRIVEN IDENTITY)
+[2026-10-27 00:26:22.493] ================================================================================
+[2026-10-27 00:26:22.494] Source Video: new video.mp4
+[2026-10-27 00:26:22.494] Target Duration: 60.0s (1800 frames @ 30.0 FPS)
+[2026-10-27 00:26:22.494] Output Video: test_outputs/one_minute_har_demo.mp4
+[2026-10-27 00:26:22.494] Execution Log: test_outputs/one_minute_har_verification.log
+[2026-10-27 00:26:22.494] HAR Model: MCG-NJU/videomae-small-finetuned-kinetics (400 action classes)
+[2026-10-27 00:26:22.494] Geometry Rules: STRICTLY DISABLED (Zero wrist-to-ear, zero hand-distance heuristics)
+[2026-10-27 00:26:22.494] Desk Ground Truth: Desk 1 = Harshil, Desk 2 = Swayam, Desk 3 = Aagam, Desk 4 = Soham
+[2026-10-27 00:26:22.494] ================================================================================
+[2026-10-27 00:26:22.506] Opened video source: 1120x480 @ 30.00 FPS (16905 total frames available)
+[2026-10-27 00:26:22.559] Initializing Event-Driven IdentityAdapter with Quality Gating...
+[2026-10-27 00:26:31.712] Loading VideoMAE Pretrained Classifier...
+[2026-10-27 00:26:34.825] HAR Model ready in 3.11s.
+[2026-10-27 00:26:34.826] Starting synchronous frame loop...
+[2026-10-27 00:26:35.411] FRAME 0000 ( 0.00s) | Track #1 (Identifying (likely: Soham)) STATE CHANGE: None -> FACE_CANDIDATE
+[2026-10-27 00:26:35.412] FRAME 0000 ( 0.00s) | Track #2 (Identifying...) STATE CHANGE: None -> UNIDENTIFIED
+[2026-10-27 00:26:35.412] FRAME 0000 ( 0.00s) | Track #3 (Identifying...) STATE CHANGE: None -> UNIDENTIFIED
+[2026-10-27 00:26:38.377] FRAME 0015 ( 0.50s) | Track #1 (Identifying (likely: Soham) at D04) | HAR: 'using computer' (conf: 61.2%, margin: 59.0%, lat: 1091ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 61.2%, 'playing piano': 2.2%, 'yoga': 1.5%]
+[2026-10-27 00:26:42.155] FRAME 0030 ( 1.00s) | Track #1 (Identifying (likely: Soham) at D04) | HAR: 'using computer' (conf: 61.2%, margin: 59.0%, lat: 1091ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 61.2%, 'playing piano': 2.2%, 'yoga': 1.5%]
+[2026-10-27 00:26:42.886] FRAME 0037 ( 1.23s) | Track #4 (Duplicate #4) STATE CHANGE: None -> UNIDENTIFIED
+[2026-10-27 00:26:43.890] FRAME 0045 ( 1.50s) | Track #1 (Identifying (likely: Soham) at D04) | HAR: 'using computer' (conf: 61.2%, margin: 59.0%, lat: 1091ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 61.2%, 'playing piano': 2.2%, 'yoga': 1.5%]
+[2026-10-27 00:26:46.776] FRAME 0060 ( 2.00s) | Track #1 (Identifying (likely: Soham) at D04) | HAR: 'using computer' (conf: 61.2%, margin: 59.0%, lat: 1091ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 61.2%, 'playing piano': 2.2%, 'yoga': 1.5%]
+[2026-10-27 00:26:51.297] FRAME 0080 ( 2.67s) | Track #1 (Soham) STATE CHANGE: FACE_CANDIDATE -> IDENTITY_LOCKED
+[2026-10-27 00:26:52.815] FRAME 0102 ( 3.40s) | Track #5 (Identifying...) STATE CHANGE: None -> UNIDENTIFIED
+[2026-10-27 00:26:56.620] FRAME 0127 ( 4.23s) | Track #6 (Identifying...) STATE CHANGE: None -> UNIDENTIFIED
+[2026-10-27 00:27:00.442] >> Progress: Frame 150/1800 (8.3%) | Rate: 5.9 FPS | ETA: 282s | ArcFace calls: 41 | HAR Inferences: 8
+[2026-10-27 00:27:12.387] FRAME 0266 ( 8.87s) | Track #7 (Identifying...) STATE CHANGE: None -> UNIDENTIFIED
+[2026-10-27 00:27:12.852] FRAME 0271 ( 9.03s) | Track #8 (Identifying...) STATE CHANGE: None -> UNIDENTIFIED
+[2026-10-27 00:27:18.253] >> Progress: Frame 300/1800 (16.7%) | Rate: 6.9 FPS | ETA: 217s | ArcFace calls: 64 | HAR Inferences: 13
+[2026-10-27 00:27:20.882] FRAME 0315 (10.50s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 16.4%, margin: 10.6%, lat: 1178ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 16.4%, 'washing feet': 5.8%, 'yoga': 4.1%]
+[2026-10-27 00:27:22.391] FRAME 0330 (11.00s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 16.4%, margin: 10.6%, lat: 1178ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 16.4%, 'washing feet': 5.8%, 'yoga': 4.1%]
+[2026-10-27 00:27:24.920] FRAME 0345 (11.50s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 16.4%, margin: 10.6%, lat: 1178ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 16.4%, 'washing feet': 5.8%, 'yoga': 4.1%]
+[2026-10-27 00:27:27.160] FRAME 0360 (12.00s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 16.4%, margin: 10.6%, lat: 1178ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 16.4%, 'washing feet': 5.8%, 'yoga': 4.1%]
+[2026-10-27 00:27:29.280] FRAME 0375 (12.50s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 31.5%, margin: 22.9%, lat: 1198ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 31.5%, 'bench pressing': 8.6%, 'stretching arm': 4.2%]
+[2026-10-27 00:27:29.970] FRAME 0390 (13.00s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 31.5%, margin: 22.9%, lat: 1198ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 31.5%, 'bench pressing': 8.6%, 'stretching arm': 4.2%]
+[2026-10-27 00:27:30.626] FRAME 0405 (13.50s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 31.5%, margin: 22.9%, lat: 1198ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 31.5%, 'bench pressing': 8.6%, 'stretching arm': 4.2%]
+[2026-10-27 00:27:30.786] FRAME 0407 (13.57s) | Track #9 (Identifying...) STATE CHANGE: None -> UNIDENTIFIED
+[2026-10-27 00:27:31.685] FRAME 0420 (14.00s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 31.5%, margin: 22.9%, lat: 1198ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 31.5%, 'bench pressing': 8.6%, 'stretching arm': 4.2%]
+[2026-10-27 00:27:33.588] FRAME 0435 (14.50s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 55.6%, margin: 49.2%, lat: 1242ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 55.6%, 'air drumming': 6.5%, 'stretching leg': 2.5%]
+[2026-10-27 00:27:33.871] FRAME 0440 (14.67s) | Track #10 (Identifying...) STATE CHANGE: None -> UNIDENTIFIED
+[2026-10-27 00:27:34.706] FRAME 0450 (15.00s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 55.6%, margin: 49.2%, lat: 1242ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 55.6%, 'air drumming': 6.5%, 'stretching leg': 2.5%]
+[2026-10-27 00:27:36.004] >> Progress: Frame 450/1800 (25.0%) | Rate: 7.4 FPS | ETA: 184s | ArcFace calls: 78 | HAR Inferences: 19
+[2026-10-27 00:27:38.735] FRAME 0465 (15.50s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 55.6%, margin: 49.2%, lat: 1242ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 55.6%, 'air drumming': 6.5%, 'stretching leg': 2.5%]
+[2026-10-27 00:27:41.370] FRAME 0490 (16.33s) | Track #10 (Identifying (likely: Swayam)) STATE CHANGE: UNIDENTIFIED -> FACE_CANDIDATE
+[2026-10-27 00:27:47.402] FRAME 0531 (17.70s) | Track #11 (Identifying...) STATE CHANGE: None -> UNIDENTIFIED
+[2026-10-27 00:27:50.689] FRAME 0550 (18.33s) | Track #10 (Identifying...) STATE CHANGE: FACE_CANDIDATE -> UNIDENTIFIED
+[2026-10-27 00:27:52.660] FRAME 0555 (18.50s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 72.0%, margin: 70.2%, lat: 1267ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 72.0%, 'air drumming': 1.8%, 'playing piano': 1.5%]
+[2026-10-27 00:27:52.997] FRAME 0560 (18.67s) | Track #10 (Identifying (likely: Swayam)) STATE CHANGE: UNIDENTIFIED -> FACE_CANDIDATE
+[2026-10-27 00:27:53.766] FRAME 0565 (18.83s) | Track #12 (Duplicate #12) STATE CHANGE: None -> UNIDENTIFIED
+[2026-10-27 00:27:54.463] FRAME 0570 (19.00s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 72.0%, margin: 70.2%, lat: 1267ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 72.0%, 'air drumming': 1.8%, 'playing piano': 1.5%]
+[2026-10-27 00:27:54.463] FRAME 0570 (19.00s) | Track #10 (Swayam) STATE CHANGE: FACE_CANDIDATE -> IDENTITY_LOCKED
+[2026-10-27 00:27:56.768] FRAME 0585 (19.50s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 72.0%, margin: 70.2%, lat: 1267ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 72.0%, 'air drumming': 1.8%, 'playing piano': 1.5%]
+[2026-10-27 00:27:57.826] FRAME 0600 (20.00s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 72.0%, margin: 70.2%, lat: 1267ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 72.0%, 'air drumming': 1.8%, 'playing piano': 1.5%]
+[2026-10-27 00:27:57.849] >> Progress: Frame 600/1800 (33.3%) | Rate: 7.2 FPS | ETA: 166s | ArcFace calls: 101 | HAR Inferences: 25
+[2026-10-27 00:28:00.379] FRAME 0615 (20.50s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 48.2%, margin: 34.3%, lat: 1296ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 48.2%, 'playing piano': 13.9%, 'playing organ': 4.8%]
+[2026-10-27 00:28:01.465] FRAME 0630 (21.00s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 48.2%, margin: 34.3%, lat: 1296ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 48.2%, 'playing piano': 13.9%, 'playing organ': 4.8%]
+[2026-10-27 00:28:03.552] FRAME 0638 (21.27s) | Track #13 (Identifying...) STATE CHANGE: None -> UNIDENTIFIED
+[2026-10-27 00:28:05.276] FRAME 0640 (21.33s) | Track #11 (Identifying (likely: Aagam)) STATE CHANGE: UNIDENTIFIED -> FACE_CANDIDATE
+[2026-10-27 00:28:05.988] FRAME 0645 (21.50s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 48.2%, margin: 34.3%, lat: 1296ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 48.2%, 'playing piano': 13.9%, 'playing organ': 4.8%]
+[2026-10-27 00:28:08.865] FRAME 0659 (21.97s) | Track #14 (Duplicate #14) STATE CHANGE: None -> UNIDENTIFIED
+[2026-10-27 00:28:09.261] FRAME 0660 (22.00s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 48.2%, margin: 34.3%, lat: 1296ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 48.2%, 'playing piano': 13.9%, 'playing organ': 4.8%]
+[2026-10-27 00:28:12.311] FRAME 0675 (22.50s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 66.5%, margin: 64.2%, lat: 1311ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 66.5%, 'playing piano': 2.3%, 'playing organ': 1.8%]
+[2026-10-27 00:28:13.777] FRAME 0690 (23.00s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 66.5%, margin: 64.2%, lat: 1311ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 66.5%, 'playing piano': 2.3%, 'playing organ': 1.8%]
+[2026-10-27 00:28:14.538] FRAME 0698 (23.27s) | Track #15 (Identifying...) STATE CHANGE: None -> UNIDENTIFIED
+[2026-10-27 00:28:16.656] FRAME 0702 (23.40s) | Track #11 (Identifying (likely: Aagam) at D03) | HAR: 'using computer' (conf: 16.2%, margin: 8.8%, lat: 1408ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 16.2%, 'laying bricks': 7.4%, 'recording music': 7.3%]
+[2026-10-27 00:28:16.874] FRAME 0705 (23.50s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 66.5%, margin: 64.2%, lat: 1311ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 66.5%, 'playing piano': 2.3%, 'playing organ': 1.8%]
+[2026-10-27 00:28:16.874] FRAME 0705 (23.50s) | Track #11 (Identifying (likely: Aagam) at D03) | HAR: 'using computer' (conf: 16.2%, margin: 8.8%, lat: 1408ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 16.2%, 'laying bricks': 7.4%, 'recording music': 7.3%]
+[2026-10-27 00:28:19.653] FRAME 0720 (24.00s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 66.5%, margin: 64.2%, lat: 1311ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 66.5%, 'playing piano': 2.3%, 'playing organ': 1.8%]
+[2026-10-27 00:28:19.653] FRAME 0720 (24.00s) | Track #11 (Identifying (likely: Aagam) at D03) | HAR: 'using computer' (conf: 16.2%, margin: 8.8%, lat: 1408ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 16.2%, 'laying bricks': 7.4%, 'recording music': 7.3%]
+[2026-10-27 00:28:24.066] FRAME 0735 (24.50s) | Track #11 (Identifying (likely: Aagam) at D03) | HAR: 'using computer' (conf: 16.2%, margin: 8.8%, lat: 1408ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 16.2%, 'laying bricks': 7.4%, 'recording music': 7.3%]
+[2026-10-27 00:28:25.689] FRAME 0750 (25.00s) | Track #11 (Identifying (likely: Aagam) at D03) | HAR: 'using computer' (conf: 16.2%, margin: 8.8%, lat: 1408ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 16.2%, 'laying bricks': 7.4%, 'recording music': 7.3%]
+[2026-10-27 00:28:25.696] >> Progress: Frame 750/1800 (41.7%) | Rate: 6.8 FPS | ETA: 155s | ArcFace calls: 127 | HAR Inferences: 34
+[2026-10-27 00:28:27.956] FRAME 0760 (25.33s) | Track #11 (Aagam) STATE CHANGE: FACE_CANDIDATE -> IDENTITY_LOCKED
+[2026-10-27 00:28:29.859] FRAME 0765 (25.50s) | Track #11 (Aagam at D03) | HAR: 'using computer' (conf: 21.6%, margin: 17.7%, lat: 1435ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 21.6%, 'using remote controller (not gaming)': 3.9%, 'recording music': 3.4%]
+[2026-10-27 00:28:31.200] FRAME 0780 (26.00s) | Track #11 (Aagam at D03) | HAR: 'using computer' (conf: 21.6%, margin: 17.7%, lat: 1435ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 21.6%, 'using remote controller (not gaming)': 3.9%, 'recording music': 3.4%]
+[2026-10-27 00:28:31.881] FRAME 0788 (26.27s) | Track #13 (Unknown (not enrolled) #13) STATE CHANGE: UNIDENTIFIED -> UNKNOWN
+[2026-10-27 00:28:33.983] FRAME 0793 (26.43s) | Track #16 (Identifying...) STATE CHANGE: None -> UNIDENTIFIED
+[2026-10-27 00:28:34.350] FRAME 0795 (26.50s) | Track #11 (Aagam at D03) | HAR: 'using computer' (conf: 21.6%, margin: 17.7%, lat: 1435ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 21.6%, 'using remote controller (not gaming)': 3.9%, 'recording music': 3.4%]
+[2026-10-27 00:28:37.010] FRAME 0810 (27.00s) | Track #11 (Aagam at D03) | HAR: 'using computer' (conf: 21.6%, margin: 17.7%, lat: 1435ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 21.6%, 'using remote controller (not gaming)': 3.9%, 'recording music': 3.4%]
+[2026-10-27 00:28:39.911] FRAME 0811 (27.03s) | Track #10 (Swayam at D04) | HAR: 'using computer' (conf: 52.5%, margin: 49.5%, lat: 1291ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 52.5%, 'playing piano': 2.9%, 'sailing': 2.1%]
+[2026-10-27 00:28:42.423] FRAME 0825 (27.50s) | Track #10 (Swayam at D04) | HAR: 'using computer' (conf: 52.5%, margin: 49.5%, lat: 1291ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 52.5%, 'playing piano': 2.9%, 'sailing': 2.1%]
+[2026-10-27 00:28:43.716] FRAME 0840 (28.00s) | Track #10 (Swayam at D04) | HAR: 'using computer' (conf: 52.5%, margin: 49.5%, lat: 1291ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 52.5%, 'playing piano': 2.9%, 'sailing': 2.1%]
+[2026-10-27 00:28:44.695] FRAME 0855 (28.50s) | Track #10 (Swayam at D04) | HAR: 'using computer' (conf: 52.5%, margin: 49.5%, lat: 1291ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 52.5%, 'playing piano': 2.9%, 'sailing': 2.1%]
+[2026-10-27 00:28:45.582] FRAME 0870 (29.00s) | Track #10 (Swayam at D04) | HAR: 'using computer' (conf: 52.5%, margin: 49.5%, lat: 1291ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 52.5%, 'playing piano': 2.9%, 'sailing': 2.1%]
+[2026-10-27 00:28:55.191] >> Progress: Frame 900/1800 (50.0%) | Rate: 6.4 FPS | ETA: 140s | ArcFace calls: 154 | HAR Inferences: 46
+[2026-10-27 00:29:02.258] FRAME 0940 (31.33s) | [RE-ID TRANSITION] Track #10 | PrevIdentity: swayam (conf: 59.5%, prev_tid: 10) | Trigger: contradictory_face_evidence | FaceQuality: 0.93 (det: 0.83, sharp: 202.7) | Candidates: {'aagam': 0.68584144115448, 'swayam': 0.22975033521652222} | Decision: LOCK_INVALIDATED_AND_REASSIGNED | Reason: Face match strongly contradicted previous lock (swayam -> aagam, score=0.686)
+[2026-10-27 00:29:04.115] FRAME 0943 (31.43s) | Track #16 (Unknown (not enrolled) #16) STATE CHANGE: UNIDENTIFIED -> UNKNOWN
+[2026-10-27 00:29:07.001] FRAME 0960 (32.00s) | Track #16 (Identifying (likely: Harshil)) STATE CHANGE: UNKNOWN -> FACE_CANDIDATE
+[2026-10-27 00:29:07.834] FRAME 0968 (32.27s) | Track #18 (Identifying...) STATE CHANGE: None -> UNIDENTIFIED
+[2026-10-27 00:29:09.538] FRAME 0980 (32.67s) | Track #18 (Identifying (likely: Swayam)) STATE CHANGE: UNIDENTIFIED -> FACE_CANDIDATE
+[2026-10-27 00:29:15.855] FRAME 1000 (33.33s) | Track #19 (Soham (Duplicate)) STATE CHANGE: None -> IDENTITY_LOCKED
+[2026-10-27 00:29:15.933] FRAME 1001 (33.37s) | Track #19 (Identifying...) STATE CHANGE: IDENTITY_LOCKED -> UNIDENTIFIED
+[2026-10-27 00:29:16.960] FRAME 1010 (33.67s) | Track #16 (Harshil) STATE CHANGE: FACE_CANDIDATE -> IDENTITY_LOCKED
+[2026-10-27 00:29:19.013] FRAME 1015 (33.83s) | Track #19 (Identifying... at D04) | HAR: 'using computer' (conf: 23.4%, margin: 19.4%, lat: 1328ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 23.4%, 'grooming dog': 4.0%, 'bench pressing': 3.7%]
+[2026-10-27 00:29:19.060] FRAME 1016 (33.87s) | Track #19 (Soham (Duplicate)) STATE CHANGE: UNIDENTIFIED -> IDENTITY_LOCKED
+[2026-10-27 00:29:20.592] FRAME 1019 (33.97s) | Track #19 (Identifying...) STATE CHANGE: IDENTITY_LOCKED -> UNIDENTIFIED
+[2026-10-27 00:29:20.749] FRAME 1020 (34.00s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 18.3%, margin: 11.9%, lat: 1315ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 18.3%, 'washing feet': 6.4%, 'bookbinding': 4.1%]
+[2026-10-27 00:29:22.337] FRAME 1035 (34.50s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 18.3%, margin: 11.9%, lat: 1315ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 18.3%, 'washing feet': 6.4%, 'bookbinding': 4.1%]
+[2026-10-27 00:29:23.459] FRAME 1046 (34.87s) | Track #20 (Identifying...) STATE CHANGE: None -> UNIDENTIFIED
+[2026-10-27 00:29:23.768] FRAME 1048 (34.93s) | [RE-ID TRANSITION] Track #20 | PrevIdentity: aagam (conf: 55.3%, prev_tid: 11) | Trigger: stitching_gap | FaceQuality: 0.00 (det: 0.00, sharp: 0.0) | Candidates: {'aagam': 0.5528469830751419} | Decision: REIDENTIFICATION_PENDING | Reason: Spatio-temporal stitch with dt=4.17s > 1.5s
+[2026-10-27 00:29:23.769] FRAME 1048 (34.93s) | Track #20 (Aagam (Re-ID Pending)) STATE CHANGE: UNIDENTIFIED -> REIDENTIFICATION_PENDING
+[2026-10-27 00:29:24.111] FRAME 1050 (35.00s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 18.3%, margin: 11.9%, lat: 1315ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 18.3%, 'washing feet': 6.4%, 'bookbinding': 4.1%]
+[2026-10-27 00:29:24.116] >> Progress: Frame 1050/1800 (58.3%) | Rate: 6.2 FPS | ETA: 121s | ArcFace calls: 186 | HAR Inferences: 55
+[2026-10-27 00:29:28.184] FRAME 1065 (35.50s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 18.3%, margin: 11.9%, lat: 1315ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 18.3%, 'washing feet': 6.4%, 'bookbinding': 4.1%]
+[2026-10-27 00:29:42.985] FRAME 1173 (39.10s) | Track #21 (Soham (Duplicate)) STATE CHANGE: None -> IDENTITY_LOCKED
+[2026-10-27 00:29:46.865] FRAME 1188 (39.60s) | Track #21 (Identifying...) STATE CHANGE: IDENTITY_LOCKED -> UNIDENTIFIED
+[2026-10-27 00:29:47.835] FRAME 1197 (39.90s) | Track #21 (Soham (Duplicate)) STATE CHANGE: UNIDENTIFIED -> IDENTITY_LOCKED
+[2026-10-27 00:29:50.828] >> Progress: Frame 1200/1800 (66.7%) | Rate: 6.1 FPS | ETA: 98s | ArcFace calls: 217 | HAR Inferences: 65
+[2026-10-27 00:29:51.435] FRAME 1208 (40.27s) | Track #21 (Identifying...) STATE CHANGE: IDENTITY_LOCKED -> UNIDENTIFIED
+[2026-10-27 00:29:52.181] FRAME 1214 (40.47s) | Track #21 (Soham (Duplicate)) STATE CHANGE: UNIDENTIFIED -> IDENTITY_LOCKED
+[2026-10-27 00:29:52.296] FRAME 1215 (40.50s) | Track #21 (Identifying...) STATE CHANGE: IDENTITY_LOCKED -> UNIDENTIFIED
+[2026-10-27 00:29:52.400] FRAME 1217 (40.57s) | Track #21 (Soham (Duplicate)) STATE CHANGE: UNIDENTIFIED -> IDENTITY_LOCKED
+[2026-10-27 00:29:52.494] FRAME 1218 (40.60s) | Track #21 (Identifying...) STATE CHANGE: IDENTITY_LOCKED -> UNIDENTIFIED
+[2026-10-27 00:29:52.545] FRAME 1219 (40.63s) | Track #21 (Soham (Duplicate)) STATE CHANGE: UNIDENTIFIED -> IDENTITY_LOCKED
+[2026-10-27 00:29:53.097] FRAME 1223 (40.77s) | Track #21 (Identifying...) STATE CHANGE: IDENTITY_LOCKED -> UNIDENTIFIED
+[2026-10-27 00:29:53.542] FRAME 1229 (40.97s) | Track #21 (Soham (Duplicate)) STATE CHANGE: UNIDENTIFIED -> IDENTITY_LOCKED
+[2026-10-27 00:29:53.743] FRAME 1230 (41.00s) | Track #21 (Identifying...) STATE CHANGE: IDENTITY_LOCKED -> UNIDENTIFIED
+[2026-10-27 00:29:55.884] FRAME 1240 (41.33s) | Track #21 (Soham (Duplicate)) STATE CHANGE: UNIDENTIFIED -> IDENTITY_LOCKED
+[2026-10-27 00:30:00.370] FRAME 1259 (41.97s) | Track #21 (Soham (Duplicate) at D04) | HAR: 'using computer' (conf: 31.5%, margin: 13.6%, lat: 1344ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 31.5%, 'bench pressing': 17.9%, 'unboxing': 3.8%]
+[2026-10-27 00:30:00.576] FRAME 1260 (42.00s) | Track #21 (Soham (Duplicate) at D04) | HAR: 'using computer' (conf: 31.5%, margin: 13.6%, lat: 1344ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 31.5%, 'bench pressing': 17.9%, 'unboxing': 3.8%]
+[2026-10-27 00:30:01.036] FRAME 1264 (42.13s) | Track #21 (Identifying...) STATE CHANGE: IDENTITY_LOCKED -> UNIDENTIFIED
+[2026-10-27 00:30:01.096] FRAME 1265 (42.17s) | Track #21 (Soham (Duplicate)) STATE CHANGE: UNIDENTIFIED -> IDENTITY_LOCKED
+[2026-10-27 00:30:02.421] FRAME 1282 (42.73s) | Track #22 (Harshil (Duplicate)) STATE CHANGE: None -> IDENTITY_LOCKED
+[2026-10-27 00:30:02.612] FRAME 1285 (42.83s) | Track #22 (Identifying...) STATE CHANGE: IDENTITY_LOCKED -> UNIDENTIFIED
+[2026-10-27 00:30:03.371] FRAME 1293 (43.10s) | Track #23 (Identifying...) STATE CHANGE: None -> UNIDENTIFIED
+[2026-10-27 00:30:07.692] FRAME 1305 (43.50s) | Track #21 (Soham (Duplicate) at D04) | HAR: 'using computer' (conf: 31.5%, margin: 13.6%, lat: 1344ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 31.5%, 'bench pressing': 17.9%, 'unboxing': 3.8%]
+[2026-10-27 00:30:08.784] FRAME 1315 (43.83s) | Track #24 (Identifying...) STATE CHANGE: None -> UNIDENTIFIED
+[2026-10-27 00:30:12.282] FRAME 1320 (44.00s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 32.8%, margin: 19.8%, lat: 1357ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 32.8%, 'playing piano': 13.0%, 'air drumming': 5.2%]
+[2026-10-27 00:30:12.283] FRAME 1320 (44.00s) | Track #21 (Soham (Duplicate) at D04) | HAR: 'using computer' (conf: 49.4%, margin: 39.2%, lat: 1319ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 49.4%, 'bench pressing': 10.2%, 'playing piano': 2.1%]
+[2026-10-27 00:30:12.870] FRAME 1324 (44.13s) | Track #21 (Unknown (not enrolled) #21) STATE CHANGE: IDENTITY_LOCKED -> UNKNOWN
+[2026-10-27 00:30:13.097] FRAME 1326 (44.20s) | Track #21 (Soham (Duplicate)) STATE CHANGE: UNKNOWN -> IDENTITY_LOCKED
+[2026-10-27 00:30:13.147] FRAME 1327 (44.23s) | Track #21 (Unknown (not enrolled) #21) STATE CHANGE: IDENTITY_LOCKED -> UNKNOWN
+[2026-10-27 00:30:15.574] FRAME 1335 (44.50s) | Track #21 (Unknown (not enrolled) #21 at D04) | HAR: 'using computer' (conf: 49.4%, margin: 39.2%, lat: 1319ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 49.4%, 'bench pressing': 10.2%, 'playing piano': 2.1%]
+[2026-10-27 00:30:17.403] FRAME 1350 (45.00s) | Track #21 (Unknown (not enrolled) #21 at D04) | HAR: 'using computer' (conf: 49.4%, margin: 39.2%, lat: 1319ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 49.4%, 'bench pressing': 10.2%, 'playing piano': 2.1%]
+[2026-10-27 00:30:17.411] >> Progress: Frame 1350/1800 (75.0%) | Rate: 6.1 FPS | ETA: 74s | ArcFace calls: 252 | HAR Inferences: 73
+[2026-10-27 00:30:19.520] FRAME 1356 (45.20s) | Track #16 (Harshil at D03) | HAR: 'using computer' (conf: 69.1%, margin: 66.5%, lat: 1341ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 69.1%, 'recording music': 2.6%, 'bench pressing': 2.5%]
+[2026-10-27 00:30:22.015] FRAME 1365 (45.50s) | Track #16 (Harshil at D03) | HAR: 'using computer' (conf: 69.1%, margin: 66.5%, lat: 1341ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 69.1%, 'recording music': 2.6%, 'bench pressing': 2.5%]
+[2026-10-27 00:30:22.016] FRAME 1365 (45.50s) | Track #21 (Unknown (not enrolled) #21 at D04) | HAR: 'using computer' (conf: 49.4%, margin: 39.2%, lat: 1319ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 49.4%, 'bench pressing': 10.2%, 'playing piano': 2.1%]
+[2026-10-27 00:30:22.118] FRAME 1367 (45.57s) | Track #21 (Soham (Duplicate)) STATE CHANGE: UNKNOWN -> IDENTITY_LOCKED
+[2026-10-27 00:30:22.980] FRAME 1372 (45.73s) | Track #25 (Harshil (Duplicate)) STATE CHANGE: None -> IDENTITY_LOCKED
+[2026-10-27 00:30:24.889] FRAME 1378 (45.93s) | Track #21 (Unknown (not enrolled) #21) STATE CHANGE: IDENTITY_LOCKED -> UNKNOWN
+[2026-10-27 00:30:26.730] FRAME 1380 (46.00s) | Track #16 (Harshil at D03) | HAR: 'using computer' (conf: 69.1%, margin: 66.5%, lat: 1341ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 69.1%, 'recording music': 2.6%, 'bench pressing': 2.5%]
+[2026-10-27 00:30:26.731] FRAME 1380 (46.00s) | Track #21 (Unknown (not enrolled) #21 at D04) | HAR: 'using computer' (conf: 70.5%, margin: 68.7%, lat: 1327ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 70.5%, 'playing piano': 1.7%, 'stretching leg': 1.5%]
+[2026-10-27 00:30:26.826] FRAME 1381 (46.03s) | Track #21 (Soham (Duplicate)) STATE CHANGE: UNKNOWN -> IDENTITY_LOCKED
+[2026-10-27 00:30:26.913] FRAME 1382 (46.07s) | Track #21 (Unknown (not enrolled) #21) STATE CHANGE: IDENTITY_LOCKED -> UNKNOWN
+[2026-10-27 00:30:27.319] FRAME 1384 (46.13s) | Track #21 (Soham (Duplicate)) STATE CHANGE: UNKNOWN -> IDENTITY_LOCKED
+[2026-10-27 00:30:31.124] FRAME 1393 (46.43s) | Track #25 (Identifying...) STATE CHANGE: IDENTITY_LOCKED -> UNIDENTIFIED
+[2026-10-27 00:30:31.357] FRAME 1395 (46.50s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 20.9%, margin: 15.6%, lat: 1332ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 20.9%, 'air drumming': 5.4%, 'playing piano': 4.2%]
+[2026-10-27 00:30:33.224] FRAME 1410 (47.00s) | Track #1 (Soham at D04) | HAR: 'using computer' (conf: 20.9%, margin: 15.6%, lat: 1332ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 20.9%, 'air drumming': 5.4%, 'playing piano': 4.2%]
+[2026-10-27 00:30:33.875] FRAME 1414 (47.13s) | Track #21 (Unknown (not enrolled) #21) STATE CHANGE: IDENTITY_LOCKED -> UNKNOWN
+[2026-10-27 00:30:34.184] FRAME 1417 (47.23s) | Track #25 (Harshil (Duplicate)) STATE CHANGE: UNIDENTIFIED -> IDENTITY_LOCKED
+[2026-10-27 00:30:38.041] FRAME 1425 (47.50s) | Track #21 (Unknown (not enrolled) #21 at D04) | HAR: 'using computer' (conf: 70.5%, margin: 68.7%, lat: 1327ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 70.5%, 'playing piano': 1.7%, 'stretching leg': 1.5%]
+[2026-10-27 00:30:39.121] FRAME 1432 (47.73s) | Track #22 (Unknown (not enrolled) #22) STATE CHANGE: UNIDENTIFIED -> UNKNOWN
+[2026-10-27 00:30:42.240] FRAME 1447 (48.23s) | Track #25 (Identifying...) STATE CHANGE: IDENTITY_LOCKED -> UNIDENTIFIED
+[2026-10-27 00:30:47.409] FRAME 1465 (48.83s) | Track #24 (Unknown (not enrolled) #24) STATE CHANGE: UNIDENTIFIED -> UNKNOWN
+[2026-10-27 00:30:56.376] FRAME 1500 (50.00s) | Track #21 (Unknown (not enrolled) #21 at D04) | HAR: 'using computer' (conf: 14.2%, margin: 8.2%, lat: 1351ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 14.2%, 'playing piano': 5.9%, 'air drumming': 2.8%]
+[2026-10-27 00:30:56.383] >> Progress: Frame 1500/1800 (83.3%) | Rate: 5.7 FPS | ETA: 52s | ArcFace calls: 306 | HAR Inferences: 87
+[2026-10-27 00:31:01.139] FRAME 1515 (50.50s) | Track #21 (Unknown (not enrolled) #21 at D04) | HAR: 'using computer' (conf: 14.2%, margin: 8.2%, lat: 1351ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 14.2%, 'playing piano': 5.9%, 'air drumming': 2.8%]
+[2026-10-27 00:31:02.191] FRAME 1522 (50.73s) | Track #25 (Unknown (not enrolled) #25) STATE CHANGE: UNIDENTIFIED -> UNKNOWN
+[2026-10-27 00:31:03.359] FRAME 1530 (51.00s) | Track #21 (Unknown (not enrolled) #21 at D04) | HAR: 'using computer' (conf: 14.2%, margin: 8.2%, lat: 1351ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 14.2%, 'playing piano': 5.9%, 'air drumming': 2.8%]
+[2026-10-27 00:31:06.876] FRAME 1545 (51.50s) | Track #21 (Unknown (not enrolled) #21 at D04) | HAR: 'using computer' (conf: 14.2%, margin: 8.2%, lat: 1351ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 14.2%, 'playing piano': 5.9%, 'air drumming': 2.8%]
+[2026-10-27 00:31:12.640] FRAME 1567 (52.23s) | Track #25 (Unknown (not enrolled) #25 at D03) | HAR: 'using computer' (conf: 31.0%, margin: 24.9%, lat: 1316ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 31.0%, 'bench pressing': 6.0%, 'rock climbing': 4.9%]
+[2026-10-27 00:31:15.073] FRAME 1575 (52.50s) | Track #25 (Unknown (not enrolled) #25 at D03) | HAR: 'using computer' (conf: 31.0%, margin: 24.9%, lat: 1316ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 31.0%, 'bench pressing': 6.0%, 'rock climbing': 4.9%]
+[2026-10-27 00:31:17.010] FRAME 1590 (53.00s) | Track #25 (Unknown (not enrolled) #25 at D03) | HAR: 'using computer' (conf: 31.0%, margin: 24.9%, lat: 1316ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 31.0%, 'bench pressing': 6.0%, 'rock climbing': 4.9%]
+[2026-10-27 00:31:20.436] FRAME 1605 (53.50s) | Track #25 (Unknown (not enrolled) #25 at D03) | HAR: 'using computer' (conf: 31.0%, margin: 24.9%, lat: 1316ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 31.0%, 'bench pressing': 6.0%, 'rock climbing': 4.9%]
+[2026-10-27 00:31:22.350] FRAME 1620 (54.00s) | Track #25 (Unknown (not enrolled) #25 at D03) | HAR: 'using computer' (conf: 31.0%, margin: 24.9%, lat: 1316ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 31.0%, 'bench pressing': 6.0%, 'rock climbing': 4.9%]
+[2026-10-27 00:31:28.698] FRAME 1640 (54.67s) | Track #26 (Identifying...) STATE CHANGE: None -> UNIDENTIFIED
+[2026-10-27 00:31:30.228] >> Progress: Frame 1650/1800 (91.7%) | Rate: 5.6 FPS | ETA: 27s | ArcFace calls: 357 | HAR Inferences: 97
+[2026-10-27 00:31:32.219] FRAME 1655 (55.17s) | Track #26 (Identifying... at D03) | HAR: 'using computer' (conf: 33.1%, margin: 27.0%, lat: 1330ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 33.1%, 'recording music': 6.1%, 'bench pressing': 3.5%]
+[2026-10-27 00:31:33.879] FRAME 1658 (55.27s) | Track #28 (Duplicate #28) STATE CHANGE: None -> UNIDENTIFIED
+[2026-10-27 00:31:35.050] FRAME 1665 (55.50s) | Track #26 (Identifying... at D03) | HAR: 'using computer' (conf: 33.1%, margin: 27.0%, lat: 1330ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 33.1%, 'recording music': 6.1%, 'bench pressing': 3.5%]
+[2026-10-27 00:31:38.491] FRAME 1680 (56.00s) | Track #26 (Identifying... at D03) | HAR: 'using computer' (conf: 33.1%, margin: 27.0%, lat: 1330ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 33.1%, 'recording music': 6.1%, 'bench pressing': 3.5%]
+[2026-10-27 00:31:41.030] FRAME 1690 (56.33s) | Track #24 (Unknown (not enrolled) #24 at D02) | HAR: 'using computer' (conf: 15.4%, margin: 9.3%, lat: 1412ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 15.4%, 'playing piano': 6.1%, 'playing trumpet': 4.1%]
+[2026-10-27 00:31:41.506] FRAME 1695 (56.50s) | Track #24 (Unknown (not enrolled) #24 at D02) | HAR: 'using computer' (conf: 15.4%, margin: 9.3%, lat: 1412ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 15.4%, 'playing piano': 6.1%, 'playing trumpet': 4.1%]
+[2026-10-27 00:31:43.222] FRAME 1710 (57.00s) | Track #24 (Unknown (not enrolled) #24 at D02) | HAR: 'using computer' (conf: 15.4%, margin: 9.3%, lat: 1412ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 15.4%, 'playing piano': 6.1%, 'playing trumpet': 4.1%]
+[2026-10-27 00:31:47.770] FRAME 1725 (57.50s) | Track #24 (Unknown (not enrolled) #24 at D02) | HAR: 'using computer' (conf: 15.4%, margin: 9.3%, lat: 1412ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 15.4%, 'playing piano': 6.1%, 'playing trumpet': 4.1%]
+[2026-10-27 00:31:49.366] FRAME 1740 (58.00s) | Track #24 (Unknown (not enrolled) #24 at D02) | HAR: 'using computer' (conf: 15.4%, margin: 9.3%, lat: 1412ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 15.4%, 'playing piano': 6.1%, 'playing trumpet': 4.1%]
+[2026-10-27 00:31:53.985] FRAME 1770 (59.00s) | Track #24 (Unknown (not enrolled) #24 at D02) | HAR: 'using computer' (conf: 20.8%, margin: 17.3%, lat: 1666ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 20.8%, 'recording music': 3.5%, 'sailing': 2.6%]
+[2026-10-27 00:31:57.013] FRAME 1785 (59.50s) | Track #24 (Unknown (not enrolled) #24 at D02) | HAR: 'using computer' (conf: 20.8%, margin: 17.3%, lat: 1666ms) -> Mapped: ACTIVE_WORK | Top-3: ['using computer': 20.8%, 'recording music': 3.5%, 'sailing': 2.6%]
+[2026-10-27 00:31:58.352] ================================================================================
+[2026-10-27 00:31:58.352] RENDER EXECUTION COMPLETE
+[2026-10-27 00:31:58.352] ================================================================================
+[2026-10-27 00:31:58.352] Total Frames Processed: 1800
+[2026-10-27 00:31:58.352] Total Wall-Clock Time: 323.5s (5.6 FPS overall)
+[2026-10-27 00:31:58.352] Output Video File: test_outputs/one_minute_har_demo.mp4 (6.98 MB)
+[2026-10-27 00:31:58.352] Output Log File: test_outputs/one_minute_har_verification.log
+[2026-10-27 00:31:58.352] 
+[2026-10-27 00:31:58.352] --- PERFORMANCE METRICS ---
+[2026-10-27 00:31:58.352] Total Person Observations: 5257
+[2026-10-27 00:31:58.352] Total ArcFace Evaluations: 390
+[2026-10-27 00:31:58.352] ArcFace Bypass Reduction: 92.6% calls saved by event-driven sticky locking
+[2026-10-27 00:31:58.352] Total VideoMAE Inferences: 105
+[2026-10-27 00:31:58.352] Average VideoMAE Latency: 1347.9 ms
+[2026-10-27 00:31:58.352] 
+[2026-10-27 00:31:58.352] --- IDENTITY STATE SUMMARY ---
+[2026-10-27 00:31:58.352]   FACE_CANDIDATE           :   335 frame-observations (  6.4%)
+[2026-10-27 00:31:58.352]   IDENTITY_LOCKED          :  2211 frame-observations ( 42.1%)
+[2026-10-27 00:31:58.352]   REIDENTIFICATION_PENDING :   162 frame-observations (  3.1%)
+[2026-10-27 00:31:58.352]   UNIDENTIFIED             :  1485 frame-observations ( 28.2%)
+[2026-10-27 00:31:58.352]   UNKNOWN                  :  1064 frame-observations ( 20.2%)
+[2026-10-27 00:31:58.352] 
+[2026-10-27 00:31:58.352] --- ACTIVITY CLASSIFICATION SUMMARY (VideoMAE Only) ---
+[2026-10-27 00:31:58.352]   uncertain           :  4145 occurrences ( 78.8%)
+[2026-10-27 00:31:58.352]   active_work         :  1112 occurrences ( 21.2%)
+[2026-10-27 00:31:58.352] 
+[2026-10-27 00:31:58.352] --- GROUND TRUTH WORKSTATION OCCUPANCY ---
+[2026-10-27 00:31:58.352]   Desk 1 (D01): Harshil  -> Verified at D03 (812 seated frames)
+[2026-10-27 00:31:58.352]   Desk 2 (D02): Swayam   -> Verified at D04 (229 seated frames)
+[2026-10-27 00:31:58.352]   Desk 3 (D03): Aagam    -> Verified at D03 (767 seated frames)
+[2026-10-27 00:31:58.352]   Desk 4 (D04): Soham    -> Verified at D04 (2163 seated frames)
+[2026-10-27 00:31:58.353] 
+[2026-10-27 00:31:58.353] --- VIDEOMAE UNCERTAINTY ROOT-CAUSE ANALYSIS ---
+[2026-10-27 00:31:58.353]   1. Per-Track Temporal Buffering: The initial 16 frames of each newly initiated or recovering
+[2026-10-27 00:31:58.353]      track have not yet accumulated a full clip and are deterministically logged as buffering/uncertain.
+[2026-10-27 00:31:58.353]   2. Kinetics-400 Softmax Probability Diffusion: Across 400 classes (random baseline = 0.25%),
+[2026-10-27 00:31:58.353]      true lab activities like 'using computer' frequently achieve 15-24% confidence, which is 60-100x
+[2026-10-27 00:31:58.353]      random chance with a dominant margin over the runner-up class.
+[2026-10-27 00:31:58.353]   3. Out-Of-Domain Actions: Natural lab postures (slumping, resting chin, turning to speak) map to
+[2026-10-27 00:31:58.353]      non-academic Kinetics classes with low confidence and are correctly preserved as 'uncertain'.
+[2026-10-27 00:31:58.353] ================================================================================

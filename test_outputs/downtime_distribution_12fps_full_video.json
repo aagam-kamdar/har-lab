@@ -1,0 +1,14 @@
+{
+  "video_duration_sec": 1.6666666666666667,
+  "sampling_fps": 12.0,
+  "total_sampled_frames": 20,
+  "downtime_events": [],
+  "distribution": {
+    "n": 0,
+    "min": null,
+    "median": null,
+    "mean": null,
+    "max": null
+  },
+  "unresolved_removals": {}
+}

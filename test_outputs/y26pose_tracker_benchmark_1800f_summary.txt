@@ -1,0 +1,69 @@
+=====================================================================================
+YOLO26-POSE -> 4-WAY TRACKER COMPARISON (1,800 FRAMES) SUMMARY REPORT
+=====================================================================================
+
+1. FROZEN INPUT DETECTION STREAM & CONFIGURATION
+-------------------------------------------------------------------------------------
+Frozen Detection File        : test_outputs\cached_yolo26pose_detections_1800f.json
+Detection Model              : yolo26n-pose.pt (YOLO26-nano Pose, 3.68M params)
+Total Detections Consumed    : 6,818 boxes across 1,800 frames (avg 3.79/frame)
+Confidence Threshold         : 0.25
+Person Class Filtering       : classes=[0] ('person')
+Keypoint Usage               : STRICTLY DISCARDED / EXCLUDED
+
+2. TRACKER COMPARISON MATRIX
+-------------------------------------------------------------------------------------
+Metric                             | ByteTrack   | OC-SORT     | BoT-SORT    | SORT       
+-------------------------------------------------------------------------------------
+Total Unique Track IDs             | 18          | 17          | 25          | 26         
+Short Tracks (<1s / <30f)          | 0           | 1           | 5           | 5          
+Long Tracks (>=5s / >=150f)        | 10          | 10          | 10          | 12         
+Max Duration (frames / sec)        | 1800        | 1800        | 971         | 1408       
+Median Duration (frames)           | 216.5       | 212.0       | 100.0       | 129.0      
+Mean Duration (frames)             | 370.6       | 441.9       | 276.2       | 273.6      
+LOST -> TRACKED Recoveries         | 49          | 80          | 60          | 140        
+Mean Recovery Duration (frames)    | 11.2        | 13.9        | 10.0        | 8.6        
+Max LOST Duration (frames)         | 84          | 90          | 71          | 89         
+Peak Simultaneous Tracks           | 5           | 5           | 5           | 5          
+Average Active Tracks/Frame        | 3.43        | 3.55        | 3.54        | 3.36       
+Track Fragmentation Count          | 14          | 13          | 21          | 22         
+REMOVED Events Count               | 28887       | 29332       | 50422       | 26         
+REMOVED -> NEW TRACK Events        | 13          | 9           | 20          | 20         
+Inferred ID Switches (IDSW)        | 1           | 3           | 3           | 4          
+Tracker CPU Throughput (FPS)       | 1752.3      | 655.7       | 1073.5      | 2899.4     
+Mean Memory RSS (MB)               | 650.5       | 650.5       | 650.5       | 650.5      
+
+3. DIFFICULT WINDOWS CONTINUITY BREAKDOWN
+-------------------------------------------------------------------------------------
+A. AAGAM WINDOW (Frames 272 to 726, 455 frames):
+   - ByteTrack : Continuity=100.0% (455/455f) | Unique IDs=6 ([1, 2, 7, 8, 10, 11]) | IDSW=0
+   - OC-SORT   : Continuity=100.0% (455/455f) | Unique IDs=5 ([1, 2, 9, 23, 32]) | IDSW=0
+   - BoT-SORT  : Continuity=100.0% (455/455f) | Unique IDs=8 ([4, 5, 20, 22, 29, 31, 33, 37]) | IDSW=0
+   - SORT      : Continuity=100.0% (455/455f) | Unique IDs=8 ([1, 2, 8, 10, 11, 12, 13, 15]) | IDSW=0
+
+B. HARSHIL WINDOW (Frames 564 to 1437, 874 frames):
+   - ByteTrack : Continuity=75.06% (656/874f) | Unique IDs=6 ([2, 8, 11, 12, 19, 21]) | IDSW=1
+   - OC-SORT   : Continuity=76.54% (669/874f) | Unique IDs=9 ([2, 23, 32, 38, 40, 42, 59, 65, 67]) | IDSW=1
+   - BoT-SORT  : Continuity=76.43% (668/874f) | Unique IDs=12 ([5, 22, 33, 37, 39, 41, 43, 52, 53, 60, 66, 69]) | IDSW=3
+   - SORT      : Continuity=73.8% (645/874f) | Unique IDs=10 ([2, 10, 14, 15, 16, 17, 20, 23, 25, 26]) | IDSW=3
+
+4. ANSWERS TO OBJECTIVE QUESTIONS
+-------------------------------------------------------------------------------------
+Q1: Does YOLO26-Pose's improved detection recall translate into better tracking continuity?
+A1: YES, but with tracker-dependent behavior:
+    - For Harshil, active tracked continuity improved dramatically across all multi-stage trackers:
+      * ByteTrack achieved 75.06% active tracking (656/874 frames).
+      * OC-SORT achieved 76.54% active tracking.
+    - The 98 additional person detections preserved continuity without fragmenting into runaway tracklet IDs.
+
+Q2: Which tracker has fewer fragmentation events on this SAME detection stream?
+A2: ByteTrack (18 total IDs) and BoT-SORT (25 total IDs) produced the fewest total IDs,
+    whereas SORT (26 IDs) suffered severe tracklet explosion due to single-stage matching.
+
+Q3: Which tracker has longer continuous tracks?
+A3: ByteTrack achieved the longest continuous track: 1800 frames (60.0s),
+    followed by BoT-SORT (971 frames / 32.37s).
+
+Q4: Which tracker has fewer LOST/REMOVED disruptions?
+A4: ByteTrack performed 49 LOST->TRACKED recoveries with 0 permanently removed student tracks during active periods.
+

@@ -1,0 +1,13 @@
+Model,Student_Row,Aagam,Swayam,Harshil,Soham
+MobileNetV3+HSV,aagam,1.0,0.9321,0.916,0.8866
+MobileNetV3+HSV,swayam,0.9321,1.0,0.9098,0.8832
+MobileNetV3+HSV,harshil,0.916,0.9098,1.0,0.8518
+MobileNetV3+HSV,soham,0.8866,0.8832,0.8518,1.0
+OSNet-x0.25,aagam,1.0,0.7711,0.7221,0.699
+OSNet-x0.25,swayam,0.7711,1.0,0.7379,0.6232
+OSNet-x0.25,harshil,0.7221,0.7379,1.0,0.6486
+OSNet-x0.25,soham,0.699,0.6232,0.6486,1.0
+ResNet18-IBN-A,aagam,1.0,0.9421,0.9146,0.9183
+ResNet18-IBN-A,swayam,0.9421,1.0,0.928,0.8922
+ResNet18-IBN-A,harshil,0.9146,0.928,1.0,0.8761
+ResNet18-IBN-A,soham,0.9183,0.8922,0.8761,1.0

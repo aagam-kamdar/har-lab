@@ -1,0 +1,128 @@
+{
+  "video": "new lab video.mp4",
+  "total_frames": 1800,
+  "runtime_seconds": 231.58,
+  "fps": 7.77,
+  "initial_gallery_sizes": {
+    "aagam": 35,
+    "harshil": 43,
+    "soham": 33,
+    "swayam": 39
+  },
+  "final_gallery_sizes": {
+    "aagam": 35,
+    "harshil": 43,
+    "soham": 33,
+    "swayam": 39
+  },
+  "gallery_mutations": 0,
+  "ownership_violations": 0,
+  "locks": [
+    [
+      1,
+      1,
+      "soham",
+      0.563
+    ],
+    [
+      82,
+      2,
+      "harshil",
+      0.43
+    ],
+    [
+      537,
+      8,
+      "swayam",
+      0.388
+    ],
+    [
+      571,
+      10,
+      "aagam",
+      0.436
+    ],
+    [
+      951,
+      12,
+      "harshil",
+      0.405
+    ],
+    [
+      1226,
+      19,
+      "swayam",
+      0.441
+    ],
+    [
+      1401,
+      21,
+      "swayam",
+      0.485
+    ],
+    [
+      1604,
+      23,
+      "swayam",
+      0.428
+    ],
+    [
+      1749,
+      24,
+      "harshil",
+      0.425
+    ]
+  ],
+  "swayam_harshil_swaps": 0,
+  "contradictions": [
+    [
+      41,
+      1,
+      "soham",
+      "swayam",
+      0.399
+    ],
+    [
+      314,
+      1,
+      "soham",
+      "swayam",
+      0.393
+    ],
+    [
+      472,
+      1,
+      "soham",
+      "swayam",
+      0.423
+    ],
+    [
+      473,
+      1,
+      "soham",
+      "swayam",
+      0.421
+    ],
+    [
+      475,
+      1,
+      "soham",
+      "swayam",
+      0.422
+    ],
+    [
+      915,
+      1,
+      "soham",
+      "swayam",
+      0.429
+    ]
+  ],
+  "recovery_events": [],
+  "final_ownership": {
+    "soham": 1,
+    "swayam": 23,
+    "harshil": 24
+  },
+  "unique_tracks": 18
+}

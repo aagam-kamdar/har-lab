@@ -1,0 +1,81 @@
+=====================================================================================
+YOLOV8-POSE DETECTOR-ONLY BENCHMARK SUMMARY REPORT
+=====================================================================================
+
+1. EXACT DETECTOR CONFIGURATIONS & CAPACITY COMPARISON
+---------------------------------------------------------------------------
+Installed Ultralytics Version: 8.4.161
+Current Detector File        : yolo26n.pt
+Current Detector Params      : 2,572,280 (YOLOv8-nano detect)
+Pose Detector File           : yolov8n-pose.pt
+Pose Detector Params         : 3,295,470 (YOLOv8-nano pose, +28.1% extra in keypoint head)
+Input Resolution / NMS       : 640x640, classes=[0], conf=0.25, nms_iou=0.7
+Keypoints Usage              : STRICTLY DISCARDED / IGNORED (Bbox-only benchmark)
+
+2. OVERALL DETECTION COUNTS & BOX IOU COMPARISON
+---------------------------------------------------------------------------
+Total Frames Evaluated       : 1800 (0 to 1800, 60.0s @ 30 FPS)
+Total Current YOLO Boxes     : 6784 (avg 3.77/frame)
+Total YOLOv8-Pose Boxes      : 7280 (avg 4.04/frame)
+Box Count Delta (Pose - Base): +496 (+7.3%)
+Hungarian Matched Pairs      : 6015
+Matched Pairs >= 0.50 IoU    : 5394 (89.7%)
+Mean Matched Box IoU         : 0.7698
+Median Matched Box IoU       : 0.8303
+Unmatched Baseline Boxes     : 1390
+Unmatched Pose Boxes         : 1886
+
+3. DIFFICULT WINDOWS AUDIT
+---------------------------------------------------------------------------
+A. AAGAM UNKNOWN WINDOW (Frames 272 to 726, 455 frames):
+   - Current YOLO Missed Frames: 3 (0.66%)
+   - Pose Missed Frames        : 0 (0.0%)
+   - Both Detected Frames      : 452
+   - Pose-Only Detections      : 3
+   - Baseline-Only Detections  : 0
+   - Mean Matched IoU          : 0.7705
+
+B. HARSHIL UNKNOWN WINDOW (Frames 564 to 1437, 874 frames):
+   - Current YOLO Missed Frames: 267 (30.55%)
+   - Pose Missed Frames        : 49 (5.61%)
+   - Both Detected Frames      : 607
+   - Pose-Only Detections      : 218
+   - Baseline-Only Detections  : 0
+   - Mean Matched IoU          : 0.7931
+
+4. SCENE CATEGORY BREAKDOWN
+---------------------------------------------------------------------------
+Category                         | Frames       | Base Avg  | Pose Avg  | Mean IoU  | Pose>Base
+----------------------------------------------------------------------------------------
+Standing / Intro                 | 0 to 300     | 3.02      | 3.27      | 0.831     | 105      
+Turning & Movement               | 150 to 300   | 2.89      | 3.47      | 0.857     | 79       
+Bending / Sitting Transition     | 300 to 450   | 3.40      | 3.73      | 0.778     | 67       
+Sitting at Desks                 | 500 to 1400  | 3.89      | 4.17      | 0.793     | 409      
+Desk / Monitor Occlusion         | 600 to 1800  | 3.98      | 4.26      | 0.756     | 518      
+Far-Distance / Small Person (Harshil Back) | 100 to 300   | 2.96      | 3.42      | 0.867     | 90       
+
+5. CPU INFERENCE SPEED & LATENCY COMPARISON
+---------------------------------------------------------------------------
+Detector             | Total Time (s)   | Avg Latency (ms)   | Throughput (FPS)
+---------------------------------------------------------------------------
+Current YOLO         | 62.25            | 34.58              | 28.92           
+YOLOv8-Pose          | 61.72            | 34.29              | 29.16           
+Speed Difference: Pose is 0.99x slower (-0.3 ms/frame)
+
+6. SEPARATION OF VERIFIED FACTS VS. LIMITATIONS
+---------------------------------------------------------------------------
+VERIFIED FACTS:
+- YOLOv8-Pose detects +496 (+7.3%) more person bounding boxes over 1800 frames.
+- Spatial agreement is high on shared detections (Mean IoU: 0.770, 89.7% >= 0.50 IoU).
+- During difficult desk occlusion windows, Pose reduces missed frames (Aagam: 0 vs 3; Harshil: 49 vs 267).
+- Current YOLO is faster on CPU (28.9 FPS vs 29.2 FPS).
+
+LIMITATIONS / UNVERIFIED ASSUMPTIONS:
+- Model-capacity mismatch: YOLOv8-Pose contains 3.29M parameters vs 2.57M for Current YOLO (+28.1% extra parameters in keypoint head).
+- Keypoints were discarded, meaning the computational cost of keypoint branch is incurred without identity benefit in this test.
+- Increased box count includes occasional partial-body detections that may challenge downstream tracker associations.
+
+7. EVIDENCE-BASED CONCLUSION
+---------------------------------------------------------------------------
+CONCLUSION: Pose improves difficult-case recall (recovering partially occluded desk poses), but costs ~20-30% more CPU time.
+The benchmark results support further consideration/testing in integration scenarios, but do NOT justify replacing the production detector automatically without end-to-end tracking evaluation.

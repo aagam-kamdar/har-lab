@@ -1,0 +1,702 @@
+{
+  "metadata": {
+    "experiment": "Matched-Generation YOLO26 vs YOLO26-Pose Detector Benchmark",
+    "video_path": "new lab video.mp4",
+    "frames_evaluated": 1800,
+    "fps_target": 30.0,
+    "ultralytics_version": "8.4.161",
+    "box_comparison_data_source": "Original Cached YOLO Baseline (cached_yolo_detections_1800f.json)",
+    "timing_data_source": "Fresh CPU timing run across identical 1800 frames"
+  },
+  "model_capacity_verification": {
+    "production_detector": {
+      "checkpoint": "yolo26n.pt",
+      "architecture": "YOLO26-nano Object Detector (yolo26n.yaml)",
+      "parameters": 2572280,
+      "input_resolution": "640x640",
+      "classes": [
+        0
+      ],
+      "conf_threshold": 0.25,
+      "nms_iou": 0.7,
+      "end2end": true
+    },
+    "matched_pose_detector": {
+      "checkpoint": "yolo26n-pose.pt",
+      "architecture": "YOLO26-nano Pose Estimation (yolo26n-pose.yaml, Pose26 Head)",
+      "parameters": 3679464,
+      "input_resolution": "640x640",
+      "classes": [
+        0
+      ],
+      "conf_threshold": 0.25,
+      "nms_iou": 0.7,
+      "end2end": true
+    },
+    "capacity_delta_parameters": 1107184,
+    "capacity_delta_pct": 43.04,
+    "matched_generation_assessment": "MATCHED GENERATION: Both models are native YOLO26 architecture (v8.3.222/v8.4.0 assets) sharing identical backbone, neck, and scales. Parameter delta (+43.0%) is strictly confined to the 17-keypoint Pose26 head, which was ignored during box evaluation."
+  },
+  "overall_detection_metrics": {
+    "total_frames": 1800,
+    "total_production_boxes": 6784,
+    "total_pose_boxes": 6818,
+    "average_production_boxes_per_frame": 3.769,
+    "average_pose_boxes_per_frame": 3.788,
+    "box_count_delta_pose_minus_prod": 34,
+    "box_count_delta_pct": 0.5,
+    "total_matched_pairs": 5878,
+    "total_matched_gte_50_iou": 5389,
+    "percent_matched_gte_50_iou": 91.68,
+    "mean_matched_iou": 0.7694,
+    "median_matched_iou": 0.8174,
+    "total_unmatched_prod_boxes": 1395,
+    "total_unmatched_pose_boxes": 1429
+  },
+  "difficult_windows_audit": {
+    "aagam_window": {
+      "window": "Frames 272 to 726",
+      "student": "Aagam",
+      "total_frames": 455,
+      "prod_avg_dets_per_frame": 3.63,
+      "pose_avg_dets_per_frame": 3.72,
+      "prod_missed_person_frames": 3,
+      "prod_missed_person_pct": 0.66,
+      "pose_missed_person_frames": 0,
+      "pose_missed_person_pct": 0.0,
+      "both_detected_person_frames": 452,
+      "both_missed_person_frames": 0,
+      "prod_only_detected_frames": 0,
+      "pose_only_detected_frames": 3,
+      "matched_mean_iou": 0.7644
+    },
+    "harshil_window": {
+      "window": "Frames 564 to 1437",
+      "student": "Harshil",
+      "total_frames": 874,
+      "prod_avg_dets_per_frame": 3.96,
+      "pose_avg_dets_per_frame": 3.95,
+      "prod_missed_person_frames": 267,
+      "prod_missed_person_pct": 30.55,
+      "pose_missed_person_frames": 169,
+      "pose_missed_person_pct": 19.34,
+      "both_detected_person_frames": 607,
+      "both_missed_person_frames": 169,
+      "prod_only_detected_frames": 0,
+      "pose_only_detected_frames": 98,
+      "matched_mean_iou": 0.805
+    }
+  },
+  "scene_category_breakdown": [
+    {
+      "category": "Standing / Intro",
+      "frame_range": "0 to 300",
+      "total_frames": 301,
+      "prod_avg_dets": 3.02,
+      "pose_avg_dets": 3.08,
+      "mean_iou": 0.8222,
+      "frames_prod_more": 48,
+      "frames_pose_more": 55,
+      "frames_agree": 198
+    },
+    {
+      "category": "Turning & Movement",
+      "frame_range": "150 to 300",
+      "total_frames": 151,
+      "prod_avg_dets": 2.89,
+      "pose_avg_dets": 3.12,
+      "mean_iou": 0.8411,
+      "frames_prod_more": 16,
+      "frames_pose_more": 39,
+      "frames_agree": 96
+    },
+    {
+      "category": "Bending / Sitting Transition",
+      "frame_range": "300 to 450",
+      "total_frames": 151,
+      "prod_avg_dets": 3.4,
+      "pose_avg_dets": 3.43,
+      "mean_iou": 0.7489,
+      "frames_prod_more": 32,
+      "frames_pose_more": 37,
+      "frames_agree": 82
+    },
+    {
+      "category": "Sitting at Desks",
+      "frame_range": "500 to 1400",
+      "total_frames": 901,
+      "prod_avg_dets": 3.89,
+      "pose_avg_dets": 3.9,
+      "mean_iou": 0.8052,
+      "frames_prod_more": 269,
+      "frames_pose_more": 310,
+      "frames_agree": 322
+    },
+    {
+      "category": "Desk / Monitor Occlusion",
+      "frame_range": "600 to 1800",
+      "total_frames": 1200,
+      "prod_avg_dets": 3.98,
+      "pose_avg_dets": 3.99,
+      "mean_iou": 0.7645,
+      "frames_prod_more": 395,
+      "frames_pose_more": 426,
+      "frames_agree": 379
+    },
+    {
+      "category": "Far-Distance / Small Person (Harshil Back)",
+      "frame_range": "100 to 300",
+      "total_frames": 201,
+      "prod_avg_dets": 2.96,
+      "pose_avg_dets": 3.11,
+      "mean_iou": 0.8529,
+      "frames_prod_more": 25,
+      "frames_pose_more": 45,
+      "frames_agree": 131
+    }
+  ],
+  "inference_speed_cpu": {
+    "production_detector": {
+      "total_inference_time_seconds": 77.8,
+      "average_latency_ms": 43.22,
+      "average_fps": 23.14
+    },
+    "matched_pose_detector": {
+      "total_inference_time_seconds": 86.06,
+      "average_latency_ms": 47.81,
+      "average_fps": 20.92
+    },
+    "speed_ratio_pose_vs_prod": 0.9
+  },
+  "representative_examples": [
+    {
+      "image_filename": "01_prod_misses_pose_detects.jpg",
+      "frame": 30,
+      "description": "YOLO26-Pose detects person missed by Production YOLO26",
+      "prod_boxes": [
+        {
+          "bbox": [
+            766.2,
+            71.0,
+            967.8,
+            386.8
+          ],
+          "conf": 0.7785
+        },
+        {
+          "bbox": [
+            654.8,
+            58.5,
+            803.4,
+            235.3
+          ],
+          "conf": 0.4093
+        }
+      ],
+      "pose_boxes": [
+        {
+          "bbox": [
+            768.9,
+            73.7,
+            972.6,
+            371.0
+          ],
+          "conf": 0.8721
+        },
+        {
+          "bbox": [
+            658.6,
+            66.7,
+            815.8,
+            250.3
+          ],
+          "conf": 0.7108
+        },
+        {
+          "bbox": [
+            520.5,
+            40.2,
+            629.6,
+            185.5
+          ],
+          "conf": 0.5283
+        }
+      ]
+    },
+    {
+      "image_filename": "02_pose_misses_prod_detects.jpg",
+      "frame": 8,
+      "description": "Production YOLO26 detects person missed by YOLO26-Pose",
+      "prod_boxes": [
+        {
+          "bbox": [
+            766.7,
+            76.2,
+            968.0,
+            387.0
+          ],
+          "conf": 0.7956
+        },
+        {
+          "bbox": [
+            657.4,
+            61.7,
+            808.1,
+            230.9
+          ],
+          "conf": 0.553
+        },
+        {
+          "bbox": [
+            513.6,
+            47.3,
+            621.5,
+            177.5
+          ],
+          "conf": 0.3651
+        },
+        {
+          "bbox": [
+            658.5,
+            62.0,
+            789.2,
+            195.7
+          ],
+          "conf": 0.2777
+        }
+      ],
+      "pose_boxes": [
+        {
+          "bbox": [
+            769.6,
+            75.7,
+            972.1,
+            369.9
+          ],
+          "conf": 0.883
+        },
+        {
+          "bbox": [
+            520.3,
+            45.7,
+            618.4,
+            176.0
+          ],
+          "conf": 0.5694
+        },
+        {
+          "bbox": [
+            655.3,
+            58.4,
+            794.5,
+            238.9
+          ],
+          "conf": 0.4328
+        }
+      ]
+    },
+    {
+      "image_filename": "03_both_detect_standing_intro.jpg",
+      "frame": 50,
+      "description": "Both detectors find all 3 standing students with high overlap",
+      "prod_boxes": [
+        {
+          "bbox": [
+            763.2,
+            92.4,
+            947.4,
+            374.4
+          ],
+          "conf": 0.6661
+        },
+        {
+          "bbox": [
+            650.8,
+            61.3,
+            774.8,
+            167.0
+          ],
+          "conf": 0.6319
+        },
+        {
+          "bbox": [
+            506.1,
+            44.6,
+            623.0,
+            143.2
+          ],
+          "conf": 0.2745
+        }
+      ],
+      "pose_boxes": [
+        {
+          "bbox": [
+            771.5,
+            85.9,
+            962.6,
+            370.0
+          ],
+          "conf": 0.8476
+        },
+        {
+          "bbox": [
+            650.4,
+            61.8,
+            799.9,
+            260.5
+          ],
+          "conf": 0.7095
+        },
+        {
+          "bbox": [
+            521.7,
+            39.0,
+            637.2,
+            179.3
+          ],
+          "conf": 0.484
+        }
+      ]
+    },
+    {
+      "image_filename": "04_both_miss_heavy_occlusion.jpg",
+      "frame": 600,
+      "description": "Both detectors miss deeply occluded seated student",
+      "prod_boxes": [
+        {
+          "bbox": [
+            608.5,
+            106.6,
+            821.4,
+            378.4
+          ],
+          "conf": 0.8266
+        },
+        {
+          "bbox": [
+            792.7,
+            73.7,
+            938.6,
+            294.9
+          ],
+          "conf": 0.6024
+        },
+        {
+          "bbox": [
+            638.7,
+            67.6,
+            769.7,
+            199.4
+          ],
+          "conf": 0.2527
+        }
+      ],
+      "pose_boxes": [
+        {
+          "bbox": [
+            615.0,
+            101.5,
+            816.8,
+            372.4
+          ],
+          "conf": 0.856
+        },
+        {
+          "bbox": [
+            794.5,
+            72.5,
+            947.8,
+            317.8
+          ],
+          "conf": 0.8335
+        },
+        {
+          "bbox": [
+            522.6,
+            40.3,
+            626.4,
+            162.2
+          ],
+          "conf": 0.3967
+        },
+        {
+          "bbox": [
+            520.8,
+            43.5,
+            603.9,
+            134.3
+          ],
+          "conf": 0.3058
+        }
+      ]
+    },
+    {
+      "image_filename": "05_desk_monitor_occlusion.jpg",
+      "frame": 800,
+      "description": "Desk partition and monitor occlusion comparison",
+      "prod_boxes": [
+        {
+          "bbox": [
+            628.4,
+            61.5,
+            792.1,
+            306.4
+          ],
+          "conf": 0.8117
+        },
+        {
+          "bbox": [
+            483.1,
+            3.7,
+            619.5,
+            195.0
+          ],
+          "conf": 0.5496
+        },
+        {
+          "bbox": [
+            779.6,
+            75.3,
+            937.9,
+            295.1
+          ],
+          "conf": 0.4318
+        }
+      ],
+      "pose_boxes": [
+        {
+          "bbox": [
+            633.5,
+            54.7,
+            795.5,
+            307.2
+          ],
+          "conf": 0.8547
+        },
+        {
+          "bbox": [
+            784.9,
+            75.2,
+            948.6,
+            321.2
+          ],
+          "conf": 0.7681
+        },
+        {
+          "bbox": [
+            481.2,
+            0.0,
+            612.8,
+            190.4
+          ],
+          "conf": 0.6631
+        },
+        {
+          "bbox": [
+            535.5,
+            41.8,
+            649.3,
+            178.2
+          ],
+          "conf": 0.3971
+        }
+      ]
+    },
+    {
+      "image_filename": "06_far_distance_harshil.jpg",
+      "frame": 100,
+      "description": "Far-distance student standing at rear computer desk",
+      "prod_boxes": [
+        {
+          "bbox": [
+            696.4,
+            0.9,
+            864.4,
+            374.8
+          ],
+          "conf": 0.8901
+        },
+        {
+          "bbox": [
+            877.4,
+            233.8,
+            1081.6,
+            474.7
+          ],
+          "conf": 0.3504
+        },
+        {
+          "bbox": [
+            513.8,
+            43.3,
+            626.8,
+            140.1
+          ],
+          "conf": 0.2605
+        }
+      ],
+      "pose_boxes": [
+        {
+          "bbox": [
+            693.6,
+            0.0,
+            865.9,
+            367.1
+          ],
+          "conf": 0.9047
+        },
+        {
+          "bbox": [
+            521.8,
+            40.3,
+            636.9,
+            159.9
+          ],
+          "conf": 0.3883
+        }
+      ]
+    },
+    {
+      "image_filename": "07_aagam_desk_occlusion.jpg",
+      "frame": 727,
+      "description": "Aagam seated at desk before face-lock confirmation",
+      "prod_boxes": [
+        {
+          "bbox": [
+            639.3,
+            64.2,
+            794.2,
+            301.2
+          ],
+          "conf": 0.569
+        },
+        {
+          "bbox": [
+            784.9,
+            76.8,
+            939.9,
+            256.9
+          ],
+          "conf": 0.5153
+        },
+        {
+          "bbox": [
+            494.9,
+            32.3,
+            628.4,
+            179.2
+          ],
+          "conf": 0.2902
+        }
+      ],
+      "pose_boxes": [
+        {
+          "bbox": [
+            644.5,
+            58.6,
+            794.9,
+            276.6
+          ],
+          "conf": 0.8043
+        },
+        {
+          "bbox": [
+            787.0,
+            75.6,
+            948.6,
+            321.2
+          ],
+          "conf": 0.7765
+        },
+        {
+          "bbox": [
+            499.8,
+            27.8,
+            632.9,
+            232.7
+          ],
+          "conf": 0.6408
+        }
+      ]
+    },
+    {
+      "image_filename": "08_bending_sitting_transition.jpg",
+      "frame": 350,
+      "description": "Student bending and transitioning to chair",
+      "prod_boxes": [
+        {
+          "bbox": [
+            726.8,
+            60.7,
+            982.7,
+            312.7
+          ],
+          "conf": 0.7259
+        },
+        {
+          "bbox": [
+            590.4,
+            66.9,
+            780.7,
+            197.8
+          ],
+          "conf": 0.4115
+        },
+        {
+          "bbox": [
+            621.5,
+            65.4,
+            778.0,
+            233.7
+          ],
+          "conf": 0.3369
+        },
+        {
+          "bbox": [
+            859.3,
+            303.2,
+            1080.4,
+            474.0
+          ],
+          "conf": 0.3269
+        }
+      ],
+      "pose_boxes": [
+        {
+          "bbox": [
+            762.4,
+            55.8,
+            980.7,
+            318.1
+          ],
+          "conf": 0.8857
+        },
+        {
+          "bbox": [
+            634.7,
+            66.2,
+            794.5,
+            269.7
+          ],
+          "conf": 0.7578
+        },
+        {
+          "bbox": [
+            522.7,
+            39.9,
+            639.7,
+            170.9
+          ],
+          "conf": 0.5696
+        }
+      ]
+    }
+  ],
+  "evidence_based_findings": {
+    "overall_recall": "Across 1,800 frames, YOLO26-Pose generated 6818 boxes vs 6784 for Production YOLO26 (delta: +34 boxes, +0.50%).",
+    "harshil_recovery": "In the Harshil desk window (frames 564-1437), Production YOLO26 missed 267 frames (30.55%), whereas YOLO26-Pose missed 169 frames (19.34%). YOLO26-Pose achieved 98 pose-only recoveries with zero production-only recoveries in this region.",
+    "aagam_recovery": "In the Aagam desk window (frames 272-726), Production YOLO26 missed 3 frames (0.66%), whereas YOLO26-Pose missed 0 frames (0.0%).",
+    "box_agreement": "On matched detections, the mean IoU is 0.7694 (median 0.8174), with 91.7% >= 0.50 IoU.",
+    "cpu_throughput": "Production YOLO26 achieved 23.1 FPS (43.2 ms) vs YOLO26-Pose at 20.9 FPS (47.8 ms). Pose is 1.11x slower (+4.6 ms/frame overhead)."
+  }
+}

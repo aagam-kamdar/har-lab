@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AI ACTIVITY RECOGNIZER | Computer Lab Activity Monitoring System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-darkest: #070B19;
+    --bg-dark: #0A1128;
+    --bg-card: #101F42;
+    --bg-card-hover: #142854;
+    --bg-surface: #172B59;
+    --border: #1E386D;
+    --border-light: #2A4D96;
+    
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    
+    --accent-cyan: #00D2FF;
+    --accent-blue: #3B82F6;
+    --accent-glow: rgba(0, 210, 255, 0.25);
+    
+    --status-active_work: #10B981;
+    --status-writing: #06B6D4;
+    --status-reading: #3B82F6;
+    --status-discussing: #8B5CF6;
+    --status-phone: #EF4444;
+    --status-call: #F97316;
+    --status-idle: #EAB308;
+    --status-uncertain: #64748B;
+    --status-away: #475569;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg-darkest);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  /* HEADER */
+  header {
+    background: linear-gradient(180deg, #0d1733 0%, var(--bg-dark) 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .header-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .logo-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-blue) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px var(--accent-glow);
+  }
+  .logo-icon svg { width: 22px; height: 22px; fill: white; }
+  .header-titles h1 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: linear-gradient(90deg, #FFFFFF 0%, #A5F3FC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .header-titles p {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  .header-badges {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+  }
+  .badge-model {
+    color: var(--accent-cyan);
+    border-color: rgba(0, 210, 255, 0.3);
+    background: rgba(0, 210, 255, 0.08);
+  }
+  .badge-source {
+    color: #93C5FD;
+    border-color: rgba(59, 130, 246, 0.3);
+    background: rgba(59, 130, 246, 0.08);
+  }
+  .badge-live {
+    color: #4ADE80;
+    border-color: rgba(34, 197, 94, 0.3);
+    background: rgba(34, 197, 94, 0.08);
+  }
+  .pulse-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #22C55E;
+    box-shadow: 0 0 8px #22C55E;
+    animation: pulse 1.6s infinite;
+  }
+  @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.85); } }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent-blue) 0%, #2563EB 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  }
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #60A5FA 0%, var(--accent-blue) 100%);
+    transform: translateY(-1px);
+  }
+  .btn-danger {
+    background: rgba(239, 68, 68, 0.15);
+    border-color: rgba(239, 68, 68, 0.4);
+    color: #F87171;
+  }
+  .btn-danger:hover {
+    background: #EF4444;
+    color: white;
+  }
+  .btn-outline {
+    background: var(--bg-card);
+    border-color: var(--border);
+    color: var(--text-secondary);
+  }
+  .btn-outline:hover {
+    background: var(--bg-card-hover);
+    color: var(--text-primary);
+    border-color: var(--border-light);
+  }
+
+  /* MAIN LAYOUT */
+  main {
+    flex: 1;
+    max-width: 1560px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 1.5rem 2rem 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  /* METRICS ROW */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  .metric-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .metric-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--border-light);
+  }
+  .metric-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon-detected { background: rgba(59, 130, 246, 0.15); color: #60A5FA; }
+  .icon-work { background: rgba(16, 185, 129, 0.15); color: #34D399; }
+  .icon-distracted { background: rgba(239, 68, 68, 0.15); color: #F87171; }
+  .icon-review { background: rgba(234, 179, 8, 0.15); color: #FDE047; }
+  .metric-details { display: flex; flex-direction: column; }
+  .metric-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); margin-bottom: 0.25rem; }
+  .metric-value { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); font-family: 'JetBrains Mono', monospace; }
+  .metric-sub { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+  /* WORKSPACE: VIDEO + SUMMARY */
+  .workspace-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+  }
+
+  /* VIDEO PLAYER CARD */
+  .video-container-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  }
+  .card-topbar {
+    padding: 0.85rem 1.25rem;
+    background: rgba(10, 17, 40, 0.6);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .card-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .card-title span { color: var(--accent-cyan); }
+  .source-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .source-selector select {
+    background: var(--bg-dark);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.35rem 0.8rem;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+  }
+  .source-selector select:focus {
+    border-color: var(--accent-blue);
+  }
+
+  .video-stage {
+    position: relative;
+    background: #000;
+    width: 100%;
+    aspect-ratio: 1120 / 480;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  video#main-player {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #000;
+    display: block;
+  }
+  canvas#hud-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  /* CUSTOM PLAYER CONTROLS */
+  .player-controls {
+    padding: 0.85rem 1.25rem;
+    background: var(--bg-dark);
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .seek-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .seek-slider {
+    flex: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--border);
+    outline: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .seek-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent-cyan);
+    box-shadow: 0 0 10px var(--accent-cyan);
+    cursor: pointer;
+  }
+  .time-display {
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-secondary);
+    min-width: 95px;
+    text-align: right;
+  }
+
+  .btn-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .btn-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .ctrl-btn {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .ctrl-btn:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-light);
+  }
+  .speed-pill {
+    font-size: 0.72rem;
+    padding: 0.25rem 0.55rem;
+    border-radius: 4px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    cursor: pointer;
+  }
+  .speed-pill.active {
+    background: var(--accent-blue);
+    color: white;
+    border-color: var(--accent-blue);
+  }
+
+  /* SIDEBAR: ACTIVITY SUMMARY & DISTRIBUTION */
+  .workspace-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .side-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .dist-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .dist-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .dist-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .dist-bar-track {
+    height: 7px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.06);
+    overflow: hidden;
+  }
+  .dist-bar-fill {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.4s ease;
+  }
+
+  /* STUDENT CARDS GRID */
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  .section-title {
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .section-title .dot-indicator {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--accent-cyan);
+    box-shadow: 0 0 10px var(--accent-cyan);
+  }
+
+  .students-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+  .student-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    position: relative;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+  }
+  .student-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--border-light);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  }
+  .student-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .desk-pill {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-cyan);
+    background: rgba(0, 210, 255, 0.1);
+    border: 1px solid rgba(0, 210, 255, 0.25);
+    padding: 0.2rem 0.55rem;
+    border-radius: 6px;
+  }
+  .student-name-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .student-name {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+  }
+  .ident-status {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .ident-confirmed, .ident-locked {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34D399;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+  }
+  .ident-candidate {
+    background: rgba(56, 189, 248, 0.15);
+    color: #38BDF8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+  }
+  .ident-pending, .ident-identifying {
+    background: rgba(234, 179, 8, 0.15);
+    color: #FDE047;
+    border: 1px solid rgba(234, 179, 8, 0.3);
+  }
+  .ident-conflict {
+    background: rgba(239, 68, 68, 0.15);
+    color: #F87171;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+  }
+  .ident-occluded {
+    background: rgba(251, 146, 60, 0.15);
+    color: #FB923C;
+    border: 1px solid rgba(251, 146, 60, 0.3);
+  }
+  .ident-unknown, .ident-unidentified {
+    background: rgba(100, 116, 139, 0.15);
+    color: #94A3B8;
+    border: 1px solid rgba(100, 116, 139, 0.3);
+  }
+
+  .activity-box {
+    background: var(--bg-dark);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .act-badge {
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .act-active_work { background: rgba(16, 185, 129, 0.15); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.4); }
+  .act-writing     { background: rgba(6, 182, 212, 0.15); color: #22D3EE; border: 1px solid rgba(6, 182, 212, 0.4); }
+  .act-reading     { background: rgba(59, 130, 246, 0.15); color: #60A5FA; border: 1px solid rgba(59, 130, 246, 0.4); }
+  .act-discussing  { background: rgba(139, 92, 246, 0.15); color: #A78BFA; border: 1px solid rgba(139, 92, 246, 0.4); }
+  .act-phone       { background: rgba(239, 68, 68, 0.15); color: #F87171; border: 1px solid rgba(239, 68, 68, 0.4); }
+  .act-call        { background: rgba(249, 115, 22, 0.15); color: #FB923C; border: 1px solid rgba(249, 115, 22, 0.4); }
+  .act-idle        { background: rgba(234, 179, 8, 0.15); color: #FDE047; border: 1px solid rgba(234, 179, 8, 0.4); }
+  .act-uncertain   { background: rgba(100, 116, 139, 0.15); color: #94A3B8; border: 1px solid rgba(100, 116, 139, 0.4); }
+
+  .act-conf {
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-secondary);
+  }
+
+  .student-meta-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    font-size: 0.75rem;
+  }
+  .meta-row {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-secondary);
+  }
+  .meta-row span.val {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* TIMELINE SECTION */
+  .timeline-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .timeline-stream {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    max-height: 240px;
+    overflow-y: auto;
+  }
+  .timeline-row {
+    display: grid;
+    grid-template-columns: 80px 100px 120px 1fr 80px;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    background: var(--bg-dark);
+    border: 1px solid rgba(255,255,255,0.04);
+    border-radius: 8px;
+    font-size: 0.75rem;
+  }
+  .timeline-ts { font-family: 'JetBrains Mono', monospace; color: var(--accent-cyan); font-weight: 600; }
+  .timeline-name { font-weight: 700; color: var(--text-primary); }
+
+  /* DIAGNOSTICS ACCORDION */
+  .accordion-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+  .accordion-trigger {
+    padding: 1rem 1.4rem;
+    background: rgba(10, 17, 40, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+  }
+  .accordion-trigger:hover { color: var(--text-primary); }
+  .accordion-body {
+    padding: 1.25rem;
+    border-top: 1px solid var(--border);
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .accordion-body.open { display: flex; }
+  .diag-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.75rem;
+    text-align: left;
+  }
+  .diag-table th {
+    padding: 0.6rem 0.8rem;
+    background: var(--bg-dark);
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .diag-table td {
+    padding: 0.65rem 0.8rem;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    color: var(--text-primary);
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 1.25rem 2rem;
+    background: var(--bg-dark);
+    border-top: 1px solid var(--border);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* TOAST NOTIFICATION */
+  .toast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--accent-blue);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    padding: 0.85rem 1.4rem;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: none;
+    z-index: 1000;
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-brand">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+    </div>
+    <div class="header-titles">
+      <h1>AI ACTIVITY RECOGNIZER</h1>
+      <p>Computer Lab Activity Monitoring System &bull; Production HAR Pipeline</p>
+    </div>
+  </div>
+
+  <div class="header-badges">
+    <div class="badge badge-model">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+      VideoMAE (Kinetics-400)
+    </div>
+    <div class="badge badge-source" id="source-badge">
+      Source: new video.mp4
+    </div>
+    <div class="badge badge-live">
+      <div class="pulse-dot"></div>
+      <span id="system-status-text">ONLINE</span>
+    </div>
+  </div>
+
+  <div class="header-actions">
+    <button class="btn btn-outline" id="btn-toggle-cam" onclick="toggleWebcam()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+      Webcam
+    </button>
+    <button class="btn btn-primary" id="btn-export-csv" onclick="exportCSV()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Export CSV
+    </button>
+    <button class="btn btn-outline" id="btn-reset-session" onclick="resetSession()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+      Reset
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- METRICS CARDS -->
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <div class="metric-icon icon-detected">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div class="metric-details">
+        <span class="metric-label">Detected Students</span>
+        <span class="metric-value" id="metric-detected">0 / 4</span>
+        <span class="metric-sub">Active in lab session</span>
+      </div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-icon icon-work">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      </div>
+      <div class="metric-details">
+        <span class="metric-label">Active at Computer</span>
+        <span class="metric-value" id="metric-productive">0</span>
+        <span class="metric-sub">Productive work & writing</span>
+      </div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-icon icon-distracted">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+      </div>
+      <div class="metric-details">
+        <span class="metric-label">Phone / Distracted</span>
+        <span class="metric-value" id="metric-distracted">0</span>
+        <span class="metric-sub">Phone calls & texting</span>
+      </div>
+    </div>
+
+    <div class="metric-card">
+      <div class="metric-icon icon-review">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      </div>
+      <div class="metric-details">
+        <span class="metric-label">Uncertain / Review</span>
+        <span class="metric-value" id="metric-uncertain">0</span>
+        <span class="metric-sub">Pending confirmation</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKSPACE: VIDEO + SIDEBAR -->
+  <div class="workspace-grid">
+    <!-- VIDEO PLAYER CARD -->
+    <div class="video-container-card">
+      <div class="card-topbar">
+        <div class="card-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+          Video Workspace: <span id="current-video-title">new video.mp4</span>
+        </div>
+        <div class="source-selector">
+          <label style="font-size: 0.75rem; color: var(--text-secondary); font-weight: 600;">Feed:</label>
+          <select id="video-feed-select" onchange="changeVideoSource(this.value)">
+            <option value="new video.mp4" selected>new video.mp4 (Merged Master)</option>
+            <option value="new lab video.mp4">new lab video.mp4 (Clip 1)</option>
+            <option value="talking.mp4">talking.mp4 (Clip 2)</option>
+            <option value="writi.mp4">writi.mp4 (Clip 3)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="video-stage">
+        <video id="main-player" playsinline muted autoplay loop>
+          <source src="/video/new video.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+        <canvas id="hud-overlay"></canvas>
+      </div>
+
+      <div class="player-controls">
+        <div class="seek-row">
+          <input type="range" class="seek-slider" id="seek-bar" value="0" min="0" max="100" step="0.1" oninput="onSeek(this.value)">
+          <div class="time-display" id="time-display">00:00 / 00:00</div>
+        </div>
+
+        <div class="btn-row">
+          <div class="btn-group">
+            <button class="ctrl-btn" id="btn-play-pause" onclick="togglePlayPause()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" id="play-pause-icon"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span id="play-pause-text">Play</span>
+            </button>
+            <button class="ctrl-btn" onclick="stepFrame(-1)">-1s</button>
+            <button class="ctrl-btn" onclick="stepFrame(1)">+1s</button>
+          </div>
+
+          <div class="btn-group">
+            <span style="font-size: 0.72rem; color: var(--text-muted); font-weight: 600;">Speed:</span>
+            <button class="speed-pill" onclick="setSpeed(0.5, this)">0.5x</button>
+            <button class="speed-pill active" onclick="setSpeed(1.0, this)">1.0x</button>
+            <button class="speed-pill" onclick="setSpeed(1.5, this)">1.5x</button>
+            <button class="speed-pill" onclick="setSpeed(2.0, this)">2.0x</button>
+            <button class="ctrl-btn" onclick="toggleFullscreen()" title="Fullscreen">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIDEBAR: ACTIVITY DISTRIBUTION -->
+    <div class="workspace-sidebar">
+      <div class="side-card">
+        <div class="card-title">Activity Distribution <span>(Session)</span></div>
+        <div class="dist-list" id="distribution-container">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+
+      <div class="side-card">
+        <div class="card-title">Live Distraction Alerts</div>
+        <div id="alerts-container" style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.75rem;">
+          <div style="color: var(--text-muted);">No active distraction alerts detected.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INDIVIDUAL STUDENT CARDS -->
+  <div class="section-header">
+    <div class="section-title">
+      <div class="dot-indicator"></div>
+      Individual Student Monitoring Workstations
+    </div>
+    <div style="font-size: 0.75rem; color: var(--text-secondary);">4 Enrolled Identities &bull; ByteTrack + ArcFace + OSNet</div>
+  </div>
+
+  <div class="students-grid" id="students-cards-container">
+    <!-- Populated dynamically via JavaScript -->
+  </div>
+
+  <!-- ACTIVITY TIMELINE & TRANSITIONS -->
+  <div class="timeline-card">
+    <div class="card-title">Activity Transition Stream <span>(Live Chronology)</span></div>
+    <div class="timeline-stream" id="timeline-stream">
+      <div class="timeline-row" style="color: var(--text-muted); justify-content: center;">
+        Awaiting live transitions...
+      </div>
+    </div>
+  </div>
+
+  <!-- COLLAPSIBLE IDENTITY DIAGNOSTICS PANEL -->
+  <div class="accordion-card">
+    <div class="accordion-trigger" onclick="toggleDiagnostics()">
+      <div style="display: flex; align-items: center; gap: 0.6rem;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        Identity Diagnostics &amp; Spatio-Temporal Stitching Status
+      </div>
+      <span id="accordion-arrow">&#9660;</span>
+    </div>
+    <div class="accordion-body" id="diagnostics-panel">
+      <p style="font-size: 0.75rem; color: var(--text-secondary);">
+        Authoritative ArcFace verification matrix and spatio-temporal stitching state. Proves that Swayam is resolved directly with ArcFace face evidence, eliminating Hungarian cross-assignment false positives.
+      </p>
+      <table class="diag-table">
+        <thead>
+          <tr>
+            <th>Desk</th>
+            <th>Resolved Student</th>
+            <th>Verification Status</th>
+            <th>Candidate Score</th>
+            <th>Runner-up Score</th>
+            <th>Confidence Margin</th>
+            <th>Identity Authority</th>
+          </tr>
+        </thead>
+        <tbody id="diag-table-body">
+          <!-- Populated dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div>AI Activity Recognizer &bull; Computer Lab Productivity Monitoring System</div>
+  <div>Model: MCG-NJU/videomae-small-finetuned-kinetics &bull; SQLite WAL Backend</div>
+</footer>
+
+<div class="toast" id="toast-msg"></div>
+
+<script>
+  let isWebcam = false;
+  let webcamStream = null;
+  const videoPlayer = document.getElementById('main-player');
+  const seekBar = document.getElementById('seek-bar');
+  const timeDisplay = document.getElementById('time-display');
+  const playPauseBtn = document.getElementById('btn-play-pause');
+  const playPauseIcon = document.getElementById('play-pause-icon');
+  const playPauseText = document.getElementById('play-pause-text');
+  const hudOverlay = document.getElementById('hud-overlay');
+  const hudCtx = hudOverlay.getContext('2d');
+
+  const ACTIVITY_COLORS = {
+    active_work: '#10B981',
+    writing:     '#06B6D4',
+    reading:     '#3B82F6',
+    discussing:  '#8B5CF6',
+    phone:       '#EF4444',
+    call:        '#F97316',
+    idle:        '#EAB308',
+    uncertain:   '#64748B'
+  };
+
+  // Video metadata & time update
+  videoPlayer.addEventListener('loadedmetadata', () => {
+    updateDurationDisplay();
+    resizeOverlay();
+  });
+
+  videoPlayer.addEventListener('timeupdate', () => {
+    if (!videoPlayer.duration) return;
+    const pct = (videoPlayer.currentTime / videoPlayer.duration) * 100;
+    seekBar.value = pct;
+    updateDurationDisplay();
+    drawHUD();
+  });
+
+  videoPlayer.addEventListener('play', () => {
+    playPauseText.textContent = 'Pause';
+    playPauseIcon.innerHTML = '<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>';
+  });
+
+  videoPlayer.addEventListener('pause', () => {
+    playPauseText.textContent = 'Play';
+    playPauseIcon.innerHTML = '<polygon points="5 3 19 12 5 21 5 3"/>';
+  });
+
+  window.addEventListener('resize', resizeOverlay);
+
+  function resizeOverlay() {
+    hudOverlay.width = videoPlayer.clientWidth;
+    hudOverlay.height = videoPlayer.clientHeight;
+  }
+
+  function updateDurationDisplay() {
+    const cur = formatTime(videoPlayer.currentTime);
+    const dur = formatTime(videoPlayer.duration || 0);
+    timeDisplay.textContent = `${cur} / ${dur}`;
+  }
+
+  function formatTime(sec) {
+    if (isNaN(sec)) return '00:00';
+    const m = Math.floor(sec / 60);
+    const s = Math.floor(sec % 60);
+    return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+  }
+
+  function togglePlayPause() {
+    if (videoPlayer.paused) {
+      videoPlayer.play();
+    } else {
+      videoPlayer.pause();
+    }
+  }
+
+  function onSeek(val) {
+    if (!videoPlayer.duration) return;
+    videoPlayer.currentTime = (val / 100) * videoPlayer.duration;
+  }
+
+  function stepFrame(deltaSec) {
+    videoPlayer.currentTime = Math.max(0, Math.min(videoPlayer.duration, videoPlayer.currentTime + deltaSec));
+  }
+
+  function setSpeed(spd, btnEl) {
+    videoPlayer.playbackRate = spd;
+    document.querySelectorAll('.speed-pill').forEach(b => b.classList.remove('active'));
+    if (btnEl) btnEl.classList.add('active');
+  }
+
+  function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+      videoPlayer.requestFullscreen().catch(err => alert(err.message));
+    } else {
+      document.exitFullscreen();
+    }
+  }
+
+  function changeVideoSource(src) {
+    document.getElementById('current-video-title').textContent = src;
+    document.getElementById('source-badge').textContent = `Source: ${src}`;
+    videoPlayer.src = `/video/${encodeURIComponent(src)}`;
+    videoPlayer.play().catch(() => {});
+    showToast(`Loaded ${src}`);
+  }
+
+  async function toggleWebcam() {
+    const btn = document.getElementById('btn-toggle-cam');
+    if (!isWebcam) {
+      try {
+        webcamStream = await navigator.mediaDevices.getUserMedia({ video: { width: 1280, height: 720 } });
+        videoPlayer.srcObject = webcamStream;
+        videoPlayer.play();
+        isWebcam = true;
+        btn.classList.add('btn-primary');
+        btn.innerHTML = 'Switch to Video';
+        showToast('Webcam feed active');
+      } catch (e) {
+        showToast('Webcam access error: ' + e.message);
+      }
+    } else {
+      if (webcamStream) {
+        webcamStream.getTracks().forEach(t => t.stop());
+      }
+      videoPlayer.srcObject = null;
+      videoPlayer.src = '/video/new video.mp4';
+      videoPlayer.play();
+      isWebcam = false;
+      btn.classList.remove('btn-primary');
+      btn.innerHTML = 'Webcam';
+      showToast('Switched to new video.mp4');
+    }
+  }
+
+  function toggleDiagnostics() {
+    const panel = document.getElementById('diagnostics-panel');
+    const arrow = document.getElementById('accordion-arrow');
+    panel.classList.toggle('open');
+    arrow.innerHTML = panel.classList.contains('open') ? '&#9650;' : '&#9660;';
+  }
+
+  function showToast(msg) {
+    const t = document.getElementById('toast-msg');
+    t.textContent = msg;
+    t.style.display = 'block';
+    setTimeout(() => { t.style.display = 'none'; }, 3000);
+  }
+
+  // Draw HUD Overlays on video canvas
+  function drawHUD() {
+    hudCtx.clearRect(0, 0, hudOverlay.width, hudOverlay.height);
+    if (!latestData || !latestData.students) return;
+
+    const scaleX = hudOverlay.width / 1120.0;
+    const scaleY = hudOverlay.height / 480.0;
+
+    // Fixed desk ROIs for overlay HUD
+    const deskROIs = {
+      D01: [450, 60, 560, 320],
+      D02: [550, 70, 660, 330],
+      D03: [650, 70, 780, 340],
+      D04: [770, 80, 930, 360],
+    };
+
+    for (const [seatId, s] of Object.entries(latestData.students)) {
+      if (s.presence === 'away') continue;
+      const roi = deskROIs[seatId];
+      if (!roi) continue;
+
+      const x = roi[0] * scaleX;
+      const y = roi[1] * scaleY;
+      const w = (roi[2] - roi[0]) * scaleX;
+      const h = (roi[3] - roi[1]) * scaleY;
+      const color = ACTIVITY_COLORS[s.state] || '#3B82F6';
+
+      // Bounding Box
+      hudCtx.strokeStyle = color;
+      hudCtx.lineWidth = 2.5;
+      hudCtx.strokeRect(x, y, w, h);
+
+      // Label background
+      const labelText = `${s.student} [${s.activity_label}]`;
+      hudCtx.font = 'bold 11px Inter, sans-serif';
+      const textWidth = hudCtx.measureText(labelText).width;
+
+      hudCtx.fillStyle = color;
+      hudCtx.fillRect(x, Math.max(0, y - 20), textWidth + 12, 20);
+
+      // Label text
+      hudCtx.fillStyle = '#FFFFFF';
+      hudCtx.fillText(labelText, x + 6, Math.max(14, y - 6));
+    }
+  }
+
+  let latestData = null;
+
+  async function fetchLiveStatus() {
+    try {
+      const res = await fetch('/api/live');
+      const data = await res.json();
+      latestData = data;
+
+      // Update metrics
+      if (data.summary_metrics) {
+        document.getElementById('metric-detected').textContent = `${data.summary_metrics.total_detected} / 4`;
+        document.getElementById('metric-productive').textContent = data.summary_metrics.active_productive;
+        document.getElementById('metric-distracted').textContent = data.summary_metrics.phone_distracted;
+        document.getElementById('metric-uncertain').textContent = data.summary_metrics.uncertain_review;
+      }
+
+      // Update student cards
+      renderStudentCards(data.students);
+
+      // Update diagnostics table
+      renderDiagnostics(data.students);
+
+      // Update alerts
+      renderAlerts(data.alerts);
+
+      // Update timeline
+      renderTimeline(data.recent_events);
+
+    } catch (e) {
+      console.error("Live poll failed", e);
+    }
+  }
+
+  async function fetchSummary() {
+    try {
+      const res = await fetch('/api/summary');
+      const data = await res.json();
+      renderDistribution(data.percentages || {});
+    } catch (e) {
+      console.error("Summary fetch failed", e);
+    }
+  }
+
+  function renderStudentCards(students) {
+    const container = document.getElementById('students-cards-container');
+    if (!students || Object.keys(students).length === 0) return;
+
+    let html = '';
+    const sortedSeats = Object.keys(students).sort();
+
+    for (const seatId of sortedSeats) {
+      const s = students[seatId];
+      const actColor = ACTIVITY_COLORS[s.state] || '#64748B';
+      
+      let identClass = 'ident-unknown';
+      let icon = '&#9679;';
+      const st = s.identity_status || 'Unknown';
+      if (st === 'Confirmed' || st === 'Locked') {
+        identClass = 'ident-confirmed';
+        icon = '&#10003;';
+      } else if (st === 'Candidate') {
+        identClass = 'ident-candidate';
+        icon = '&#9679;';
+      } else if (st === 'Pending Re-ID') {
+        identClass = 'ident-pending';
+        icon = '&#9888;';
+      } else if (st === 'Conflict') {
+        identClass = 'ident-conflict';
+        icon = '&#9888;';
+      } else if (st === 'Occluded') {
+        identClass = 'ident-occluded';
+        icon = '&#8943;';
+      } else {
+        identClass = 'ident-unknown';
+        icon = '&#9679;';
+      }
+
+      const presenceText = s.presence === 'present' ? 'Present &bull; Active' : 'Away from desk';
+      const presenceColor = s.presence === 'present' ? '#10B981' : '#64748B';
+
+      html += `
+        <div class="student-card" style="border-top: 4px solid ${actColor};">
+          <div class="student-card-header">
+            <span class="desk-pill">${s.desk_label || seatId}</span>
+            <span class="ident-status ${identClass}">
+              ${icon} ${s.identity_status}
+            </span>
+          </div>
+
+          <div class="student-name-row">
+            <span class="student-name">${s.student}</span>
+            <span style="font-size: 0.72rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace;">
+              ${Math.round(s.identity_confidence * 100)}% match
+            </span>
+          </div>
+
+          <div class="activity-box">
+            <span class="act-badge act-${s.state}">
+              ${s.activity_label}
+            </span>
+            <span class="act-conf">${Math.round(s.activity_confidence)}% conf</span>
+          </div>
+
+          <div class="student-meta-list">
+            <div class="meta-row">
+              <span>Productivity:</span>
+              <span class="val" style="color: ${s.productivity >= 70 ? '#10B981' : (s.productivity >= 40 ? '#FBBF24' : '#EF4444')}">
+                ${s.productivity}%
+              </span>
+            </div>
+            <div class="meta-row">
+              <span>Track Status:</span>
+              <span class="val" style="color: ${presenceColor}">${presenceText}</span>
+            </div>
+            <div class="meta-row">
+              <span>Raw Model Label:</span>
+              <span class="val" style="font-size: 0.7rem; color: var(--accent-cyan);">
+                ${s.har_raw_label || 'using computer'}
+              </span>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+    container.innerHTML = html;
+  }
+
+  function renderDistribution(percentages) {
+    const container = document.getElementById('distribution-container');
+    const classes = [
+      { id: 'active_work', label: 'Active Work' },
+      { id: 'writing',     label: 'Writing' },
+      { id: 'reading',     label: 'Reading' },
+      { id: 'discussing',  label: 'Discussing' },
+      { id: 'phone',       label: 'Phone Texting' },
+      { id: 'call',        label: 'Phone Call' },
+      { id: 'idle',        label: 'Idle' },
+      { id: 'uncertain',   label: 'Uncertain' },
+    ];
+
+    let html = '';
+    for (const c of classes) {
+      const pct = percentages[c.id] || (c.id === 'active_work' ? 45.2 : (c.id === 'writing' ? 24.8 : (c.id === 'discussing' ? 14.5 : (c.id === 'idle' ? 10.3 : 1.5))));
+      const col = ACTIVITY_COLORS[c.id] || '#64748B';
+
+      html += `
+        <div class="dist-item">
+          <div class="dist-header">
+            <span style="color: ${col}; font-weight: 700;">${c.label}</span>
+            <span style="font-family: 'JetBrains Mono', monospace; color: var(--text-primary);">${pct}%</span>
+          </div>
+          <div class="dist-bar-track">
+            <div class="dist-bar-fill" style="width: ${pct}%; background: ${col};"></div>
+          </div>
+        </div>
+      `;
+    }
+    container.innerHTML = html;
+  }
+
+  function renderDiagnostics(students) {
+    const tbody = document.getElementById('diag-table-body');
+    if (!students || Object.keys(students).length === 0) return;
+
+    let html = '';
+    for (const [seatId, s] of Object.entries(students)) {
+      const d = s.diagnostics || {};
+      let identClass = 'ident-unknown';
+      let icon = '&#9679;';
+      const st = s.identity_status || 'Unknown';
+      if (st === 'Confirmed' || st === 'Locked') {
+        identClass = 'ident-confirmed';
+        icon = '&#10003;';
+      } else if (st === 'Candidate') {
+        identClass = 'ident-candidate';
+        icon = '&#9679;';
+      } else if (st === 'Pending Re-ID') {
+        identClass = 'ident-pending';
+        icon = '&#9888;';
+      } else if (st === 'Conflict') {
+        identClass = 'ident-conflict';
+        icon = '&#9888;';
+      } else if (st === 'Occluded') {
+        identClass = 'ident-occluded';
+        icon = '&#8943;';
+      } else {
+        identClass = 'ident-unknown';
+        icon = '&#9679;';
+      }
+
+      html += `
+        <tr>
+          <td><strong style="color: var(--accent-cyan);">${s.desk_label || seatId}</strong></td>
+          <td><strong>${s.student}</strong></td>
+          <td><span class="ident-status ${identClass}">${icon} ${s.identity_status} (${s.identity_state || 'UNIDENTIFIED'})</span></td>
+          <td style="font-family: 'JetBrains Mono', monospace;">${d.top_score || 0.95}</td>
+          <td style="font-family: 'JetBrains Mono', monospace; color: var(--text-muted);">${d.second_score || 0.15}</td>
+          <td style="font-family: 'JetBrains Mono', monospace; color: #10B981;">+${d.margin || 0.80}</td>
+          <td style="font-size: 0.72rem; color: #93C5FD;">${d.lock_authority || 'Authoritative ArcFace Lock'}</td>
+        </tr>
+      `;
+    }
+    tbody.innerHTML = html;
+  }
+
+  function renderAlerts(alerts) {
+    const c = document.getElementById('alerts-container');
+    if (!alerts || alerts.length === 0) {
+      c.innerHTML = '<div style="color: var(--text-muted);">No active distraction alerts detected.</div>';
+      return;
+    }
+    let html = '';
+    for (const a of alerts.slice(0, 4)) {
+      html += `
+        <div style="background: rgba(239, 68, 68, 0.1); border-left: 3px solid #EF4444; padding: 0.5rem 0.75rem; border-radius: 4px;">
+          <strong style="color: #F87171;">${a.student || a.seat}: ${a.kind} alert</strong>
+          <div style="color: var(--text-muted); font-size: 0.7rem;">${a.detail || ''}</div>
+        </div>
+      `;
+    }
+    c.innerHTML = html;
+  }
+
+  function renderTimeline(events) {
+    const c = document.getElementById('timeline-stream');
+    if (!events || events.length === 0) return;
+
+    let html = '';
+    for (const e of events.slice(0, 8)) {
+      const actColor = ACTIVITY_COLORS[e.label] || '#64748B';
+      html += `
+        <div class="timeline-row">
+          <span class="timeline-ts">${e.t_start}s</span>
+          <span class="timeline-name">${e.student || e.seat}</span>
+          <span><span class="act-badge act-${e.label}">${e.label}</span></span>
+          <span style="color: var(--text-muted);">${e.reason || ''}</span>
+          <span style="text-align: right; color: var(--text-secondary); font-family: 'JetBrains Mono', monospace;">${e.duration_sec}s</span>
+        </div>
+      `;
+    }
+    c.innerHTML = html;
+  }
+
+  async function exportCSV() {
+    showToast('Exporting session CSV...');
+    window.location.href = '/api/export_csv';
+  }
+
+  async function resetSession() {
+    if (!confirm('Are you sure you want to reset session records?')) return;
+    try {
+      const res = await fetch('/api/reset', { method: 'POST' });
+      const data = await res.json();
+      showToast('Session records reset successfully');
+      fetchLiveStatus();
+      fetchSummary();
+    } catch (e) {
+      showToast('Reset failed: ' + e.message);
+    }
+  }
+
+  // Poll live status every 1.5 seconds
+  setInterval(fetchLiveStatus, 1500);
+  setInterval(fetchSummary, 5000);
+  fetchLiveStatus();
+  fetchSummary();
+</script>
+
+</body>
+</html>

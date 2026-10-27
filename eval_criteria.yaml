@@ -1,0 +1,58 @@
+# eval_criteria.yaml
+# ------------------
+# Pre-registered criteria for computer lab activity benchmark evaluation.
+# All metrics are evaluated strictly on sealed recordings listed in a user-provided manifest.
+
+benchmark:
+  version: "1.1.0"
+  description: "Pre-registered validation criteria on human ground-truth intervals"
+  
+  # Minimum human-confirmed intervals required to consider a class evaluated & validated.
+  # Must have >= 20 intervals from >= 3 distinct students.
+  # Classes below this support threshold are strictly reported as "not enough support".
+  min_intervals_per_class: 20
+  min_distinct_students_per_class: 3
+  min_total_duration_s: 30.0
+
+  # Pre-registered per-class target performance thresholds
+  targets:
+    active_work:
+      min_precision: 0.80
+      min_recall: 0.80
+      description: "Digital typing and desk work with active wrist motion or debounce grace"
+    writing:
+      min_precision: 0.75
+      min_recall: 0.70
+      description: "Pen/notebook handwriting on desk surface with downward head posture"
+    reading:
+      min_precision: 0.70
+      min_recall: 0.70
+      description: "Seated steadily reading monitor or notes without hand motion"
+    discussing:
+      min_precision: 0.75
+      min_recall: 0.70
+      description: "Sustained mutual peer interaction with proximity and orientation"
+    idle:
+      min_precision: 0.75
+      min_recall: 0.75
+      description: "Seated facing desk/room with no work interaction and no sustained talk"
+    walking:
+      min_precision: 0.85
+      min_recall: 0.85
+      description: "Standing or moving through aisles with significant hip displacement"
+    phone:
+      min_precision: 0.80
+      min_recall: 0.75
+      description: "Handheld phone use confirmed by verified phone object detection"
+    call:
+      min_precision: 0.85
+      min_recall: 0.80
+      description: "Phone call confirmed with elevated elbow and wrist-at-ear geometry"
+    away:
+      min_precision: 0.90
+      min_recall: 0.90
+      description: "Person completely absent from room/camera view"
+    uncertain:
+      min_precision: 0.50
+      min_recall: 0.50
+      description: "Heavily occluded or borderline ambiguous activity"

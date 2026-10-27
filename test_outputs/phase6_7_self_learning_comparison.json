@@ -1,0 +1,2664 @@
+{
+  "off": {
+    "name": "Self-Learning OFF (Frozen Enrollment-Only)",
+    "self_learning_enabled": false,
+    "initial_gallery_sizes": {
+      "aagam": 35,
+      "harshil": 43,
+      "soham": 35,
+      "swayam": 37
+    },
+    "final_gallery_sizes": {
+      "aagam": 35,
+      "harshil": 43,
+      "soham": 35,
+      "swayam": 37
+    },
+    "self_learned_count": 0,
+    "swayam_locks": [
+      [
+        3175,
+        23,
+        0.39712241291999817
+      ]
+    ],
+    "harshil_locks": [
+      [
+        65,
+        3,
+        0.4255661964416504
+      ],
+      [
+        1946,
+        11,
+        0.4095612168312073
+      ]
+    ],
+    "contradictions": [
+      {
+        "frame": 109,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.39246466755867004,
+        "margin": 0.11920750141143799
+      },
+      {
+        "frame": 213,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.38486915826797485,
+        "margin": 0.20257613062858582
+      },
+      {
+        "frame": 276,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4846210479736328,
+        "margin": 0.3836851939558983
+      },
+      {
+        "frame": 278,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.45254969596862793,
+        "margin": 0.28620627522468567
+      },
+      {
+        "frame": 279,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4368738532066345,
+        "margin": 0.31276870518922806
+      },
+      {
+        "frame": 280,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4757472276687622,
+        "margin": 0.3038906753063202
+      },
+      {
+        "frame": 284,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.39989280700683594,
+        "margin": 0.14413058757781982
+      },
+      {
+        "frame": 285,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4726649224758148,
+        "margin": 0.27593860030174255
+      },
+      {
+        "frame": 288,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4451685845851898,
+        "margin": 0.22962208092212677
+      },
+      {
+        "frame": 290,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.45235365629196167,
+        "margin": 0.20721128582954407
+      },
+      {
+        "frame": 291,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4114329218864441,
+        "margin": 0.2585345059633255
+      },
+      {
+        "frame": 292,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.415119469165802,
+        "margin": 0.2497963309288025
+      },
+      {
+        "frame": 293,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.397770494222641,
+        "margin": 0.1821008026599884
+      },
+      {
+        "frame": 294,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.41927963495254517,
+        "margin": 0.22044867277145386
+      },
+      {
+        "frame": 298,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.39029037952423096,
+        "margin": 0.21736297011375427
+      },
+      {
+        "frame": 299,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.39642444252967834,
+        "margin": 0.18917882442474365
+      },
+      {
+        "frame": 302,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.40193474292755127,
+        "margin": 0.18039563298225403
+      },
+      {
+        "frame": 303,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.39602139592170715,
+        "margin": 0.14231958985328674
+      },
+      {
+        "frame": 304,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3822898268699646,
+        "margin": 0.14548827707767487
+      },
+      {
+        "frame": 306,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4003975987434387,
+        "margin": 0.19190900027751923
+      },
+      {
+        "frame": 309,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4264886975288391,
+        "margin": 0.16421353816986084
+      },
+      {
+        "frame": 310,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.41576358675956726,
+        "margin": 0.15776434540748596
+      },
+      {
+        "frame": 312,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4170948266983032,
+        "margin": 0.12477397918701172
+      },
+      {
+        "frame": 355,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.4230649471282959,
+        "margin": 0.2530270516872406
+      },
+      {
+        "frame": 356,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.39803433418273926,
+        "margin": 0.23587195575237274
+      },
+      {
+        "frame": 357,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.4399612545967102,
+        "margin": 0.2695099115371704
+      },
+      {
+        "frame": 358,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.4158550500869751,
+        "margin": 0.17531681060791016
+      },
+      {
+        "frame": 359,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.47202104330062866,
+        "margin": 0.25519169867038727
+      },
+      {
+        "frame": 360,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.43962520360946655,
+        "margin": 0.21461234986782074
+      },
+      {
+        "frame": 361,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.4216322898864746,
+        "margin": 0.1848801225423813
+      },
+      {
+        "frame": 363,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.44084882736206055,
+        "margin": 0.25135231018066406
+      },
+      {
+        "frame": 364,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.4509241580963135,
+        "margin": 0.2787633538246155
+      },
+      {
+        "frame": 365,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.43563732504844666,
+        "margin": 0.2095869779586792
+      },
+      {
+        "frame": 366,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.45846331119537354,
+        "margin": 0.19971948862075806
+      },
+      {
+        "frame": 367,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.48067930340766907,
+        "margin": 0.150977224111557
+      },
+      {
+        "frame": 368,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.5456222295761108,
+        "margin": 0.15502452850341797
+      },
+      {
+        "frame": 369,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.5734529495239258,
+        "margin": 0.18618366122245789
+      },
+      {
+        "frame": 370,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.5900717973709106,
+        "margin": 0.29728803038597107
+      },
+      {
+        "frame": 371,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.5290447473526001,
+        "margin": 0.2911684513092041
+      },
+      {
+        "frame": 372,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.551974892616272,
+        "margin": 0.27342694997787476
+      },
+      {
+        "frame": 373,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.5517003536224365,
+        "margin": 0.2983740568161011
+      },
+      {
+        "frame": 374,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.4980001449584961,
+        "margin": 0.26435989141464233
+      },
+      {
+        "frame": 375,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.5194612145423889,
+        "margin": 0.2801567316055298
+      },
+      {
+        "frame": 376,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.5114694833755493,
+        "margin": 0.22665974497795105
+      },
+      {
+        "frame": 377,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.500861644744873,
+        "margin": 0.17460817098617554
+      },
+      {
+        "frame": 378,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.4992554783821106,
+        "margin": 0.2734762132167816
+      },
+      {
+        "frame": 379,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.43744736909866333,
+        "margin": 0.27800776064395905
+      },
+      {
+        "frame": 406,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.39244693517684937,
+        "margin": 0.13016653060913086
+      },
+      {
+        "frame": 415,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4098414182662964,
+        "margin": 0.1655380129814148
+      },
+      {
+        "frame": 610,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.39653894305229187,
+        "margin": 0.1351637840270996
+      },
+      {
+        "frame": 611,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4409075975418091,
+        "margin": 0.23885387182235718
+      },
+      {
+        "frame": 645,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.38336509466171265,
+        "margin": 0.1211618185043335
+      },
+      {
+        "frame": 646,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3841918706893921,
+        "margin": 0.12161791324615479
+      },
+      {
+        "frame": 648,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3931726813316345,
+        "margin": 0.15254856646060944
+      },
+      {
+        "frame": 649,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3844793438911438,
+        "margin": 0.12742304801940918
+      },
+      {
+        "frame": 654,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.40373900532722473,
+        "margin": 0.17118453979492188
+      },
+      {
+        "frame": 655,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.40796908736228943,
+        "margin": 0.1524222195148468
+      },
+      {
+        "frame": 788,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3809940218925476,
+        "margin": 0.1839740127325058
+      },
+      {
+        "frame": 789,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.380967915058136,
+        "margin": 0.1658148169517517
+      },
+      {
+        "frame": 791,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4355819821357727,
+        "margin": 0.2241089642047882
+      },
+      {
+        "frame": 793,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4007411599159241,
+        "margin": 0.13773036003112793
+      },
+      {
+        "frame": 824,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3969576954841614,
+        "margin": 0.15944460034370422
+      },
+      {
+        "frame": 913,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4160327613353729,
+        "margin": 0.19739387929439545
+      },
+      {
+        "frame": 914,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.5200183391571045,
+        "margin": 0.39546339958906174
+      },
+      {
+        "frame": 917,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4739653170108795,
+        "margin": 0.21943587064743042
+      },
+      {
+        "frame": 923,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4010043442249298,
+        "margin": 0.19477039575576782
+      },
+      {
+        "frame": 924,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3979572057723999,
+        "margin": 0.2007901668548584
+      },
+      {
+        "frame": 925,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4016647934913635,
+        "margin": 0.20581284165382385
+      },
+      {
+        "frame": 926,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4086267650127411,
+        "margin": 0.20318761467933655
+      },
+      {
+        "frame": 927,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.40847206115722656,
+        "margin": 0.22752653062343597
+      },
+      {
+        "frame": 928,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3939744234085083,
+        "margin": 0.22842001914978027
+      },
+      {
+        "frame": 929,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3918027877807617,
+        "margin": 0.21429121494293213
+      },
+      {
+        "frame": 930,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.46459269523620605,
+        "margin": 0.25160011649131775
+      },
+      {
+        "frame": 931,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4715244174003601,
+        "margin": 0.22141492366790771
+      },
+      {
+        "frame": 932,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.5170527696609497,
+        "margin": 0.30615372955799103
+      },
+      {
+        "frame": 933,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4643667936325073,
+        "margin": 0.23003330826759338
+      },
+      {
+        "frame": 936,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4991123080253601,
+        "margin": 0.255885511636734
+      },
+      {
+        "frame": 937,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.433175653219223,
+        "margin": 0.19073989987373352
+      },
+      {
+        "frame": 938,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.43101125955581665,
+        "margin": 0.23476622998714447
+      },
+      {
+        "frame": 939,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.47414061427116394,
+        "margin": 0.24116341769695282
+      },
+      {
+        "frame": 940,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.5261061787605286,
+        "margin": 0.31840991973876953
+      },
+      {
+        "frame": 941,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.45342710614204407,
+        "margin": 0.25558289885520935
+      },
+      {
+        "frame": 942,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4745056629180908,
+        "margin": 0.22246623039245605
+      },
+      {
+        "frame": 943,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4399724006652832,
+        "margin": 0.1969641000032425
+      },
+      {
+        "frame": 944,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4478709101676941,
+        "margin": 0.22708600759506226
+      },
+      {
+        "frame": 945,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.474822461605072,
+        "margin": 0.20580673217773438
+      },
+      {
+        "frame": 946,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.44619330763816833,
+        "margin": 0.176971435546875
+      },
+      {
+        "frame": 947,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.47976523637771606,
+        "margin": 0.25097665190696716
+      },
+      {
+        "frame": 948,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.40532392263412476,
+        "margin": 0.20219625532627106
+      },
+      {
+        "frame": 949,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.38484057784080505,
+        "margin": 0.1030607521533966
+      },
+      {
+        "frame": 950,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.43939873576164246,
+        "margin": 0.2454926073551178
+      },
+      {
+        "frame": 951,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.43710240721702576,
+        "margin": 0.18942008912563324
+      },
+      {
+        "frame": 952,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4255311191082001,
+        "margin": 0.21088239550590515
+      },
+      {
+        "frame": 953,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4442833662033081,
+        "margin": 0.2343789041042328
+      },
+      {
+        "frame": 954,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4183311462402344,
+        "margin": 0.24571025371551514
+      },
+      {
+        "frame": 955,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4588472545146942,
+        "margin": 0.239973247051239
+      },
+      {
+        "frame": 956,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4829603135585785,
+        "margin": 0.23762103915214539
+      },
+      {
+        "frame": 957,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.48155519366264343,
+        "margin": 0.23345869779586792
+      },
+      {
+        "frame": 958,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4225592017173767,
+        "margin": 0.16349348425865173
+      },
+      {
+        "frame": 959,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4037677049636841,
+        "margin": 0.12160992622375488
+      },
+      {
+        "frame": 960,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.42437979578971863,
+        "margin": 0.12788331508636475
+      },
+      {
+        "frame": 961,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4200100302696228,
+        "margin": 0.13507524132728577
+      },
+      {
+        "frame": 962,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4351932108402252,
+        "margin": 0.13278767466545105
+      },
+      {
+        "frame": 963,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3832361102104187,
+        "margin": 0.11161676049232483
+      },
+      {
+        "frame": 965,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4406278431415558,
+        "margin": 0.23122350871562958
+      },
+      {
+        "frame": 967,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.38677170872688293,
+        "margin": 0.1400790810585022
+      },
+      {
+        "frame": 968,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4013298749923706,
+        "margin": 0.11252200603485107
+      },
+      {
+        "frame": 969,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3833886981010437,
+        "margin": 0.10759037733078003
+      },
+      {
+        "frame": 970,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.39813360571861267,
+        "margin": 0.10334676504135132
+      },
+      {
+        "frame": 982,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.5018834471702576,
+        "margin": 0.3659284710884094
+      },
+      {
+        "frame": 983,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.40571483969688416,
+        "margin": 0.11759224534034729
+      },
+      {
+        "frame": 986,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.5358001589775085,
+        "margin": 0.40867121517658234
+      },
+      {
+        "frame": 987,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.5295079350471497,
+        "margin": 0.3987326920032501
+      },
+      {
+        "frame": 988,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.44496607780456543,
+        "margin": 0.2959286868572235
+      },
+      {
+        "frame": 989,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4509667158126831,
+        "margin": 0.34142983704805374
+      },
+      {
+        "frame": 991,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4612544775009155,
+        "margin": 0.32403551042079926
+      },
+      {
+        "frame": 992,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.46366390585899353,
+        "margin": 0.3632018640637398
+      },
+      {
+        "frame": 993,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.42765721678733826,
+        "margin": 0.30581922829151154
+      },
+      {
+        "frame": 995,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.48598209023475647,
+        "margin": 0.36734534800052643
+      },
+      {
+        "frame": 996,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.5183975696563721,
+        "margin": 0.3998434692621231
+      },
+      {
+        "frame": 998,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.38551995158195496,
+        "margin": 0.18585453927516937
+      },
+      {
+        "frame": 999,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.38452404737472534,
+        "margin": 0.20536112785339355
+      },
+      {
+        "frame": 1000,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3868582844734192,
+        "margin": 0.1829635053873062
+      },
+      {
+        "frame": 1001,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.43347233533859253,
+        "margin": 0.19706909358501434
+      },
+      {
+        "frame": 1002,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4580797553062439,
+        "margin": 0.2672772705554962
+      },
+      {
+        "frame": 1003,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.39862126111984253,
+        "margin": 0.19107025861740112
+      },
+      {
+        "frame": 1006,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.40884262323379517,
+        "margin": 0.16575659811496735
+      },
+      {
+        "frame": 1007,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.45143330097198486,
+        "margin": 0.25046147406101227
+      },
+      {
+        "frame": 1008,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.43827173113822937,
+        "margin": 0.2145269811153412
+      },
+      {
+        "frame": 1165,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.5184159278869629,
+        "margin": 0.33429476618766785
+      },
+      {
+        "frame": 1187,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4080452024936676,
+        "margin": 0.2212803214788437
+      },
+      {
+        "frame": 1188,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.38452833890914917,
+        "margin": 0.1662634313106537
+      },
+      {
+        "frame": 1189,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4482174217700958,
+        "margin": 0.32714632898569107
+      },
+      {
+        "frame": 1192,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3979912996292114,
+        "margin": 0.1329556107521057
+      },
+      {
+        "frame": 1193,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4265463948249817,
+        "margin": 0.13423165678977966
+      },
+      {
+        "frame": 1194,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.45458072423934937,
+        "margin": 0.19034144282341003
+      },
+      {
+        "frame": 1198,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.39470767974853516,
+        "margin": 0.17067575454711914
+      },
+      {
+        "frame": 1199,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4405626058578491,
+        "margin": 0.17920821905136108
+      },
+      {
+        "frame": 1210,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3879072666168213,
+        "margin": 0.12789934873580933
+      },
+      {
+        "frame": 1229,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.43169283866882324,
+        "margin": 0.19592255353927612
+      },
+      {
+        "frame": 1230,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4232019782066345,
+        "margin": 0.18932729959487915
+      },
+      {
+        "frame": 1236,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.39009103178977966,
+        "margin": 0.1423352211713791
+      },
+      {
+        "frame": 1237,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4174419641494751,
+        "margin": 0.10203057527542114
+      },
+      {
+        "frame": 1241,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4153873324394226,
+        "margin": 0.1741722822189331
+      },
+      {
+        "frame": 1242,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.44035476446151733,
+        "margin": 0.1823803186416626
+      },
+      {
+        "frame": 1243,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3907233476638794,
+        "margin": 0.135700523853302
+      },
+      {
+        "frame": 1500,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3838534653186798,
+        "margin": 0.0765160322189331
+      },
+      {
+        "frame": 1529,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3847482204437256,
+        "margin": 0.13727696239948273
+      },
+      {
+        "frame": 1537,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.38387706875801086,
+        "margin": 0.06794819235801697
+      },
+      {
+        "frame": 1563,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.428201824426651,
+        "margin": 0.26203225553035736
+      },
+      {
+        "frame": 1566,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3948470652103424,
+        "margin": 0.28470827639102936
+      },
+      {
+        "frame": 1569,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4190005362033844,
+        "margin": 0.25473828613758087
+      },
+      {
+        "frame": 1570,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4400825500488281,
+        "margin": 0.3192955106496811
+      },
+      {
+        "frame": 1571,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4733685255050659,
+        "margin": 0.3193124532699585
+      },
+      {
+        "frame": 1581,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4026728868484497,
+        "margin": 0.23709715902805328
+      },
+      {
+        "frame": 3171,
+        "track_id": 11,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.38360100984573364,
+        "margin": 0.14522576332092285
+      },
+      {
+        "frame": 3176,
+        "track_id": 11,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.3921087980270386,
+        "margin": 0.18333038687705994
+      },
+      {
+        "frame": 3177,
+        "track_id": 11,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.4042251706123352,
+        "margin": 0.17940175533294678
+      },
+      {
+        "frame": 3178,
+        "track_id": 11,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.4744759500026703,
+        "margin": 0.2096436321735382
+      },
+      {
+        "frame": 3183,
+        "track_id": 11,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.4411110579967499,
+        "margin": 0.19201382994651794
+      },
+      {
+        "frame": 3184,
+        "track_id": 11,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.4374305009841919,
+        "margin": 0.22077807784080505
+      }
+    ],
+    "gap_recoveries": [],
+    "final_ownership": {
+      "harshil": 11,
+      "swayam": 23
+    }
+  },
+  "on": {
+    "name": "Self-Learning ON (Online Mutation)",
+    "self_learning_enabled": true,
+    "initial_gallery_sizes": {
+      "aagam": 37,
+      "harshil": 42,
+      "soham": 33,
+      "swayam": 37
+    },
+    "final_gallery_sizes": {
+      "aagam": 80,
+      "harshil": 80,
+      "soham": 33,
+      "swayam": 54
+    },
+    "self_learned_count": 98,
+    "swayam_locks": [
+      [
+        3175,
+        23,
+        0.39712241291999817
+      ]
+    ],
+    "harshil_locks": [
+      [
+        65,
+        3,
+        0.4255661964416504
+      ],
+      [
+        1946,
+        11,
+        0.4095612168312073
+      ]
+    ],
+    "contradictions": [
+      {
+        "frame": 109,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.39246466755867004,
+        "margin": 0.11920750141143799
+      },
+      {
+        "frame": 213,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.38486915826797485,
+        "margin": 0.20257613062858582
+      },
+      {
+        "frame": 276,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4846210479736328,
+        "margin": 0.3836851939558983
+      },
+      {
+        "frame": 278,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.45254969596862793,
+        "margin": 0.28620627522468567
+      },
+      {
+        "frame": 279,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4368738532066345,
+        "margin": 0.31276870518922806
+      },
+      {
+        "frame": 280,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4757472276687622,
+        "margin": 0.3038906753063202
+      },
+      {
+        "frame": 284,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.39989280700683594,
+        "margin": 0.14413058757781982
+      },
+      {
+        "frame": 285,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4726649224758148,
+        "margin": 0.27593860030174255
+      },
+      {
+        "frame": 288,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4451685845851898,
+        "margin": 0.22962208092212677
+      },
+      {
+        "frame": 290,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.45235365629196167,
+        "margin": 0.20721128582954407
+      },
+      {
+        "frame": 291,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4114329218864441,
+        "margin": 0.2585345059633255
+      },
+      {
+        "frame": 292,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.415119469165802,
+        "margin": 0.2497963309288025
+      },
+      {
+        "frame": 293,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.397770494222641,
+        "margin": 0.1821008026599884
+      },
+      {
+        "frame": 294,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.41927963495254517,
+        "margin": 0.22044867277145386
+      },
+      {
+        "frame": 298,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.39029037952423096,
+        "margin": 0.21736297011375427
+      },
+      {
+        "frame": 299,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.39642444252967834,
+        "margin": 0.18917882442474365
+      },
+      {
+        "frame": 302,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.40193474292755127,
+        "margin": 0.18039563298225403
+      },
+      {
+        "frame": 303,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.39602139592170715,
+        "margin": 0.14231958985328674
+      },
+      {
+        "frame": 304,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3822898268699646,
+        "margin": 0.14548827707767487
+      },
+      {
+        "frame": 306,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4003975987434387,
+        "margin": 0.19190900027751923
+      },
+      {
+        "frame": 309,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4264886975288391,
+        "margin": 0.16421353816986084
+      },
+      {
+        "frame": 310,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.41576358675956726,
+        "margin": 0.15776434540748596
+      },
+      {
+        "frame": 312,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4170948266983032,
+        "margin": 0.12477397918701172
+      },
+      {
+        "frame": 355,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.4230649471282959,
+        "margin": 0.2530270516872406
+      },
+      {
+        "frame": 356,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.39803433418273926,
+        "margin": 0.23587195575237274
+      },
+      {
+        "frame": 357,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.4399612545967102,
+        "margin": 0.2695099115371704
+      },
+      {
+        "frame": 358,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.4158550500869751,
+        "margin": 0.17531681060791016
+      },
+      {
+        "frame": 359,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.47202104330062866,
+        "margin": 0.25519169867038727
+      },
+      {
+        "frame": 360,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.43962520360946655,
+        "margin": 0.21461234986782074
+      },
+      {
+        "frame": 361,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.4216322898864746,
+        "margin": 0.1848801225423813
+      },
+      {
+        "frame": 363,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.44084882736206055,
+        "margin": 0.25135231018066406
+      },
+      {
+        "frame": 364,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.4509241580963135,
+        "margin": 0.2787633538246155
+      },
+      {
+        "frame": 365,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.43563732504844666,
+        "margin": 0.2095869779586792
+      },
+      {
+        "frame": 366,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.45846331119537354,
+        "margin": 0.19971948862075806
+      },
+      {
+        "frame": 367,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.48067930340766907,
+        "margin": 0.150977224111557
+      },
+      {
+        "frame": 368,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.5456222295761108,
+        "margin": 0.15502452850341797
+      },
+      {
+        "frame": 369,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.5734529495239258,
+        "margin": 0.18618366122245789
+      },
+      {
+        "frame": 370,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.5900717973709106,
+        "margin": 0.29728803038597107
+      },
+      {
+        "frame": 371,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.5290447473526001,
+        "margin": 0.2911684513092041
+      },
+      {
+        "frame": 372,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.551974892616272,
+        "margin": 0.27342694997787476
+      },
+      {
+        "frame": 373,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.5517003536224365,
+        "margin": 0.2983740568161011
+      },
+      {
+        "frame": 374,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.4980001449584961,
+        "margin": 0.26435989141464233
+      },
+      {
+        "frame": 375,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.5194612145423889,
+        "margin": 0.2801567316055298
+      },
+      {
+        "frame": 376,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.5114694833755493,
+        "margin": 0.22665974497795105
+      },
+      {
+        "frame": 377,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.500861644744873,
+        "margin": 0.17460817098617554
+      },
+      {
+        "frame": 378,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.4992554783821106,
+        "margin": 0.2734762132167816
+      },
+      {
+        "frame": 379,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.43744736909866333,
+        "margin": 0.27800776064395905
+      },
+      {
+        "frame": 406,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.39244693517684937,
+        "margin": 0.13016653060913086
+      },
+      {
+        "frame": 415,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4098414182662964,
+        "margin": 0.1655380129814148
+      },
+      {
+        "frame": 610,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.39653894305229187,
+        "margin": 0.1351637840270996
+      },
+      {
+        "frame": 611,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4409075975418091,
+        "margin": 0.23885387182235718
+      },
+      {
+        "frame": 645,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.38336509466171265,
+        "margin": 0.1211618185043335
+      },
+      {
+        "frame": 646,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3841918706893921,
+        "margin": 0.12161791324615479
+      },
+      {
+        "frame": 648,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3931726813316345,
+        "margin": 0.15254856646060944
+      },
+      {
+        "frame": 649,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3844793438911438,
+        "margin": 0.12742304801940918
+      },
+      {
+        "frame": 654,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.40373900532722473,
+        "margin": 0.17118453979492188
+      },
+      {
+        "frame": 655,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.40796908736228943,
+        "margin": 0.1524222195148468
+      },
+      {
+        "frame": 788,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3809940218925476,
+        "margin": 0.1839740127325058
+      },
+      {
+        "frame": 789,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.380967915058136,
+        "margin": 0.1658148169517517
+      },
+      {
+        "frame": 791,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4355819821357727,
+        "margin": 0.2241089642047882
+      },
+      {
+        "frame": 793,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4007411599159241,
+        "margin": 0.13773036003112793
+      },
+      {
+        "frame": 824,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3969576954841614,
+        "margin": 0.15944460034370422
+      },
+      {
+        "frame": 913,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4160327613353729,
+        "margin": 0.19739387929439545
+      },
+      {
+        "frame": 914,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.5200183391571045,
+        "margin": 0.39546339958906174
+      },
+      {
+        "frame": 917,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4739653170108795,
+        "margin": 0.21943587064743042
+      },
+      {
+        "frame": 923,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4010043442249298,
+        "margin": 0.19477039575576782
+      },
+      {
+        "frame": 924,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3979572057723999,
+        "margin": 0.2007901668548584
+      },
+      {
+        "frame": 925,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4016647934913635,
+        "margin": 0.20581284165382385
+      },
+      {
+        "frame": 926,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4086267650127411,
+        "margin": 0.20318761467933655
+      },
+      {
+        "frame": 927,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.40847206115722656,
+        "margin": 0.22752653062343597
+      },
+      {
+        "frame": 928,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3939744234085083,
+        "margin": 0.22842001914978027
+      },
+      {
+        "frame": 929,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3918027877807617,
+        "margin": 0.21429121494293213
+      },
+      {
+        "frame": 930,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.46459269523620605,
+        "margin": 0.25160011649131775
+      },
+      {
+        "frame": 931,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4715244174003601,
+        "margin": 0.22141492366790771
+      },
+      {
+        "frame": 932,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.5170527696609497,
+        "margin": 0.30615372955799103
+      },
+      {
+        "frame": 933,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4643667936325073,
+        "margin": 0.23003330826759338
+      },
+      {
+        "frame": 936,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4991123080253601,
+        "margin": 0.255885511636734
+      },
+      {
+        "frame": 937,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.433175653219223,
+        "margin": 0.19073989987373352
+      },
+      {
+        "frame": 938,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.43101125955581665,
+        "margin": 0.23476622998714447
+      },
+      {
+        "frame": 939,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.47414061427116394,
+        "margin": 0.24116341769695282
+      },
+      {
+        "frame": 940,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.5261061787605286,
+        "margin": 0.31840991973876953
+      },
+      {
+        "frame": 941,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.45342710614204407,
+        "margin": 0.25558289885520935
+      },
+      {
+        "frame": 942,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4745056629180908,
+        "margin": 0.22246623039245605
+      },
+      {
+        "frame": 943,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4399724006652832,
+        "margin": 0.1969641000032425
+      },
+      {
+        "frame": 944,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4478709101676941,
+        "margin": 0.22708600759506226
+      },
+      {
+        "frame": 945,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.474822461605072,
+        "margin": 0.20580673217773438
+      },
+      {
+        "frame": 946,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.44619330763816833,
+        "margin": 0.176971435546875
+      },
+      {
+        "frame": 947,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.47976523637771606,
+        "margin": 0.25097665190696716
+      },
+      {
+        "frame": 948,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.40532392263412476,
+        "margin": 0.20219625532627106
+      },
+      {
+        "frame": 949,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.38484057784080505,
+        "margin": 0.1030607521533966
+      },
+      {
+        "frame": 950,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.43939873576164246,
+        "margin": 0.2454926073551178
+      },
+      {
+        "frame": 951,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.43710240721702576,
+        "margin": 0.18942008912563324
+      },
+      {
+        "frame": 952,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4255311191082001,
+        "margin": 0.21088239550590515
+      },
+      {
+        "frame": 953,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4442833662033081,
+        "margin": 0.2343789041042328
+      },
+      {
+        "frame": 954,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4183311462402344,
+        "margin": 0.24571025371551514
+      },
+      {
+        "frame": 955,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4588472545146942,
+        "margin": 0.239973247051239
+      },
+      {
+        "frame": 956,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4829603135585785,
+        "margin": 0.23762103915214539
+      },
+      {
+        "frame": 957,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.48155519366264343,
+        "margin": 0.23345869779586792
+      },
+      {
+        "frame": 958,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4225592017173767,
+        "margin": 0.16349348425865173
+      },
+      {
+        "frame": 959,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4037677049636841,
+        "margin": 0.12160992622375488
+      },
+      {
+        "frame": 960,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.42437979578971863,
+        "margin": 0.12788331508636475
+      },
+      {
+        "frame": 961,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4200100302696228,
+        "margin": 0.13507524132728577
+      },
+      {
+        "frame": 962,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4351932108402252,
+        "margin": 0.13278767466545105
+      },
+      {
+        "frame": 963,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3832361102104187,
+        "margin": 0.11161676049232483
+      },
+      {
+        "frame": 965,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4406278431415558,
+        "margin": 0.23122350871562958
+      },
+      {
+        "frame": 967,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.38677170872688293,
+        "margin": 0.1400790810585022
+      },
+      {
+        "frame": 968,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4013298749923706,
+        "margin": 0.11252200603485107
+      },
+      {
+        "frame": 969,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3833886981010437,
+        "margin": 0.10759037733078003
+      },
+      {
+        "frame": 970,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.39813360571861267,
+        "margin": 0.10334676504135132
+      },
+      {
+        "frame": 982,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.5018834471702576,
+        "margin": 0.3659284710884094
+      },
+      {
+        "frame": 983,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.40571483969688416,
+        "margin": 0.11759224534034729
+      },
+      {
+        "frame": 986,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.5358001589775085,
+        "margin": 0.40867121517658234
+      },
+      {
+        "frame": 987,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.5295079350471497,
+        "margin": 0.3987326920032501
+      },
+      {
+        "frame": 988,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.44496607780456543,
+        "margin": 0.2959286868572235
+      },
+      {
+        "frame": 989,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4509667158126831,
+        "margin": 0.34142983704805374
+      },
+      {
+        "frame": 991,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4612544775009155,
+        "margin": 0.32403551042079926
+      },
+      {
+        "frame": 992,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.46366390585899353,
+        "margin": 0.3632018640637398
+      },
+      {
+        "frame": 993,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.42765721678733826,
+        "margin": 0.30581922829151154
+      },
+      {
+        "frame": 995,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.48598209023475647,
+        "margin": 0.36734534800052643
+      },
+      {
+        "frame": 996,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.5183975696563721,
+        "margin": 0.3998434692621231
+      },
+      {
+        "frame": 998,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.38551995158195496,
+        "margin": 0.18585453927516937
+      },
+      {
+        "frame": 999,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.38452404737472534,
+        "margin": 0.20536112785339355
+      },
+      {
+        "frame": 1000,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3868582844734192,
+        "margin": 0.1829635053873062
+      },
+      {
+        "frame": 1001,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.43347233533859253,
+        "margin": 0.19706909358501434
+      },
+      {
+        "frame": 1002,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4580797553062439,
+        "margin": 0.2672772705554962
+      },
+      {
+        "frame": 1003,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.39862126111984253,
+        "margin": 0.19107025861740112
+      },
+      {
+        "frame": 1006,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.40884262323379517,
+        "margin": 0.16575659811496735
+      },
+      {
+        "frame": 1007,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.45143330097198486,
+        "margin": 0.25046147406101227
+      },
+      {
+        "frame": 1008,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.43827173113822937,
+        "margin": 0.2145269811153412
+      },
+      {
+        "frame": 1165,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.5184159278869629,
+        "margin": 0.33429476618766785
+      },
+      {
+        "frame": 1187,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4080452024936676,
+        "margin": 0.2212803214788437
+      },
+      {
+        "frame": 1188,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.38452833890914917,
+        "margin": 0.1662634313106537
+      },
+      {
+        "frame": 1189,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4482174217700958,
+        "margin": 0.32714632898569107
+      },
+      {
+        "frame": 1192,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3979912996292114,
+        "margin": 0.1329556107521057
+      },
+      {
+        "frame": 1193,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4265463948249817,
+        "margin": 0.13423165678977966
+      },
+      {
+        "frame": 1194,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.45458072423934937,
+        "margin": 0.19034144282341003
+      },
+      {
+        "frame": 1198,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.39470767974853516,
+        "margin": 0.17067575454711914
+      },
+      {
+        "frame": 1199,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4405626058578491,
+        "margin": 0.17920821905136108
+      },
+      {
+        "frame": 1210,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3879072666168213,
+        "margin": 0.12789934873580933
+      },
+      {
+        "frame": 1229,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.43169283866882324,
+        "margin": 0.19592255353927612
+      },
+      {
+        "frame": 1230,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4232019782066345,
+        "margin": 0.18932729959487915
+      },
+      {
+        "frame": 1236,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.39009103178977966,
+        "margin": 0.1423352211713791
+      },
+      {
+        "frame": 1237,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4174419641494751,
+        "margin": 0.10203057527542114
+      },
+      {
+        "frame": 1241,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4153873324394226,
+        "margin": 0.1741722822189331
+      },
+      {
+        "frame": 1242,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.44035476446151733,
+        "margin": 0.1823803186416626
+      },
+      {
+        "frame": 1243,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3907233476638794,
+        "margin": 0.135700523853302
+      },
+      {
+        "frame": 1500,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3838534653186798,
+        "margin": 0.0765160322189331
+      },
+      {
+        "frame": 1529,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3847482204437256,
+        "margin": 0.13727696239948273
+      },
+      {
+        "frame": 1537,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.38387706875801086,
+        "margin": 0.06794819235801697
+      },
+      {
+        "frame": 1563,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.428201824426651,
+        "margin": 0.26203225553035736
+      },
+      {
+        "frame": 1566,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.3948470652103424,
+        "margin": 0.28470827639102936
+      },
+      {
+        "frame": 1569,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4190005362033844,
+        "margin": 0.25473828613758087
+      },
+      {
+        "frame": 1570,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4400825500488281,
+        "margin": 0.3192955106496811
+      },
+      {
+        "frame": 1571,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4733685255050659,
+        "margin": 0.3193124532699585
+      },
+      {
+        "frame": 1581,
+        "track_id": 3,
+        "locked": "harshil",
+        "face_cand": "aagam",
+        "score": 0.4026728868484497,
+        "margin": 0.23709715902805328
+      },
+      {
+        "frame": 3171,
+        "track_id": 11,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.38360100984573364,
+        "margin": 0.14522576332092285
+      },
+      {
+        "frame": 3176,
+        "track_id": 11,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.3921087980270386,
+        "margin": 0.18333038687705994
+      },
+      {
+        "frame": 3177,
+        "track_id": 11,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.4042251706123352,
+        "margin": 0.17940175533294678
+      },
+      {
+        "frame": 3178,
+        "track_id": 11,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.4744759500026703,
+        "margin": 0.2096436321735382
+      },
+      {
+        "frame": 3183,
+        "track_id": 11,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.4411110579967499,
+        "margin": 0.19201382994651794
+      },
+      {
+        "frame": 3184,
+        "track_id": 11,
+        "locked": "harshil",
+        "face_cand": "swayam",
+        "score": 0.4374305009841919,
+        "margin": 0.22077807784080505
+      }
+    ],
+    "gap_recoveries": [],
+    "final_ownership": {
+      "harshil": 11,
+      "swayam": 23
+    }
+  }
+}

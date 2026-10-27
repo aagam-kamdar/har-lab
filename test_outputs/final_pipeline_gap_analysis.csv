@@ -1,0 +1,25 @@
+configuration,tracker,reid_model,gap_bin,total_events,correct,false,unknown,bin_accuracy_pct
+ByteTrack + MobileNetV3+HSV,ByteTrack,MobileNetV3+HSV,0-100f,1,0,0,1,0.0
+ByteTrack + MobileNetV3+HSV,ByteTrack,MobileNetV3+HSV,100-150f,2,1,1,0,50.0
+ByteTrack + MobileNetV3+HSV,ByteTrack,MobileNetV3+HSV,150-250f,1,0,0,1,0.0
+ByteTrack + MobileNetV3+HSV,ByteTrack,MobileNetV3+HSV,250f+,0,0,0,0,0.0
+ByteTrack + OSNet-x0.25,ByteTrack,OSNet-x0.25,0-100f,1,0,1,0,0.0
+ByteTrack + OSNet-x0.25,ByteTrack,OSNet-x0.25,100-150f,2,1,1,0,50.0
+ByteTrack + OSNet-x0.25,ByteTrack,OSNet-x0.25,150-250f,1,1,0,0,100.0
+ByteTrack + OSNet-x0.25,ByteTrack,OSNet-x0.25,250f+,0,0,0,0,0.0
+ByteTrack + ResNet18-IBN-A,ByteTrack,ResNet18-IBN-A,0-100f,1,0,1,0,0.0
+ByteTrack + ResNet18-IBN-A,ByteTrack,ResNet18-IBN-A,100-150f,2,0,1,1,0.0
+ByteTrack + ResNet18-IBN-A,ByteTrack,ResNet18-IBN-A,150-250f,1,1,0,0,100.0
+ByteTrack + ResNet18-IBN-A,ByteTrack,ResNet18-IBN-A,250f+,0,0,0,0,0.0
+OC-SORT + MobileNetV3+HSV,OC-SORT,MobileNetV3+HSV,0-100f,0,0,0,0,0.0
+OC-SORT + MobileNetV3+HSV,OC-SORT,MobileNetV3+HSV,100-150f,1,0,0,1,0.0
+OC-SORT + MobileNetV3+HSV,OC-SORT,MobileNetV3+HSV,150-250f,2,0,0,2,0.0
+OC-SORT + MobileNetV3+HSV,OC-SORT,MobileNetV3+HSV,250f+,1,0,0,1,0.0
+OC-SORT + OSNet-x0.25,OC-SORT,OSNet-x0.25,0-100f,0,0,0,0,0.0
+OC-SORT + OSNet-x0.25,OC-SORT,OSNet-x0.25,100-150f,1,0,0,1,0.0
+OC-SORT + OSNet-x0.25,OC-SORT,OSNet-x0.25,150-250f,2,1,0,1,50.0
+OC-SORT + OSNet-x0.25,OC-SORT,OSNet-x0.25,250f+,1,0,0,1,0.0
+OC-SORT + ResNet18-IBN-A,OC-SORT,ResNet18-IBN-A,0-100f,0,0,0,0,0.0
+OC-SORT + ResNet18-IBN-A,OC-SORT,ResNet18-IBN-A,100-150f,1,1,0,0,100.0
+OC-SORT + ResNet18-IBN-A,OC-SORT,ResNet18-IBN-A,150-250f,2,0,0,2,0.0
+OC-SORT + ResNet18-IBN-A,OC-SORT,ResNet18-IBN-A,250f+,1,0,0,1,0.0

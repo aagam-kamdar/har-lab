@@ -1,185 +1,952 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Video Tracking Demo — Student Lab Tracker</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            max-width: 680px;
-            margin: 2.5rem auto;
-            padding: 1.5rem;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: #f8fafc;
-            color: #1e293b;
-        }
-        .card {
-            background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.06), 0 2px 4px -2px rgba(0,0,0,0.06);
-        }
-        h2 {
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-            font-size: 1.5rem;
-            color: #0f172a;
-        }
-        .subtitle {
-            color: #64748b;
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.4;
-        }
-        .badge {
-            display: inline-block;
-            background: #dbeafe;
-            color: #1e40af;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            padding: 0.2rem 0.55rem;
-            border-radius: 4px;
-            margin-bottom: 0.75rem;
-            letter-spacing: 0.05em;
-        }
-        .error {
-            background: #fef2f2;
-            color: #b91c1c;
-            border: 1px solid #fecaca;
-            padding: 0.75rem 1rem;
-            border-radius: 6px;
-            margin-bottom: 1.25rem;
-            font-size: 0.9rem;
-        }
-        .form-group {
-            margin-bottom: 1.25rem;
-        }
-        label {
-            display: block;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 0.35rem;
-            color: #334155;
-        }
-        input[type="file"] {
-            display: block;
-            width: 100%;
-            padding: 0.75rem;
-            background: #f8fafc;
-            border: 2px dashed #cbd5e1;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 0.9rem;
-        }
-        input[type="file"]:hover {
-            border-color: #3b82f6;
-            background: #f0f9ff;
-        }
-        .settings-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid #f1f5f9;
-        }
-        input[type="number"] {
-            width: 100%;
-            padding: 0.5rem 0.75rem;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            font-size: 0.9rem;
-        }
-        .help-text {
-            font-size: 0.75rem;
-            color: #94a3b8;
-            margin-top: 0.25rem;
-        }
-        button[type="submit"] {
-            width: 100%;
-            padding: 0.85rem 1.25rem;
-            background: #2563eb;
-            color: white;
-            font-weight: 600;
-            font-size: 1rem;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            margin-top: 1.5rem;
-            transition: background 0.15s ease-in-out;
-        }
-        button[type="submit"]:hover {
-            background: #1d4ed8;
-        }
-        .info-box {
-            margin-top: 1.5rem;
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 0.85rem 1rem;
-            font-size: 0.85rem;
-            color: #475569;
-            line-height: 1.45;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab Productivity Intelligence Monitor</title>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card: #131b2e;
+      --card-hover: #18223a;
+      --border: #222f48;
+      --border-focus: #3b82f6;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --active: #10b981;
+      --phone: #ef4444;
+      --call: #f97316;
+      --discussing: #38bdf8;
+      --idle: #eab308;
+      --walking: #a855f7;
+      --away: #64748b;
+      --danger: #dc2626;
+      --danger-bg: rgba(220, 38, 38, 0.15);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* TOP OFFLINE BANNER */
+    #offlineBanner {
+      display: none;
+      background: var(--danger);
+      color: #ffffff;
+      padding: 0.75rem 1.5rem;
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+      z-index: 1000;
+    }
+
+    /* HEADER */
+    header {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .header-brand h1 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .status-pill.online {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+    .status-pill.offline {
+      background: rgba(239, 68, 68, 0.2);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.4);
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+      animation: pulse 1.6s infinite ease-in-out;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    /* CONTROLS */
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .btn {
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      border: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .btn-primary { background: #3b82f6; color: white; }
+    .btn-primary:hover:not(:disabled) { background: #2563eb; }
+    .btn-danger { background: #ef4444; color: white; }
+    .btn-danger:hover:not(:disabled) { background: #dc2626; }
+    .btn-secondary { background: #1e293b; color: var(--text); border: 1px solid var(--border); }
+    .btn-secondary:hover:not(:disabled) { background: #334155; }
+
+    /* MAIN CONTAINER */
+    main {
+      flex: 1;
+      max-width: 1480px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* TOP STATS BAR */
+    .overview-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .stat-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .stat-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+    }
+    .stat-value {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: #ffffff;
+    }
+    .stat-desc {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    /* SEAT GRID */
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .grid-seats {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .card-seat {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      transition: transform 0.15s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .card-seat:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+
+    .seat-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .seat-person-info h3 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+    .seat-meta {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-top: 0.2rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+    .seat-pill-cam {
+      background: #1e293b;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+    }
+
+    /* STATE BADGES */
+    .badge-state {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 0.45rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+    .badge-active_work { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .badge-phone       { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+    .badge-call        { background: rgba(249, 115, 22, 0.15); color: #fb923c; border: 1px solid rgba(249, 115, 22, 0.3); }
+    .badge-discussing  { background: rgba(56, 189, 248, 0.15); color: #7dd3fc; border: 1px solid rgba(56, 189, 248, 0.3); }
+    .badge-idle        { background: rgba(234, 179, 8, 0.15); color: #fde047; border: 1px solid rgba(234, 179, 8, 0.3); }
+    .badge-walking     { background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); }
+    .badge-away        { background: rgba(100, 116, 139, 0.15); color: #94a3b8; border: 1px solid rgba(100, 116, 139, 0.3); }
+
+    /* CARD BORDER COLORING PER STATE */
+    .card-seat[data-state="active_work"] { border-top-color: var(--active); }
+    .card-seat[data-state="phone"]       { border-top-color: var(--phone); }
+    .card-seat[data-state="call"]        { border-top-color: var(--call); }
+    .card-seat[data-state="discussing"]  { border-top-color: var(--discussing); }
+    .card-seat[data-state="idle"]        { border-top-color: var(--idle); }
+    .card-seat[data-state="walking"]     { border-top-color: var(--walking); }
+    .card-seat[data-state="away"]        { border-top-color: var(--away); }
+
+    .seat-reason {
+      font-size: 0.75rem;
+      color: var(--muted);
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 0.4rem;
+      padding: 0.5rem;
+      min-height: 2.4rem;
+      line-height: 1.35;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    .seat-duration {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    .seat-duration strong {
+      color: var(--text);
+    }
+
+    .seat-prod-section {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .seat-prod-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    .seat-prod-pct {
+      font-weight: 700;
+      color: #ffffff;
+    }
+    .prod-track {
+      height: 7px;
+      border-radius: 999px;
+      background: #1e293b;
+      overflow: hidden;
+    }
+    .prod-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: var(--active);
+      transition: width 0.3s ease;
+    }
+
+    /* VIDEO & ANALYTICS DUAL SECTION */
+    .analytics-row {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 950px) {
+      .analytics-row { grid-template-columns: 1fr; }
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .video-viewport {
+      width: 100%;
+      background: #000000;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+    }
+    .video-viewport img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* ALERTS FEED */
+    .alerts-feed {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      max-height: 280px;
+      overflow-y: auto;
+    }
+    .alert-card {
+      background: #201317;
+      border: 1px solid #571e24;
+      border-radius: 0.5rem;
+      padding: 0.75rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+    .alert-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+    .alert-title {
+      font-weight: 700;
+      color: #f87171;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .alert-time {
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+    .btn-dismiss {
+      background: transparent;
+      border: 1px solid #84232c;
+      color: #fca5a5;
+      font-size: 0.72rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .btn-dismiss:hover {
+      background: #571e24;
+    }
+
+    /* EVENTS TABLE */
+    .events-panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+    }
+    th {
+      text-align: left;
+      padding: 0.6rem 0.5rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+    }
+    td {
+      padding: 0.6rem 0.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text);
+    }
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* EMPTY STATES */
+    .empty-msg {
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-style: italic;
+      padding: 1rem;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    <div class="card">
-        <span class="badge">100% Offline Demo</span>
-        <h2>Student Lab Tracking Demo</h2>
-        <p class="subtitle">
-            Upload a classroom or lab video. The system runs <strong>local YOLO person detection</strong> and the <strong>official ByteTrack algorithm</strong> frame-by-frame, outputting a single playable video with persistent <strong>ID 1, ID 2, ID 3</strong> labels.
-        </p>
 
-        {% if error %}
-            <div class="error">{{ error }}</div>
-        {% endif %}
+  <!-- OFFLINE ALERT BANNER -->
+  <div id="offlineBanner">
+    ⚠️ MONITOR OFFLINE — No heartbeat signal received from activity monitor in > 5 seconds.
+  </div>
 
-        <form action="/analyze" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="video">Select Video File (.mp4, .mov, .avi, .mkv)</label>
-                <input type="file" id="video" name="video" accept="video/*" required>
-            </div>
+  <!-- HEADER -->
+  <header>
+    <div class="header-brand">
+      <h1>💻 Person-Centric Lab Activity Intelligence Monitor</h1>
+      <div id="statusPill" class="status-pill offline">
+        <span class="pulse-dot"></span>
+        <span id="statusPillText">Connecting...</span>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button id="btnToggleVideo" class="btn btn-secondary" onclick="toggleVideoPanel()">
+        📹 Toggle Video
+      </button>
+      <button id="btnStart" class="btn btn-primary" onclick="startMonitor()">
+        ▶ Start Monitor
+      </button>
+      <button id="btnStop" class="btn btn-danger" onclick="stopMonitor()">
+        ⏹ Stop Monitor
+      </button>
+    </div>
+  </header>
 
-            <div class="settings-grid">
-                <div>
-                    <label for="conf_thresh">YOLO Confidence Threshold</label>
-                    <input type="number" id="conf_thresh" name="conf_thresh" step="0.05" min="0.10" max="0.95" value="0.30">
-                    <div class="help-text">Filters weak detections before tracking.</div>
-                </div>
-                <div>
-                    <label for="track_buffer">Track Buffer (Frames)</label>
-                    <input type="number" id="track_buffer" name="track_buffer" step="5" min="10" max="300" value="30">
-                    <div class="help-text">Frames to remember occluded persons (~1 sec).</div>
-                </div>
-            </div>
-
-            <button type="submit" id="submit-btn">Process Video &amp; Track Students</button>
-        </form>
-
-        <div class="info-box">
-            <strong>Key Features:</strong>
-            <ul style="margin: 0.35rem 0 0 1.25rem; padding: 0;">
-                <li><strong>Person Class Only:</strong> Ignores laptops, phones, books, and furniture.</li>
-                <li><strong>Sequential Tracking:</strong> Every frame is fed sequentially to BYTETracker for smooth Kalman velocity estimation.</li>
-                <li><strong>Single MP4 Output:</strong> Generates an embedded, browser-playable annotated video.</li>
-                <li><strong>Zero API Dependencies:</strong> No cloud calls or API keys required.</li>
-            </ul>
-        </div>
+  <!-- MAIN DASHBOARD -->
+  <main>
+    <!-- OVERVIEW STATS -->
+    <div class="overview-row">
+      <div class="stat-card">
+        <span class="stat-label">Tracked Individuals</span>
+        <span id="statActiveSeats" class="stat-value">0</span>
+        <span id="statCamerasCount" class="stat-desc">across camera feeds</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Classroom Productivity</span>
+        <span id="statClassProd" class="stat-value">0.0%</span>
+        <span class="stat-desc">active work / present time</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Primary Distraction</span>
+        <span id="statDistraction" class="stat-value">None</span>
+        <span id="statDistractionDesc" class="stat-desc">no active distraction alerts</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Pipeline Cadence</span>
+        <span id="statCadence" class="stat-value">8.0 FPS</span>
+        <span class="stat-desc">batched YOLO-Pose + YOLO-Det</span>
+      </div>
     </div>
 
-    <script>
-        document.querySelector("form").addEventListener("submit", function() {
-            var btn = document.getElementById("submit-btn");
-            btn.disabled = true;
-            btn.innerText = "Processing Video Locally (This may take a moment)...";
-            btn.style.background = "#64748b";
-        });
-    </script>
+    <!-- WORKSTATION CARDS (RESPONSIVE GRID) -->
+    <section>
+      <div class="section-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+        <h2 class="section-title">👥 Tracked Students & Individuals (<span id="seatCountBadge">0</span>)</h2>
+        <div style="font-size: 0.75rem; color: var(--text-muted);" id="validationRegistryBanner">
+          <strong>Validation Registry:</strong>
+          <span style="color: #f59e0b; font-weight: 600;">● All classes unvalidated (Alerts suppressed)</span> until validated via sealed benchmark.
+        </div>
+      </div>
+      <div id="seatsGrid" class="grid-seats">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- LIVE VIDEO & TIME DISTRIBUTION -->
+    <div class="analytics-row">
+      <!-- VIDEO FEED PANEL -->
+      <div id="videoPanel" class="panel">
+        <div class="section-header">
+          <h2 class="section-title">📹 Live Annotated Video Stream</h2>
+        </div>
+        <div class="video-viewport">
+          <img id="mjpegFeed" src="/video" alt="Lab Live Stream" />
+        </div>
+      </div>
+
+      <!-- PRODUCTIVITY TIME DISTRIBUTION CHART -->
+      <div class="panel">
+        <div class="section-header">
+          <h2 class="section-title">📊 Time Distribution Breakdown</h2>
+        </div>
+        <div style="position: relative; height: 260px;">
+          <canvas id="timeChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- ALERTS FEED & RECENT EVENTS -->
+    <div class="analytics-row">
+      <!-- RECENT ALERTS -->
+      <div class="panel">
+        <div class="section-header">
+          <h2 class="section-title">⚠️ Distraction Alert Feed</h2>
+          <button class="btn btn-secondary" style="padding: 0.2rem 0.5rem; font-size: 0.72rem;" onclick="clearDismissedAlerts()">
+            Clear Feed
+          </button>
+        </div>
+        <div id="alertsContainer" class="alerts-feed">
+          <div class="empty-msg">No active distraction alerts</div>
+        </div>
+      </div>
+
+      <!-- RECENT EVENTS TIMELINE -->
+      <div class="panel">
+        <div class="section-header">
+          <h2 class="section-title">⏱️ Activity Event Log</h2>
+        </div>
+        <div class="events-panel" style="max-height: 280px; overflow-y: auto; padding: 0; border: none;">
+          <table>
+            <thead>
+              <tr>
+                <th>Seat</th>
+                <th>Student</th>
+                <th>Activity</th>
+                <th>Duration</th>
+                <th>Evidence Reason</th>
+              </tr>
+            </thead>
+            <tbody id="eventsTableBody">
+              <tr><td colspan="5" class="empty-msg">Waiting for activity events...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Global state cache
+    const STATE_LABELS = {
+      active_work: "Active Work",
+      writing: "Writing",
+      reading: "Reading",
+      phone: "Phone Use",
+      call: "Phone Call",
+      discussing: "Discussion (Unvalidated)",
+      idle: "Idle / Distracted",
+      walking: "Walking / Standing",
+      away: "Away",
+      uncertain: "Uncertain"
+    };
+
+    const STATE_COLORS = {
+      active_work: "#10b981",
+      writing: "#14b8a6",
+      reading: "#06b6d4",
+      phone: "#ef4444",
+      call: "#f97316",
+      discussing: "#38bdf8",
+      idle: "#eab308",
+      walking: "#a855f7",
+      away: "#64748b",
+      uncertain: "#94a3b8"
+    };
+
+    let dismissedAlertIds = new Set();
+    let chartInstance = null;
+    let sseActive = false;
+
+    // Initialize Chart.js
+    function initChart() {
+      const ctx = document.getElementById("timeChart").getContext("2d");
+      chartInstance = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+          labels: Object.values(STATE_LABELS),
+          datasets: [{
+            data: [0, 0, 0, 0, 0, 0, 0],
+            backgroundColor: Object.values(STATE_COLORS),
+            borderWidth: 1,
+            borderColor: "#151d2f"
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: "right",
+              labels: { color: "#94a3b8", font: { size: 11 }, boxWidth: 12 }
+            }
+          }
+        }
+      });
+    }
+
+    // Format duration in seconds to "Xm Ys" or "Xs"
+    function formatDuration(sec) {
+      sec = Math.max(0, Math.floor(sec || 0));
+      const m = Math.floor(sec / 60);
+      const s = sec % 60;
+      if (m > 0) return `${m}m ${s}s`;
+      return `${s}s`;
+    }
+
+    // Update Person Card in DOM (in-place modification without whole-page refresh)
+    function updatePersonCard(person) {
+      const grid = document.getElementById("seatsGrid");
+      const pKey = person.person_id || person.seat_id;
+      const cardId = `person-card-${pKey}`;
+      let card = document.getElementById(cardId);
+
+      if (!card) {
+        card = document.createElement("div");
+        card.id = cardId;
+        card.className = "card-seat";
+        card.setAttribute("data-person-id", pKey);
+        card.innerHTML = `
+          <div class="seat-top">
+            <div class="seat-person-info">
+              <h3 class="seat-person-name"></h3>
+              <div class="seat-meta">
+                <span class="seat-id-tag"></span>
+                <span class="seat-pill-cam"></span>
+                <span class="seat-pill-zone" style="background: rgba(59, 130, 246, 0.2); color: #93c5fd; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.7rem;"></span>
+                <span class="seat-pill-lock" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.7rem; display: none;"></span>
+              </div>
+            </div>
+            <span class="badge-state"></span>
+          </div>
+          <div class="seat-reason"></div>
+          <div class="seat-duration">In current state for: <strong class="seat-since-val">0s</strong></div>
+          <div class="seat-prod-section">
+            <div class="seat-prod-header">
+              <span>Productivity</span>
+              <span class="seat-prod-pct">0.0%</span>
+            </div>
+            <div class="prod-track">
+              <div class="prod-fill" style="width: 0%;"></div>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      }
+
+      // Update state attribute for border-top styling
+      card.setAttribute("data-state", person.state);
+
+      card.querySelector(".seat-person-name").textContent = person.display_name || person.person_id || person.seat_id;
+      
+      const trackTag = person.track_id ? `Track #${person.track_id}` : (person.seat_id || pKey);
+      card.querySelector(".seat-id-tag").textContent = trackTag;
+      card.querySelector(".seat-pill-cam").textContent = person.camera_id || "cam_0";
+
+      const zonePill = card.querySelector(".seat-pill-zone");
+      const zone = person.desk_zone || (person.seat_id && person.seat_id.startsWith("D") ? person.seat_id : null);
+      if (zone) {
+        zonePill.style.display = "inline-block";
+        zonePill.textContent = zone.startsWith("D") ? `Desk ${zone}` : zone;
+      } else {
+        zonePill.style.display = "none";
+      }
+
+      const lockPill = card.querySelector(".seat-pill-lock");
+      if (person.identity_confidence && person.identity_confidence > 0) {
+        lockPill.style.display = "inline-block";
+        lockPill.textContent = `🔒 ArcFace ${(person.identity_confidence * 100).toFixed(0)}%`;
+      } else if (person.is_locked) {
+        lockPill.style.display = "inline-block";
+        lockPill.textContent = "🔒 Enrolled";
+      } else {
+        lockPill.style.display = "none";
+      }
+
+      const badge = card.querySelector(".badge-state");
+      badge.className = `badge-state badge-${person.state}`;
+      const isVal = person.is_validated != null ? person.is_validated : (data.label_validation ? data.label_validation[person.state] : true);
+      const valBadge = isVal 
+        ? '<span style="font-size:0.65rem; margin-left:6px; color:#34d399; font-weight:700;">[Validated]</span>' 
+        : '<span style="font-size:0.65rem; margin-left:6px; color:#f59e0b; font-weight:700;">[Unvalidated]</span>';
+      badge.innerHTML = `${STATE_LABELS[person.state] || person.state} ${valBadge}`;
+
+      card.querySelector(".seat-reason").textContent = person.reason || "Analyzing...";
+      card.querySelector(".seat-since-val").textContent = formatDuration(person.duration_s);
+
+      const prod = Math.min(100, Math.max(0, person.productivity_pct || 0));
+      card.querySelector(".seat-prod-pct").textContent = `${prod.toFixed(1)}%`;
+      card.querySelector(".prod-fill").style.width = `${prod}%`;
+    }
+
+    // Apply status data
+    function applyStatusData(data) {
+      const offlineBanner = document.getElementById("offlineBanner");
+      const statusPill = document.getElementById("statusPill");
+      const statusPillText = document.getElementById("statusPillText");
+
+      if (data.monitor_online) {
+        offlineBanner.style.display = "none";
+        statusPill.className = "status-pill online";
+        statusPillText.textContent = "Monitor Online";
+      } else {
+        offlineBanner.style.display = "block";
+        statusPill.className = "status-pill offline";
+        statusPillText.textContent = "Monitor Offline";
+      }
+
+      const items = (data.persons && data.persons.length > 0) ? data.persons : (data.seats || []);
+      document.getElementById("statActiveSeats").textContent = items.length;
+      document.getElementById("seatCountBadge").textContent = items.length;
+
+      // Update person/seat cards
+      items.forEach(p => updatePersonCard(p));
+    }
+
+    // Fetch and render summary (chart + class metrics)
+    async function fetchSummary() {
+      try {
+        const res = await fetch("/api/summary");
+        if (!res.ok) return;
+        const data = await res.json();
+
+        document.getElementById("statClassProd").textContent = `${data.class_productivity_pct.toFixed(1)}%`;
+
+        if (chartInstance && data.state_distribution_seconds) {
+          const keys = ["active_work", "phone", "call", "discussing", "idle", "walking", "away"];
+          const values = keys.map(k => data.state_distribution_seconds[k] || 0);
+          chartInstance.data.datasets[0].data = values;
+          chartInstance.update();
+        }
+      } catch (err) {
+        console.error("Summary fetch error:", err);
+      }
+    }
+
+    // Fetch and render alerts
+    async function fetchAlerts() {
+      try {
+        const res = await fetch("/api/alerts?limit=15");
+        if (!res.ok) return;
+        const data = await res.json();
+        const container = document.getElementById("alertsContainer");
+        const alerts = (data.alerts || []).filter(a => !dismissedAlertIds.has(a.id));
+
+        if (alerts.length === 0) {
+          container.innerHTML = '<div class="empty-msg">No active distraction alerts</div>';
+          document.getElementById("statDistraction").textContent = "None";
+          document.getElementById("statDistractionDesc").textContent = "no active alerts";
+          return;
+        }
+
+        const latest = alerts[0];
+        document.getElementById("statDistraction").textContent = `${latest.person_id} (${latest.kind})`;
+        document.getElementById("statDistractionDesc").textContent = `held for ${latest.detail.held_s || '?'}s`;
+
+        container.innerHTML = alerts.map(a => `
+          <div class="alert-card" id="alert-${a.id}">
+            <div class="alert-info">
+              <div class="alert-title">
+                ⚠️ ${a.person_id} (${a.seat}) - ${a.kind.toUpperCase()}
+              </div>
+              <div class="alert-time">
+                Held for ${a.detail.held_s || 0}s | ${a.detail.reason || ""}
+              </div>
+            </div>
+            <button class="btn-dismiss" onclick="dismissAlert(${a.id})">Dismiss</button>
+          </div>
+        `).join("");
+      } catch (err) {
+        console.error("Alerts fetch error:", err);
+      }
+    }
+
+    function dismissAlert(alertId) {
+      dismissedAlertIds.add(alertId);
+      const el = document.getElementById(`alert-${alertId}`);
+      if (el) el.remove();
+      if (document.getElementById("alertsContainer").children.length === 0) {
+        document.getElementById("alertsContainer").innerHTML = '<div class="empty-msg">No active distraction alerts</div>';
+      }
+    }
+
+    function clearDismissedAlerts() {
+      const cards = document.querySelectorAll(".alert-card");
+      cards.forEach(c => {
+        const id = parseInt(c.id.replace("alert-", ""), 10);
+        if (id) dismissedAlertIds.add(id);
+        c.remove();
+      });
+      document.getElementById("alertsContainer").innerHTML = '<div class="empty-msg">No active distraction alerts</div>';
+    }
+
+    // Fetch and render events log
+    async function fetchEvents() {
+      try {
+        const res = await fetch("/api/events?limit=20");
+        if (!res.ok) return;
+        const data = await res.json();
+        const tbody = document.getElementById("eventsTableBody");
+        const events = data.events || [];
+
+        if (events.length === 0) {
+          tbody.innerHTML = '<tr><td colspan="5" class="empty-msg">Waiting for activity events...</td></tr>';
+          return;
+        }
+
+        tbody.innerHTML = events.map(e => `
+          <tr>
+            <td><strong>${e.desk_zone || e.seat || '-'}</strong></td>
+            <td>${e.person_id || (e.track_id ? ('Track #' + e.track_id) : '-')}</td>
+            <td>
+              <span class="badge-state badge-${e.label}" style="font-size: 0.7rem; padding: 0.2rem 0.5rem;">
+                ${STATE_LABELS[e.label] || e.label}
+              </span>
+            </td>
+            <td>${formatDuration(e.duration_sec)}</td>
+            <td style="color: var(--muted); font-family: monospace; font-size: 0.72rem;">${e.reason || ""}</td>
+          </tr>
+        `).join("");
+      } catch (err) {
+        console.error("Events fetch error:", err);
+      }
+    }
+
+    // SSE Connection with polling fallback
+    function connectSSE() {
+      try {
+        const evtSource = new EventSource("/api/stream");
+        evtSource.onmessage = function(event) {
+          sseActive = true;
+          try {
+            const data = JSON.parse(event.data);
+            applyStatusData(data);
+          } catch (e) {}
+        };
+        evtSource.onerror = function() {
+          sseActive = false;
+          evtSource.close();
+          setTimeout(connectSSE, 4000);
+        };
+      } catch (e) {
+        sseActive = false;
+      }
+    }
+
+    // Polling fallback loop
+    async function pollStatus() {
+      if (!sseActive) {
+        try {
+          const res = await fetch("/api/status");
+          if (res.ok) {
+            const data = await res.json();
+            applyStatusData(data);
+          }
+        } catch (e) {
+          applyStatusData({ monitor_online: false, seats: [] });
+        }
+      }
+    }
+
+    // Process control buttons
+    async function startMonitor() {
+      const btn = document.getElementById("btnStart");
+      btn.disabled = true;
+      try {
+        const res = await fetch("/api/monitor/start", { method: "POST" });
+        const data = await res.json();
+        console.log("Start response:", data);
+      } catch (err) {
+        alert("Failed to start monitor: " + err);
+      } finally {
+        setTimeout(() => { btn.disabled = false; }, 1500);
+      }
+    }
+
+    async function stopMonitor() {
+      const btn = document.getElementById("btnStop");
+      btn.disabled = true;
+      try {
+        const res = await fetch("/api/monitor/stop", { method: "POST" });
+        const data = await res.json();
+        console.log("Stop response:", data);
+      } catch (err) {
+        alert("Failed to stop monitor: " + err);
+      } finally {
+        setTimeout(() => { btn.disabled = false; }, 1500);
+      }
+    }
+
+    function toggleVideoPanel() {
+      const p = document.getElementById("videoPanel");
+      p.style.display = (p.style.display === "none") ? "flex" : "none";
+    }
+
+    // Lifecycle startup
+    window.addEventListener("DOMContentLoaded", () => {
+      initChart();
+      connectSSE();
+
+      // Polling loops
+      setInterval(pollStatus, 1000);
+      setInterval(fetchSummary, 2500);
+      setInterval(fetchAlerts, 2000);
+      setInterval(fetchEvents, 3000);
+
+      // Initial fetch
+      pollStatus();
+      fetchSummary();
+      fetchAlerts();
+      fetchEvents();
+    });
+  </script>
 </body>
 </html>

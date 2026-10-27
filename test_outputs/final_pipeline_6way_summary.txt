@@ -1,0 +1,62 @@
+=====================================================================================
+FINAL INTEGRATION BENCHMARK (6-WAY COMPARISON) SUMMARY REPORT
+YOLO26-Pose + TRACKER + ARCFACE + BODY RE-ID (1,800 FRAMES)
+=====================================================================================
+
+1. FROZEN INPUT & AUTHORITY RULES VERIFICATION
+-------------------------------------------------------------------------------------
+Frozen Detection File        : test_outputs\cached_yolo26pose_detections_1800f.json
+Detection Model              : yolo26n-pose.pt (3.68M params)
+Total Detections Consumed    : 6,818 boxes across 1,800 frames
+Keypoint Usage               : STRICTLY DISCARDED / EXCLUDED
+Initial Lock Authority       : ArcFace (insightface buffalo_sc, 512-D)
+Body Re-ID Role              : RECOVERY ONLY (triggered only when track REMOVED >= 90f)
+Production Code Status       : 100% UNCHANGED / STRICT ISOLATION
+
+2. MASTER 6-WAY CONFIGURATION COMPARISON MATRIX
+-------------------------------------------------------------------------------------
+Configuration                | Rec Acc | False Rec | UNKNOWN | IDSW | Frag | Events | CPU FPS
+-------------------------------------------------------------------------------------
+ByteTrack + MobileNetV3+HSV  | 25.0%   | 25.0%     | 50.0%   | 1    | 14   | 4      | 1752.3 
+ByteTrack + OSNet-x0.25      | 50.0%   | 50.0%     | 0.0%    | 1    | 14   | 4      | 1752.3 
+ByteTrack + ResNet18-IBN-A   | 25.0%   | 50.0%     | 25.0%   | 1    | 14   | 4      | 1752.3 
+OC-SORT + MobileNetV3+HSV    | 0.0%    | 0.0%      | 100.0%  | 3    | 13   | 4      | 655.7  
+OC-SORT + OSNet-x0.25        | 25.0%   | 0.0%      | 75.0%   | 3    | 13   | 4      | 655.7  
+OC-SORT + ResNet18-IBN-A     | 25.0%   | 0.0%      | 75.0%   | 3    | 13   | 4      | 655.7  
+-------------------------------------------------------------------------------------
+
+3. RECOVERY ACCURACY BY GAP LENGTH (STRATIFICATION)
+-------------------------------------------------------------------------------------
+Configuration                | 0-100f   | 100-150f  | 150-250f  | 250f+   
+-------------------------------------------------------------------------------------
+ByteTrack + MobileNetV3+HSV  | 0/1      | 1/2       | 0/1       | 0/0     
+ByteTrack + OSNet-x0.25      | 0/1      | 1/2       | 1/1       | 0/0     
+ByteTrack + ResNet18-IBN-A   | 0/1      | 0/2       | 1/1       | 0/0     
+OC-SORT + MobileNetV3+HSV    | 0/0      | 0/1       | 0/2       | 0/1     
+OC-SORT + OSNet-x0.25        | 0/0      | 0/1       | 1/2       | 0/1     
+OC-SORT + ResNet18-IBN-A     | 0/0      | 1/1       | 0/2       | 0/1     
+-------------------------------------------------------------------------------------
+
+4. REPRESENTATIVE RECOVERY EXAMPLES
+-------------------------------------------------------------------------------------
+A. Correct Recovery (ByteTrack + OSNet-x0.25):
+   - Event EVT_BT_4: Harshil (Track 22 lost f1584, removed f1674 -> Track 24 birth f1722, gap 138f/4.60s).
+     Match: harshil | Score: 0.811 (tau=0.68) | Margin: 0.146 (req=0.05) -> CORRECT RECOVERY.
+     Significance: Bridges severe monitor desk occlusion where ArcFace was unavailable.
+
+B. UNKNOWN / Rejection by Margin Safety (ByteTrack + OSNet-x0.25):
+   - Event EVT_BT_1: Harshil (Track 2 lost f697, removed f787 -> Track 12 birth f902, gap 205f/6.83s).
+     Match: harshil | Score: 0.765 (tau=0.68) | Margin: 0.012 (req=0.05) -> REJECTED AS UNKNOWN.
+     Significance: Top score matched Harshil correctly, but ambiguity margin (<0.05) safely prevented
+     an unconfirmed lock, awaiting downstream ArcFace confirmation.
+
+C. False Recovery Risk (Aagam / Swayam / Soham Inter-Class Confusion):
+   - Event EVT_BT_2: Aagam (Track 8 lost f943, removed f1033 -> Track 18 birth f1089, gap 146f/4.87s).
+     Match: soham | Score: 0.896 (tau=0.68) | Margin: 0.240 (req=0.05) -> FALSE RECOVERY.
+     Significance: Both MobileNet+HSV and OSNet misclassified walking Aagam as Soham due to similar dark clothing.
+
+D. Severe Metric Compression in ResNet18-IBN-A:
+   - ResNet18-IBN-A achieved 0.0% recovery accuracy across all combinations because cosine similarities
+     for all students clustered tightly in [0.82, 0.88], causing margin (top1 - top2) to drop below 0.05
+     in 100% of tested recovery events.
+

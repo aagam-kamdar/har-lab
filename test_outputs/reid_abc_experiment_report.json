@@ -1,0 +1,196 @@
+{
+  "benchmark_window": "1800 frames (60.0 seconds @ 30.0 fps)",
+  "threshold_evaluation": {
+    "Variant_A_MobileNetV3": {
+      "threshold": 0.78,
+      "total_positive_pairs": 13944,
+      "positive_pairs_below_threshold_fn": 7095,
+      "false_negative_rate_pct": 50.88,
+      "total_negative_pairs": 42336,
+      "negative_pairs_above_threshold_fp": 6606,
+      "empirical_false_positive_rate_pct": 15.6,
+      "intra_mean": 0.754,
+      "intra_min": 0.253,
+      "inter_mean": 0.683,
+      "inter_max": 0.871
+    },
+    "Variant_B_OSNet_x0_25": {
+      "threshold": 0.68,
+      "total_positive_pairs": 13944,
+      "positive_pairs_below_threshold_fn": 6839,
+      "false_negative_rate_pct": 49.05,
+      "total_negative_pairs": 42336,
+      "negative_pairs_above_threshold_fp": 150,
+      "empirical_false_positive_rate_pct": 0.35,
+      "intra_mean": 0.708,
+      "intra_min": 0.41,
+      "inter_mean": 0.505,
+      "inter_max": 0.735
+    },
+    "Variant_C_ResNet18_IBN_A": {
+      "threshold": 0.8,
+      "total_positive_pairs": 13944,
+      "positive_pairs_below_threshold_fn": 7808,
+      "false_negative_rate_pct": 56.0,
+      "total_negative_pairs": 42336,
+      "negative_pairs_above_threshold_fp": 4141,
+      "empirical_false_positive_rate_pct": 9.78,
+      "intra_mean": 0.779,
+      "intra_min": 0.513,
+      "inter_mean": 0.718,
+      "inter_max": 0.863
+    }
+  },
+  "tracking_and_recovery_evaluation": {
+    "Variant_A": {
+      "variant": "Variant A (MobileNetV3 + HSV)",
+      "threshold": 0.78,
+      "margin": 0.06,
+      "simulation_time_seconds": 51.28,
+      "face_locks": 6,
+      "gap_recovery_attempts": 0,
+      "gap_recovery_successes": 0,
+      "gap_recovery_events": [],
+      "self_learned_embeddings": 172,
+      "final_gallery_sizes": {
+        "aagam": 80,
+        "swayam": 80,
+        "harshil": 80,
+        "soham": 80
+      },
+      "extraction_throughput_fps": 102.1,
+      "student_coverage": {
+        "UNKNOWN": {
+          "frames": 2356,
+          "coverage_pct": 130.9
+        },
+        "soham": {
+          "frames": 472,
+          "coverage_pct": 26.2
+        },
+        "swayam": {
+          "frames": 1090,
+          "coverage_pct": 60.6
+        },
+        "harshil": {
+          "frames": 583,
+          "coverage_pct": 32.4
+        },
+        "aagam": {
+          "frames": 667,
+          "coverage_pct": 37.1
+        }
+      },
+      "final_ownership": {
+        "student_owner": {
+          "harshil": 27,
+          "swayam": 31
+        },
+        "track_to_student": {
+          "27": "harshil",
+          "31": "swayam"
+        }
+      }
+    },
+    "Variant_B": {
+      "variant": "Variant B (OSNet-x0.25)",
+      "threshold": 0.68,
+      "margin": 0.05,
+      "simulation_time_seconds": 252.2,
+      "face_locks": 6,
+      "gap_recovery_attempts": 0,
+      "gap_recovery_successes": 0,
+      "gap_recovery_events": [],
+      "self_learned_embeddings": 159,
+      "final_gallery_sizes": {
+        "aagam": 80,
+        "swayam": 80,
+        "harshil": 80,
+        "soham": 80
+      },
+      "extraction_throughput_fps": 20.5,
+      "student_coverage": {
+        "UNKNOWN": {
+          "frames": 2356,
+          "coverage_pct": 130.9
+        },
+        "soham": {
+          "frames": 472,
+          "coverage_pct": 26.2
+        },
+        "swayam": {
+          "frames": 1090,
+          "coverage_pct": 60.6
+        },
+        "harshil": {
+          "frames": 583,
+          "coverage_pct": 32.4
+        },
+        "aagam": {
+          "frames": 667,
+          "coverage_pct": 37.1
+        }
+      },
+      "final_ownership": {
+        "student_owner": {
+          "harshil": 27,
+          "swayam": 31
+        },
+        "track_to_student": {
+          "27": "harshil",
+          "31": "swayam"
+        }
+      }
+    },
+    "Variant_C": {
+      "variant": "Variant C (ResNet-18-IBN-A)",
+      "threshold": 0.8,
+      "margin": 0.05,
+      "simulation_time_seconds": 85.83,
+      "face_locks": 6,
+      "gap_recovery_attempts": 0,
+      "gap_recovery_successes": 0,
+      "gap_recovery_events": [],
+      "self_learned_embeddings": 144,
+      "final_gallery_sizes": {
+        "aagam": 80,
+        "swayam": 80,
+        "harshil": 80,
+        "soham": 80
+      },
+      "extraction_throughput_fps": 60.7,
+      "student_coverage": {
+        "UNKNOWN": {
+          "frames": 2356,
+          "coverage_pct": 130.9
+        },
+        "soham": {
+          "frames": 472,
+          "coverage_pct": 26.2
+        },
+        "swayam": {
+          "frames": 1090,
+          "coverage_pct": 60.6
+        },
+        "harshil": {
+          "frames": 583,
+          "coverage_pct": 32.4
+        },
+        "aagam": {
+          "frames": 667,
+          "coverage_pct": 37.1
+        }
+      },
+      "final_ownership": {
+        "student_owner": {
+          "harshil": 27,
+          "swayam": 31
+        },
+        "track_to_student": {
+          "27": "harshil",
+          "31": "swayam"
+        }
+      }
+    }
+  }
+}

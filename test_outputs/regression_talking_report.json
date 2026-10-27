@@ -1,0 +1,53 @@
+{
+  "video": "talking.mp4",
+  "total_frames": 3417,
+  "runtime_seconds": 495.86,
+  "fps": 6.89,
+  "initial_gallery_sizes": {
+    "aagam": 35,
+    "harshil": 42,
+    "soham": 33,
+    "swayam": 37
+  },
+  "final_gallery_sizes": {
+    "aagam": 35,
+    "harshil": 42,
+    "soham": 33,
+    "swayam": 37
+  },
+  "gallery_mutations": 0,
+  "ownership_violations": 0,
+  "locks": [
+    [
+      2,
+      1,
+      "aagam",
+      0.504
+    ],
+    [
+      356,
+      3,
+      "swayam",
+      0.398
+    ],
+    [
+      1946,
+      11,
+      "harshil",
+      0.41
+    ],
+    [
+      3174,
+      23,
+      "swayam",
+      0.41
+    ]
+  ],
+  "swayam_harshil_swaps": 0,
+  "contradictions": [],
+  "final_ownership": {
+    "harshil": 11,
+    "swayam": 23
+  },
+  "unique_tracks": 17
+}

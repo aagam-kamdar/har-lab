@@ -1,0 +1,306 @@
+{
+  "model": "OSNet-x0.25 (MSMT17 Pretrained, 512-D native)",
+  "evaluation_criteria": {
+    "threshold_tau": 0.6,
+    "ambiguity_margin": 0.05,
+    "gallery": "6 independent reference crops per student + augmentations"
+  },
+  "crops_evaluated": 10,
+  "metrics_tau_060": {
+    "accepted_matches": 8,
+    "correct_accepted": 6,
+    "false_recoveries": 2,
+    "rejections_unknown": 2,
+    "overall_accuracy_pct": 60.0,
+    "false_recovery_rate_pct": 20.0,
+    "rejection_rate_pct": 20.0
+  },
+  "metrics_tau_068_comparison": {
+    "accepted_matches": 8,
+    "correct_accepted": 6,
+    "false_recoveries": 2,
+    "rejections_unknown": 2,
+    "overall_accuracy_pct": 60.0,
+    "false_recovery_rate_pct": 20.0,
+    "rejection_rate_pct": 20.0
+  },
+  "comparison_delta": {
+    "delta_accepted_matches": 0,
+    "delta_correct_accepted": 0,
+    "delta_false_recoveries": 0,
+    "delta_rejections": 0,
+    "key_finding": "Identical performance between tau=0.60 and tau=0.68 on real crops. All accepted matches have similarity >= 0.724, well above 0.68. The 2 rejections (Swayam f1400 and Aagam f1100) are rejected by the ambiguity margin (< 0.05), not the threshold."
+  },
+  "crops": [
+    {
+      "frame": 50,
+      "ground_truth_student": "soham",
+      "description": "standing",
+      "bbox": [
+        763,
+        92,
+        947,
+        374
+      ],
+      "top_match": "soham",
+      "top_score": 0.7821,
+      "second_score": 0.6059,
+      "margin": 0.1762,
+      "eval_tau_060": {
+        "decision": "ACCEPT",
+        "classification": "CORRECT",
+        "score_passed": true,
+        "margin_passed": true
+      },
+      "eval_tau_068": {
+        "decision": "ACCEPT",
+        "classification": "CORRECT",
+        "score_passed": true,
+        "margin_passed": true
+      }
+    },
+    {
+      "frame": 150,
+      "ground_truth_student": "soham",
+      "description": "walking",
+      "bbox": [
+        602,
+        61,
+        818,
+        359
+      ],
+      "top_match": "soham",
+      "top_score": 0.9057,
+      "second_score": 0.5728,
+      "margin": 0.3329,
+      "eval_tau_060": {
+        "decision": "ACCEPT",
+        "classification": "CORRECT",
+        "score_passed": true,
+        "margin_passed": true
+      },
+      "eval_tau_068": {
+        "decision": "ACCEPT",
+        "classification": "CORRECT",
+        "score_passed": true,
+        "margin_passed": true
+      }
+    },
+    {
+      "frame": 400,
+      "ground_truth_student": "soham",
+      "description": "approaching_desk",
+      "bbox": [
+        800,
+        100,
+        950,
+        320
+      ],
+      "top_match": "soham",
+      "top_score": 0.8269,
+      "second_score": 0.6,
+      "margin": 0.2269,
+      "eval_tau_060": {
+        "decision": "ACCEPT",
+        "classification": "CORRECT",
+        "score_passed": true,
+        "margin_passed": true
+      },
+      "eval_tau_068": {
+        "decision": "ACCEPT",
+        "classification": "CORRECT",
+        "score_passed": true,
+        "margin_passed": true
+      }
+    },
+    {
+      "frame": 473,
+      "ground_truth_student": "swayam",
+      "description": "standing_desk",
+      "bbox": [
+        650,
+        50,
+        770,
+        260
+      ],
+      "top_match": "aagam",
+      "top_score": 0.8272,
+      "second_score": 0.6614,
+      "margin": 0.1658,
+      "eval_tau_060": {
+        "decision": "ACCEPT",
+        "classification": "FALSE RECOVERY",
+        "score_passed": true,
+        "margin_passed": true
+      },
+      "eval_tau_068": {
+        "decision": "ACCEPT",
+        "classification": "FALSE RECOVERY",
+        "score_passed": true,
+        "margin_passed": true
+      }
+    },
+    {
+      "frame": 800,
+      "ground_truth_student": "swayam",
+      "description": "seated_desk",
+      "bbox": [
+        680,
+        70,
+        840,
+        310
+      ],
+      "top_match": "aagam",
+      "top_score": 0.8592,
+      "second_score": 0.6642,
+      "margin": 0.1951,
+      "eval_tau_060": {
+        "decision": "ACCEPT",
+        "classification": "FALSE RECOVERY",
+        "score_passed": true,
+        "margin_passed": true
+      },
+      "eval_tau_068": {
+        "decision": "ACCEPT",
+        "classification": "FALSE RECOVERY",
+        "score_passed": true,
+        "margin_passed": true
+      }
+    },
+    {
+      "frame": 1400,
+      "ground_truth_student": "swayam",
+      "description": "seated_typing",
+      "bbox": [
+        700,
+        80,
+        860,
+        320
+      ],
+      "top_match": "aagam",
+      "top_score": 0.6966,
+      "second_score": 0.6854,
+      "margin": 0.0112,
+      "eval_tau_060": {
+        "decision": "REJECT",
+        "classification": "UNKNOWN",
+        "score_passed": true,
+        "margin_passed": false
+      },
+      "eval_tau_068": {
+        "decision": "REJECT",
+        "classification": "UNKNOWN",
+        "score_passed": true,
+        "margin_passed": false
+      }
+    },
+    {
+      "frame": 100,
+      "ground_truth_student": "harshil",
+      "description": "standing_back",
+      "bbox": [
+        513,
+        43,
+        626,
+        140
+      ],
+      "top_match": "harshil",
+      "top_score": 0.7203,
+      "second_score": 0.6323,
+      "margin": 0.0879,
+      "eval_tau_060": {
+        "decision": "ACCEPT",
+        "classification": "CORRECT",
+        "score_passed": true,
+        "margin_passed": true
+      },
+      "eval_tau_068": {
+        "decision": "ACCEPT",
+        "classification": "CORRECT",
+        "score_passed": true,
+        "margin_passed": true
+      }
+    },
+    {
+      "frame": 1438,
+      "ground_truth_student": "harshil",
+      "description": "seated_desk",
+      "bbox": [
+        480,
+        50,
+        600,
+        250
+      ],
+      "top_match": "harshil",
+      "top_score": 0.7283,
+      "second_score": 0.6648,
+      "margin": 0.0634,
+      "eval_tau_060": {
+        "decision": "ACCEPT",
+        "classification": "CORRECT",
+        "score_passed": true,
+        "margin_passed": true
+      },
+      "eval_tau_068": {
+        "decision": "ACCEPT",
+        "classification": "CORRECT",
+        "score_passed": true,
+        "margin_passed": true
+      }
+    },
+    {
+      "frame": 727,
+      "ground_truth_student": "aagam",
+      "description": "seated_desk",
+      "bbox": [
+        650,
+        70,
+        800,
+        280
+      ],
+      "top_match": "aagam",
+      "top_score": 0.8011,
+      "second_score": 0.7005,
+      "margin": 0.1006,
+      "eval_tau_060": {
+        "decision": "ACCEPT",
+        "classification": "CORRECT",
+        "score_passed": true,
+        "margin_passed": true
+      },
+      "eval_tau_068": {
+        "decision": "ACCEPT",
+        "classification": "CORRECT",
+        "score_passed": true,
+        "margin_passed": true
+      }
+    },
+    {
+      "frame": 1100,
+      "ground_truth_student": "aagam",
+      "description": "seated_turning",
+      "bbox": [
+        670,
+        70,
+        820,
+        290
+      ],
+      "top_match": "aagam",
+      "top_score": 0.7406,
+      "second_score": 0.6913,
+      "margin": 0.0493,
+      "eval_tau_060": {
+        "decision": "REJECT",
+        "classification": "UNKNOWN",
+        "score_passed": true,
+        "margin_passed": false
+      },
+      "eval_tau_068": {
+        "decision": "REJECT",
+        "classification": "UNKNOWN",
+        "score_passed": true,
+        "margin_passed": false
+      }
+    }
+  ]
+}

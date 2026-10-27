@@ -1,0 +1,82 @@
+{
+  "manifest": "test_outputs/test_manifest.txt",
+  "sealed_videos": [
+    "dummy_sealed.mp4"
+  ],
+  "total_sealed_videos": 1,
+  "total_gt_intervals": 0,
+  "min_intervals_required": 5,
+  "min_duration_required_s": 15.0,
+  "classes": {
+    "active_work": {
+      "support_intervals": 0,
+      "total_duration_s": 0,
+      "status": "not enough support",
+      "evaluated": false,
+      "reason": "Only 0 intervals (0.0s) available; requires >= 5 intervals and >= 15.0s."
+    },
+    "away": {
+      "support_intervals": 0,
+      "total_duration_s": 0,
+      "status": "not enough support",
+      "evaluated": false,
+      "reason": "Only 0 intervals (0.0s) available; requires >= 5 intervals and >= 15.0s."
+    },
+    "call": {
+      "support_intervals": 0,
+      "total_duration_s": 0,
+      "status": "not enough support",
+      "evaluated": false,
+      "reason": "Only 0 intervals (0.0s) available; requires >= 5 intervals and >= 15.0s."
+    },
+    "discussing": {
+      "support_intervals": 0,
+      "total_duration_s": 0,
+      "status": "not enough support",
+      "evaluated": false,
+      "reason": "Only 0 intervals (0.0s) available; requires >= 5 intervals and >= 15.0s."
+    },
+    "idle": {
+      "support_intervals": 0,
+      "total_duration_s": 0,
+      "status": "not enough support",
+      "evaluated": false,
+      "reason": "Only 0 intervals (0.0s) available; requires >= 5 intervals and >= 15.0s."
+    },
+    "phone": {
+      "support_intervals": 0,
+      "total_duration_s": 0,
+      "status": "not enough support",
+      "evaluated": false,
+      "reason": "Only 0 intervals (0.0s) available; requires >= 5 intervals and >= 15.0s."
+    },
+    "reading": {
+      "support_intervals": 0,
+      "total_duration_s": 0,
+      "status": "not enough support",
+      "evaluated": false,
+      "reason": "Only 0 intervals (0.0s) available; requires >= 5 intervals and >= 15.0s."
+    },
+    "uncertain": {
+      "support_intervals": 0,
+      "total_duration_s": 0,
+      "status": "not enough support",
+      "evaluated": false,
+      "reason": "Only 0 intervals (0.0s) available; requires >= 5 intervals and >= 15.0s."
+    },
+    "walking": {
+      "support_intervals": 0,
+      "total_duration_s": 0,
+      "status": "not enough support",
+      "evaluated": false,
+      "reason": "Only 0 intervals (0.0s) available; requires >= 5 intervals and >= 15.0s."
+    },
+    "writing": {
+      "support_intervals": 0,
+      "total_duration_s": 0,
+      "status": "not enough support",
+      "evaluated": false,
+      "reason": "Only 0 intervals (0.0s) available; requires >= 5 intervals and >= 15.0s."
+    }
+  }
+}

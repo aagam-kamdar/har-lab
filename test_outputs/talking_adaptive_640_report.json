@@ -1,0 +1,100 @@
+{
+  "video": "talking.mp4",
+  "total_frames": 3417,
+  "runtime_seconds": 183.7,
+  "effective_fps": 18.6,
+  "video_fps": 30.016678860871284,
+  "confirmed_locks": [
+    {
+      "frame": 2,
+      "timestamp": 0.07,
+      "tid": 1,
+      "name": "aagam",
+      "score": 0.504
+    },
+    {
+      "frame": 358,
+      "timestamp": 11.93,
+      "tid": 3,
+      "name": "swayam",
+      "score": 0.416
+    },
+    {
+      "frame": 3178,
+      "timestamp": 105.87,
+      "tid": 23,
+      "name": "swayam",
+      "score": 0.479
+    }
+  ],
+  "total_locks": 3,
+  "contradictions": [],
+  "escalation_events_count": 149,
+  "sample_escalation_events": [
+    {
+      "frame": 36,
+      "tid": 2,
+      "timestamp": 1.2
+    },
+    {
+      "frame": 61,
+      "tid": 3,
+      "timestamp": 2.03
+    },
+    {
+      "frame": 66,
+      "tid": 2,
+      "timestamp": 2.2
+    },
+    {
+      "frame": 93,
+      "tid": 3,
+      "timestamp": 3.1
+    },
+    {
+      "frame": 96,
+      "tid": 2,
+      "timestamp": 3.2
+    },
+    {
+      "frame": 123,
+      "tid": 3,
+      "timestamp": 4.1
+    },
+    {
+      "frame": 131,
+      "tid": 2,
+      "timestamp": 4.36
+    },
+    {
+      "frame": 153,
+      "tid": 3,
+      "timestamp": 5.1
+    },
+    {
+      "frame": 163,
+      "tid": 2,
+      "timestamp": 5.43
+    },
+    {
+      "frame": 186,
+      "tid": 3,
+      "timestamp": 6.2
+    }
+  ],
+  "ownership_violations": 0,
+  "candidate_pool_violations": 0,
+  "gallery_mutations": 0,
+  "stats": {
+    "face_extractions": 4483,
+    "body_extractions": 4339,
+    "face_locks": 3,
+    "body_extractions_skipped": 4129,
+    "face_extractions_skipped": 4126,
+    "escalations_to_640": 149
+  },
+  "final_ownership": {
+    "swayam": 23
+  },
+  "output_video": "test_outputs/talking_adaptive_640.mp4"
+}

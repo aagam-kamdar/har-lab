@@ -1,0 +1,68 @@
+{
+  "video": "new lab video.mp4",
+  "frames_evaluated": 1800,
+  "fps": 30.0,
+  "duration_evaluated_seconds": 60.0,
+  "bytetrack_metrics": {
+    "tracker": "ByteTrack",
+    "total_frames_processed": 1800,
+    "total_unique_track_ids": 21,
+    "peak_simultaneous_tracks": 6,
+    "average_active_tracks_per_frame": 2.87,
+    "max_continuous_track_duration_frames": 959,
+    "max_continuous_track_duration_seconds": 31.97,
+    "median_track_duration_frames": 152.0,
+    "mean_track_duration_frames": 286.1,
+    "short_tracks_count_lt_1s": 2,
+    "long_tracks_count_gte_5s": 12,
+    "lost_to_tracked_recoveries": 95,
+    "average_lost_recovery_duration_frames": 9.9,
+    "max_lost_recovery_duration_frames": 82,
+    "removed_tracks_count": 39268,
+    "tracking_only_cpu_fps": 1700.8,
+    "tracking_time_total_seconds": 1.058
+  },
+  "ocsort_metrics": {
+    "tracker": "OC-SORT",
+    "total_frames_processed": 1800,
+    "total_unique_track_ids": 32,
+    "peak_simultaneous_tracks": 6,
+    "average_active_tracks_per_frame": 3.12,
+    "max_continuous_track_duration_frames": 1005,
+    "max_continuous_track_duration_seconds": 33.5,
+    "median_track_duration_frames": 129.0,
+    "mean_track_duration_frames": 232.7,
+    "short_tracks_count_lt_1s": 7,
+    "long_tracks_count_gte_5s": 14,
+    "lost_to_tracked_recoveries": 144,
+    "average_lost_recovery_duration_frames": 13.7,
+    "max_lost_recovery_duration_frames": 90,
+    "removed_tracks_count": 60585,
+    "tracking_only_cpu_fps": 658.5,
+    "tracking_time_total_seconds": 2.733
+  },
+  "phase_breakdown": {
+    "Phase_1_Standing_Turn_0_300": {
+      "bytetrack_unique_ids": 7,
+      "ocsort_unique_ids": 9,
+      "ocsort_id_reduction": -2
+    },
+    "Phase_2_Bending_Sitting_300_600": {
+      "bytetrack_unique_ids": 6,
+      "ocsort_unique_ids": 7,
+      "ocsort_id_reduction": -1
+    },
+    "Phase_3_Desk_Occlusion_600_1800": {
+      "bytetrack_unique_ids": 15,
+      "ocsort_unique_ids": 24,
+      "ocsort_id_reduction": -9
+    }
+  },
+  "comparison_delta": {
+    "total_ids_difference (ByteTrack - OCSORT)": -11,
+    "id_reduction_percentage": -52.38,
+    "max_continuous_duration_improvement_seconds": 1.53,
+    "recoveries_difference": 49,
+    "speed_fps_difference": -1042.3
+  }
+}

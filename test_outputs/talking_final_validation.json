@@ -1,0 +1,2130 @@
+{
+  "video_info": {
+    "path": "talking.mp4",
+    "resolution": "848x392",
+    "fps": 30.016678860871284,
+    "total_frames": 3417,
+    "duration_seconds": 113.8367111111111,
+    "detector_model": "yolo26n-pose.pt",
+    "tracker_config": {
+      "track_thresh": 0.35,
+      "track_buffer": 90,
+      "match_thresh": 0.85,
+      "frame_rate": 30
+    }
+  },
+  "gallery_audit": {
+    "initial_sizes": {
+      "aagam": 42,
+      "swayam": 50,
+      "harshil": 37,
+      "soham": 31
+    },
+    "final_sizes": {
+      "aagam": 42,
+      "swayam": 50,
+      "harshil": 37,
+      "soham": 31
+    },
+    "total_updates": 0,
+    "is_frozen": true
+  },
+  "ownership_audit": {
+    "ownership_violations": 0,
+    "ownership_timing_violations": 0,
+    "candidate_pool_leak_violations": 0,
+    "final_student_owner": {
+      "aagam": 14,
+      "swayam": 18,
+      "harshil": 21
+    },
+    "final_track_to_student": {
+      "14": "aagam",
+      "18": "swayam",
+      "21": "harshil"
+    }
+  },
+  "swayam_harshil_incidents": [
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 163,
+      "timestamp": "00:05.430 (00:05)",
+      "track_id": 3,
+      "locked_name": "harshil",
+      "predicted_name": "aagam",
+      "score": 0.42166078090667725,
+      "second_score": 0.12019144743680954,
+      "margin": 0.3014693334698677,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 165,
+      "timestamp": "00:05.496 (00:05)",
+      "track_id": 3,
+      "locked_name": "harshil",
+      "predicted_name": "aagam",
+      "score": 0.4860647916793823,
+      "second_score": 0.11904260516166687,
+      "margin": 0.36702218651771545,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 167,
+      "timestamp": "00:05.563 (00:05)",
+      "track_id": 3,
+      "locked_name": "harshil",
+      "predicted_name": "aagam",
+      "score": 0.404268741607666,
+      "second_score": 0.1673547476530075,
+      "margin": 0.2369139939546585,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 192,
+      "timestamp": "00:06.396 (00:06)",
+      "track_id": 3,
+      "locked_name": "harshil",
+      "predicted_name": "aagam",
+      "score": 0.3803366720676422,
+      "second_score": 0.23667621612548828,
+      "margin": 0.14366045594215393,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 193,
+      "timestamp": "00:06.429 (00:06)",
+      "track_id": 3,
+      "locked_name": "harshil",
+      "predicted_name": "aagam",
+      "score": 0.4341506361961365,
+      "second_score": 0.24723364412784576,
+      "margin": 0.1869169920682907,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 201,
+      "timestamp": "00:06.696 (00:06)",
+      "track_id": 3,
+      "locked_name": "harshil",
+      "predicted_name": "aagam",
+      "score": 0.40590667724609375,
+      "second_score": 0.1868317425251007,
+      "margin": 0.21907493472099304,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 203,
+      "timestamp": "00:06.762 (00:06)",
+      "track_id": 3,
+      "locked_name": "harshil",
+      "predicted_name": "aagam",
+      "score": 0.5034700632095337,
+      "second_score": 0.12541989982128143,
+      "margin": 0.37805016338825226,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 204,
+      "timestamp": "00:06.796 (00:06)",
+      "track_id": 3,
+      "locked_name": "harshil",
+      "predicted_name": "aagam",
+      "score": 0.39563676714897156,
+      "second_score": 0.10473339259624481,
+      "margin": 0.29090337455272675,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 206,
+      "timestamp": "00:06.862 (00:06)",
+      "track_id": 3,
+      "locked_name": "harshil",
+      "predicted_name": "aagam",
+      "score": 0.441150963306427,
+      "second_score": 0.17671366035938263,
+      "margin": 0.2644373029470444,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 207,
+      "timestamp": "00:06.896 (00:06)",
+      "track_id": 3,
+      "locked_name": "harshil",
+      "predicted_name": "aagam",
+      "score": 0.44000691175460815,
+      "second_score": 0.1783246546983719,
+      "margin": 0.26168225705623627,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 208,
+      "timestamp": "00:06.929 (00:06)",
+      "track_id": 3,
+      "locked_name": "harshil",
+      "predicted_name": "aagam",
+      "score": 0.3936707675457001,
+      "second_score": 0.20561009645462036,
+      "margin": 0.1880606710910797,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 211,
+      "timestamp": "00:07.029 (00:07)",
+      "track_id": 3,
+      "locked_name": "harshil",
+      "predicted_name": "aagam",
+      "score": 0.38170695304870605,
+      "second_score": 0.24326056241989136,
+      "margin": 0.1384463906288147,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 213,
+      "timestamp": "00:07.096 (00:07)",
+      "track_id": 3,
+      "locked_name": "harshil",
+      "predicted_name": "aagam",
+      "score": 0.460928350687027,
+      "second_score": 0.10642269253730774,
+      "margin": 0.35450565814971924,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 220,
+      "timestamp": "00:07.329 (00:07)",
+      "track_id": 3,
+      "locked_name": "harshil",
+      "predicted_name": "aagam",
+      "score": 0.5460060834884644,
+      "second_score": 0.16997668147087097,
+      "margin": 0.3760294020175934,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 221,
+      "timestamp": "00:07.362 (00:07)",
+      "track_id": 3,
+      "locked_name": "harshil",
+      "predicted_name": "aagam",
+      "score": 0.5683010816574097,
+      "second_score": 0.1310296654701233,
+      "margin": 0.4372714161872864,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 222,
+      "timestamp": "00:07.395 (00:07)",
+      "track_id": 3,
+      "locked_name": "harshil",
+      "predicted_name": "aagam",
+      "score": 0.5214986801147461,
+      "second_score": 0.12777933478355408,
+      "margin": 0.393719345331192,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 224,
+      "timestamp": "00:07.462 (00:07)",
+      "track_id": 3,
+      "locked_name": "harshil",
+      "predicted_name": "aagam",
+      "score": 0.44262033700942993,
+      "second_score": 0.1707015186548233,
+      "margin": 0.27191881835460663,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 226,
+      "timestamp": "00:07.529 (00:07)",
+      "track_id": 3,
+      "locked_name": "harshil",
+      "predicted_name": "aagam",
+      "score": 0.42072635889053345,
+      "second_score": 0.19690750539302826,
+      "margin": 0.2238188534975052,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 229,
+      "timestamp": "00:07.629 (00:07)",
+      "track_id": 3,
+      "locked_name": "harshil",
+      "predicted_name": "aagam",
+      "score": 0.4916705787181854,
+      "second_score": 0.12713311612606049,
+      "margin": 0.36453746259212494,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 230,
+      "timestamp": "00:07.662 (00:07)",
+      "track_id": 3,
+      "locked_name": "harshil",
+      "predicted_name": "aagam",
+      "score": 0.4089325964450836,
+      "second_score": 0.16743266582489014,
+      "margin": 0.24149993062019348,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 363,
+      "timestamp": "00:12.093 (00:12)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.3909221589565277,
+      "second_score": 0.21515826880931854,
+      "margin": 0.17576389014720917,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 367,
+      "timestamp": "00:12.226 (00:12)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.39783215522766113,
+      "second_score": 0.23354411125183105,
+      "margin": 0.16428804397583008,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 368,
+      "timestamp": "00:12.259 (00:12)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.46623295545578003,
+      "second_score": 0.2785482406616211,
+      "margin": 0.18768471479415894,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 370,
+      "timestamp": "00:12.326 (00:12)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.5737643241882324,
+      "second_score": 0.19862429797649384,
+      "margin": 0.3751400262117386,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 371,
+      "timestamp": "00:12.359 (00:12)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4636420011520386,
+      "second_score": 0.1548028588294983,
+      "margin": 0.3088391423225403,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 372,
+      "timestamp": "00:12.393 (00:12)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.49207574129104614,
+      "second_score": 0.18457090854644775,
+      "margin": 0.3075048327445984,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 383,
+      "timestamp": "00:12.759 (00:12)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.40900564193725586,
+      "second_score": 0.2855404019355774,
+      "margin": 0.12346524000167847,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 405,
+      "timestamp": "00:13.492 (00:13)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.42012912034988403,
+      "second_score": 0.23036319017410278,
+      "margin": 0.18976593017578125,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 406,
+      "timestamp": "00:13.525 (00:13)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4536932110786438,
+      "second_score": 0.20516708493232727,
+      "margin": 0.24852612614631653,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 411,
+      "timestamp": "00:13.692 (00:13)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.3921380043029785,
+      "second_score": 0.19898080825805664,
+      "margin": 0.19315719604492188,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 417,
+      "timestamp": "00:13.892 (00:13)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4546051621437073,
+      "second_score": 0.12723325192928314,
+      "margin": 0.32737191021442413,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 423,
+      "timestamp": "00:14.092 (00:14)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.46293896436691284,
+      "second_score": 0.14220263063907623,
+      "margin": 0.3207363337278366,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 424,
+      "timestamp": "00:14.125 (00:14)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.484998881816864,
+      "second_score": 0.1506819874048233,
+      "margin": 0.3343168944120407,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 433,
+      "timestamp": "00:14.425 (00:14)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.38760292530059814,
+      "second_score": 0.16484224796295166,
+      "margin": 0.22276067733764648,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 434,
+      "timestamp": "00:14.458 (00:14)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4101739525794983,
+      "second_score": 0.2568833827972412,
+      "margin": 0.15329056978225708,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 439,
+      "timestamp": "00:14.625 (00:14)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.457960307598114,
+      "second_score": 0.20977455377578735,
+      "margin": 0.24818575382232666,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 463,
+      "timestamp": "00:15.424 (00:15)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.48512130975723267,
+      "second_score": 0.20093613862991333,
+      "margin": 0.28418517112731934,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 528,
+      "timestamp": "00:17.590 (00:17)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4113370180130005,
+      "second_score": 0.17365023493766785,
+      "margin": 0.23768678307533264,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 530,
+      "timestamp": "00:17.656 (00:17)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4764885902404785,
+      "second_score": 0.2384113371372223,
+      "margin": 0.23807725310325623,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 537,
+      "timestamp": "00:17.890 (00:17)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4132322371006012,
+      "second_score": 0.18492338061332703,
+      "margin": 0.22830885648727417,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 538,
+      "timestamp": "00:17.923 (00:17)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.48834896087646484,
+      "second_score": 0.14923427999019623,
+      "margin": 0.3391146808862686,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 570,
+      "timestamp": "00:18.989 (00:18)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.41638773679733276,
+      "second_score": 0.18049344420433044,
+      "margin": 0.23589429259300232,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 595,
+      "timestamp": "00:19.822 (00:19)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4290846586227417,
+      "second_score": 0.26985180377960205,
+      "margin": 0.15923285484313965,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 604,
+      "timestamp": "00:20.122 (00:20)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.3954768776893616,
+      "second_score": 0.23066803812980652,
+      "margin": 0.16480883955955505,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 609,
+      "timestamp": "00:20.288 (00:20)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4068645238876343,
+      "second_score": 0.23106792569160461,
+      "margin": 0.17579659819602966,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 648,
+      "timestamp": "00:21.587 (00:21)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.3954147696495056,
+      "second_score": 0.15888094902038574,
+      "margin": 0.23653382062911987,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 654,
+      "timestamp": "00:21.787 (00:21)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.41724658012390137,
+      "second_score": 0.2210814505815506,
+      "margin": 0.19616512954235077,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 656,
+      "timestamp": "00:21.854 (00:21)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.38080617785453796,
+      "second_score": 0.25380006432533264,
+      "margin": 0.12700611352920532,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 695,
+      "timestamp": "00:23.153 (00:23)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "harshil",
+      "score": 0.39169248938560486,
+      "second_score": 0.19985927641391754,
+      "margin": 0.19183321297168732,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 696,
+      "timestamp": "00:23.187 (00:23)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "harshil",
+      "score": 0.38654565811157227,
+      "second_score": 0.14695927500724792,
+      "margin": 0.23958638310432434,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 697,
+      "timestamp": "00:23.220 (00:23)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "harshil",
+      "score": 0.3942078948020935,
+      "second_score": 0.1760270595550537,
+      "margin": 0.2181808352470398,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 723,
+      "timestamp": "00:24.086 (00:24)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.47124677896499634,
+      "second_score": 0.17739197611808777,
+      "margin": 0.29385480284690857,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 782,
+      "timestamp": "00:26.052 (00:26)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.38177159428596497,
+      "second_score": 0.289032518863678,
+      "margin": 0.09273907542228699,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 783,
+      "timestamp": "00:26.085 (00:26)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.38536322116851807,
+      "second_score": 0.2751111388206482,
+      "margin": 0.11025208234786987,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 784,
+      "timestamp": "00:26.118 (00:26)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.3995923399925232,
+      "second_score": 0.26766136288642883,
+      "margin": 0.13193097710609436,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 792,
+      "timestamp": "00:26.385 (00:26)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4398457407951355,
+      "second_score": 0.2950614094734192,
+      "margin": 0.1447843313217163,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 793,
+      "timestamp": "00:26.418 (00:26)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4232444763183594,
+      "second_score": 0.3241212069988251,
+      "margin": 0.0991232693195343,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 794,
+      "timestamp": "00:26.451 (00:26)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.39642053842544556,
+      "second_score": 0.2872898578643799,
+      "margin": 0.10913068056106567,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 801,
+      "timestamp": "00:26.685 (00:26)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.40987810492515564,
+      "second_score": 0.14565500617027283,
+      "margin": 0.2642230987548828,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 876,
+      "timestamp": "00:29.183 (00:29)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.41941308975219727,
+      "second_score": 0.22560779750347137,
+      "margin": 0.1938052922487259,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 894,
+      "timestamp": "00:29.783 (00:29)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.41739529371261597,
+      "second_score": 0.17771479487419128,
+      "margin": 0.23968049883842468,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 924,
+      "timestamp": "00:30.782 (00:30)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.42550182342529297,
+      "second_score": 0.1931564211845398,
+      "margin": 0.23234540224075317,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 925,
+      "timestamp": "00:30.816 (00:30)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.3968963027000427,
+      "second_score": 0.22938655316829681,
+      "margin": 0.1675097495317459,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 935,
+      "timestamp": "00:31.149 (00:31)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4199907183647156,
+      "second_score": 0.2880038022994995,
+      "margin": 0.13198691606521606,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 952,
+      "timestamp": "00:31.715 (00:31)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.38231298327445984,
+      "second_score": 0.24161919951438904,
+      "margin": 0.1406937837600708,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 953,
+      "timestamp": "00:31.749 (00:31)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4083992540836334,
+      "second_score": 0.25265368819236755,
+      "margin": 0.15574556589126587,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 954,
+      "timestamp": "00:31.782 (00:31)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.38601526618003845,
+      "second_score": 0.2948155999183655,
+      "margin": 0.09119966626167297,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 955,
+      "timestamp": "00:31.815 (00:31)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.43506932258605957,
+      "second_score": 0.31644147634506226,
+      "margin": 0.11862784624099731,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 956,
+      "timestamp": "00:31.848 (00:31)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4458850622177124,
+      "second_score": 0.2704424560070038,
+      "margin": 0.17544260621070862,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 957,
+      "timestamp": "00:31.882 (00:31)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4036661386489868,
+      "second_score": 0.3140127658843994,
+      "margin": 0.0896533727645874,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 958,
+      "timestamp": "00:31.915 (00:31)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.3999866843223572,
+      "second_score": 0.3134405314922333,
+      "margin": 0.0865461528301239,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 959,
+      "timestamp": "00:31.948 (00:31)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4053494334220886,
+      "second_score": 0.30393528938293457,
+      "margin": 0.10141414403915405,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 968,
+      "timestamp": "00:32.248 (00:32)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.40245217084884644,
+      "second_score": 0.30464881658554077,
+      "margin": 0.09780335426330566,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 981,
+      "timestamp": "00:32.681 (00:32)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.3853524923324585,
+      "second_score": 0.29387786984443665,
+      "margin": 0.09147462248802185,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 991,
+      "timestamp": "00:33.014 (00:33)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.41525888442993164,
+      "second_score": 0.1332249790430069,
+      "margin": 0.28203390538692474,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 993,
+      "timestamp": "00:33.081 (00:33)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.41591936349868774,
+      "second_score": 0.2002764195203781,
+      "margin": 0.21564294397830963,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1019,
+      "timestamp": "00:33.947 (00:33)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.3957569897174835,
+      "second_score": 0.25137948989868164,
+      "margin": 0.14437749981880188,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1020,
+      "timestamp": "00:33.981 (00:33)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.46061480045318604,
+      "second_score": 0.19408629834651947,
+      "margin": 0.26652850210666656,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1021,
+      "timestamp": "00:34.014 (00:34)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4707244038581848,
+      "second_score": 0.17270460724830627,
+      "margin": 0.29801979660987854,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1025,
+      "timestamp": "00:34.147 (00:34)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4715921878814697,
+      "second_score": 0.19187067449092865,
+      "margin": 0.2797215133905411,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1026,
+      "timestamp": "00:34.180 (00:34)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4663904905319214,
+      "second_score": 0.17907008528709412,
+      "margin": 0.28732040524482727,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1027,
+      "timestamp": "00:34.214 (00:34)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4642722010612488,
+      "second_score": 0.17329910397529602,
+      "margin": 0.29097309708595276,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1028,
+      "timestamp": "00:34.247 (00:34)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.45367270708084106,
+      "second_score": 0.14378297328948975,
+      "margin": 0.3098897337913513,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1029,
+      "timestamp": "00:34.280 (00:34)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.47928839921951294,
+      "second_score": 0.13916084170341492,
+      "margin": 0.340127557516098,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1030,
+      "timestamp": "00:34.314 (00:34)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.5514869689941406,
+      "second_score": 0.17780037224292755,
+      "margin": 0.3736865967512131,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1033,
+      "timestamp": "00:34.414 (00:34)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.468814492225647,
+      "second_score": 0.2361849695444107,
+      "margin": 0.23262952268123627,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1088,
+      "timestamp": "00:36.246 (00:36)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.38832300901412964,
+      "second_score": 0.2875831425189972,
+      "margin": 0.10073986649513245,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1091,
+      "timestamp": "00:36.346 (00:36)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4244811236858368,
+      "second_score": 0.2677699327468872,
+      "margin": 0.15671119093894958,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1092,
+      "timestamp": "00:36.379 (00:36)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4436774253845215,
+      "second_score": 0.24661414325237274,
+      "margin": 0.19706328213214874,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1100,
+      "timestamp": "00:36.646 (00:36)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.39617085456848145,
+      "second_score": 0.2821488082408905,
+      "margin": 0.11402204632759094,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1101,
+      "timestamp": "00:36.679 (00:36)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4107836186885834,
+      "second_score": 0.28358182311058044,
+      "margin": 0.12720179557800293,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1105,
+      "timestamp": "00:36.812 (00:36)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.3879801332950592,
+      "second_score": 0.21033301949501038,
+      "margin": 0.17764711380004883,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1106,
+      "timestamp": "00:36.846 (00:36)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.3852046728134155,
+      "second_score": 0.2120772749185562,
+      "margin": 0.17312739789485931,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1107,
+      "timestamp": "00:36.879 (00:36)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.3837932050228119,
+      "second_score": 0.2369914948940277,
+      "margin": 0.14680171012878418,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1112,
+      "timestamp": "00:37.046 (00:37)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4059433937072754,
+      "second_score": 0.25750207901000977,
+      "margin": 0.14844131469726562,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1129,
+      "timestamp": "00:37.612 (00:37)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.39181745052337646,
+      "second_score": 0.21875734627246857,
+      "margin": 0.1730601042509079,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1155,
+      "timestamp": "00:38.478 (00:38)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.39165356755256653,
+      "second_score": 0.21352294087409973,
+      "margin": 0.1781306266784668,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1157,
+      "timestamp": "00:38.545 (00:38)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.46409741044044495,
+      "second_score": 0.20501112937927246,
+      "margin": 0.2590862810611725,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1158,
+      "timestamp": "00:38.578 (00:38)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.48769545555114746,
+      "second_score": 0.19810546934604645,
+      "margin": 0.289589986205101,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1159,
+      "timestamp": "00:38.611 (00:38)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.49354493618011475,
+      "second_score": 0.21290726959705353,
+      "margin": 0.2806376665830612,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1164,
+      "timestamp": "00:38.778 (00:38)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.3861910402774811,
+      "second_score": 0.21211417019367218,
+      "margin": 0.1740768700838089,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1165,
+      "timestamp": "00:38.811 (00:38)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.40267589688301086,
+      "second_score": 0.2587229013442993,
+      "margin": 0.14395299553871155,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1173,
+      "timestamp": "00:39.078 (00:39)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.3937065005302429,
+      "second_score": 0.2179851531982422,
+      "margin": 0.17572134733200073,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1183,
+      "timestamp": "00:39.411 (00:39)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.42745524644851685,
+      "second_score": 0.2921299934387207,
+      "margin": 0.13532525300979614,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1190,
+      "timestamp": "00:39.644 (00:39)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.5096600651741028,
+      "second_score": 0.25326788425445557,
+      "margin": 0.2563921809196472,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1193,
+      "timestamp": "00:39.744 (00:39)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.5483106374740601,
+      "second_score": 0.23638704419136047,
+      "margin": 0.3119235932826996,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1194,
+      "timestamp": "00:39.777 (00:39)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.5755537152290344,
+      "second_score": 0.26771682500839233,
+      "margin": 0.3078368902206421,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1195,
+      "timestamp": "00:39.811 (00:39)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4262954592704773,
+      "second_score": 0.2845533490180969,
+      "margin": 0.14174211025238037,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1198,
+      "timestamp": "00:39.911 (00:39)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.46918922662734985,
+      "second_score": 0.2511495053768158,
+      "margin": 0.21803972125053406,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1199,
+      "timestamp": "00:39.944 (00:39)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4453245997428894,
+      "second_score": 0.24618935585021973,
+      "margin": 0.19913524389266968,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1219,
+      "timestamp": "00:40.610 (00:40)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.3857153356075287,
+      "second_score": 0.10533691942691803,
+      "margin": 0.28037841618061066,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1225,
+      "timestamp": "00:40.810 (00:40)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4439140260219574,
+      "second_score": 0.18523243069648743,
+      "margin": 0.25868159532546997,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1227,
+      "timestamp": "00:40.877 (00:40)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.39068374037742615,
+      "second_score": 0.19949907064437866,
+      "margin": 0.19118466973304749,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1228,
+      "timestamp": "00:40.910 (00:40)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4833969473838806,
+      "second_score": 0.13941814005374908,
+      "margin": 0.34397880733013153,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1257,
+      "timestamp": "00:41.876 (00:41)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.38394105434417725,
+      "second_score": 0.1642434298992157,
+      "margin": 0.21969762444496155,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1286,
+      "timestamp": "00:42.842 (00:42)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.39291173219680786,
+      "second_score": 0.24999840557575226,
+      "margin": 0.1429133266210556,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1313,
+      "timestamp": "00:43.742 (00:43)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.38439881801605225,
+      "second_score": 0.14185841381549835,
+      "margin": 0.2425404042005539,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1315,
+      "timestamp": "00:43.808 (00:43)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.3828127384185791,
+      "second_score": 0.15208907425403595,
+      "margin": 0.23072366416454315,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1354,
+      "timestamp": "00:45.108 (00:45)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4657471776008606,
+      "second_score": 0.16880425810813904,
+      "margin": 0.29694291949272156,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1491,
+      "timestamp": "00:49.672 (00:49)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.38888025283813477,
+      "second_score": 0.27676743268966675,
+      "margin": 0.11211282014846802,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1495,
+      "timestamp": "00:49.805 (00:49)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.43541938066482544,
+      "second_score": 0.19505560398101807,
+      "margin": 0.24036377668380737,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1499,
+      "timestamp": "00:49.938 (00:49)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4085466265678406,
+      "second_score": 0.22518742084503174,
+      "margin": 0.18335920572280884,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1524,
+      "timestamp": "00:50.771 (00:50)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.45833760499954224,
+      "second_score": 0.21309801936149597,
+      "margin": 0.24523958563804626,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1529,
+      "timestamp": "00:50.938 (00:50)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.3857789933681488,
+      "second_score": 0.2757031321525574,
+      "margin": 0.11007586121559143,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1530,
+      "timestamp": "00:50.971 (00:50)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4158913493156433,
+      "second_score": 0.2623276710510254,
+      "margin": 0.15356367826461792,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1534,
+      "timestamp": "00:51.104 (00:51)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4166605472564697,
+      "second_score": 0.2693626284599304,
+      "margin": 0.1472979187965393,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1536,
+      "timestamp": "00:51.171 (00:51)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.3883501887321472,
+      "second_score": 0.31646108627319336,
+      "margin": 0.07188910245895386,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    },
+    {
+      "type": "ARCFACE_CONTRADICTION_IGNORED",
+      "frame": 1537,
+      "timestamp": "00:51.204 (00:51)",
+      "track_id": 5,
+      "locked_name": "swayam",
+      "predicted_name": "aagam",
+      "score": 0.4201525151729584,
+      "second_score": 0.33139511942863464,
+      "margin": 0.08875739574432373,
+      "action": "STICKY_LOCK_PRESERVED_CONTRADICTION_IGNORED"
+    }
+  ],
+  "frame_356_forensics": {
+    "track_1": {
+      "bbox": [
+        484,
+        53,
+        618,
+        254
+      ],
+      "crop_window": [
+        451,
+        20,
+        651,
+        176
+      ],
+      "detected_faces_count": 1,
+      "faces": [
+        {
+          "face_idx": 0,
+          "bbox_crop": [
+            51.515167236328125,
+            52.048500061035156,
+            71.93346405029297,
+            72.6981201171875
+          ],
+          "bbox_abs": [
+            502.5151672363281,
+            72.04850006103516,
+            522.933464050293,
+            92.6981201171875
+          ],
+          "area": 421.63006591796875,
+          "center_inside_person_bbox": true,
+          "similarities": {
+            "aagam": 0.3128214180469513,
+            "harshil": 0.16808827221393585,
+            "soham": -0.023806311190128326,
+            "swayam": 0.10267412662506104
+          }
+        }
+      ],
+      "state_before": {
+        "locked": true,
+        "locked_name": "aagam",
+        "pending_name": null,
+        "pending_count": 0
+      }
+    },
+    "track_2": {
+      "bbox": [
+        657,
+        115,
+        848,
+        364
+      ],
+      "crop_window": [
+        610,
+        68,
+        848,
+        274
+      ],
+      "detected_faces_count": 0,
+      "faces": [],
+      "state_before": {
+        "locked": false,
+        "locked_name": null,
+        "pending_name": null,
+        "pending_count": 0
+      }
+    },
+    "track_5": {
+      "bbox": [
+        408,
+        51,
+        494,
+        164
+      ],
+      "crop_window": [
+        387,
+        30,
+        515,
+        122
+      ],
+      "detected_faces_count": 2,
+      "faces": [
+        {
+          "face_idx": 0,
+          "bbox_crop": [
+            41.91379165649414,
+            36.68440628051758,
+            56.14699172973633,
+            57.89414596557617
+          ],
+          "bbox_abs": [
+            428.91379165649414,
+            66.68440628051758,
+            443.1469917297363,
+            87.89414596557617
+          ],
+          "area": 301.8824768066406,
+          "center_inside_person_bbox": true,
+          "similarities": {
+            "aagam": 0.12491639703512192,
+            "harshil": 0.1669430434703827,
+            "soham": 0.17294740676879883,
+            "swayam": 0.39517509937286377
+          }
+        },
+        {
+          "face_idx": 1,
+          "bbox_crop": [
+            15.268106460571289,
+            27.12135887145996,
+            26.93942642211914,
+            45.726158142089844
+          ],
+          "bbox_abs": [
+            402.2681064605713,
+            57.12135887145996,
+            413.93942642211914,
+            75.72615814208984
+          ],
+          "area": 217.14256286621094,
+          "center_inside_person_bbox": true,
+          "similarities": {
+            "aagam": 0.13612890243530273,
+            "harshil": 0.2527153491973877,
+            "soham": 0.13733041286468506,
+            "swayam": 0.11158984154462814
+          }
+        }
+      ],
+      "state_before": {
+        "locked": false,
+        "locked_name": null,
+        "pending_name": "swayam",
+        "pending_count": 1
+      }
+    }
+  },
+  "events_log": [
+    {
+      "event_type": "RECOVERY",
+      "frame": 0,
+      "timestamp": "00:00.000 (00:00)",
+      "track_id": 1,
+      "student": "aagam",
+      "score": 0.9090301394462585,
+      "margin": 0.26465851068496704,
+      "candidate_pool": [
+        "soham",
+        "aagam",
+        "harshil",
+        "swayam"
+      ]
+    },
+    {
+      "event_type": "LOCK",
+      "frame": 1,
+      "timestamp": "00:00.033 (00:00)",
+      "track_id": 1,
+      "student": "aagam",
+      "score": 0.4398382604122162,
+      "margin": 0.29701393842697144,
+      "prior_recovery": "aagam"
+    },
+    {
+      "event_type": "RECOVERY",
+      "frame": 13,
+      "timestamp": "00:00.433 (00:00)",
+      "track_id": 3,
+      "student": "swayam",
+      "score": 0.7524983882904053,
+      "margin": 0.058022379875183105,
+      "candidate_pool": [
+        "soham",
+        "harshil",
+        "swayam"
+      ]
+    },
+    {
+      "event_type": "LOCK",
+      "frame": 59,
+      "timestamp": "00:01.965 (00:01)",
+      "track_id": 3,
+      "student": "harshil",
+      "score": 0.41530483961105347,
+      "margin": 0.23090721666812897,
+      "prior_recovery": "swayam"
+    },
+    {
+      "event_type": "RELEASE",
+      "frame": 60,
+      "timestamp": "00:01.998 (00:01)",
+      "track_id": 3,
+      "student": "swayam",
+      "trigger": "ByteTrack Eviction (REMOVED after 90f)"
+    },
+    {
+      "event_type": "RECOVERY",
+      "frame": 277,
+      "timestamp": "00:09.228 (00:09)",
+      "track_id": 5,
+      "student": "swayam",
+      "score": 0.6835570931434631,
+      "margin": 0.1898455023765564,
+      "candidate_pool": [
+        "soham",
+        "swayam"
+      ]
+    },
+    {
+      "event_type": "RELEASE",
+      "frame": 322,
+      "timestamp": "00:10.727 (00:10)",
+      "track_id": 3,
+      "student": "harshil",
+      "trigger": "ByteTrack Eviction (REMOVED after 90f)"
+    },
+    {
+      "event_type": "LOCK",
+      "frame": 356,
+      "timestamp": "00:11.860 (00:11)",
+      "track_id": 5,
+      "student": "swayam",
+      "score": 0.39517509937286377,
+      "margin": 0.22222769260406494,
+      "prior_recovery": "swayam"
+    },
+    {
+      "event_type": "RECOVERY",
+      "frame": 626,
+      "timestamp": "00:20.855 (00:20)",
+      "track_id": 2,
+      "student": "harshil",
+      "score": 0.6943200826644897,
+      "margin": 0.10415089130401611,
+      "candidate_pool": [
+        "soham",
+        "harshil"
+      ]
+    },
+    {
+      "event_type": "RELEASE",
+      "frame": 1068,
+      "timestamp": "00:35.580 (00:35)",
+      "track_id": 2,
+      "student": "harshil",
+      "trigger": "ByteTrack Eviction (REMOVED after 90f)"
+    },
+    {
+      "event_type": "RECOVERY",
+      "frame": 1272,
+      "timestamp": "00:42.376 (00:42)",
+      "track_id": 9,
+      "student": "harshil",
+      "score": 0.6922767162322998,
+      "margin": 0.08959341049194336,
+      "candidate_pool": [
+        "soham",
+        "harshil"
+      ]
+    },
+    {
+      "event_type": "RELEASE",
+      "frame": 1364,
+      "timestamp": "00:45.441 (00:45)",
+      "track_id": 9,
+      "student": "harshil",
+      "trigger": "ByteTrack Eviction (REMOVED after 90f)"
+    },
+    {
+      "event_type": "RECOVERY",
+      "frame": 1376,
+      "timestamp": "00:45.841 (00:45)",
+      "track_id": 10,
+      "student": "harshil",
+      "score": 0.6820931434631348,
+      "margin": 0.08637934923171997,
+      "candidate_pool": [
+        "soham",
+        "harshil"
+      ]
+    },
+    {
+      "event_type": "RELEASE",
+      "frame": 1483,
+      "timestamp": "00:49.405 (00:49)",
+      "track_id": 10,
+      "student": "harshil",
+      "trigger": "ByteTrack Eviction (REMOVED after 90f)"
+    },
+    {
+      "event_type": "RECOVERY",
+      "frame": 1578,
+      "timestamp": "00:52.570 (00:52)",
+      "track_id": 11,
+      "student": "harshil",
+      "score": 0.7066264152526855,
+      "margin": 0.1165168285369873,
+      "candidate_pool": [
+        "soham",
+        "harshil"
+      ]
+    },
+    {
+      "event_type": "RELEASE",
+      "frame": 1991,
+      "timestamp": "01:06.329 (01:06)",
+      "track_id": 11,
+      "student": "harshil",
+      "trigger": "ByteTrack Eviction (REMOVED after 90f)"
+    },
+    {
+      "event_type": "RECOVERY",
+      "frame": 1991,
+      "timestamp": "01:06.329 (01:06)",
+      "track_id": 8,
+      "student": "harshil",
+      "score": 0.6972827911376953,
+      "margin": 0.09396278858184814,
+      "candidate_pool": [
+        "soham",
+        "harshil"
+      ]
+    },
+    {
+      "event_type": "RELEASE",
+      "frame": 2172,
+      "timestamp": "01:12.359 (01:12)",
+      "track_id": 1,
+      "student": "aagam",
+      "trigger": "ByteTrack Eviction (REMOVED after 90f)"
+    },
+    {
+      "event_type": "RECOVERY",
+      "frame": 2172,
+      "timestamp": "01:12.359 (01:12)",
+      "track_id": 14,
+      "student": "aagam",
+      "score": 0.8389879465103149,
+      "margin": 0.231187105178833,
+      "candidate_pool": [
+        "soham",
+        "aagam"
+      ]
+    },
+    {
+      "event_type": "RELEASE",
+      "frame": 2529,
+      "timestamp": "01:24.253 (01:24)",
+      "track_id": 5,
+      "student": "swayam",
+      "trigger": "ByteTrack Eviction (REMOVED after 90f)"
+    },
+    {
+      "event_type": "RECOVERY",
+      "frame": 2529,
+      "timestamp": "01:24.253 (01:24)",
+      "track_id": 18,
+      "student": "swayam",
+      "score": 0.7811259627342224,
+      "margin": 0.23746943473815918,
+      "candidate_pool": [
+        "soham",
+        "swayam"
+      ]
+    },
+    {
+      "event_type": "RELEASE",
+      "frame": 3011,
+      "timestamp": "01:40.310 (01:40)",
+      "track_id": 8,
+      "student": "harshil",
+      "trigger": "ByteTrack Eviction (REMOVED after 90f)"
+    },
+    {
+      "event_type": "LOCK",
+      "frame": 3176,
+      "timestamp": "01:45.807 (01:45)",
+      "track_id": 18,
+      "student": "swayam",
+      "score": 0.4297890365123749,
+      "margin": 0.2260684072971344,
+      "prior_recovery": "swayam"
+    },
+    {
+      "event_type": "RECOVERY",
+      "frame": 3272,
+      "timestamp": "01:49.006 (01:49)",
+      "track_id": 21,
+      "student": "harshil",
+      "score": 0.6902052760124207,
+      "margin": 0.164850652217865,
+      "candidate_pool": [
+        "soham",
+        "harshil"
+      ]
+    }
+  ],
+  "all_tracks": [
+    {
+      "track_id": 1,
+      "name": "aagam",
+      "locked": true,
+      "locked_at_frame": 1,
+      "locked_face_score": 0.5759828090667725,
+      "contradictions": 0,
+      "status": "REMOVED"
+    },
+    {
+      "track_id": 2,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "contradictions": 0,
+      "status": "REMOVED"
+    },
+    {
+      "track_id": 3,
+      "name": "harshil",
+      "locked": true,
+      "locked_at_frame": 59,
+      "locked_face_score": 0.43181437253952026,
+      "contradictions": 20,
+      "status": "REMOVED"
+    },
+    {
+      "track_id": 4,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "contradictions": 0,
+      "status": "REMOVED"
+    },
+    {
+      "track_id": 5,
+      "name": "swayam",
+      "locked": true,
+      "locked_at_frame": 356,
+      "locked_face_score": 0.5303027629852295,
+      "contradictions": 108,
+      "status": "REMOVED"
+    },
+    {
+      "track_id": 8,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "contradictions": 0,
+      "status": "REMOVED"
+    },
+    {
+      "track_id": 9,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "contradictions": 0,
+      "status": "REMOVED"
+    },
+    {
+      "track_id": 10,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "contradictions": 0,
+      "status": "REMOVED"
+    },
+    {
+      "track_id": 11,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "contradictions": 0,
+      "status": "REMOVED"
+    },
+    {
+      "track_id": 12,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "contradictions": 0,
+      "status": "REMOVED"
+    },
+    {
+      "track_id": 14,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "contradictions": 0,
+      "status": "TRACKED"
+    },
+    {
+      "track_id": 15,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "contradictions": 0,
+      "status": "REMOVED"
+    },
+    {
+      "track_id": 17,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "contradictions": 0,
+      "status": "REMOVED"
+    },
+    {
+      "track_id": 18,
+      "name": "swayam",
+      "locked": true,
+      "locked_at_frame": 3176,
+      "locked_face_score": 0.645051121711731,
+      "contradictions": 0,
+      "status": "TRACKED"
+    },
+    {
+      "track_id": 20,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "contradictions": 0,
+      "status": "REMOVED"
+    },
+    {
+      "track_id": 21,
+      "name": "UNKNOWN",
+      "locked": false,
+      "locked_at_frame": -1,
+      "locked_face_score": 0.0,
+      "contradictions": 0,
+      "status": "TRACKED"
+    }
+  ]
+}

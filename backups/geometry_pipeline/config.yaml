@@ -1,0 +1,58 @@
+app:
+  db_path: "lab_events.db"
+  frame_dump_path: "static/live_frame.jpg"
+  heartbeat_timeout_s: 5.0
+  port: 5002
+  host: "0.0.0.0"
+
+monitor:
+  desk_zones_path: "desk_zones.yaml"
+  thresholds_path: "thresholds.yaml"
+  fps: 8.0
+  debounce_window_s: 2.0
+  away_timeout_s: 10.0
+  imgsz: 640
+  device: "cpu"
+  frame_publish_fps: 5.0
+  frame_publish_scale: 0.6
+  phone_alert_s: 60.0
+  idle_alert_s: 180.0
+  alert_cooldown_s: 300.0
+  live_gate_evidence_s: 1.5
+  clear_margin: 0.15
+  productive_classes:
+    - "active_work"
+    - "writing"
+    # - "reading"  # Configurable: uncomment to count reading as productive
+
+  identity_gate:
+    mode: "stitching"
+    arcface_confirm_s: 0.5
+    body_stable_s: 3.0
+    body_only_cross_assignment: false
+    min_affinity_thresh: 0.50
+    stitching_max_gap_s: 5.0
+    stitching_max_dist_px: 100.0
+    stitching_body_veto_thresh: 0.40
+
+  # Per-label validation status: only classes validated via evaluate_sealed_benchmark.py are permitted to fire alerts.
+  # ALL classes default to false until validated on sealed benchmarks.
+  validated_classes:
+    active_work: false
+    idle: false
+    walking: false
+    away: false
+    writing: false
+    reading: false
+    discussing: false
+    phone: false
+    call: false
+    uncertain: false
+
+cameras:
+  cam_0:
+    source: "new lab video.mp4"
+    name: "Lab Main Camera"
+  cam_1:
+    source: "new lab video.mp4"
+    name: "Lab Secondary Camera"

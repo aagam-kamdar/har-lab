@@ -1,0 +1,261 @@
+{
+  "embedding_dim": 672,
+  "total_vectors": 51,
+  "metadata": [
+    {
+      "student_name": "Aagam",
+      "vec_idx": 0,
+      "crop_path": "galleries\\Aagam\\body_crop_000.jpg"
+    },
+    {
+      "student_name": "Aagam",
+      "vec_idx": 1,
+      "crop_path": "galleries\\Aagam\\body_crop_001.jpg"
+    },
+    {
+      "student_name": "Aagam",
+      "vec_idx": 2,
+      "crop_path": "galleries\\Aagam\\body_crop_002.jpg"
+    },
+    {
+      "student_name": "Aagam",
+      "vec_idx": 3,
+      "crop_path": "galleries\\Aagam\\body_crop_003.jpg"
+    },
+    {
+      "student_name": "Aagam",
+      "vec_idx": 4,
+      "crop_path": "galleries\\Aagam\\body_crop_004.jpg"
+    },
+    {
+      "student_name": "Aagam",
+      "vec_idx": 5,
+      "crop_path": "galleries\\Aagam\\body_crop_005.jpg"
+    },
+    {
+      "student_name": "Swayam",
+      "vec_idx": 6,
+      "crop_path": "galleries\\Swayam\\body_crop_000.jpg"
+    },
+    {
+      "student_name": "Swayam",
+      "vec_idx": 7,
+      "crop_path": "galleries\\Swayam\\body_crop_001.jpg"
+    },
+    {
+      "student_name": "Swayam",
+      "vec_idx": 8,
+      "crop_path": "galleries\\Swayam\\body_crop_002.jpg"
+    },
+    {
+      "student_name": "Swayam",
+      "vec_idx": 9,
+      "crop_path": "galleries\\Swayam\\body_crop_003.jpg"
+    },
+    {
+      "student_name": "Swayam",
+      "vec_idx": 10,
+      "crop_path": "galleries\\Swayam\\body_crop_004.jpg"
+    },
+    {
+      "student_name": "Swayam",
+      "vec_idx": 11,
+      "crop_path": "galleries\\Swayam\\body_crop_005.jpg"
+    },
+    {
+      "student_name": "Harshil",
+      "vec_idx": 12,
+      "crop_path": "galleries\\Harshil\\body_crop_000.jpg"
+    },
+    {
+      "student_name": "Harshil",
+      "vec_idx": 13,
+      "crop_path": "galleries\\Harshil\\body_crop_001.jpg"
+    },
+    {
+      "student_name": "Harshil",
+      "vec_idx": 14,
+      "crop_path": "galleries\\Harshil\\body_crop_002.jpg"
+    },
+    {
+      "student_name": "Harshil",
+      "vec_idx": 15,
+      "crop_path": "galleries\\Harshil\\body_crop_003.jpg"
+    },
+    {
+      "student_name": "Harshil",
+      "vec_idx": 16,
+      "crop_path": "galleries\\Harshil\\body_crop_004.jpg"
+    },
+    {
+      "student_name": "Harshil",
+      "vec_idx": 17,
+      "crop_path": "galleries\\Harshil\\body_crop_005.jpg"
+    },
+    {
+      "student_name": "Soham",
+      "vec_idx": 18,
+      "crop_path": "galleries\\Soham\\body_crop_000.jpg"
+    },
+    {
+      "student_name": "Soham",
+      "vec_idx": 19,
+      "crop_path": "galleries\\Soham\\body_crop_001.jpg"
+    },
+    {
+      "student_name": "Soham",
+      "vec_idx": 20,
+      "crop_path": "galleries\\Soham\\body_crop_002.jpg"
+    },
+    {
+      "student_name": "Soham",
+      "vec_idx": 21,
+      "crop_path": "galleries\\Soham\\body_crop_003.jpg"
+    },
+    {
+      "student_name": "Soham",
+      "vec_idx": 22,
+      "crop_path": "galleries\\Soham\\body_crop_004.jpg"
+    },
+    {
+      "student_name": "Soham",
+      "vec_idx": 23,
+      "crop_path": "galleries\\Soham\\body_crop_005.jpg"
+    },
+    {
+      "student_name": "Soham",
+      "vec_idx": 24,
+      "crop_path": "galleries\\Soham\\body_crop_006.jpg"
+    },
+    {
+      "student_name": "Soham",
+      "vec_idx": 25,
+      "crop_path": "galleries\\Soham\\body_crop_007.jpg"
+    },
+    {
+      "student_name": "Soham",
+      "vec_idx": 26,
+      "crop_path": "galleries\\Soham\\body_crop_008.jpg"
+    },
+    {
+      "student_name": "Soham",
+      "vec_idx": 27,
+      "crop_path": "galleries\\Soham\\body_crop_009.jpg"
+    },
+    {
+      "student_name": "Soham",
+      "vec_idx": 28,
+      "crop_path": "galleries\\Soham\\body_crop_010.jpg"
+    },
+    {
+      "student_name": "Soham",
+      "vec_idx": 29,
+      "crop_path": "galleries\\Soham\\body_crop_011.jpg"
+    },
+    {
+      "student_name": "Soham",
+      "vec_idx": 30,
+      "crop_path": "galleries\\Soham\\body_crop_012.jpg"
+    },
+    {
+      "student_name": "Soham",
+      "vec_idx": 31,
+      "crop_path": "galleries\\Soham\\body_crop_013.jpg"
+    },
+    {
+      "student_name": "Soham",
+      "vec_idx": 32,
+      "crop_path": "galleries\\Soham\\body_crop_014.jpg"
+    },
+    {
+      "student_name": "Soham",
+      "vec_idx": 33,
+      "crop_path": "galleries\\Soham\\body_crop_015.jpg"
+    },
+    {
+      "student_name": "Soham",
+      "vec_idx": 34,
+      "crop_path": "galleries\\Soham\\body_crop_016.jpg"
+    },
+    {
+      "student_name": "Soham",
+      "vec_idx": 35,
+      "crop_path": "galleries\\Soham\\body_crop_017.jpg"
+    },
+    {
+      "student_name": "Soham",
+      "vec_idx": 36,
+      "crop_path": "galleries\\Soham\\body_crop_018.jpg"
+    },
+    {
+      "student_name": "Soham",
+      "vec_idx": 37,
+      "crop_path": "galleries\\Soham\\body_crop_019.jpg"
+    },
+    {
+      "student_name": "Swayam",
+      "vec_idx": 38,
+      "crop_path": "galleries\\Swayam\\body_crop_006.jpg"
+    },
+    {
+      "student_name": "Swayam",
+      "vec_idx": 39,
+      "crop_path": "galleries\\Swayam\\body_crop_007.jpg"
+    },
+    {
+      "student_name": "Swayam",
+      "vec_idx": 40,
+      "crop_path": "galleries\\Swayam\\body_crop_008.jpg"
+    },
+    {
+      "student_name": "Swayam",
+      "vec_idx": 41,
+      "crop_path": "galleries\\Swayam\\body_crop_009.jpg"
+    },
+    {
+      "student_name": "Swayam",
+      "vec_idx": 42,
+      "crop_path": "galleries\\Swayam\\body_crop_010.jpg"
+    },
+    {
+      "student_name": "Swayam",
+      "vec_idx": 43,
+      "crop_path": "galleries\\Swayam\\body_crop_011.jpg"
+    },
+    {
+      "student_name": "Swayam",
+      "vec_idx": 44,
+      "crop_path": "galleries\\Swayam\\body_crop_012.jpg"
+    },
+    {
+      "student_name": "Aagam",
+      "vec_idx": 45,
+      "crop_path": "galleries\\Aagam\\body_crop_006.jpg"
+    },
+    {
+      "student_name": "Harshil",
+      "vec_idx": 46,
+      "crop_path": "galleries\\Harshil\\body_crop_006.jpg"
+    },
+    {
+      "student_name": "Aagam",
+      "vec_idx": 47,
+      "crop_path": "galleries\\Aagam\\body_crop_007.jpg"
+    },
+    {
+      "student_name": "Harshil",
+      "vec_idx": 48,
+      "crop_path": "galleries\\Harshil\\body_crop_007.jpg"
+    },
+    {
+      "student_name": "Aagam",
+      "vec_idx": 49,
+      "crop_path": "galleries\\Aagam\\body_crop_008.jpg"
+    },
+    {
+      "student_name": "Aagam",
+      "vec_idx": 50,
+      "crop_path": "galleries\\Aagam\\body_crop_009.jpg"
+    }
+  ]
+}

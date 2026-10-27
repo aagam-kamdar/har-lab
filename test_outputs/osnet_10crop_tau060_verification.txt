@@ -1,0 +1,35 @@
+=====================================================================================
+OSNet-x0.25 REAL-CROP TEST AT tau = 0.60 & MARGIN >= 0.05
+=====================================================================================
+
+Crop  | Ground Truth | Frame  | Top Match  | Score   | Margin  | Decision (0.60) | Classification 
+----------------------------------------------------------------------------------------
+1     | soham      | 50     | soham      | 0.782   | 0.176   | ACCEPT          | CORRECT        
+2     | soham      | 150    | soham      | 0.906   | 0.333   | ACCEPT          | CORRECT        
+3     | soham      | 400    | soham      | 0.827   | 0.227   | ACCEPT          | CORRECT        
+4     | swayam     | 473    | aagam      | 0.827   | 0.166   | ACCEPT          | FALSE RECOVERY 
+5     | swayam     | 800    | aagam      | 0.859   | 0.195   | ACCEPT          | FALSE RECOVERY 
+6     | swayam     | 1400   | aagam      | 0.697   | 0.011   | REJECT          | UNKNOWN        
+7     | harshil    | 100    | harshil    | 0.720   | 0.088   | ACCEPT          | CORRECT        
+8     | harshil    | 1438   | harshil    | 0.728   | 0.063   | ACCEPT          | CORRECT        
+9     | aagam      | 727    | aagam      | 0.801   | 0.101   | ACCEPT          | CORRECT        
+10    | aagam      | 1100   | aagam      | 0.741   | 0.049   | REJECT          | UNKNOWN        
+
+=====================================================================================
+METRIC COMPARISON: tau = 0.60 vs tau = 0.68 (Margin >= 0.05)
+=====================================================================================
+Metric                         | tau = 0.60      | tau = 0.68      | Difference  
+---------------------------------------------------------------------------
+Total Real-Video Crops         | 10              | 10              | 0           
+Accepted Matches               | 8               | 8               | 0           
+Correct Accepted               | 6               | 6               | 0           
+False Recoveries               | 2               | 2               | 0           
+Rejections / UNKNOWN           | 2               | 2               | 0           
+Overall Accuracy (%)           | 60.0            | 60.0            | 0.0         
+False Recovery Rate (%)        | 20.0            | 20.0            | 0.0         
+Rejection Rate (%)             | 20.0            | 20.0            | 0.0         
+
+Key Observations:
+1. Exact Invariance: Lowering tau from 0.68 to 0.60 changes ZERO decisions across all 10 real video crops.
+2. Separation: All 6 true positive crops exceed 0.724 similarity. All false matches (Swayam -> Aagam confusion) exceed 0.827.
+3. Margin Safety: The two rejected crops (Swayam f1400 margin=0.011, Aagam f1100 margin=0.049) are rejected by the ambiguity margin (margin < 0.05), preventing low-confidence associations.

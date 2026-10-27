@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Session Analytics — Student Productivity Tracker</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg:#0f172a;--card:#1e293b;--border:#334155;--text:#e2e8f0;--muted:#94a3b8;
+    --aagam:#5eead4;--swayam:#f472b6;--harshil:#818cf8;--soham:#fbbf24;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;
+       background:var(--card);border-bottom:1px solid var(--border);}
+  nav h1{font-size:1.1rem;font-weight:700;}
+  nav h1 span{color:var(--aagam);}
+  a.btn{text-decoration:none;padding:0.4rem 1rem;background:var(--border);color:var(--text);
+         border-radius:0.5rem;font-size:0.8rem;font-weight:600;}
+  .container{max-width:1200px;margin:0 auto;padding:1rem;}
+  .section-title{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;
+                  color:var(--muted);margin:1.5rem 0 0.75rem;}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:0.75rem;padding:1.25rem;}
+  .card-title{font-size:0.8rem;color:var(--muted);margin-bottom:0.5rem;}
+  .card-value{font-size:1.8rem;font-weight:800;}
+  .student-section{border-top:3px solid;}
+  .student-section[data-s="Aagam"]{border-top-color:var(--aagam);}
+  .student-section[data-s="Swayam"]{border-top-color:var(--swayam);}
+  .student-section[data-s="Harshil"]{border-top-color:var(--harshil);}
+  .student-section[data-s="Soham"]{border-top-color:var(--soham);}
+  .student-name-hdr{font-weight:700;font-size:1rem;margin-bottom:0.75rem;}
+  .score-large{font-size:2rem;font-weight:900;margin-bottom:0.25rem;}
+  .score-bar{height:8px;border-radius:999px;background:var(--border);overflow:hidden;margin:0.5rem 0;}
+  .score-bar-fill{height:100%;border-radius:999px;background:#22c55e;}
+  table{width:100%;border-collapse:collapse;font-size:0.8rem;margin-top:0.5rem;}
+  th{text-align:left;color:var(--muted);font-weight:600;padding:0.4rem 0;border-bottom:1px solid var(--border);}
+  td{padding:0.4rem 0;border-bottom:1px solid #1a2742;}
+  .action-pip{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;}
+  canvas{max-height:240px;}
+  .alert-row{display:flex;align-items:center;gap:0.75rem;padding:0.5rem;
+              background:#450a0a;border-radius:0.4rem;border:1px solid #7f1d1d;margin-bottom:0.35rem;font-size:0.8rem;}
+  .refresh-btn{cursor:pointer;padding:0.35rem 0.75rem;border:1px solid var(--border);
+                border-radius:0.4rem;background:transparent;color:var(--text);font-size:0.75rem;}
+  .refresh-btn:hover{background:var(--border);}
+</style>
+</head>
+<body>
+<nav>
+  <h1>📊 Session <span>Analytics</span></h1>
+  <div style="display:flex;gap:0.75rem;align-items:center;">
+    <button class="refresh-btn" onclick="loadData()">↻ Refresh</button>
+    <a class="btn" href="/">← Live Dashboard</a>
+  </div>
+</nav>
+
+<div class="container">
+  <!-- Session Overview -->
+  <div class="section-title">Session Overview</div>
+  <div class="grid-4" id="overviewCards">
+    <div class="card"><div class="card-title">Session Duration</div><div class="card-value" id="ov-duration">—</div></div>
+    <div class="card"><div class="card-title">Total Frames</div><div class="card-value" id="ov-frames">—</div></div>
+    <div class="card"><div class="card-title">Alert Events</div><div class="card-value" id="ov-alerts">—</div></div>
+    <div class="card"><div class="card-title">Action Bouts</div><div class="card-value" id="ov-bouts">—</div></div>
+  </div>
+
+  <!-- Per-Student Breakdown -->
+  <div class="section-title">Student Breakdown</div>
+  <div class="grid-2" id="studentSections">
+    {% for name in ["Aagam", "Swayam", "Harshil", "Soham"] %}
+    <div class="card student-section" data-s="{{ name }}" id="sec-{{ name }}">
+      <div class="student-name-hdr">{{ name }}</div>
+      <div class="score-large" id="score-{{ name }}">—%</div>
+      <div style="font-size:0.7rem;color:var(--muted);margin-bottom:0.4rem;">Productivity Score</div>
+      <div class="score-bar"><div class="score-bar-fill" id="sbar-{{ name }}" style="width:0%"></div></div>
+      <canvas id="pie-{{ name }}" height="180"></canvas>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- Alerts -->
+  <div class="section-title">⚠️ Alert Events</div>
+  <div class="card" id="alertsSection">
+    <div id="alertsList" style="color:var(--muted);font-size:0.85rem;">No alerts recorded.</div>
+  </div>
+</div>
+
+<script>
+const ACTION_COLORS = {
+  sitting:"#6b7280", reading:"#eab308", writing:"#22c55e", typing:"#38bdf8",
+  phone:"#ef4444", sleeping:"#8b5cf6", standing:"#06b6d4", walking:"#10b981", discuss:"#f97316"
+};
+const STUDENTS = ["Aagam","Swayam","Harshil","Soham"];
+const pieCharts = {};
+
+function formatDur(sec) {
+  const m = Math.floor(sec/60), s = Math.floor(sec%60);
+  return m > 0 ? `${m}m ${s}s` : `${s}s`;
+}
+
+async function loadData() {
+  const res = await fetch("/api/summary").catch(()=>null);
+  if (!res) { return; }
+  const data = await res.json();
+  if (data.error) { console.warn(data.error); return; }
+
+  document.getElementById("ov-duration").textContent = formatDur(data.session_duration_sec || 0);
+  document.getElementById("ov-frames").textContent = (data.total_frames || 0).toLocaleString();
+  document.getElementById("ov-alerts").textContent = data.total_alerts || 0;
+  document.getElementById("ov-bouts").textContent = data.bouts_count || 0;
+
+  for (const name of STUDENTS) {
+    const info = (data.students || {})[name];
+    if (!info) continue;
+
+    const score = info.productivity_score || 0;
+    document.getElementById(`score-${name}`).textContent = score + "%";
+    document.getElementById(`sbar-${name}`).style.width = score + "%";
+
+    // Pie chart
+    const breakdown = info.action_times_sec || {};
+    const labels = Object.keys(breakdown);
+    const values = labels.map(k => breakdown[k]);
+    const colors = labels.map(k => ACTION_COLORS[k] || "#6b7280");
+
+    const ctx = document.getElementById(`pie-${name}`).getContext("2d");
+    if (pieCharts[name]) { pieCharts[name].destroy(); }
+    pieCharts[name] = new Chart(ctx, {
+      type: "doughnut",
+      data: { labels, datasets: [{ data: values, backgroundColor: colors, borderWidth: 2, borderColor: "#1e293b" }] },
+      options: {
+        plugins: {
+          legend: { position: "bottom", labels: { color: "#94a3b8", font: { size: 11 } } },
+          tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.raw.toFixed(1)}s` } }
+        }
+      }
+    });
+  }
+
+  // Alerts
+  const alerts = data.alert_events || [];
+  const alertEl = document.getElementById("alertsList");
+  const AICONS = {phone:"📱", sleeping:"😴", discuss:"💬"};
+  if (alerts.length === 0) {
+    alertEl.innerHTML = '<span style="color:var(--muted)">No alerts recorded.</span>';
+  } else {
+    alertEl.innerHTML = alerts.map(a => `
+      <div class="alert-row">
+        <span>${AICONS[a.action]||"⚠️"}</span>
+        <span><b>${a.student}</b> — ${a.action} for ${Math.floor(a.duration_sec)}s at t=${formatDur(a.timestamp)}</span>
+      </div>
+    `).join("");
+  }
+}
+
+loadData();
+setInterval(loadData, 5000);
+</script>
+</body>
+</html>

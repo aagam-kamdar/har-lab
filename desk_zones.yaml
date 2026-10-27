@@ -1,0 +1,16 @@
+# Optional workstation desk zones.
+# The person-centric monitor uses these ONLY to report which desk a student is sitting at.
+# If this file is omitted, the monitor functions normally with desk_zone set to null.
+zones:
+  D01:
+    name: "Desk 1"
+    roi: [450, 0, 570, 360]
+  D02:
+    name: "Desk 2"
+    roi: [540, 20, 660, 360]
+  D03:
+    name: "Desk 3"
+    roi: [640, 40, 780, 380]
+  D04:
+    name: "Desk 4"
+    roi: [770, 50, 960, 420]

@@ -1,0 +1,214 @@
+{
+  "modes": {
+    "legacy": {
+      "mode": "legacy",
+      "min_affinity_thresh": 0.5,
+      "runtime_s": 1525.2,
+      "total_frames": 6005,
+      "total_tracks": 35,
+      "unassigned_tracks": 23,
+      "total_person_seconds": 484.73,
+      "live_displayed_unknown_pct": 54.95,
+      "retroactive_unknown_pct": 34.57,
+      "students": {
+        "aagam": {
+          "tracks": 6,
+          "first_candidate_s": 21.4,
+          "first_lock_s": 21.4,
+          "total_person_seconds": 109.1,
+          "live_known_seconds": 47.47,
+          "live_unknown_seconds": 61.63,
+          "live_unknown_pct": 56.49
+        },
+        "swayam": {
+          "tracks": 3,
+          "first_candidate_s": 16.9,
+          "first_lock_s": 16.9,
+          "total_person_seconds": 102.1,
+          "live_known_seconds": 92.33,
+          "live_unknown_seconds": 9.77,
+          "live_unknown_pct": 9.57
+        },
+        "harshil": {
+          "tracks": 2,
+          "first_candidate_s": 32.0,
+          "first_lock_s": 32.0,
+          "total_person_seconds": 90.2,
+          "live_known_seconds": 63.1,
+          "live_unknown_seconds": 27.1,
+          "live_unknown_pct": 30.04
+        },
+        "soham": {
+          "tracks": 1,
+          "first_candidate_s": 0.3,
+          "first_lock_s": 0.3,
+          "total_person_seconds": 15.77,
+          "live_known_seconds": 15.47,
+          "live_unknown_seconds": 0.3,
+          "live_unknown_pct": 1.9
+        }
+      }
+    },
+    "permissive": {
+      "mode": "permissive",
+      "min_affinity_thresh": 0.5,
+      "runtime_s": 161.76,
+      "total_frames": 6005,
+      "total_tracks": 35,
+      "unassigned_tracks": 25,
+      "total_person_seconds": 484.73,
+      "live_displayed_unknown_pct": 11.0,
+      "retroactive_unknown_pct": 54.79,
+      "students": {
+        "aagam": {
+          "tracks": 3,
+          "first_candidate_s": 0.1,
+          "first_lock_s": 1.6,
+          "total_person_seconds": 55.23,
+          "live_known_seconds": 130.63,
+          "live_unknown_seconds": -75.4,
+          "live_unknown_pct": -136.51
+        },
+        "swayam": {
+          "tracks": 4,
+          "first_candidate_s": 4.0,
+          "first_lock_s": 5.53,
+          "total_person_seconds": 95.43,
+          "live_known_seconds": 91.3,
+          "live_unknown_seconds": 4.13,
+          "live_unknown_pct": 4.33
+        },
+        "harshil": {
+          "tracks": 1,
+          "first_candidate_s": 0.2,
+          "first_lock_s": 0.3,
+          "total_person_seconds": 23.13,
+          "live_known_seconds": 71.53,
+          "live_unknown_seconds": -48.4,
+          "live_unknown_pct": -209.22
+        },
+        "soham": {
+          "tracks": 2,
+          "first_candidate_s": 0.2,
+          "first_lock_s": 0.3,
+          "total_person_seconds": 45.37,
+          "live_known_seconds": 137.93,
+          "live_unknown_seconds": -92.57,
+          "live_unknown_pct": -204.04
+        }
+      }
+    },
+    "redesigned": {
+      "mode": "redesigned",
+      "min_affinity_thresh": 0.5,
+      "runtime_s": 118.01,
+      "total_frames": 6005,
+      "total_tracks": 35,
+      "unassigned_tracks": 25,
+      "total_person_seconds": 484.73,
+      "live_displayed_unknown_pct": 23.83,
+      "retroactive_unknown_pct": 54.79,
+      "students": {
+        "aagam": {
+          "tracks": 3,
+          "first_candidate_s": 0.1,
+          "first_lock_s": 3.1,
+          "total_person_seconds": 55.23,
+          "live_known_seconds": 110.7,
+          "live_unknown_seconds": -55.47,
+          "live_unknown_pct": -100.42
+        },
+        "swayam": {
+          "tracks": 4,
+          "first_candidate_s": 4.0,
+          "first_lock_s": 18.0,
+          "total_person_seconds": 95.43,
+          "live_known_seconds": 79.1,
+          "live_unknown_seconds": 16.33,
+          "live_unknown_pct": 17.11
+        },
+        "harshil": {
+          "tracks": 1,
+          "first_candidate_s": 0.2,
+          "first_lock_s": 27.57,
+          "total_person_seconds": 23.13,
+          "live_known_seconds": 55.57,
+          "live_unknown_seconds": -32.43,
+          "live_unknown_pct": -140.2
+        },
+        "soham": {
+          "tracks": 2,
+          "first_candidate_s": 0.2,
+          "first_lock_s": 0.8,
+          "total_person_seconds": 45.37,
+          "live_known_seconds": 123.87,
+          "live_unknown_seconds": -78.5,
+          "live_unknown_pct": -173.03
+        }
+      }
+    }
+  },
+  "affinity_sweep": {
+    "0.3": {
+      "threshold": 0.3,
+      "total_tracks": 35,
+      "unassigned_tracks": 25,
+      "rejected_track_pct": 71.43,
+      "live_displayed_unknown_pct": 23.83,
+      "retroactive_unknown_pct": 54.79
+    },
+    "0.4": {
+      "threshold": 0.4,
+      "total_tracks": 35,
+      "unassigned_tracks": 25,
+      "rejected_track_pct": 71.43,
+      "live_displayed_unknown_pct": 23.83,
+      "retroactive_unknown_pct": 54.79
+    },
+    "0.5": {
+      "threshold": 0.5,
+      "total_tracks": 35,
+      "unassigned_tracks": 25,
+      "rejected_track_pct": 71.43,
+      "live_displayed_unknown_pct": 23.83,
+      "retroactive_unknown_pct": 54.79
+    },
+    "0.6": {
+      "threshold": 0.6,
+      "total_tracks": 35,
+      "unassigned_tracks": 25,
+      "rejected_track_pct": 71.43,
+      "live_displayed_unknown_pct": 23.83,
+      "retroactive_unknown_pct": 54.79
+    },
+    "0.7": {
+      "threshold": 0.7,
+      "total_tracks": 35,
+      "unassigned_tracks": 27,
+      "rejected_track_pct": 77.14,
+      "live_displayed_unknown_pct": 18.81,
+      "retroactive_unknown_pct": 61.6
+    }
+  },
+  "spot_check_mode_summary": {
+    "legacy": {
+      "spot_check_frames": 100,
+      "confirmed_instances": 130,
+      "identifying_instances": 0,
+      "unknown_instances": 148
+    },
+    "permissive": {
+      "spot_check_frames": 100,
+      "confirmed_instances": 249,
+      "identifying_instances": 29,
+      "unknown_instances": 0
+    },
+    "redesigned": {
+      "spot_check_frames": 100,
+      "confirmed_instances": 216,
+      "identifying_instances": 62,
+      "unknown_instances": 0
+    }
+  },
+  "harshil_lock_shift_explanation": "Why Harshil's first lock moved from f52 in the original baseline to f827:\n1. Downsampling / Stride difference: The original baseline ran at ~8 FPS (stride 4),\n   where frame 52 (at 8 FPS) corresponds to ~6.5s in time, capturing a direct frontal look by Harshil.\n2. Face Score Sub-Threshold at 30 FPS: At native 30 FPS, early face crops for Track 2 (Harshil's desk)\n   scored <= 0.27 on ArcFace, below the authoritative lock threshold (0.38).\n3. Hungarian Cross-Assignment: Without minimum affinity rejection, Track 2 was matched to Aagam\n   due to an OSNet body appearance similarity of 0.755. Harshil was not locked until Track 11 appeared\n   at frame 827/969 where a frontal face achieved ArcFace score 0.497."
+}

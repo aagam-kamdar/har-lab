@@ -1,0 +1,54 @@
+{
+  "buffer_size_steps": 36,
+  "buffer_size_real_video_sec": 1.2,
+  "theoretical_worst_case_sec": 1.2,
+  "downtime_events": [
+    {
+      "student": "harshil",
+      "old_tid": 2,
+      "old_removed_frame": 790,
+      "old_removed_sec": 26.333333333333332,
+      "new_tid": 13,
+      "recovery_frame": 982,
+      "recovery_sec": 32.733333333333334,
+      "downtime_sec": 6.400000000000002,
+      "method": "ArcFace",
+      "score": 0.38042712211608887,
+      "margin": 0.17988568544387817,
+      "candidate_pool_size": 2
+    },
+    {
+      "student": "swayam",
+      "old_tid": 10,
+      "old_removed_frame": 1127,
+      "old_removed_sec": 37.56666666666667,
+      "new_tid": 21,
+      "recovery_frame": 1455,
+      "recovery_sec": 48.5,
+      "downtime_sec": 10.93333333333333,
+      "method": "ArcFace",
+      "score": 0.40855103731155396,
+      "margin": 0.09831887483596802,
+      "candidate_pool_size": 2
+    }
+  ],
+  "distribution": {
+    "n": 2,
+    "min": 6.400000000000002,
+    "median": 8.666666666666666,
+    "max": 10.93333333333333,
+    "mean": 8.666666666666666
+  },
+  "unresolved_removals": {
+    "soham": {
+      "removed_frame": 1290,
+      "removed_sec": 43.0,
+      "old_tid": 1
+    },
+    "harshil": {
+      "removed_frame": 1505,
+      "removed_sec": 50.166666666666664,
+      "old_tid": 13
+    }
+  }
+}

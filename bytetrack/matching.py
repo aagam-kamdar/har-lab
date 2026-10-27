@@ -1,8 +1,79 @@
 import cv2
 import numpy as np
-import scipy
-from scipy.spatial.distance import cdist
 import time
+
+# ---------------------------------------------------------------------------
+# scipy-free replacements  (scipy has a broken install in this environment)
+# ---------------------------------------------------------------------------
+
+def cdist(XA, XB, metric='cosine'):
+    """Minimal cdist replacement supporting 'cosine' and 'euclidean'."""
+    XA = np.asarray(XA, dtype=float)
+    XB = np.asarray(XB, dtype=float)
+    if metric == 'cosine':
+        # cosine distance = 1 - cosine_similarity
+        na = np.linalg.norm(XA, axis=1, keepdims=True)
+        nb = np.linalg.norm(XB, axis=1, keepdims=True)
+        na = np.where(na < 1e-12, 1e-12, na)
+        nb = np.where(nb < 1e-12, 1e-12, nb)
+        sim = (XA / na) @ (XB / nb).T
+        return np.maximum(0.0, 1.0 - sim)
+    elif metric == 'euclidean':
+        # ||a - b||^2 = ||a||^2 + ||b||^2 - 2*a@b.T
+        aa = np.sum(XA ** 2, axis=1)[:, None]
+        bb = np.sum(XB ** 2, axis=1)[None, :]
+        dist2 = aa + bb - 2.0 * (XA @ XB.T)
+        return np.sqrt(np.maximum(0.0, dist2))
+    else:
+        # Generic fallback
+        out = np.zeros((len(XA), len(XB)), dtype=float)
+        for i, a in enumerate(XA):
+            for j, b in enumerate(XB):
+                out[i, j] = np.linalg.norm(a - b)
+        return out
+
+
+class _SparseDummy:
+    """Minimal sparse matrix replacement for merge_matches."""
+    def __init__(self, data, coords, shape):
+        self._data = np.array(data, dtype=float)
+        self._row = np.array(coords[0], dtype=int)
+        self._col = np.array(coords[1], dtype=int)
+        self._shape = shape
+
+    def __matmul__(self, other):
+        """Dense multiplication for small matrices used in merge_matches."""
+        R = np.zeros(self._shape, dtype=float)
+        for d, r, c in zip(self._data, self._row, self._col):
+            R[r, c] = d
+        S = np.zeros(other._shape, dtype=float)
+        for d, r, c in zip(other._data, other._row, other._col):
+            S[r, c] = d
+        result_dense = R @ S
+        # Return an object with nonzero()
+        class _Result:
+            def __init__(self, dense):
+                self._d = dense
+            def nonzero(self):
+                nz = np.argwhere(self._d != 0)
+                if len(nz) == 0:
+                    return (np.array([], dtype=int), np.array([], dtype=int))
+                return (nz[:, 0], nz[:, 1])
+        return _Result(result_dense)
+
+
+class _SparseModule:
+    @staticmethod
+    def coo_matrix(arg, shape):
+        data, coords = arg
+        return _SparseDummy(data, coords, shape)
+
+
+class _ScipyStub:
+    sparse = _SparseModule()
+
+
+scipy = _ScipyStub()
 
 from . import kalman_filter
 

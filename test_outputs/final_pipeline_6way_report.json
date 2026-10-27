@@ -1,0 +1,396 @@
+{
+  "metadata": {
+    "experiment": "FINAL INTEGRATION BENCHMARK: YOLO26-Pose + TRACKER + ArcFace + BODY RE-ID",
+    "video": "new lab video.mp4",
+    "total_frames": 1800,
+    "fps": 30.0,
+    "frozen_detection_cache": "test_outputs\\cached_yolo26pose_detections_1800f.json",
+    "total_cached_detections": 6818,
+    "detector": "yolo26n-pose.pt (Pose Keypoints Ignored/Discarded)",
+    "authority_rules": "ArcFace is sole initial identity-lock authority. Body Re-ID is RECOVERY ONLY."
+  },
+  "tracker_base_metrics": {
+    "ByteTrack": {
+      "total_unique_track_ids": 18,
+      "short_tracks_lt_1s": 0,
+      "long_tracks_gte_5s": 10,
+      "max_duration_frames": 1800,
+      "median_duration_frames": 216.5,
+      "mean_duration_frames": 370.6,
+      "lost_to_tracked_recoveries": 49,
+      "max_lost_duration_frames": 84,
+      "removed_events": 28887,
+      "removed_to_new_track_events": 13,
+      "fragmentation_count": 14,
+      "inferred_id_switches": 1,
+      "cpu_throughput_fps": 1752.3,
+      "mean_memory_rss_mb": 650.5
+    },
+    "OC-SORT": {
+      "total_unique_track_ids": 17,
+      "short_tracks_lt_1s": 1,
+      "long_tracks_gte_5s": 10,
+      "max_duration_frames": 1800,
+      "median_duration_frames": 212.0,
+      "mean_duration_frames": 441.9,
+      "lost_to_tracked_recoveries": 80,
+      "max_lost_duration_frames": 90,
+      "removed_events": 29332,
+      "removed_to_new_track_events": 9,
+      "fragmentation_count": 13,
+      "inferred_id_switches": 3,
+      "cpu_throughput_fps": 655.7,
+      "mean_memory_rss_mb": 650.5
+    }
+  },
+  "combinations_summary": {
+    "ByteTrack + MobileNetV3+HSV": {
+      "configuration": "ByteTrack + MobileNetV3+HSV",
+      "tracker": "ByteTrack",
+      "reid_model": "MobileNetV3+HSV",
+      "threshold": 0.78,
+      "margin_required": 0.06,
+      "total_recovery_events": 4,
+      "correct_recoveries": 1,
+      "false_recoveries": 1,
+      "unknown_rejected": 2,
+      "recovery_accuracy_pct": 25.0,
+      "false_recovery_rate_pct": 25.0,
+      "rejection_rate_pct": 50.0,
+      "mean_similarity": 0.8136,
+      "median_similarity": 0.8337,
+      "mean_recovery_gap_frames": 144.5,
+      "long_gap_total_events": 3,
+      "long_gap_correct": 1,
+      "long_gap_accuracy_pct": 33.3,
+      "condition_breakdown": {
+        "seated_desk_occlusion": {
+          "total": 3,
+          "correct": 1,
+          "false": 0,
+          "unknown": 2
+        },
+        "standing_walking": {
+          "total": 1,
+          "correct": 0,
+          "false": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "ByteTrack + OSNet-x0.25": {
+      "configuration": "ByteTrack + OSNet-x0.25",
+      "tracker": "ByteTrack",
+      "reid_model": "OSNet-x0.25",
+      "threshold": 0.68,
+      "margin_required": 0.05,
+      "total_recovery_events": 4,
+      "correct_recoveries": 2,
+      "false_recoveries": 2,
+      "unknown_rejected": 0,
+      "recovery_accuracy_pct": 50.0,
+      "false_recovery_rate_pct": 50.0,
+      "rejection_rate_pct": 0.0,
+      "mean_similarity": 0.8058,
+      "median_similarity": 0.7877,
+      "mean_recovery_gap_frames": 144.5,
+      "long_gap_total_events": 3,
+      "long_gap_correct": 2,
+      "long_gap_accuracy_pct": 66.7,
+      "condition_breakdown": {
+        "seated_desk_occlusion": {
+          "total": 3,
+          "correct": 2,
+          "false": 1,
+          "unknown": 0
+        },
+        "standing_walking": {
+          "total": 1,
+          "correct": 0,
+          "false": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "ByteTrack + ResNet18-IBN-A": {
+      "configuration": "ByteTrack + ResNet18-IBN-A",
+      "tracker": "ByteTrack",
+      "reid_model": "ResNet18-IBN-A",
+      "threshold": 0.8,
+      "margin_required": 0.05,
+      "total_recovery_events": 4,
+      "correct_recoveries": 1,
+      "false_recoveries": 2,
+      "unknown_rejected": 1,
+      "recovery_accuracy_pct": 25.0,
+      "false_recovery_rate_pct": 50.0,
+      "rejection_rate_pct": 25.0,
+      "mean_similarity": 0.8434,
+      "median_similarity": 0.8464,
+      "mean_recovery_gap_frames": 144.5,
+      "long_gap_total_events": 3,
+      "long_gap_correct": 1,
+      "long_gap_accuracy_pct": 33.3,
+      "condition_breakdown": {
+        "seated_desk_occlusion": {
+          "total": 3,
+          "correct": 1,
+          "false": 1,
+          "unknown": 1
+        },
+        "standing_walking": {
+          "total": 1,
+          "correct": 0,
+          "false": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "OC-SORT + MobileNetV3+HSV": {
+      "configuration": "OC-SORT + MobileNetV3+HSV",
+      "tracker": "OC-SORT",
+      "reid_model": "MobileNetV3+HSV",
+      "threshold": 0.78,
+      "margin_required": 0.06,
+      "total_recovery_events": 4,
+      "correct_recoveries": 0,
+      "false_recoveries": 0,
+      "unknown_rejected": 4,
+      "recovery_accuracy_pct": 0.0,
+      "false_recovery_rate_pct": 0.0,
+      "rejection_rate_pct": 100.0,
+      "mean_similarity": 0.7466,
+      "median_similarity": 0.7582,
+      "mean_recovery_gap_frames": 180.5,
+      "long_gap_total_events": 4,
+      "long_gap_correct": 0,
+      "long_gap_accuracy_pct": 0.0,
+      "condition_breakdown": {
+        "seated_desk_occlusion": {
+          "total": 4,
+          "correct": 0,
+          "false": 0,
+          "unknown": 4
+        }
+      }
+    },
+    "OC-SORT + OSNet-x0.25": {
+      "configuration": "OC-SORT + OSNet-x0.25",
+      "tracker": "OC-SORT",
+      "reid_model": "OSNet-x0.25",
+      "threshold": 0.68,
+      "margin_required": 0.05,
+      "total_recovery_events": 4,
+      "correct_recoveries": 1,
+      "false_recoveries": 0,
+      "unknown_rejected": 3,
+      "recovery_accuracy_pct": 25.0,
+      "false_recovery_rate_pct": 0.0,
+      "rejection_rate_pct": 75.0,
+      "mean_similarity": 0.6339,
+      "median_similarity": 0.6511,
+      "mean_recovery_gap_frames": 180.5,
+      "long_gap_total_events": 4,
+      "long_gap_correct": 1,
+      "long_gap_accuracy_pct": 25.0,
+      "condition_breakdown": {
+        "seated_desk_occlusion": {
+          "total": 4,
+          "correct": 1,
+          "false": 0,
+          "unknown": 3
+        }
+      }
+    },
+    "OC-SORT + ResNet18-IBN-A": {
+      "configuration": "OC-SORT + ResNet18-IBN-A",
+      "tracker": "OC-SORT",
+      "reid_model": "ResNet18-IBN-A",
+      "threshold": 0.8,
+      "margin_required": 0.05,
+      "total_recovery_events": 4,
+      "correct_recoveries": 1,
+      "false_recoveries": 0,
+      "unknown_rejected": 3,
+      "recovery_accuracy_pct": 25.0,
+      "false_recovery_rate_pct": 0.0,
+      "rejection_rate_pct": 75.0,
+      "mean_similarity": 0.7761,
+      "median_similarity": 0.7676,
+      "mean_recovery_gap_frames": 180.5,
+      "long_gap_total_events": 4,
+      "long_gap_correct": 1,
+      "long_gap_accuracy_pct": 25.0,
+      "condition_breakdown": {
+        "seated_desk_occlusion": {
+          "total": 4,
+          "correct": 1,
+          "false": 0,
+          "unknown": 3
+        }
+      }
+    }
+  },
+  "ground_truth_recovery_events": [
+    {
+      "event_id": "EVT_BT_1",
+      "tracker": "ByteTrack",
+      "student": "harshil",
+      "old_track_id": 2,
+      "old_last_seen_frame": 697,
+      "removed_frame": 787,
+      "new_track_id": 12,
+      "new_track_first_frame": 902,
+      "gap_frames": 205,
+      "gap_seconds": 6.83,
+      "viewpoint": "side_view",
+      "occlusion_condition": "seated_desk_occlusion",
+      "crop_box": [
+        456.8,
+        2.2,
+        595.3,
+        188.1
+      ]
+    },
+    {
+      "event_id": "EVT_BT_2",
+      "tracker": "ByteTrack",
+      "student": "aagam",
+      "old_track_id": 8,
+      "old_last_seen_frame": 943,
+      "removed_frame": 1033,
+      "new_track_id": 18,
+      "new_track_first_frame": 1089,
+      "gap_frames": 146,
+      "gap_seconds": 4.87,
+      "viewpoint": "three_quarter_standing",
+      "occlusion_condition": "standing_walking",
+      "crop_box": [
+        789.5,
+        76.7,
+        945.9,
+        301.8
+      ]
+    },
+    {
+      "event_id": "EVT_BT_3",
+      "tracker": "ByteTrack",
+      "student": "swayam",
+      "old_track_id": 10,
+      "old_last_seen_frame": 1141,
+      "removed_frame": 1231,
+      "new_track_id": 20,
+      "new_track_first_frame": 1230,
+      "gap_frames": 89,
+      "gap_seconds": 2.97,
+      "viewpoint": "frontal_seated",
+      "occlusion_condition": "seated_desk_occlusion",
+      "crop_box": [
+        630.8,
+        51.7,
+        807.5,
+        220.1
+      ]
+    },
+    {
+      "event_id": "EVT_BT_4",
+      "tracker": "ByteTrack",
+      "student": "harshil",
+      "old_track_id": 22,
+      "old_last_seen_frame": 1584,
+      "removed_frame": 1674,
+      "new_track_id": 24,
+      "new_track_first_frame": 1722,
+      "gap_frames": 138,
+      "gap_seconds": 4.6,
+      "viewpoint": "side_view",
+      "occlusion_condition": "seated_desk_occlusion",
+      "crop_box": [
+        526.2,
+        38.4,
+        601.6,
+        147.5
+      ]
+    },
+    {
+      "event_id": "EVT_OC_1",
+      "tracker": "OC-SORT",
+      "student": "harshil",
+      "old_track_id": 2,
+      "old_last_seen_frame": 697,
+      "removed_frame": 787,
+      "new_track_id": 17,
+      "new_track_first_frame": 888,
+      "gap_frames": 191,
+      "gap_seconds": 6.37,
+      "viewpoint": "side_view",
+      "occlusion_condition": "seated_desk_occlusion",
+      "crop_box": [
+        544.6,
+        45.0,
+        605.2,
+        133.2
+      ]
+    },
+    {
+      "event_id": "EVT_OC_2",
+      "tracker": "OC-SORT",
+      "student": "harshil",
+      "old_track_id": 10,
+      "old_last_seen_frame": 1043,
+      "removed_frame": 1133,
+      "new_track_id": 25,
+      "new_track_first_frame": 1202,
+      "gap_frames": 159,
+      "gap_seconds": 5.3,
+      "viewpoint": "side_view",
+      "occlusion_condition": "seated_desk_occlusion",
+      "crop_box": [
+        415.1,
+        49.6,
+        533.5,
+        184.9
+      ]
+    },
+    {
+      "event_id": "EVT_OC_3",
+      "tracker": "OC-SORT",
+      "student": "harshil",
+      "old_track_id": 10,
+      "old_last_seen_frame": 1043,
+      "removed_frame": 1133,
+      "new_track_id": 28,
+      "new_track_first_frame": 1311,
+      "gap_frames": 268,
+      "gap_seconds": 8.93,
+      "viewpoint": "side_view",
+      "occlusion_condition": "seated_desk_occlusion",
+      "crop_box": [
+        518.2,
+        0.3,
+        630.1,
+        180.5
+      ]
+    },
+    {
+      "event_id": "EVT_OC_4",
+      "tracker": "OC-SORT",
+      "student": "harshil",
+      "old_track_id": 25,
+      "old_last_seen_frame": 1300,
+      "removed_frame": 1390,
+      "new_track_id": 29,
+      "new_track_first_frame": 1404,
+      "gap_frames": 104,
+      "gap_seconds": 3.47,
+      "viewpoint": "side_view",
+      "occlusion_condition": "seated_desk_occlusion",
+      "crop_box": [
+        592.2,
+        0.1,
+        653.0,
+        144.5
+      ]
+    }
+  ]
+}

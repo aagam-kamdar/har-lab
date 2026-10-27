@@ -1,0 +1,397 @@
+seats:
+  S01:
+    roi:
+    - 50
+    - 30
+    - 150
+    - 140
+    person_id: Student_01
+    camera_id: cam_0
+    neighbors:
+      left: null
+      right: S02
+  S02:
+    roi:
+    - 170
+    - 30
+    - 270
+    - 140
+    person_id: Student_02
+    camera_id: cam_0
+    neighbors:
+      left: S01
+      right: S03
+  S03:
+    roi:
+    - 290
+    - 30
+    - 390
+    - 140
+    person_id: Student_03
+    camera_id: cam_0
+    neighbors:
+      left: S02
+      right: S04
+  S04:
+    roi:
+    - 410
+    - 30
+    - 510
+    - 140
+    person_id: Student_04
+    camera_id: cam_0
+    neighbors:
+      left: S03
+      right: S05
+  S05:
+    roi:
+    - 530
+    - 30
+    - 630
+    - 140
+    person_id: Student_05
+    camera_id: cam_0
+    neighbors:
+      left: S04
+      right: S06
+  S06:
+    roi:
+    - 650
+    - 30
+    - 750
+    - 140
+    person_id: Student_06
+    camera_id: cam_0
+    neighbors:
+      left: S05
+      right: null
+  S07:
+    roi:
+    - 50
+    - 150
+    - 150
+    - 260
+    person_id: Student_07
+    camera_id: cam_0
+    neighbors:
+      left: null
+      right: S08
+  S08:
+    roi:
+    - 170
+    - 150
+    - 270
+    - 260
+    person_id: Student_08
+    camera_id: cam_0
+    neighbors:
+      left: S07
+      right: S09
+  S09:
+    roi:
+    - 290
+    - 150
+    - 390
+    - 260
+    person_id: Student_09
+    camera_id: cam_0
+    neighbors:
+      left: S08
+      right: S10
+  S10:
+    roi:
+    - 410
+    - 150
+    - 510
+    - 260
+    person_id: Student_10
+    camera_id: cam_0
+    neighbors:
+      left: S09
+      right: S11
+  S11:
+    roi:
+    - 530
+    - 150
+    - 630
+    - 260
+    person_id: Student_11
+    camera_id: cam_0
+    neighbors:
+      left: S10
+      right: S12
+  S12:
+    roi:
+    - 650
+    - 150
+    - 750
+    - 260
+    person_id: Student_12
+    camera_id: cam_0
+    neighbors:
+      left: S11
+      right: null
+  S13:
+    roi:
+    - 50
+    - 270
+    - 150
+    - 380
+    person_id: Student_13
+    camera_id: cam_0
+    neighbors:
+      left: null
+      right: S14
+  S14:
+    roi:
+    - 170
+    - 270
+    - 270
+    - 380
+    person_id: Student_14
+    camera_id: cam_0
+    neighbors:
+      left: S13
+      right: S15
+  S15:
+    roi:
+    - 290
+    - 270
+    - 390
+    - 380
+    person_id: Student_15
+    camera_id: cam_0
+    neighbors:
+      left: S14
+      right: S16
+  S16:
+    roi:
+    - 410
+    - 270
+    - 510
+    - 380
+    person_id: Student_16
+    camera_id: cam_0
+    neighbors:
+      left: S15
+      right: S17
+  S17:
+    roi:
+    - 530
+    - 270
+    - 630
+    - 380
+    person_id: Student_17
+    camera_id: cam_0
+    neighbors:
+      left: S16
+      right: S18
+  S18:
+    roi:
+    - 650
+    - 270
+    - 750
+    - 380
+    person_id: Student_18
+    camera_id: cam_0
+    neighbors:
+      left: S17
+      right: null
+  S19:
+    roi:
+    - 50
+    - 30
+    - 150
+    - 140
+    person_id: Student_19
+    camera_id: cam_1
+    neighbors:
+      left: null
+      right: S20
+  S20:
+    roi:
+    - 170
+    - 30
+    - 270
+    - 140
+    person_id: Student_20
+    camera_id: cam_1
+    neighbors:
+      left: S19
+      right: S21
+  S21:
+    roi:
+    - 290
+    - 30
+    - 390
+    - 140
+    person_id: Student_21
+    camera_id: cam_1
+    neighbors:
+      left: S20
+      right: S22
+  S22:
+    roi:
+    - 410
+    - 30
+    - 510
+    - 140
+    person_id: Student_22
+    camera_id: cam_1
+    neighbors:
+      left: S21
+      right: S23
+  S23:
+    roi:
+    - 530
+    - 30
+    - 630
+    - 140
+    person_id: Student_23
+    camera_id: cam_1
+    neighbors:
+      left: S22
+      right: S24
+  S24:
+    roi:
+    - 650
+    - 30
+    - 750
+    - 140
+    person_id: Student_24
+    camera_id: cam_1
+    neighbors:
+      left: S23
+      right: null
+  S25:
+    roi:
+    - 50
+    - 150
+    - 150
+    - 260
+    person_id: Student_25
+    camera_id: cam_1
+    neighbors:
+      left: null
+      right: S26
+  S26:
+    roi:
+    - 170
+    - 150
+    - 270
+    - 260
+    person_id: Student_26
+    camera_id: cam_1
+    neighbors:
+      left: S25
+      right: S27
+  S27:
+    roi:
+    - 290
+    - 150
+    - 390
+    - 260
+    person_id: Student_27
+    camera_id: cam_1
+    neighbors:
+      left: S26
+      right: S28
+  S28:
+    roi:
+    - 410
+    - 150
+    - 510
+    - 260
+    person_id: Student_28
+    camera_id: cam_1
+    neighbors:
+      left: S27
+      right: S29
+  S29:
+    roi:
+    - 530
+    - 150
+    - 630
+    - 260
+    person_id: Student_29
+    camera_id: cam_1
+    neighbors:
+      left: S28
+      right: S30
+  S30:
+    roi:
+    - 650
+    - 150
+    - 750
+    - 260
+    person_id: Student_30
+    camera_id: cam_1
+    neighbors:
+      left: S29
+      right: null
+  S31:
+    roi:
+    - 50
+    - 270
+    - 150
+    - 380
+    person_id: Student_31
+    camera_id: cam_1
+    neighbors:
+      left: null
+      right: S32
+  S32:
+    roi:
+    - 170
+    - 270
+    - 270
+    - 380
+    person_id: Student_32
+    camera_id: cam_1
+    neighbors:
+      left: S31
+      right: S33
+  S33:
+    roi:
+    - 290
+    - 270
+    - 390
+    - 380
+    person_id: Student_33
+    camera_id: cam_1
+    neighbors:
+      left: S32
+      right: S34
+  S34:
+    roi:
+    - 410
+    - 270
+    - 510
+    - 380
+    person_id: Student_34
+    camera_id: cam_1
+    neighbors:
+      left: S33
+      right: S35
+  S35:
+    roi:
+    - 530
+    - 270
+    - 630
+    - 380
+    person_id: Student_35
+    camera_id: cam_1
+    neighbors:
+      left: S34
+      right: S36
+  S36:
+    roi:
+    - 650
+    - 270
+    - 750
+    - 380
+    person_id: Student_36
+    camera_id: cam_1
+    neighbors:
+      left: S35
+      right: null

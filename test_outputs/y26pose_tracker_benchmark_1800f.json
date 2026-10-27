@@ -1,0 +1,617 @@
+{
+  "metadata": {
+    "experiment": "YOLO26-Pose -> 4-Way Tracker Comparison (ByteTrack vs OC-SORT vs BoT-SORT vs SORT)",
+    "video": "new lab video.mp4",
+    "total_frames": 1800,
+    "fps": 30.0,
+    "frozen_detection_cache": "test_outputs\\cached_yolo26pose_detections_1800f.json",
+    "total_cached_detections": 6818,
+    "source_model": "yolo26n-pose.pt"
+  },
+  "tracker_configurations": {
+    "ByteTrack": {
+      "track_high_thresh": 0.35,
+      "track_low_thresh": 0.1,
+      "new_track_thresh": 0.35,
+      "track_buffer": 90,
+      "match_thresh": 0.85,
+      "fuse_score": true,
+      "mot20": false
+    },
+    "OC-SORT": {
+      "track_high_thresh": 0.35,
+      "track_low_thresh": 0.1,
+      "new_track_thresh": 0.35,
+      "track_buffer": 90,
+      "match_thresh": 0.85,
+      "fuse_score": true,
+      "delta_t": 3,
+      "inertia": 0.2,
+      "use_byte": true,
+      "mot20": false
+    },
+    "BoT-SORT": {
+      "track_high_thresh": 0.35,
+      "track_low_thresh": 0.1,
+      "new_track_thresh": 0.35,
+      "track_buffer": 90,
+      "match_thresh": 0.85,
+      "fuse_score": true,
+      "gmc_method": "none",
+      "proximity_thresh": 0.5,
+      "appearance_thresh": 0.8,
+      "with_reid": false,
+      "mot20": false
+    },
+    "SORT": {
+      "track_thresh": 0.35,
+      "track_buffer": 90,
+      "min_hits": 3,
+      "match_thresh": 0.3,
+      "track_low_thresh": "not applicable",
+      "fuse_score": "not applicable"
+    }
+  },
+  "overall_tracking_metrics": [
+    {
+      "tracker": "ByteTrack",
+      "total_frames_processed": 1800,
+      "total_unique_track_ids": 18,
+      "tracks_lt_1sec": 0,
+      "tracks_gte_5sec": 10,
+      "max_continuous_track_duration_frames": 1800,
+      "max_continuous_track_duration_seconds": 60.0,
+      "median_track_duration_frames": 216.5,
+      "mean_track_duration_frames": 370.6,
+      "lost_to_tracked_recoveries": 49,
+      "mean_lost_recovery_duration_frames": 11.2,
+      "mean_lost_recovery_duration_seconds": 0.37,
+      "max_lost_recovery_duration_frames": 84,
+      "max_lost_recovery_duration_seconds": 2.8,
+      "peak_simultaneous_tracks": 5,
+      "average_active_tracks_per_frame": 3.43,
+      "track_fragmentation_count": 14,
+      "removed_events_count": 28887,
+      "removed_to_new_track_events_count": 13,
+      "tracker_only_time_seconds": 1.027,
+      "tracker_only_cpu_fps": 1752.3,
+      "mean_memory_rss_mb": 650.5,
+      "peak_memory_rss_mb": 657.8
+    },
+    {
+      "tracker": "OC-SORT",
+      "total_frames_processed": 1800,
+      "total_unique_track_ids": 17,
+      "tracks_lt_1sec": 1,
+      "tracks_gte_5sec": 10,
+      "max_continuous_track_duration_frames": 1800,
+      "max_continuous_track_duration_seconds": 60.0,
+      "median_track_duration_frames": 212.0,
+      "mean_track_duration_frames": 441.9,
+      "lost_to_tracked_recoveries": 80,
+      "mean_lost_recovery_duration_frames": 13.9,
+      "mean_lost_recovery_duration_seconds": 0.46,
+      "max_lost_recovery_duration_frames": 90,
+      "max_lost_recovery_duration_seconds": 3.0,
+      "peak_simultaneous_tracks": 5,
+      "average_active_tracks_per_frame": 3.55,
+      "track_fragmentation_count": 13,
+      "removed_events_count": 29332,
+      "removed_to_new_track_events_count": 9,
+      "tracker_only_time_seconds": 2.745,
+      "tracker_only_cpu_fps": 655.7,
+      "mean_memory_rss_mb": 650.5,
+      "peak_memory_rss_mb": 657.8
+    },
+    {
+      "tracker": "BoT-SORT",
+      "total_frames_processed": 1800,
+      "total_unique_track_ids": 25,
+      "tracks_lt_1sec": 5,
+      "tracks_gte_5sec": 10,
+      "max_continuous_track_duration_frames": 971,
+      "max_continuous_track_duration_seconds": 32.37,
+      "median_track_duration_frames": 100.0,
+      "mean_track_duration_frames": 276.2,
+      "lost_to_tracked_recoveries": 60,
+      "mean_lost_recovery_duration_frames": 10.0,
+      "mean_lost_recovery_duration_seconds": 0.33,
+      "max_lost_recovery_duration_frames": 71,
+      "max_lost_recovery_duration_seconds": 2.37,
+      "peak_simultaneous_tracks": 5,
+      "average_active_tracks_per_frame": 3.54,
+      "track_fragmentation_count": 21,
+      "removed_events_count": 50422,
+      "removed_to_new_track_events_count": 20,
+      "tracker_only_time_seconds": 1.677,
+      "tracker_only_cpu_fps": 1073.5,
+      "mean_memory_rss_mb": 650.5,
+      "peak_memory_rss_mb": 657.8
+    },
+    {
+      "tracker": "SORT",
+      "total_frames_processed": 1800,
+      "total_unique_track_ids": 26,
+      "tracks_lt_1sec": 5,
+      "tracks_gte_5sec": 12,
+      "max_continuous_track_duration_frames": 1408,
+      "max_continuous_track_duration_seconds": 46.93,
+      "median_track_duration_frames": 129.0,
+      "mean_track_duration_frames": 273.6,
+      "lost_to_tracked_recoveries": 140,
+      "mean_lost_recovery_duration_frames": 8.6,
+      "mean_lost_recovery_duration_seconds": 0.29,
+      "max_lost_recovery_duration_frames": 89,
+      "max_lost_recovery_duration_seconds": 2.97,
+      "peak_simultaneous_tracks": 5,
+      "average_active_tracks_per_frame": 3.36,
+      "track_fragmentation_count": 22,
+      "removed_events_count": 26,
+      "removed_to_new_track_events_count": 20,
+      "tracker_only_time_seconds": 0.621,
+      "tracker_only_cpu_fps": 2899.4,
+      "mean_memory_rss_mb": 650.5,
+      "peak_memory_rss_mb": 657.8
+    }
+  ],
+  "aagam_difficult_window": [
+    {
+      "tracker": "ByteTrack",
+      "window_frames": "272 to 726",
+      "total_window_frames": 455,
+      "active_tracked_frames": 455,
+      "continuity_pct": 100.0,
+      "unique_tids_in_window": [
+        1,
+        2,
+        7,
+        8,
+        10,
+        11
+      ],
+      "unique_tid_count": 6,
+      "inferred_id_switches": 0,
+      "fragmentations": 5
+    },
+    {
+      "tracker": "OC-SORT",
+      "window_frames": "272 to 726",
+      "total_window_frames": 455,
+      "active_tracked_frames": 455,
+      "continuity_pct": 100.0,
+      "unique_tids_in_window": [
+        1,
+        2,
+        9,
+        23,
+        32
+      ],
+      "unique_tid_count": 5,
+      "inferred_id_switches": 0,
+      "fragmentations": 4
+    },
+    {
+      "tracker": "BoT-SORT",
+      "window_frames": "272 to 726",
+      "total_window_frames": 455,
+      "active_tracked_frames": 455,
+      "continuity_pct": 100.0,
+      "unique_tids_in_window": [
+        4,
+        5,
+        20,
+        22,
+        29,
+        31,
+        33,
+        37
+      ],
+      "unique_tid_count": 8,
+      "inferred_id_switches": 0,
+      "fragmentations": 7
+    },
+    {
+      "tracker": "SORT",
+      "window_frames": "272 to 726",
+      "total_window_frames": 455,
+      "active_tracked_frames": 455,
+      "continuity_pct": 100.0,
+      "unique_tids_in_window": [
+        1,
+        2,
+        8,
+        10,
+        11,
+        12,
+        13,
+        15
+      ],
+      "unique_tid_count": 8,
+      "inferred_id_switches": 0,
+      "fragmentations": 7
+    }
+  ],
+  "harshil_difficult_window": [
+    {
+      "tracker": "ByteTrack",
+      "window_frames": "564 to 1437",
+      "total_window_frames": 874,
+      "active_tracked_frames": 656,
+      "continuity_pct": 75.06,
+      "unique_tids_in_window": [
+        2,
+        8,
+        11,
+        12,
+        19,
+        21
+      ],
+      "unique_tid_count": 6,
+      "inferred_id_switches": 1,
+      "fragmentations": 5
+    },
+    {
+      "tracker": "OC-SORT",
+      "window_frames": "564 to 1437",
+      "total_window_frames": 874,
+      "active_tracked_frames": 669,
+      "continuity_pct": 76.54,
+      "unique_tids_in_window": [
+        2,
+        23,
+        32,
+        38,
+        40,
+        42,
+        59,
+        65,
+        67
+      ],
+      "unique_tid_count": 9,
+      "inferred_id_switches": 1,
+      "fragmentations": 8
+    },
+    {
+      "tracker": "BoT-SORT",
+      "window_frames": "564 to 1437",
+      "total_window_frames": 874,
+      "active_tracked_frames": 668,
+      "continuity_pct": 76.43,
+      "unique_tids_in_window": [
+        5,
+        22,
+        33,
+        37,
+        39,
+        41,
+        43,
+        52,
+        53,
+        60,
+        66,
+        69
+      ],
+      "unique_tid_count": 12,
+      "inferred_id_switches": 3,
+      "fragmentations": 11
+    },
+    {
+      "tracker": "SORT",
+      "window_frames": "564 to 1437",
+      "total_window_frames": 874,
+      "active_tracked_frames": 645,
+      "continuity_pct": 73.8,
+      "unique_tids_in_window": [
+        2,
+        10,
+        14,
+        15,
+        16,
+        17,
+        20,
+        23,
+        25,
+        26
+      ],
+      "unique_tid_count": 10,
+      "inferred_id_switches": 3,
+      "fragmentations": 9
+    }
+  ],
+  "scene_category_breakdown": [
+    {
+      "category": "Standing / Intro",
+      "frame_range": "0 to 300",
+      "trackers": {
+        "ByteTrack": {
+          "unique_ids": 7,
+          "avg_active_tracks": 2.96,
+          "inferred_switches": 0
+        },
+        "OC-SORT": {
+          "unique_ids": 5,
+          "avg_active_tracks": 2.98,
+          "inferred_switches": 0
+        },
+        "BoT-SORT": {
+          "unique_ids": 7,
+          "avg_active_tracks": 2.97,
+          "inferred_switches": 0
+        },
+        "SORT": {
+          "unique_ids": 7,
+          "avg_active_tracks": 2.9,
+          "inferred_switches": 0
+        }
+      }
+    },
+    {
+      "category": "Turning",
+      "frame_range": "150 to 300",
+      "trackers": {
+        "ByteTrack": {
+          "unique_ids": 6,
+          "avg_active_tracks": 3.01,
+          "inferred_switches": 0
+        },
+        "OC-SORT": {
+          "unique_ids": 4,
+          "avg_active_tracks": 3.04,
+          "inferred_switches": 0
+        },
+        "BoT-SORT": {
+          "unique_ids": 6,
+          "avg_active_tracks": 3.02,
+          "inferred_switches": 0
+        },
+        "SORT": {
+          "unique_ids": 6,
+          "avg_active_tracks": 2.97,
+          "inferred_switches": 0
+        }
+      }
+    },
+    {
+      "category": "Bending",
+      "frame_range": "300 to 450",
+      "trackers": {
+        "ByteTrack": {
+          "unique_ids": 5,
+          "avg_active_tracks": 3.36,
+          "inferred_switches": 0
+        },
+        "OC-SORT": {
+          "unique_ids": 4,
+          "avg_active_tracks": 3.4,
+          "inferred_switches": 0
+        },
+        "BoT-SORT": {
+          "unique_ids": 5,
+          "avg_active_tracks": 3.39,
+          "inferred_switches": 0
+        },
+        "SORT": {
+          "unique_ids": 5,
+          "avg_active_tracks": 3.38,
+          "inferred_switches": 0
+        }
+      }
+    },
+    {
+      "category": "Sitting Transition",
+      "frame_range": "300 to 450",
+      "trackers": {
+        "ByteTrack": {
+          "unique_ids": 5,
+          "avg_active_tracks": 3.36,
+          "inferred_switches": 0
+        },
+        "OC-SORT": {
+          "unique_ids": 4,
+          "avg_active_tracks": 3.4,
+          "inferred_switches": 0
+        },
+        "BoT-SORT": {
+          "unique_ids": 5,
+          "avg_active_tracks": 3.39,
+          "inferred_switches": 0
+        },
+        "SORT": {
+          "unique_ids": 5,
+          "avg_active_tracks": 3.38,
+          "inferred_switches": 0
+        }
+      }
+    },
+    {
+      "category": "Seated at Desks",
+      "frame_range": "500 to 1400",
+      "trackers": {
+        "ByteTrack": {
+          "unique_ids": 11,
+          "avg_active_tracks": 3.51,
+          "inferred_switches": 1
+        },
+        "OC-SORT": {
+          "unique_ids": 13,
+          "avg_active_tracks": 3.64,
+          "inferred_switches": 3
+        },
+        "BoT-SORT": {
+          "unique_ids": 16,
+          "avg_active_tracks": 3.63,
+          "inferred_switches": 3
+        },
+        "SORT": {
+          "unique_ids": 16,
+          "avg_active_tracks": 3.42,
+          "inferred_switches": 4
+        }
+      }
+    },
+    {
+      "category": "Desk / Monitor Occlusion",
+      "frame_range": "600 to 1800",
+      "trackers": {
+        "ByteTrack": {
+          "unique_ids": 13,
+          "avg_active_tracks": 3.53,
+          "inferred_switches": 1
+        },
+        "OC-SORT": {
+          "unique_ids": 14,
+          "avg_active_tracks": 3.69,
+          "inferred_switches": 3
+        },
+        "BoT-SORT": {
+          "unique_ids": 17,
+          "avg_active_tracks": 3.67,
+          "inferred_switches": 3
+        },
+        "SORT": {
+          "unique_ids": 18,
+          "avg_active_tracks": 3.46,
+          "inferred_switches": 4
+        }
+      }
+    },
+    {
+      "category": "Far-Distance / Small Person",
+      "frame_range": "100 to 300",
+      "trackers": {
+        "ByteTrack": {
+          "unique_ids": 6,
+          "avg_active_tracks": 2.99,
+          "inferred_switches": 0
+        },
+        "OC-SORT": {
+          "unique_ids": 4,
+          "avg_active_tracks": 3.02,
+          "inferred_switches": 0
+        },
+        "BoT-SORT": {
+          "unique_ids": 6,
+          "avg_active_tracks": 3.01,
+          "inferred_switches": 0
+        },
+        "SORT": {
+          "unique_ids": 6,
+          "avg_active_tracks": 2.97,
+          "inferred_switches": 0
+        }
+      }
+    }
+  ],
+  "gap_analysis_summary": [
+    {
+      "tracker": "ByteTrack",
+      "gap_type": "LOST_to_TRACKED_recovery",
+      "count": 49,
+      "min_frames": 2,
+      "min_seconds": 0.07,
+      "median_frames": 5.0,
+      "median_seconds": 0.17,
+      "mean_frames": 11.2,
+      "mean_seconds": 0.37,
+      "max_frames": 84,
+      "max_seconds": 2.8
+    },
+    {
+      "tracker": "ByteTrack",
+      "gap_type": "REMOVED_to_NEW_TRACK",
+      "count": 13,
+      "min_frames": 146,
+      "min_seconds": 4.87,
+      "median_frames": 205.0,
+      "median_seconds": 6.83,
+      "mean_frames": 216.3,
+      "mean_seconds": 7.21,
+      "max_frames": 287,
+      "max_seconds": 9.57
+    },
+    {
+      "tracker": "OC-SORT",
+      "gap_type": "LOST_to_TRACKED_recovery",
+      "count": 80,
+      "min_frames": 2,
+      "min_seconds": 0.07,
+      "median_frames": 6.0,
+      "median_seconds": 0.2,
+      "mean_frames": 13.9,
+      "mean_seconds": 0.46,
+      "max_frames": 90,
+      "max_seconds": 3.0
+    },
+    {
+      "tracker": "OC-SORT",
+      "gap_type": "REMOVED_to_NEW_TRACK",
+      "count": 9,
+      "min_frames": 118,
+      "min_seconds": 3.93,
+      "median_frames": 244.0,
+      "median_seconds": 8.13,
+      "mean_frames": 225.0,
+      "mean_seconds": 7.5,
+      "max_frames": 286,
+      "max_seconds": 9.53
+    },
+    {
+      "tracker": "BoT-SORT",
+      "gap_type": "LOST_to_TRACKED_recovery",
+      "count": 60,
+      "min_frames": 2,
+      "min_seconds": 0.07,
+      "median_frames": 6.0,
+      "median_seconds": 0.2,
+      "mean_frames": 10.0,
+      "mean_seconds": 0.33,
+      "max_frames": 71,
+      "max_seconds": 2.37
+    },
+    {
+      "tracker": "BoT-SORT",
+      "gap_type": "REMOVED_to_NEW_TRACK",
+      "count": 20,
+      "min_frames": 109,
+      "min_seconds": 3.63,
+      "median_frames": 198.0,
+      "median_seconds": 6.6,
+      "mean_frames": 206.7,
+      "mean_seconds": 6.89,
+      "max_frames": 300,
+      "max_seconds": 10.0
+    },
+    {
+      "tracker": "SORT",
+      "gap_type": "LOST_to_TRACKED_recovery",
+      "count": 140,
+      "min_frames": 2,
+      "min_seconds": 0.07,
+      "median_frames": 3.0,
+      "median_seconds": 0.1,
+      "mean_frames": 8.6,
+      "mean_seconds": 0.29,
+      "max_frames": 89,
+      "max_seconds": 2.97
+    },
+    {
+      "tracker": "SORT",
+      "gap_type": "REMOVED_to_NEW_TRACK",
+      "count": 20,
+      "min_frames": 94,
+      "min_seconds": 3.13,
+      "median_frames": 197.0,
+      "median_seconds": 6.57,
+      "mean_frames": 193.4,
+      "mean_seconds": 6.45,
+      "max_frames": 276,
+      "max_seconds": 9.2
+    }
+  ],
+  "id_switch_counts": {
+    "ByteTrack": 1,
+    "OC-SORT": 3,
+    "BoT-SORT": 3,
+    "SORT": 4
+  }
+}

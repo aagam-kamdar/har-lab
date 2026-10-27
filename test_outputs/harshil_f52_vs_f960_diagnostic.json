@@ -1,0 +1,5717 @@
+{
+  "original_pipeline": [
+    {
+      "frame": 0,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        664,
+        55,
+        805,
+        242
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "aagam",
+      "body_score": 0.7766,
+      "body_margin": 0.1436,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 1,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        662,
+        55,
+        798,
+        236
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.5853,
+      "body_margin": 0.5853,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 2,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        658,
+        55,
+        800,
+        244
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6013,
+      "body_margin": 0.6013,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 3,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        655,
+        55,
+        798,
+        246
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.5814,
+      "body_margin": 0.5814,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 4,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        655,
+        55,
+        798,
+        246
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.5776,
+      "body_margin": 0.5776,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 5,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        655,
+        55,
+        796,
+        243
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.577,
+      "body_margin": 0.577,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 6,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        658,
+        55,
+        795,
+        239
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.5997,
+      "body_margin": 0.5997,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 7,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        657,
+        56,
+        793,
+        238
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.5871,
+      "body_margin": 0.5871,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 8,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        656,
+        57,
+        792,
+        238
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.592,
+      "body_margin": 0.592,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 9,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        658,
+        58,
+        797,
+        242
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6147,
+      "body_margin": 0.6147,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 10,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        660,
+        60,
+        806,
+        252
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6435,
+      "body_margin": 0.6435,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 11,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        660,
+        59,
+        810,
+        257
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.641,
+      "body_margin": 0.641,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 12,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        661,
+        59,
+        810,
+        256
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.632,
+      "body_margin": 0.632,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 13,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        662,
+        61,
+        809,
+        253
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6532,
+      "body_margin": 0.6532,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 14,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        663,
+        62,
+        809,
+        253
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6407,
+      "body_margin": 0.6407,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 15,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        663,
+        63,
+        809,
+        252
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6589,
+      "body_margin": 0.6589,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 16,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        662,
+        64,
+        809,
+        252
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6444,
+      "body_margin": 0.6444,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 17,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        663,
+        65,
+        809,
+        252
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6468,
+      "body_margin": 0.6468,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 18,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        662,
+        65,
+        809,
+        251
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6406,
+      "body_margin": 0.6406,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 19,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        663,
+        67,
+        809,
+        249
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.66,
+      "body_margin": 0.66,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 20,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        663,
+        68,
+        808,
+        248
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6633,
+      "body_margin": 0.6633,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 21,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        663,
+        69,
+        808,
+        248
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6719,
+      "body_margin": 0.6719,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 22,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        662,
+        69,
+        809,
+        249
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.668,
+      "body_margin": 0.668,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 23,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        662,
+        69,
+        810,
+        249
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6544,
+      "body_margin": 0.6544,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 24,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        661,
+        69,
+        811,
+        250
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6634,
+      "body_margin": 0.6634,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 25,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        661,
+        68,
+        811,
+        251
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6749,
+      "body_margin": 0.6749,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 26,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        659,
+        68,
+        812,
+        252
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6431,
+      "body_margin": 0.6431,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 27,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        658,
+        68,
+        813,
+        254
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6375,
+      "body_margin": 0.6375,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 28,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        660,
+        68,
+        813,
+        252
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6427,
+      "body_margin": 0.6427,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 29,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        661,
+        68,
+        814,
+        251
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.649,
+      "body_margin": 0.649,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 30,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        660,
+        67,
+        814,
+        250
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6248,
+      "body_margin": 0.6248,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 31,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        658,
+        66,
+        813,
+        251
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6306,
+      "body_margin": 0.6306,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 32,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        657,
+        65,
+        813,
+        251
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6288,
+      "body_margin": 0.6288,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 33,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        657,
+        63,
+        810,
+        246
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6529,
+      "body_margin": 0.6529,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 34,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        653,
+        62,
+        808,
+        247
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6312,
+      "body_margin": 0.6312,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 35,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        652,
+        62,
+        808,
+        249
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6498,
+      "body_margin": 0.6498,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 36,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        651,
+        63,
+        805,
+        247
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6251,
+      "body_margin": 0.6251,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 37,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        650,
+        63,
+        805,
+        248
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6392,
+      "body_margin": 0.6392,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 38,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        650,
+        64,
+        805,
+        250
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6329,
+      "body_margin": 0.6329,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 39,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        648,
+        64,
+        804,
+        252
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6236,
+      "body_margin": 0.6236,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 40,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        647,
+        64,
+        802,
+        253
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6427,
+      "body_margin": 0.6427,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 41,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        647,
+        64,
+        802,
+        253
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6375,
+      "body_margin": 0.6375,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 42,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        646,
+        63,
+        801,
+        254
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6453,
+      "body_margin": 0.6453,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 43,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        645,
+        63,
+        801,
+        257
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6317,
+      "body_margin": 0.6317,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 44,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        646,
+        63,
+        802,
+        257
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6429,
+      "body_margin": 0.6429,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 45,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        646,
+        62,
+        801,
+        257
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.635,
+      "body_margin": 0.635,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 46,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        646,
+        62,
+        802,
+        259
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6352,
+      "body_margin": 0.6352,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 47,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        647,
+        63,
+        802,
+        260
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6279,
+      "body_margin": 0.6279,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 48,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        647,
+        63,
+        802,
+        260
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6181,
+      "body_margin": 0.6181,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 49,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        647,
+        62,
+        802,
+        260
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6167,
+      "body_margin": 0.6167,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 50,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        647,
+        62,
+        802,
+        260
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6196,
+      "body_margin": 0.6196,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 51,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        646,
+        61,
+        800,
+        260
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6041,
+      "body_margin": 0.6041,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 52,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        646,
+        60,
+        799,
+        260
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6063,
+      "body_margin": 0.6063,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 53,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        646,
+        61,
+        797,
+        259
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6143,
+      "body_margin": 0.6143,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 54,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        645,
+        61,
+        794,
+        258
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.5998,
+      "body_margin": 0.5998,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 55,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        644,
+        61,
+        789,
+        256
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6085,
+      "body_margin": 0.6085,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 56,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        643,
+        62,
+        785,
+        256
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "harshil",
+      "body_score": 0.6642,
+      "body_margin": 0.6642,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 57,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        642,
+        63,
+        782,
+        256
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6024,
+      "body_margin": 0.6024,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 58,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        641,
+        64,
+        780,
+        257
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6068,
+      "body_margin": 0.6068,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 59,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        642,
+        64,
+        779,
+        257
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6255,
+      "body_margin": 0.6255,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 60,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        642,
+        64,
+        777,
+        257
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "harshil",
+      "body_score": 0.6574,
+      "body_margin": 0.6574,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 61,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        643,
+        64,
+        777,
+        257
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6346,
+      "body_margin": 0.6346,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 62,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        643,
+        64,
+        774,
+        255
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "harshil",
+      "body_score": 0.6782,
+      "body_margin": 0.6782,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 63,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        642,
+        64,
+        770,
+        253
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.637,
+      "body_margin": 0.637,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 64,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        643,
+        64,
+        768,
+        252
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "harshil",
+      "body_score": 0.6873,
+      "body_margin": 0.6873,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 65,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        644,
+        63,
+        768,
+        251
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6402,
+      "body_margin": 0.6402,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 66,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        644,
+        63,
+        766,
+        249
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "aagam",
+      "body_score": 0.8016,
+      "body_margin": 0.8016,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 67,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        644,
+        62,
+        765,
+        247
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.628,
+      "body_margin": 0.628,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 68,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        644,
+        60,
+        764,
+        247
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "harshil",
+      "body_score": 0.666,
+      "body_margin": 0.666,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 69,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        642,
+        60,
+        763,
+        251
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6296,
+      "body_margin": 0.6296,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 70,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        646,
+        60,
+        763,
+        246
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "harshil",
+      "body_score": 0.6723,
+      "body_margin": 0.6723,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 71,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        644,
+        59,
+        764,
+        250
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6293,
+      "body_margin": 0.6293,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 72,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        645,
+        59,
+        761,
+        246
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "harshil",
+      "body_score": 0.678,
+      "body_margin": 0.678,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 73,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        645,
+        60,
+        758,
+        243
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6271,
+      "body_margin": 0.6271,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 74,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        648,
+        61,
+        763,
+        249
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "harshil",
+      "body_score": 0.6905,
+      "body_margin": 0.6905,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 75,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        647,
+        62,
+        762,
+        250
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "aagam",
+      "body_score": 0.8261,
+      "body_margin": 0.8261,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 76,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        647,
+        62,
+        762,
+        251
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6538,
+      "body_margin": 0.6538,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 77,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        648,
+        62,
+        758,
+        244
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.6365,
+      "body_margin": 0.6365,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 81,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 1,
+      "bbox": [
+        705,
+        0,
+        890,
+        371
+      ],
+      "face_detected": true,
+      "face_top_match": "soham",
+      "face_score": 0.6088,
+      "face_margin": 0.3283,
+      "body_match": null,
+      "body_score": 0.0,
+      "body_margin": 0.0,
+      "locked": true,
+      "locked_name": "soham"
+    },
+    {
+      "frame": 82,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 1,
+      "bbox": [
+        702,
+        0,
+        886,
+        370
+      ],
+      "face_detected": true,
+      "face_top_match": "soham",
+      "face_score": 0.6208,
+      "face_margin": 0.3151,
+      "body_match": null,
+      "body_score": 0.0,
+      "body_margin": 0.0,
+      "locked": true,
+      "locked_name": "soham"
+    },
+    {
+      "frame": 83,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 1,
+      "bbox": [
+        701,
+        0,
+        885,
+        372
+      ],
+      "face_detected": true,
+      "face_top_match": "soham",
+      "face_score": 0.6374,
+      "face_margin": 0.29,
+      "body_match": null,
+      "body_score": 0.0,
+      "body_margin": 0.0,
+      "locked": true,
+      "locked_name": "soham"
+    },
+    {
+      "frame": 84,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 1,
+      "bbox": [
+        700,
+        0,
+        884,
+        373
+      ],
+      "face_detected": true,
+      "face_top_match": "soham",
+      "face_score": 0.603,
+      "face_margin": 0.2535,
+      "body_match": null,
+      "body_score": 0.0,
+      "body_margin": 0.0,
+      "locked": true,
+      "locked_name": "soham"
+    },
+    {
+      "frame": 85,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 1,
+      "bbox": [
+        701,
+        0,
+        884,
+        372
+      ],
+      "face_detected": true,
+      "face_top_match": "soham",
+      "face_score": 0.6367,
+      "face_margin": 0.2751,
+      "body_match": null,
+      "body_score": 0.0,
+      "body_margin": 0.0,
+      "locked": true,
+      "locked_name": "soham"
+    },
+    {
+      "frame": 86,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 1,
+      "bbox": [
+        701,
+        0,
+        883,
+        371
+      ],
+      "face_detected": true,
+      "face_top_match": "soham",
+      "face_score": 0.6798,
+      "face_margin": 0.3315,
+      "body_match": null,
+      "body_score": 0.0,
+      "body_margin": 0.0,
+      "locked": true,
+      "locked_name": "soham"
+    },
+    {
+      "frame": 87,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 1,
+      "bbox": [
+        702,
+        0,
+        883,
+        371
+      ],
+      "face_detected": true,
+      "face_top_match": "soham",
+      "face_score": 0.6793,
+      "face_margin": 0.3458,
+      "body_match": null,
+      "body_score": 0.0,
+      "body_margin": 0.0,
+      "locked": true,
+      "locked_name": "soham"
+    },
+    {
+      "frame": 88,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 1,
+      "bbox": [
+        702,
+        0,
+        882,
+        370
+      ],
+      "face_detected": true,
+      "face_top_match": "soham",
+      "face_score": 0.7055,
+      "face_margin": 0.3833,
+      "body_match": null,
+      "body_score": 0.0,
+      "body_margin": 0.0,
+      "locked": true,
+      "locked_name": "soham"
+    },
+    {
+      "frame": 89,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 1,
+      "bbox": [
+        703,
+        0,
+        882,
+        369
+      ],
+      "face_detected": true,
+      "face_top_match": "soham",
+      "face_score": 0.7163,
+      "face_margin": 0.4188,
+      "body_match": null,
+      "body_score": 0.0,
+      "body_margin": 0.0,
+      "locked": true,
+      "locked_name": "soham"
+    },
+    {
+      "frame": 89,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        643,
+        61,
+        743,
+        233
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.5746,
+      "body_margin": 0.5746,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 90,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 1,
+      "bbox": [
+        703,
+        0,
+        880,
+        368
+      ],
+      "face_detected": true,
+      "face_top_match": "soham",
+      "face_score": 0.7018,
+      "face_margin": 0.4462,
+      "body_match": null,
+      "body_score": 0.0,
+      "body_margin": 0.0,
+      "locked": true,
+      "locked_name": "soham"
+    },
+    {
+      "frame": 90,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        645,
+        61,
+        739,
+        229
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.5539,
+      "body_margin": 0.5539,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 91,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 1,
+      "bbox": [
+        702,
+        0,
+        879,
+        368
+      ],
+      "face_detected": true,
+      "face_top_match": "soham",
+      "face_score": 0.6784,
+      "face_margin": 0.4614,
+      "body_match": null,
+      "body_score": 0.0,
+      "body_margin": 0.0,
+      "locked": true,
+      "locked_name": "soham"
+    },
+    {
+      "frame": 91,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        645,
+        61,
+        736,
+        227
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.5638,
+      "body_margin": 0.5638,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 92,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 1,
+      "bbox": [
+        701,
+        0,
+        877,
+        368
+      ],
+      "face_detected": true,
+      "face_top_match": "soham",
+      "face_score": 0.6509,
+      "face_margin": 0.3786,
+      "body_match": null,
+      "body_score": 0.0,
+      "body_margin": 0.0,
+      "locked": true,
+      "locked_name": "soham"
+    },
+    {
+      "frame": 92,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        645,
+        60,
+        734,
+        227
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.5464,
+      "body_margin": 0.5464,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 93,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 1,
+      "bbox": [
+        700,
+        0,
+        874,
+        368
+      ],
+      "face_detected": true,
+      "face_top_match": "soham",
+      "face_score": 0.6811,
+      "face_margin": 0.3581,
+      "body_match": null,
+      "body_score": 0.0,
+      "body_margin": 0.0,
+      "locked": true,
+      "locked_name": "soham"
+    },
+    {
+      "frame": 93,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        644,
+        60,
+        732,
+        227
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.549,
+      "body_margin": 0.549,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 94,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 1,
+      "bbox": [
+        700,
+        0,
+        873,
+        368
+      ],
+      "face_detected": true,
+      "face_top_match": "soham",
+      "face_score": 0.7099,
+      "face_margin": 0.3652,
+      "body_match": null,
+      "body_score": 0.0,
+      "body_margin": 0.0,
+      "locked": true,
+      "locked_name": "soham"
+    },
+    {
+      "frame": 94,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        642,
+        59,
+        731,
+        231
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.5569,
+      "body_margin": 0.5569,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 95,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 1,
+      "bbox": [
+        699,
+        0,
+        871,
+        368
+      ],
+      "face_detected": true,
+      "face_top_match": "soham",
+      "face_score": 0.6988,
+      "face_margin": 0.3816,
+      "body_match": null,
+      "body_score": 0.0,
+      "body_margin": 0.0,
+      "locked": true,
+      "locked_name": "soham"
+    },
+    {
+      "frame": 95,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        641,
+        58,
+        731,
+        236
+      ],
+      "face_detected": false,
+      "face_top_match": null,
+      "face_score": 0.0,
+      "face_margin": 0.0,
+      "body_match": "swayam",
+      "body_score": 0.5552,
+      "body_margin": 0.5552,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 96,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 1,
+      "bbox": [
+        699,
+        0,
+        869,
+        367
+      ],
+      "face_detected": true,
+      "face_top_match": "soham",
+      "face_score": 0.7238,
+      "face_margin": 0.3962,
+      "body_match": null,
+      "body_score": 0.0,
+      "body_margin": 0.0,
+      "locked": true,
+      "locked_name": "soham"
+    },
+    {
+      "frame": 96,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        642,
+        57,
+        731,
+        238
+      ],
+      "face_detected": true,
+      "face_top_match": "aagam",
+      "face_score": 0.3017,
+      "face_margin": 0.0851,
+      "body_match": "swayam",
+      "body_score": 0.5504,
+      "body_margin": 0.5504,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 97,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 1,
+      "bbox": [
+        697,
+        0,
+        867,
+        366
+      ],
+      "face_detected": true,
+      "face_top_match": "soham",
+      "face_score": 0.6861,
+      "face_margin": 0.3846,
+      "body_match": null,
+      "body_score": 0.0,
+      "body_margin": 0.0,
+      "locked": true,
+      "locked_name": "soham"
+    },
+    {
+      "frame": 97,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        644,
+        56,
+        728,
+        230
+      ],
+      "face_detected": true,
+      "face_top_match": "aagam",
+      "face_score": 0.3399,
+      "face_margin": 0.0433,
+      "body_match": "swayam",
+      "body_score": 0.5358,
+      "body_margin": 0.5358,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 98,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 1,
+      "bbox": [
+        696,
+        0,
+        866,
+        366
+      ],
+      "face_detected": true,
+      "face_top_match": "soham",
+      "face_score": 0.6652,
+      "face_margin": 0.3969,
+      "body_match": null,
+      "body_score": 0.0,
+      "body_margin": 0.0,
+      "locked": true,
+      "locked_name": "soham"
+    },
+    {
+      "frame": 98,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        646,
+        57,
+        726,
+        226
+      ],
+      "face_detected": true,
+      "face_top_match": "aagam",
+      "face_score": 0.2786,
+      "face_margin": 0.0728,
+      "body_match": "swayam",
+      "body_score": 0.525,
+      "body_margin": 0.525,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 99,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 1,
+      "bbox": [
+        695,
+        0,
+        865,
+        367
+      ],
+      "face_detected": true,
+      "face_top_match": "soham",
+      "face_score": 0.6781,
+      "face_margin": 0.3792,
+      "body_match": null,
+      "body_score": 0.0,
+      "body_margin": 0.0,
+      "locked": true,
+      "locked_name": "soham"
+    },
+    {
+      "frame": 99,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 3,
+      "bbox": [
+        647,
+        60,
+        723,
+        221
+      ],
+      "face_detected": true,
+      "face_top_match": "aagam",
+      "face_score": 0.3033,
+      "face_margin": 0.0002,
+      "body_match": "swayam",
+      "body_score": 0.5154,
+      "body_margin": 0.5154,
+      "locked": false,
+      "locked_name": null
+    },
+    {
+      "frame": 100,
+      "pipeline": "ORIGINAL (run_full_video_verification)",
+      "detector": "yolo26n-pose.pt (via cached_yolo26pose_detections_1800f.json)",
+      "track_id": 1,
+      "bbox": [
+        694,
+        0,
+        864,
+        367
+      ],
+      "face_detected": true,
+      "face_top_match": "soham",
+      "face_score": 0.6809,
+      "face_margin": 0.3718,
+      "body_match": null,
+      "body_score": 0.0,
+      "body_margin": 0.0,
+      "locked": true,
+      "locked_name": "soham"
+    }
+  ],
+  "adapter_pipeline": [
+    {
+      "frame": 0,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        663,
+        59,
+        809,
+        245
+      ],
+      "display_name": "Identifying...",
+      "likely_student": null,
+      "status": "IDENTIFYING",
+      "affinity": 0.0,
+      "margin": 0.0,
+      "face_ema": {
+        "aagam": 0.0,
+        "swayam": 0.0,
+        "harshil": 0.0,
+        "soham": 0.0
+      },
+      "body_ema": {
+        "aagam": 0.405,
+        "swayam": 0.322,
+        "harshil": 0.349,
+        "soham": 0.302
+      }
+    },
+    {
+      "frame": 1,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        664,
+        59,
+        806,
+        240
+      ],
+      "display_name": "Identifying...",
+      "likely_student": null,
+      "status": "IDENTIFYING",
+      "affinity": 0.0,
+      "margin": 0.0,
+      "face_ema": {
+        "aagam": 0.0,
+        "swayam": 0.0,
+        "harshil": 0.0,
+        "soham": 0.0
+      },
+      "body_ema": {
+        "aagam": 0.405,
+        "swayam": 0.322,
+        "harshil": 0.349,
+        "soham": 0.302
+      }
+    },
+    {
+      "frame": 2,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        663,
+        59,
+        805,
+        240
+      ],
+      "display_name": "Identifying...",
+      "likely_student": null,
+      "status": "IDENTIFYING",
+      "affinity": 0.0,
+      "margin": 0.0,
+      "face_ema": {
+        "aagam": 0.0,
+        "swayam": 0.0,
+        "harshil": 0.0,
+        "soham": 0.0
+      },
+      "body_ema": {
+        "aagam": 0.405,
+        "swayam": 0.322,
+        "harshil": 0.349,
+        "soham": 0.302
+      }
+    },
+    {
+      "frame": 3,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        663,
+        59,
+        805,
+        240
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.625,
+      "margin": 0.11,
+      "face_ema": {
+        "aagam": 0.0,
+        "swayam": 0.0,
+        "harshil": 0.0,
+        "soham": 0.0
+      },
+      "body_ema": {
+        "aagam": 0.625,
+        "swayam": 0.458,
+        "harshil": 0.516,
+        "soham": 0.452
+      }
+    },
+    {
+      "frame": 4,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        664,
+        60,
+        806,
+        240
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.625,
+      "margin": 0.11,
+      "face_ema": {
+        "aagam": 0.0,
+        "swayam": 0.0,
+        "harshil": 0.0,
+        "soham": 0.0
+      },
+      "body_ema": {
+        "aagam": 0.625,
+        "swayam": 0.458,
+        "harshil": 0.516,
+        "soham": 0.452
+      }
+    },
+    {
+      "frame": 5,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        666,
+        60,
+        804,
+        236
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.625,
+      "margin": 0.11,
+      "face_ema": {
+        "aagam": 0.0,
+        "swayam": 0.0,
+        "harshil": 0.0,
+        "soham": 0.0
+      },
+      "body_ema": {
+        "aagam": 0.625,
+        "swayam": 0.458,
+        "harshil": 0.516,
+        "soham": 0.452
+      }
+    },
+    {
+      "frame": 6,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        666,
+        60,
+        802,
+        231
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.705,
+      "margin": 0.1,
+      "face_ema": {
+        "aagam": 0.0,
+        "swayam": 0.0,
+        "harshil": 0.0,
+        "soham": 0.0
+      },
+      "body_ema": {
+        "aagam": 0.705,
+        "swayam": 0.535,
+        "harshil": 0.605,
+        "soham": 0.541
+      }
+    },
+    {
+      "frame": 7,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        666,
+        61,
+        801,
+        230
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.705,
+      "margin": 0.1,
+      "face_ema": {
+        "aagam": 0.0,
+        "swayam": 0.0,
+        "harshil": 0.0,
+        "soham": 0.0
+      },
+      "body_ema": {
+        "aagam": 0.705,
+        "swayam": 0.535,
+        "harshil": 0.605,
+        "soham": 0.541
+      }
+    },
+    {
+      "frame": 8,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        665,
+        61,
+        800,
+        230
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.705,
+      "margin": 0.1,
+      "face_ema": {
+        "aagam": 0.0,
+        "swayam": 0.0,
+        "harshil": 0.0,
+        "soham": 0.0
+      },
+      "body_ema": {
+        "aagam": 0.705,
+        "swayam": 0.535,
+        "harshil": 0.605,
+        "soham": 0.541
+      }
+    },
+    {
+      "frame": 9,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        665,
+        61,
+        800,
+        229
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.705,
+      "margin": 0.1,
+      "face_ema": {
+        "aagam": 0.0,
+        "swayam": 0.0,
+        "harshil": 0.0,
+        "soham": 0.0
+      },
+      "body_ema": {
+        "aagam": 0.705,
+        "swayam": 0.535,
+        "harshil": 0.605,
+        "soham": 0.541
+      }
+    },
+    {
+      "frame": 10,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        665,
+        61,
+        800,
+        227
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.705,
+      "margin": 0.1,
+      "face_ema": {
+        "aagam": 0.0,
+        "swayam": 0.0,
+        "harshil": 0.0,
+        "soham": 0.0
+      },
+      "body_ema": {
+        "aagam": 0.705,
+        "swayam": 0.535,
+        "harshil": 0.605,
+        "soham": 0.541
+      }
+    },
+    {
+      "frame": 11,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        671,
+        60,
+        790,
+        201
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.705,
+      "margin": 0.1,
+      "face_ema": {
+        "aagam": 0.0,
+        "swayam": 0.0,
+        "harshil": 0.0,
+        "soham": 0.0
+      },
+      "body_ema": {
+        "aagam": 0.705,
+        "swayam": 0.535,
+        "harshil": 0.605,
+        "soham": 0.541
+      }
+    },
+    {
+      "frame": 12,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        671,
+        57,
+        786,
+        191
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.705,
+      "margin": 0.1,
+      "face_ema": {
+        "aagam": 0.0,
+        "swayam": 0.0,
+        "harshil": 0.0,
+        "soham": 0.0
+      },
+      "body_ema": {
+        "aagam": 0.705,
+        "swayam": 0.535,
+        "harshil": 0.605,
+        "soham": 0.541
+      }
+    },
+    {
+      "frame": 13,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        671,
+        59,
+        785,
+        189
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.705,
+      "margin": 0.1,
+      "face_ema": {
+        "aagam": 0.0,
+        "swayam": 0.0,
+        "harshil": 0.0,
+        "soham": 0.0
+      },
+      "body_ema": {
+        "aagam": 0.705,
+        "swayam": 0.535,
+        "harshil": 0.605,
+        "soham": 0.541
+      }
+    },
+    {
+      "frame": 14,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        670,
+        61,
+        789,
+        195
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.705,
+      "margin": 0.1,
+      "face_ema": {
+        "aagam": 0.0,
+        "swayam": 0.0,
+        "harshil": 0.0,
+        "soham": 0.0
+      },
+      "body_ema": {
+        "aagam": 0.705,
+        "swayam": 0.535,
+        "harshil": 0.605,
+        "soham": 0.541
+      }
+    },
+    {
+      "frame": 15,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        669,
+        63,
+        792,
+        198
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.721,
+      "margin": 0.083,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.721,
+        "swayam": 0.584,
+        "harshil": 0.638,
+        "soham": 0.578
+      }
+    },
+    {
+      "frame": 16,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        668,
+        63,
+        793,
+        200
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.721,
+      "margin": 0.083,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.721,
+        "swayam": 0.584,
+        "harshil": 0.638,
+        "soham": 0.578
+      }
+    },
+    {
+      "frame": 17,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        667,
+        63,
+        795,
+        202
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.721,
+      "margin": 0.083,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.721,
+        "swayam": 0.584,
+        "harshil": 0.638,
+        "soham": 0.578
+      }
+    },
+    {
+      "frame": 18,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        662,
+        64,
+        803,
+        216
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.721,
+      "margin": 0.083,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.721,
+        "swayam": 0.584,
+        "harshil": 0.638,
+        "soham": 0.578
+      }
+    },
+    {
+      "frame": 19,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        659,
+        64,
+        807,
+        225
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.721,
+      "margin": 0.083,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.721,
+        "swayam": 0.584,
+        "harshil": 0.638,
+        "soham": 0.578
+      }
+    },
+    {
+      "frame": 20,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        657,
+        64,
+        810,
+        230
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.721,
+      "margin": 0.083,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.721,
+        "swayam": 0.584,
+        "harshil": 0.638,
+        "soham": 0.578
+      }
+    },
+    {
+      "frame": 21,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        656,
+        64,
+        810,
+        233
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.721,
+      "margin": 0.083,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.721,
+        "swayam": 0.584,
+        "harshil": 0.638,
+        "soham": 0.578
+      }
+    },
+    {
+      "frame": 22,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        655,
+        63,
+        806,
+        229
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.721,
+      "margin": 0.083,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.721,
+        "swayam": 0.584,
+        "harshil": 0.638,
+        "soham": 0.578
+      }
+    },
+    {
+      "frame": 23,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        653,
+        64,
+        807,
+        234
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.721,
+      "margin": 0.083,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.721,
+        "swayam": 0.584,
+        "harshil": 0.638,
+        "soham": 0.578
+      }
+    },
+    {
+      "frame": 24,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        653,
+        64,
+        805,
+        231
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.721,
+      "margin": 0.083,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.721,
+        "swayam": 0.584,
+        "harshil": 0.638,
+        "soham": 0.578
+      }
+    },
+    {
+      "frame": 25,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        664,
+        63,
+        793,
+        201
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.721,
+      "margin": 0.083,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.721,
+        "swayam": 0.584,
+        "harshil": 0.638,
+        "soham": 0.578
+      }
+    },
+    {
+      "frame": 26,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        652,
+        64,
+        805,
+        228
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.721,
+      "margin": 0.083,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.721,
+        "swayam": 0.584,
+        "harshil": 0.638,
+        "soham": 0.578
+      }
+    },
+    {
+      "frame": 27,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        648,
+        62,
+        810,
+        238
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.721,
+      "margin": 0.083,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.721,
+        "swayam": 0.584,
+        "harshil": 0.638,
+        "soham": 0.578
+      }
+    },
+    {
+      "frame": 28,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        647,
+        62,
+        811,
+        243
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.721,
+      "margin": 0.083,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.721,
+        "swayam": 0.584,
+        "harshil": 0.638,
+        "soham": 0.578
+      }
+    },
+    {
+      "frame": 29,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        647,
+        61,
+        811,
+        243
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.721,
+      "margin": 0.083,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.721,
+        "swayam": 0.584,
+        "harshil": 0.638,
+        "soham": 0.578
+      }
+    },
+    {
+      "frame": 30,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        648,
+        59,
+        809,
+        239
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.739,
+      "margin": 0.049,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.739,
+        "swayam": 0.601,
+        "harshil": 0.689,
+        "soham": 0.604
+      }
+    },
+    {
+      "frame": 31,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        647,
+        58,
+        809,
+        241
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.739,
+      "margin": 0.049,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.739,
+        "swayam": 0.601,
+        "harshil": 0.689,
+        "soham": 0.604
+      }
+    },
+    {
+      "frame": 32,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        647,
+        58,
+        809,
+        243
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.739,
+      "margin": 0.049,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.739,
+        "swayam": 0.601,
+        "harshil": 0.689,
+        "soham": 0.604
+      }
+    },
+    {
+      "frame": 33,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        647,
+        59,
+        808,
+        243
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.739,
+      "margin": 0.049,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.739,
+        "swayam": 0.601,
+        "harshil": 0.689,
+        "soham": 0.604
+      }
+    },
+    {
+      "frame": 34,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        649,
+        59,
+        807,
+        241
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.739,
+      "margin": 0.049,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.739,
+        "swayam": 0.601,
+        "harshil": 0.689,
+        "soham": 0.604
+      }
+    },
+    {
+      "frame": 35,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        661,
+        59,
+        790,
+        203
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.739,
+      "margin": 0.049,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.739,
+        "swayam": 0.601,
+        "harshil": 0.689,
+        "soham": 0.604
+      }
+    },
+    {
+      "frame": 36,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        666,
+        60,
+        782,
+        185
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.739,
+      "margin": 0.049,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.739,
+        "swayam": 0.601,
+        "harshil": 0.689,
+        "soham": 0.604
+      }
+    },
+    {
+      "frame": 37,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        666,
+        60,
+        781,
+        181
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.739,
+      "margin": 0.049,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.739,
+        "swayam": 0.601,
+        "harshil": 0.689,
+        "soham": 0.604
+      }
+    },
+    {
+      "frame": 38,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        666,
+        61,
+        778,
+        175
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.739,
+      "margin": 0.049,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.739,
+        "swayam": 0.601,
+        "harshil": 0.689,
+        "soham": 0.604
+      }
+    },
+    {
+      "frame": 39,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        665,
+        61,
+        778,
+        175
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.739,
+      "margin": 0.049,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.739,
+        "swayam": 0.601,
+        "harshil": 0.689,
+        "soham": 0.604
+      }
+    },
+    {
+      "frame": 40,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        661,
+        62,
+        774,
+        173
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.739,
+      "margin": 0.049,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.739,
+        "swayam": 0.601,
+        "harshil": 0.689,
+        "soham": 0.604
+      }
+    },
+    {
+      "frame": 41,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        660,
+        62,
+        772,
+        171
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.739,
+      "margin": 0.049,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.739,
+        "swayam": 0.601,
+        "harshil": 0.689,
+        "soham": 0.604
+      }
+    },
+    {
+      "frame": 42,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        658,
+        62,
+        770,
+        171
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.739,
+      "margin": 0.049,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.739,
+        "swayam": 0.601,
+        "harshil": 0.689,
+        "soham": 0.604
+      }
+    },
+    {
+      "frame": 43,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        656,
+        62,
+        771,
+        173
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.739,
+      "margin": 0.049,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.739,
+        "swayam": 0.601,
+        "harshil": 0.689,
+        "soham": 0.604
+      }
+    },
+    {
+      "frame": 44,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        655,
+        62,
+        770,
+        172
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.739,
+      "margin": 0.049,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.739,
+        "swayam": 0.601,
+        "harshil": 0.689,
+        "soham": 0.604
+      }
+    },
+    {
+      "frame": 45,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        654,
+        62,
+        770,
+        172
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.755,
+      "margin": 0.076,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.755,
+        "swayam": 0.602,
+        "harshil": 0.679,
+        "soham": 0.627
+      }
+    },
+    {
+      "frame": 46,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        654,
+        60,
+        771,
+        170
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.755,
+      "margin": 0.076,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.755,
+        "swayam": 0.602,
+        "harshil": 0.679,
+        "soham": 0.627
+      }
+    },
+    {
+      "frame": 47,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        655,
+        61,
+        771,
+        170
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.755,
+      "margin": 0.076,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.755,
+        "swayam": 0.602,
+        "harshil": 0.679,
+        "soham": 0.627
+      }
+    },
+    {
+      "frame": 48,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        654,
+        61,
+        770,
+        169
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.755,
+      "margin": 0.076,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.755,
+        "swayam": 0.602,
+        "harshil": 0.679,
+        "soham": 0.627
+      }
+    },
+    {
+      "frame": 49,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        654,
+        61,
+        770,
+        168
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.755,
+      "margin": 0.076,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.755,
+        "swayam": 0.602,
+        "harshil": 0.679,
+        "soham": 0.627
+      }
+    },
+    {
+      "frame": 50,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        654,
+        61,
+        769,
+        166
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.755,
+      "margin": 0.076,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.755,
+        "swayam": 0.602,
+        "harshil": 0.679,
+        "soham": 0.627
+      }
+    },
+    {
+      "frame": 51,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        654,
+        60,
+        772,
+        168
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.755,
+      "margin": 0.076,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.755,
+        "swayam": 0.602,
+        "harshil": 0.679,
+        "soham": 0.627
+      }
+    },
+    {
+      "frame": 52,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        654,
+        60,
+        774,
+        169
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.755,
+      "margin": 0.076,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.755,
+        "swayam": 0.602,
+        "harshil": 0.679,
+        "soham": 0.627
+      }
+    },
+    {
+      "frame": 53,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        654,
+        60,
+        775,
+        169
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.755,
+      "margin": 0.076,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.755,
+        "swayam": 0.602,
+        "harshil": 0.679,
+        "soham": 0.627
+      }
+    },
+    {
+      "frame": 54,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        653,
+        61,
+        775,
+        171
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.755,
+      "margin": 0.076,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.755,
+        "swayam": 0.602,
+        "harshil": 0.679,
+        "soham": 0.627
+      }
+    },
+    {
+      "frame": 55,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        652,
+        61,
+        776,
+        172
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.755,
+      "margin": 0.076,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.755,
+        "swayam": 0.602,
+        "harshil": 0.679,
+        "soham": 0.627
+      }
+    },
+    {
+      "frame": 56,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        650,
+        61,
+        777,
+        174
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.755,
+      "margin": 0.076,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.755,
+        "swayam": 0.602,
+        "harshil": 0.679,
+        "soham": 0.627
+      }
+    },
+    {
+      "frame": 57,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        649,
+        61,
+        776,
+        176
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.755,
+      "margin": 0.076,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.755,
+        "swayam": 0.602,
+        "harshil": 0.679,
+        "soham": 0.627
+      }
+    },
+    {
+      "frame": 58,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        650,
+        62,
+        771,
+        173
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.755,
+      "margin": 0.076,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.755,
+        "swayam": 0.602,
+        "harshil": 0.679,
+        "soham": 0.627
+      }
+    },
+    {
+      "frame": 59,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        648,
+        64,
+        768,
+        173
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.755,
+      "margin": 0.076,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.755,
+        "swayam": 0.602,
+        "harshil": 0.679,
+        "soham": 0.627
+      }
+    },
+    {
+      "frame": 60,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        648,
+        64,
+        761,
+        167
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.772,
+      "margin": 0.106,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.772,
+        "swayam": 0.604,
+        "harshil": 0.667,
+        "soham": 0.622
+      }
+    },
+    {
+      "frame": 61,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        645,
+        64,
+        758,
+        170
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.772,
+      "margin": 0.106,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.772,
+        "swayam": 0.604,
+        "harshil": 0.667,
+        "soham": 0.622
+      }
+    },
+    {
+      "frame": 62,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        638,
+        64,
+        758,
+        178
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.772,
+      "margin": 0.106,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.772,
+        "swayam": 0.604,
+        "harshil": 0.667,
+        "soham": 0.622
+      }
+    },
+    {
+      "frame": 63,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        636,
+        64,
+        757,
+        181
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.772,
+      "margin": 0.106,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.772,
+        "swayam": 0.604,
+        "harshil": 0.667,
+        "soham": 0.622
+      }
+    },
+    {
+      "frame": 64,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        637,
+        64,
+        756,
+        182
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.772,
+      "margin": 0.106,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.772,
+        "swayam": 0.604,
+        "harshil": 0.667,
+        "soham": 0.622
+      }
+    },
+    {
+      "frame": 65,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        638,
+        64,
+        756,
+        184
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.772,
+      "margin": 0.106,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.772,
+        "swayam": 0.604,
+        "harshil": 0.667,
+        "soham": 0.622
+      }
+    },
+    {
+      "frame": 66,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        636,
+        65,
+        756,
+        189
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.772,
+      "margin": 0.106,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.772,
+        "swayam": 0.604,
+        "harshil": 0.667,
+        "soham": 0.622
+      }
+    },
+    {
+      "frame": 67,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        636,
+        65,
+        756,
+        192
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.772,
+      "margin": 0.106,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.772,
+        "swayam": 0.604,
+        "harshil": 0.667,
+        "soham": 0.622
+      }
+    },
+    {
+      "frame": 68,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        637,
+        64,
+        754,
+        192
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.772,
+      "margin": 0.106,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.772,
+        "swayam": 0.604,
+        "harshil": 0.667,
+        "soham": 0.622
+      }
+    },
+    {
+      "frame": 69,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        639,
+        65,
+        750,
+        188
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.772,
+      "margin": 0.106,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.772,
+        "swayam": 0.604,
+        "harshil": 0.667,
+        "soham": 0.622
+      }
+    },
+    {
+      "frame": 70,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        640,
+        64,
+        750,
+        188
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.772,
+      "margin": 0.106,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.772,
+        "swayam": 0.604,
+        "harshil": 0.667,
+        "soham": 0.622
+      }
+    },
+    {
+      "frame": 71,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        639,
+        64,
+        749,
+        190
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.772,
+      "margin": 0.106,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.772,
+        "swayam": 0.604,
+        "harshil": 0.667,
+        "soham": 0.622
+      }
+    },
+    {
+      "frame": 72,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        640,
+        63,
+        749,
+        190
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.772,
+      "margin": 0.106,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.772,
+        "swayam": 0.604,
+        "harshil": 0.667,
+        "soham": 0.622
+      }
+    },
+    {
+      "frame": 73,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        640,
+        63,
+        747,
+        189
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.772,
+      "margin": 0.106,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.772,
+        "swayam": 0.604,
+        "harshil": 0.667,
+        "soham": 0.622
+      }
+    },
+    {
+      "frame": 74,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        641,
+        64,
+        747,
+        191
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.772,
+      "margin": 0.106,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.772,
+        "swayam": 0.604,
+        "harshil": 0.667,
+        "soham": 0.622
+      }
+    },
+    {
+      "frame": 75,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        641,
+        63,
+        746,
+        191
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.768,
+      "margin": 0.103,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.768,
+        "swayam": 0.611,
+        "harshil": 0.665,
+        "soham": 0.618
+      }
+    },
+    {
+      "frame": 76,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        642,
+        64,
+        746,
+        192
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.768,
+      "margin": 0.103,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.768,
+        "swayam": 0.611,
+        "harshil": 0.665,
+        "soham": 0.618
+      }
+    },
+    {
+      "frame": 77,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        642,
+        64,
+        748,
+        194
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.768,
+      "margin": 0.103,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.768,
+        "swayam": 0.611,
+        "harshil": 0.665,
+        "soham": 0.618
+      }
+    },
+    {
+      "frame": 78,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        643,
+        64,
+        750,
+        198
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.768,
+      "margin": 0.103,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.768,
+        "swayam": 0.611,
+        "harshil": 0.665,
+        "soham": 0.618
+      }
+    },
+    {
+      "frame": 79,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        646,
+        64,
+        753,
+        198
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.768,
+      "margin": 0.103,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.768,
+        "swayam": 0.611,
+        "harshil": 0.665,
+        "soham": 0.618
+      }
+    },
+    {
+      "frame": 80,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 4,
+      "bbox": [
+        708,
+        0,
+        891,
+        373
+      ],
+      "display_name": "Soham",
+      "likely_student": "soham",
+      "status": "LOCKED",
+      "affinity": 0.597,
+      "margin": 0.597,
+      "face_ema": {
+        "aagam": 0.053,
+        "swayam": 0.315,
+        "harshil": 0.101,
+        "soham": 0.493
+      },
+      "body_ema": {
+        "aagam": 0.552,
+        "swayam": 0.543,
+        "harshil": 0.524,
+        "soham": 0.715
+      }
+    },
+    {
+      "frame": 80,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        647,
+        64,
+        750,
+        194
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.768,
+      "margin": 0.103,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.768,
+        "swayam": 0.611,
+        "harshil": 0.665,
+        "soham": 0.618
+      }
+    },
+    {
+      "frame": 81,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 4,
+      "bbox": [
+        706,
+        0,
+        888,
+        373
+      ],
+      "display_name": "Soham",
+      "likely_student": "soham",
+      "status": "LOCKED",
+      "affinity": 0.597,
+      "margin": 0.597,
+      "face_ema": {
+        "aagam": 0.053,
+        "swayam": 0.315,
+        "harshil": 0.101,
+        "soham": 0.493
+      },
+      "body_ema": {
+        "aagam": 0.552,
+        "swayam": 0.543,
+        "harshil": 0.524,
+        "soham": 0.715
+      }
+    },
+    {
+      "frame": 81,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        645,
+        65,
+        744,
+        192
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.768,
+      "margin": 0.103,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.768,
+        "swayam": 0.611,
+        "harshil": 0.665,
+        "soham": 0.618
+      }
+    },
+    {
+      "frame": 82,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 4,
+      "bbox": [
+        703,
+        0,
+        885,
+        373
+      ],
+      "display_name": "Soham",
+      "likely_student": "soham",
+      "status": "LOCKED",
+      "affinity": 0.597,
+      "margin": 0.597,
+      "face_ema": {
+        "aagam": 0.053,
+        "swayam": 0.315,
+        "harshil": 0.101,
+        "soham": 0.493
+      },
+      "body_ema": {
+        "aagam": 0.552,
+        "swayam": 0.543,
+        "harshil": 0.524,
+        "soham": 0.715
+      }
+    },
+    {
+      "frame": 82,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        650,
+        65,
+        736,
+        174
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.768,
+      "margin": 0.103,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.768,
+        "swayam": 0.611,
+        "harshil": 0.665,
+        "soham": 0.618
+      }
+    },
+    {
+      "frame": 83,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 4,
+      "bbox": [
+        702,
+        0,
+        883,
+        373
+      ],
+      "display_name": "Soham",
+      "likely_student": "soham",
+      "status": "LOCKED",
+      "affinity": 0.597,
+      "margin": 0.597,
+      "face_ema": {
+        "aagam": 0.053,
+        "swayam": 0.315,
+        "harshil": 0.101,
+        "soham": 0.493
+      },
+      "body_ema": {
+        "aagam": 0.552,
+        "swayam": 0.543,
+        "harshil": 0.524,
+        "soham": 0.715
+      }
+    },
+    {
+      "frame": 83,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        647,
+        65,
+        737,
+        181
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.768,
+      "margin": 0.103,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.768,
+        "swayam": 0.611,
+        "harshil": 0.665,
+        "soham": 0.618
+      }
+    },
+    {
+      "frame": 84,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 4,
+      "bbox": [
+        701,
+        0,
+        882,
+        373
+      ],
+      "display_name": "Soham",
+      "likely_student": "soham",
+      "status": "LOCKED",
+      "affinity": 0.597,
+      "margin": 0.597,
+      "face_ema": {
+        "aagam": 0.053,
+        "swayam": 0.315,
+        "harshil": 0.101,
+        "soham": 0.493
+      },
+      "body_ema": {
+        "aagam": 0.552,
+        "swayam": 0.543,
+        "harshil": 0.524,
+        "soham": 0.715
+      }
+    },
+    {
+      "frame": 84,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        650,
+        64,
+        732,
+        168
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.768,
+      "margin": 0.103,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.768,
+        "swayam": 0.611,
+        "harshil": 0.665,
+        "soham": 0.618
+      }
+    },
+    {
+      "frame": 85,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 4,
+      "bbox": [
+        701,
+        0,
+        882,
+        374
+      ],
+      "display_name": "Soham",
+      "likely_student": "soham",
+      "status": "LOCKED",
+      "affinity": 0.597,
+      "margin": 0.597,
+      "face_ema": {
+        "aagam": 0.053,
+        "swayam": 0.315,
+        "harshil": 0.101,
+        "soham": 0.493
+      },
+      "body_ema": {
+        "aagam": 0.552,
+        "swayam": 0.543,
+        "harshil": 0.524,
+        "soham": 0.715
+      }
+    },
+    {
+      "frame": 85,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        652,
+        63,
+        728,
+        159
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.768,
+      "margin": 0.103,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.768,
+        "swayam": 0.611,
+        "harshil": 0.665,
+        "soham": 0.618
+      }
+    },
+    {
+      "frame": 86,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 4,
+      "bbox": [
+        701,
+        0,
+        882,
+        375
+      ],
+      "display_name": "Soham",
+      "likely_student": "soham",
+      "status": "LOCKED",
+      "affinity": 0.597,
+      "margin": 0.597,
+      "face_ema": {
+        "aagam": 0.053,
+        "swayam": 0.315,
+        "harshil": 0.101,
+        "soham": 0.493
+      },
+      "body_ema": {
+        "aagam": 0.552,
+        "swayam": 0.543,
+        "harshil": 0.524,
+        "soham": 0.715
+      }
+    },
+    {
+      "frame": 86,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        652,
+        62,
+        726,
+        153
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.768,
+      "margin": 0.103,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.768,
+        "swayam": 0.611,
+        "harshil": 0.665,
+        "soham": 0.618
+      }
+    },
+    {
+      "frame": 87,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 4,
+      "bbox": [
+        701,
+        0,
+        882,
+        374
+      ],
+      "display_name": "Soham",
+      "likely_student": "soham",
+      "status": "LOCKED",
+      "affinity": 0.597,
+      "margin": 0.597,
+      "face_ema": {
+        "aagam": 0.053,
+        "swayam": 0.315,
+        "harshil": 0.101,
+        "soham": 0.493
+      },
+      "body_ema": {
+        "aagam": 0.552,
+        "swayam": 0.543,
+        "harshil": 0.524,
+        "soham": 0.715
+      }
+    },
+    {
+      "frame": 87,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        653,
+        61,
+        725,
+        151
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.768,
+      "margin": 0.103,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.768,
+        "swayam": 0.611,
+        "harshil": 0.665,
+        "soham": 0.618
+      }
+    },
+    {
+      "frame": 88,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 4,
+      "bbox": [
+        703,
+        0,
+        882,
+        373
+      ],
+      "display_name": "Soham",
+      "likely_student": "soham",
+      "status": "LOCKED",
+      "affinity": 0.597,
+      "margin": 0.597,
+      "face_ema": {
+        "aagam": 0.053,
+        "swayam": 0.315,
+        "harshil": 0.101,
+        "soham": 0.493
+      },
+      "body_ema": {
+        "aagam": 0.552,
+        "swayam": 0.543,
+        "harshil": 0.524,
+        "soham": 0.715
+      }
+    },
+    {
+      "frame": 88,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        652,
+        60,
+        726,
+        151
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.768,
+      "margin": 0.103,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.768,
+        "swayam": 0.611,
+        "harshil": 0.665,
+        "soham": 0.618
+      }
+    },
+    {
+      "frame": 89,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 4,
+      "bbox": [
+        705,
+        0,
+        883,
+        373
+      ],
+      "display_name": "Soham",
+      "likely_student": "soham",
+      "status": "LOCKED",
+      "affinity": 0.597,
+      "margin": 0.597,
+      "face_ema": {
+        "aagam": 0.053,
+        "swayam": 0.315,
+        "harshil": 0.101,
+        "soham": 0.493
+      },
+      "body_ema": {
+        "aagam": 0.552,
+        "swayam": 0.543,
+        "harshil": 0.524,
+        "soham": 0.715
+      }
+    },
+    {
+      "frame": 89,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        638,
+        60,
+        738,
+        188
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.768,
+      "margin": 0.103,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.768,
+        "swayam": 0.611,
+        "harshil": 0.665,
+        "soham": 0.618
+      }
+    },
+    {
+      "frame": 90,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 4,
+      "bbox": [
+        705,
+        0,
+        881,
+        372
+      ],
+      "display_name": "Soham",
+      "likely_student": "soham",
+      "status": "LOCKED",
+      "affinity": 0.597,
+      "margin": 0.597,
+      "face_ema": {
+        "aagam": 0.053,
+        "swayam": 0.315,
+        "harshil": 0.101,
+        "soham": 0.493
+      },
+      "body_ema": {
+        "aagam": 0.552,
+        "swayam": 0.543,
+        "harshil": 0.524,
+        "soham": 0.715
+      }
+    },
+    {
+      "frame": 90,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        645,
+        61,
+        729,
+        166
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.749,
+      "margin": 0.127,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.749,
+        "swayam": 0.572,
+        "harshil": 0.622,
+        "soham": 0.592
+      }
+    },
+    {
+      "frame": 91,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 4,
+      "bbox": [
+        704,
+        0,
+        879,
+        372
+      ],
+      "display_name": "Soham",
+      "likely_student": "soham",
+      "status": "LOCKED",
+      "affinity": 0.597,
+      "margin": 0.597,
+      "face_ema": {
+        "aagam": 0.053,
+        "swayam": 0.315,
+        "harshil": 0.101,
+        "soham": 0.493
+      },
+      "body_ema": {
+        "aagam": 0.552,
+        "swayam": 0.543,
+        "harshil": 0.524,
+        "soham": 0.715
+      }
+    },
+    {
+      "frame": 91,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        648,
+        62,
+        722,
+        155
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.749,
+      "margin": 0.127,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.749,
+        "swayam": 0.572,
+        "harshil": 0.622,
+        "soham": 0.592
+      }
+    },
+    {
+      "frame": 92,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 4,
+      "bbox": [
+        702,
+        0,
+        876,
+        372
+      ],
+      "display_name": "Soham",
+      "likely_student": "soham",
+      "status": "LOCKED",
+      "affinity": 0.597,
+      "margin": 0.597,
+      "face_ema": {
+        "aagam": 0.053,
+        "swayam": 0.315,
+        "harshil": 0.101,
+        "soham": 0.493
+      },
+      "body_ema": {
+        "aagam": 0.552,
+        "swayam": 0.543,
+        "harshil": 0.524,
+        "soham": 0.715
+      }
+    },
+    {
+      "frame": 92,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        649,
+        62,
+        720,
+        151
+      ],
+      "display_name": "Identifying (likely: Aagam)",
+      "likely_student": "aagam",
+      "status": "IDENTIFYING",
+      "affinity": 0.749,
+      "margin": 0.127,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.749,
+        "swayam": 0.572,
+        "harshil": 0.622,
+        "soham": 0.592
+      }
+    },
+    {
+      "frame": 93,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 4,
+      "bbox": [
+        701,
+        0,
+        874,
+        372
+      ],
+      "display_name": "Soham",
+      "likely_student": "soham",
+      "status": "LOCKED",
+      "affinity": 0.597,
+      "margin": 0.597,
+      "face_ema": {
+        "aagam": 0.053,
+        "swayam": 0.315,
+        "harshil": 0.101,
+        "soham": 0.493
+      },
+      "body_ema": {
+        "aagam": 0.552,
+        "swayam": 0.543,
+        "harshil": 0.524,
+        "soham": 0.715
+      }
+    },
+    {
+      "frame": 93,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        649,
+        61,
+        719,
+        149
+      ],
+      "display_name": "Aagam",
+      "likely_student": "aagam",
+      "status": "ASSIGNED",
+      "affinity": 0.749,
+      "margin": 0.127,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.749,
+        "swayam": 0.572,
+        "harshil": 0.622,
+        "soham": 0.592
+      }
+    },
+    {
+      "frame": 94,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 4,
+      "bbox": [
+        701,
+        0,
+        873,
+        371
+      ],
+      "display_name": "Soham",
+      "likely_student": "soham",
+      "status": "LOCKED",
+      "affinity": 0.597,
+      "margin": 0.597,
+      "face_ema": {
+        "aagam": 0.053,
+        "swayam": 0.315,
+        "harshil": 0.101,
+        "soham": 0.493
+      },
+      "body_ema": {
+        "aagam": 0.552,
+        "swayam": 0.543,
+        "harshil": 0.524,
+        "soham": 0.715
+      }
+    },
+    {
+      "frame": 95,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 4,
+      "bbox": [
+        700,
+        0,
+        871,
+        372
+      ],
+      "display_name": "Soham",
+      "likely_student": "soham",
+      "status": "LOCKED",
+      "affinity": 0.597,
+      "margin": 0.597,
+      "face_ema": {
+        "aagam": 0.053,
+        "swayam": 0.315,
+        "harshil": 0.101,
+        "soham": 0.493
+      },
+      "body_ema": {
+        "aagam": 0.552,
+        "swayam": 0.543,
+        "harshil": 0.524,
+        "soham": 0.715
+      }
+    },
+    {
+      "frame": 96,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 4,
+      "bbox": [
+        699,
+        0,
+        870,
+        373
+      ],
+      "display_name": "Soham",
+      "likely_student": "soham",
+      "status": "LOCKED",
+      "affinity": 0.597,
+      "margin": 0.597,
+      "face_ema": {
+        "aagam": 0.053,
+        "swayam": 0.315,
+        "harshil": 0.101,
+        "soham": 0.493
+      },
+      "body_ema": {
+        "aagam": 0.552,
+        "swayam": 0.543,
+        "harshil": 0.524,
+        "soham": 0.715
+      }
+    },
+    {
+      "frame": 96,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        630,
+        56,
+        735,
+        194
+      ],
+      "display_name": "Aagam",
+      "likely_student": "aagam",
+      "status": "ASSIGNED",
+      "affinity": 0.749,
+      "margin": 0.127,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.749,
+        "swayam": 0.572,
+        "harshil": 0.622,
+        "soham": 0.592
+      }
+    },
+    {
+      "frame": 97,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 4,
+      "bbox": [
+        699,
+        0,
+        869,
+        374
+      ],
+      "display_name": "Soham",
+      "likely_student": "soham",
+      "status": "LOCKED",
+      "affinity": 0.597,
+      "margin": 0.597,
+      "face_ema": {
+        "aagam": 0.053,
+        "swayam": 0.315,
+        "harshil": 0.101,
+        "soham": 0.493
+      },
+      "body_ema": {
+        "aagam": 0.552,
+        "swayam": 0.543,
+        "harshil": 0.524,
+        "soham": 0.715
+      }
+    },
+    {
+      "frame": 97,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        629,
+        57,
+        735,
+        203
+      ],
+      "display_name": "Aagam",
+      "likely_student": "aagam",
+      "status": "ASSIGNED",
+      "affinity": 0.749,
+      "margin": 0.127,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.749,
+        "swayam": 0.572,
+        "harshil": 0.622,
+        "soham": 0.592
+      }
+    },
+    {
+      "frame": 98,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 4,
+      "bbox": [
+        698,
+        0,
+        867,
+        374
+      ],
+      "display_name": "Soham",
+      "likely_student": "soham",
+      "status": "LOCKED",
+      "affinity": 0.597,
+      "margin": 0.597,
+      "face_ema": {
+        "aagam": 0.053,
+        "swayam": 0.315,
+        "harshil": 0.101,
+        "soham": 0.493
+      },
+      "body_ema": {
+        "aagam": 0.552,
+        "swayam": 0.543,
+        "harshil": 0.524,
+        "soham": 0.715
+      }
+    },
+    {
+      "frame": 98,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 5,
+      "bbox": [
+        630,
+        58,
+        735,
+        208
+      ],
+      "display_name": "Aagam",
+      "likely_student": "aagam",
+      "status": "ASSIGNED",
+      "affinity": 0.749,
+      "margin": 0.127,
+      "face_ema": {
+        "aagam": 0.13,
+        "swayam": 0.0,
+        "harshil": 0.106,
+        "soham": 0.004
+      },
+      "body_ema": {
+        "aagam": 0.749,
+        "swayam": 0.572,
+        "harshil": 0.622,
+        "soham": 0.592
+      }
+    },
+    {
+      "frame": 99,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 4,
+      "bbox": [
+        697,
+        0,
+        866,
+        374
+      ],
+      "display_name": "Soham",
+      "likely_student": "soham",
+      "status": "LOCKED",
+      "affinity": 0.597,
+      "margin": 0.597,
+      "face_ema": {
+        "aagam": 0.053,
+        "swayam": 0.315,
+        "harshil": 0.101,
+        "soham": 0.493
+      },
+      "body_ema": {
+        "aagam": 0.552,
+        "swayam": 0.543,
+        "harshil": 0.524,
+        "soham": 0.715
+      }
+    },
+    {
+      "frame": 100,
+      "pipeline": "ADAPTER (identity_adapter.py)",
+      "detector": "yolo26n.pt (live ultralytics detector)",
+      "track_id": 4,
+      "bbox": [
+        696,
+        0,
+        865,
+        374
+      ],
+      "display_name": "Soham",
+      "likely_student": "soham",
+      "status": "LOCKED",
+      "affinity": 0.597,
+      "margin": 0.597,
+      "face_ema": {
+        "aagam": 0.053,
+        "swayam": 0.315,
+        "harshil": 0.101,
+        "soham": 0.493
+      },
+      "body_ema": {
+        "aagam": 0.552,
+        "swayam": 0.543,
+        "harshil": 0.524,
+        "soham": 0.715
+      }
+    }
+  ]
+}

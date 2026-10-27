@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 
 
 def main():
-    video_path = "test_video.mp4"
+    video_path = "new lab video.mp4"
     if not os.path.exists(video_path):
         print(f"Error: {video_path} not found.")
         return

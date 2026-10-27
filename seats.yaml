@@ -1,0 +1,29 @@
+seats:
+  D01:
+    roi: [450, 0, 570, 360]
+    person_id: "Harshil"
+    camera_id: "cam_0"
+    neighbors:
+      left: null
+      right: "D02"
+  D02:
+    roi: [540, 20, 660, 360]
+    person_id: "Swayam"
+    camera_id: "cam_0"
+    neighbors:
+      left: "D01"
+      right: "D03"
+  D03:
+    roi: [640, 40, 780, 380]
+    person_id: "Aagam"
+    camera_id: "cam_0"
+    neighbors:
+      left: "D02"
+      right: "D04"
+  D04:
+    roi: [770, 50, 960, 420]
+    person_id: "Soham"
+    camera_id: "cam_0"
+    neighbors:
+      left: "D03"
+      right: null

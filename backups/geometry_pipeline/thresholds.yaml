@@ -1,0 +1,15 @@
+# Shoulder-width normalized threshold parameters for lab activity monitor
+kp_conf: 0.35        # min keypoint confidence
+det_conf: 0.20       # object detector confidence (phones are small: keep low)
+call_ear: 0.60       # wrist-to-ear distance for a phone call (shoulder-widths)
+call_hold: 2.5       # seconds hand must stay at ear
+phone_hand: 1.10     # wrist-to-phone distance for phone use (shoulder-widths)
+head_down: 0.35      # (shoulder_y - nose_y)/sw below this = head tilted down
+turn: 0.45           # |nose_x - shoulder_mid_x|/sw above this = head turned
+discuss_min_turn_s: 0.0 # reverted to original baseline (no duration gate before discussing)
+talk_motion: 0.25    # max wrist motion while "discussing"
+hand_low: 0.75       # wrist this far below shoulder line = hands at desk level
+kb_motion: 0.12      # min wrist motion (sw/s) to count as typing/mouse use
+active_grace: 6.0    # seconds hands-at-desk still counts as work after last motion
+walk_speed: 0.55     # hip-centroid speed (sw/s)
+stand_knee: 0.85     # knee this far below hip = standing (knees visible)

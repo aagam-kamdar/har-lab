@@ -11,3 +11,10 @@ static/results/
 .idea/
 .pytest_cache/
 .mypy_cache/
+*.db
+*.sqlite
+*.sqlite3
+scratch/
+scratch_crops/
+scratch_tracks/
+spot_check_frames/
